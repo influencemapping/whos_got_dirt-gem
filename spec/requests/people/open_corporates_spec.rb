@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
-module WhosGotDirt::Queries::People
+module WhosGotDirt::Requests::People
   RSpec.describe OpenCorporates do
     describe '#convert' do
       context 'when given a jurisdiction' do

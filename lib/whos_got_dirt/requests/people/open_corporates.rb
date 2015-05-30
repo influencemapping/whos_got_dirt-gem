@@ -1,18 +1,22 @@
 module WhosGotDirt
-  module Queries
+  module Requests
     module People
-      # @example
+      # @example Find people with a given jurisdiction code.
       #   "jurisdiction_code": "gb"
       #
-      # @example
+      # @example Find people with one of many jurisdiction codes.
       #   "jurisdiction_code|=": ["gb", "ie"]
       #
       # @see http://api.opencorporates.com/documentation/REST-API-introduction
       # @see http://api.opencorporates.com/documentation/API-Reference
-      class OpenCorporates < Query
+      class OpenCorporates < Request
         @base_url = 'https://api.opencorporates.com/officers/search'
 
         class << self
+          # Converts the request's parameters to OpenCorporates API parameters.
+          #
+          # @param [Hash] params the request's parameters
+          # @return [Hash] OpenCorporates API parameters
           def convert(params)
             hash = {}
 
@@ -59,10 +63,16 @@ module WhosGotDirt
           end
         end
 
+        # Converts the request's parameters to OpenCorporates API parameters.
+        #
+        # @return [Hash] OpenCorporates API parameters
         def convert
           self.class.convert(params)
         end
 
+        # Returns the URL to request.
+        #
+        # @return [String] the URL to request
         def to_s
           "#{base_url}?#{to_query(convert.merge(order: 'score'))}"
         end

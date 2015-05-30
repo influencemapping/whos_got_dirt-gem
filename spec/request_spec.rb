@@ -1,9 +1,9 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 module WhosGotDirt
-  RSpec.describe Query do
+  RSpec.describe Request do
     let :klass do
-      Class.new(Query) do
+      Class.new(Request) do
         @base_url = 'http://example.com'
 
         def to_s
