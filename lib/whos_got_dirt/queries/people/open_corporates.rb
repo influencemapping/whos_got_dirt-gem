@@ -50,8 +50,8 @@ module WhosGotDirt
               end
             end
 
-            if params['api_key']
-              hash['api_token'] = params['api_key']
+            if params['open_corporates_api_key']
+              hash['api_token'] = params['open_corporates_api_key']
               hash['per_page'] = 100
             end
 
