@@ -1,4 +1,4 @@
-# Who's got dirt? federated search for people and organizations
+# Who's got dirt? A federated search API for people and organizations
 
 [![Gem Version](https://badge.fury.io/rb/whos_got_dirt.svg)](https://badge.fury.io/rb/whos_got_dirt)
 [![Build Status](https://secure.travis-ci.org/jpmckinney/whos_got_dirt.png)](https://travis-ci.org/jpmckinney/whos_got_dirt)
