@@ -13,10 +13,12 @@ module WhosGotDirt
         @base_url = 'https://api.opencorporates.com/officers/search'
 
         class << self
-          def convert(q, params)
+          def convert(params)
             hash = {}
 
-            hash['q'] = q
+            if params['q']
+              hash['q'] = params['q']
+            end
 
             if params['jurisdiction_code']
               hash['jurisdiction_code'] = params['jurisdiction_code']
@@ -58,7 +60,7 @@ module WhosGotDirt
         end
 
         def convert
-          self.class.convert(q, params)
+          self.class.convert(params)
         end
 
         def to_s

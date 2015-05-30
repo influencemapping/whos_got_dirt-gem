@@ -10,10 +10,9 @@ module WhosGotDirt
       end
     end
 
-    attr_accessor :q, :params
+    attr_accessor :params
 
-    def initialize(q = nil, params = {})
-      @q = q
+    def initialize(params = {})
       @params = ActiveSupport::HashWithIndifferentAccess.new(params)
     end
 

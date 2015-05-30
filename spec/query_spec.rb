@@ -7,13 +7,13 @@ module WhosGotDirt
         @base_url = 'http://example.com'
 
         def to_s
-          "#{base_url}?#{to_query(params.merge(query: q))}"
+          "#{base_url}?#{to_query(params)}"
         end
       end
     end
 
     let :instance do
-      klass.new('foo', bar: false, baz: nil)
+      klass.new(q: 'foo', bar: false, baz: nil)
     end
 
     describe '.to_query' do
@@ -24,8 +24,7 @@ module WhosGotDirt
 
     describe '#initialize' do
       it 'should set the query and parameters' do
-        expect(instance.q).to eq('foo')
-        expect(instance.params).to eq('bar' => false, 'baz' => nil)
+        expect(instance.params).to eq('q' => 'foo', 'bar' => false, 'baz' => nil)
       end
 
       it 'should accept no arguments' do
@@ -47,7 +46,7 @@ module WhosGotDirt
 
     describe '#to_s' do
       it 'should return the query as a string' do
-        expect(instance.to_s).to eq('http://example.com?bar=false&baz=&query=foo')
+        expect(instance.to_s).to eq('http://example.com?q=foo&bar=false&baz=')
       end
     end
   end

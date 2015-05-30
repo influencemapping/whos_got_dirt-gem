@@ -17,11 +17,11 @@ module WhosGotDirt::Queries::People
         end
 
         it 'should return a criterion' do
-          expect(OpenCorporates.convert(nil, many)).to eq('q' => nil, 'jurisdiction_code' => 'gb|ie')
+          expect(OpenCorporates.convert(many)).to eq('jurisdiction_code' => 'gb|ie')
         end
 
         it 'should prioritize exact jurisdiction' do
-          expect(OpenCorporates.convert(nil, one)).to eq('q' => nil, 'jurisdiction_code' => 'gb')
+          expect(OpenCorporates.convert(one)).to eq('jurisdiction_code' => 'gb')
         end
       end
 
@@ -47,25 +47,25 @@ module WhosGotDirt::Queries::People
         end
 
         it 'should return a criterion' do
-          expect(OpenCorporates.convert(nil, strict)).to eq('q' => nil, 'date_of_birth' => '2010-01-02:2010-01-05')
+          expect(OpenCorporates.convert(strict)).to eq('date_of_birth' => '2010-01-02:2010-01-05')
         end
 
         it 'should prioritize or-equal dates' do
-          expect(OpenCorporates.convert(nil, nonstrict)).to eq('q' => nil, 'date_of_birth' => '2010-01-03:2010-01-04')
+          expect(OpenCorporates.convert(nonstrict)).to eq('date_of_birth' => '2010-01-03:2010-01-04')
         end
 
         it 'should prioritize exact date' do
-          expect(OpenCorporates.convert(nil, exact)).to eq('q' => nil, 'date_of_birth' => '2010-01-01:2010-01-01')
+          expect(OpenCorporates.convert(exact)).to eq('date_of_birth' => '2010-01-01:2010-01-01')
         end
       end
 
       context 'when given a membership' do
         it 'should return a role criterion' do
-          expect(OpenCorporates.convert(nil, 'memberships' => ['role' => 'ceo'])).to eq('q' => nil, 'position' => 'ceo')
+          expect(OpenCorporates.convert('memberships' => ['role' => 'ceo'])).to eq('position' => 'ceo')
         end
 
         it 'should return a status criterion' do
-          expect(OpenCorporates.convert(nil, 'memberships' => ['status' => 'active'])).to eq('q' => nil, 'inactive' => 'false')
+          expect(OpenCorporates.convert('memberships' => ['status' => 'active'])).to eq('inactive' => 'false')
         end
 
         it 'should not return a criterion' do
@@ -73,14 +73,14 @@ module WhosGotDirt::Queries::People
             ['invalid' => 'foo'],
             ['status' => 'invalid'],
           ].each do |memberships|
-            expect(OpenCorporates.convert(nil, 'memberships' => memberships)).to eq('q' => nil)
+            expect(OpenCorporates.convert('memberships' => memberships)).to eq({})
           end
         end
       end
 
       context 'when given a contact detail' do
         it 'should return an address criterion' do
-          expect(OpenCorporates.convert(nil, 'contact_details' => ['type' => 'address', 'value' => 'foo'])).to eq('q' => nil, 'address' => 'foo')
+          expect(OpenCorporates.convert('contact_details' => ['type' => 'address', 'value' => 'foo'])).to eq('address' => 'foo')
         end
 
         it 'should not return a criterion' do
@@ -89,14 +89,14 @@ module WhosGotDirt::Queries::People
             ['type' => 'invalid', 'value' => 'foo'],
             ['type' => 'address', 'invalid' => 'foo'],
           ].each do |contact_details|
-            expect(OpenCorporates.convert(nil, 'contact_details' => contact_details)).to eq('q' => nil)
+            expect(OpenCorporates.convert('contact_details' => contact_details)).to eq({})
           end
         end
       end
 
       context 'when given an API key' do
         it 'should return an API key parameter' do
-          expect(OpenCorporates.convert(nil, 'api_key' => 123)).to eq('q' => nil, 'api_token' => 123, 'per_page' => 100)
+          expect(OpenCorporates.convert('api_key' => 123)).to eq('api_token' => 123, 'per_page' => 100)
         end
       end
     end
