@@ -8,7 +8,7 @@
 
 ## Usage
 
-This gem provides a common API to multiple APIs.
+This gem provides a common API to multiple APIs. See the [server](https://github.com/influencemapping/whos_got_dirt-server) for a deployment.
 
 To add support for new APIs, see the documentation for [Request](http://www.rubydoc.info/gems/whos_got_dirt/WhosGotDirt/Request) and [Response](http://www.rubydoc.info/gems/whos_got_dirt/WhosGotDirt/Response).
 
@@ -35,12 +35,12 @@ params = {
 }
 
 url = WhosGotDirt::Requests::People::OpenCorporates.new(params).to_s
-#=> https://api.opencorporates.com/officers/search?q=John+Smith&jurisdiction_code=gb%7Cie&date_of_birth=1950-01-01%3A1959-12-31&position=ceo&inactive=false&address=52+London&api_token=...&per_page=100&order=score
+#=> "https://api.opencorporates.com/officers/search?q=John+Smith&jurisdiction_code=gb%7Cie&date_of_birth=1950-01-01%3A1959-12-31&position=ceo&inactive=false&address=52+London&api_token=...&per_page=100&order=score"
 
 response = Farady.get(url)
 
 results = WhosGotDirt::Responses::People::OpenCorporates.new(response).to_a
-#=> 
+#=> @todo
 ```
 
 ## Acknowledgements

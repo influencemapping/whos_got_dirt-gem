@@ -99,6 +99,12 @@ module WhosGotDirt::Requests::People
           expect(OpenCorporates.convert('open_corporates_api_key' => 123)).to eq('api_token' => 123, 'per_page' => 100)
         end
       end
+
+      context 'when given a limit' do
+        it 'should return a per-page limit' do
+          expect(OpenCorporates.convert('open_corporates_api_key' => 123, 'limit' => 5)).to eq('api_token' => 123, 'per_page' => 5)
+        end
+      end
     end
   end
 end

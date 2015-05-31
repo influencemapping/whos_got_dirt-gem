@@ -7,20 +7,12 @@ module WhosGotDirt
   #   end
   #
   # @example Use the class to parse a response.
-  #   MyAPIResponse.new(response) @todo
+  #   MyAPIResponse.new(response).to_a
   class Response < SimpleDelegator
-    # Parses a response into results.
-    #
-    # @return [Array<Hash>] the results
+    # @abstract Subclass and override {#to_a} to return the results in the
+    #   response, or an empty array if an error occurred
     def to_a
-      # @see http://api.opencorporates.com/documentation/REST-API-introduction
-      if status == 200
-        JSON.load(body)['results'].map do |result|
-          # @todo respect `null` in MQL
-        end
-      else
-        nil
-      end
+      raise NotImplementedError
     end
   end
 end

@@ -54,6 +54,11 @@ module WhosGotDirt
 
             if params['open_corporates_api_key']
               hash['api_token'] = params['open_corporates_api_key']
+            end
+
+            if params['limit']
+              hash['per_page'] = params['limit']
+            elsif params['open_corporates_api_key']
               hash['per_page'] = 100
             end
 
