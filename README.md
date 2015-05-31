@@ -3,7 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/whos_got_dirt.svg)](https://badge.fury.io/rb/whos_got_dirt)
 [![Build Status](https://secure.travis-ci.org/influencemapping/whos_got_dirt-gem.png)](https://travis-ci.org/influencemapping/whos_got_dirt-gem)
 [![Dependency Status](https://gemnasium.com/influencemapping/whos_got_dirt-gem.png)](https://gemnasium.com/influencemapping/whos_got_dirt-gem)
-[![Coverage Status](https://coveralls.io/repos/influencemapping/whos_got_dirt-gem/badge.png)](https://coveralls.io/r/influencemapping/whos_got_dirt-gem)
+[![Coverage Status](https://coveralls.io/repos/influencemapping/whos_got_dirt-gem/badge.svg)](https://coveralls.io/r/influencemapping/whos_got_dirt-gem)
 [![Code Climate](https://codeclimate.com/github/influencemapping/whos_got_dirt-gem.png)](https://codeclimate.com/github/influencemapping/whos_got_dirt-gem)
 
 ## Usage
