@@ -1,6 +1,6 @@
 module WhosGotDirt
   module Requests
-    module People
+    module Person
       # @example Find people with a given jurisdiction code.
       #   "jurisdiction_code": "gb"
       #

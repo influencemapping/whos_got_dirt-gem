@@ -4,7 +4,7 @@ module WhosGotDirt
   RSpec.describe Request do
     let :klass do
       Class.new(Request) do
-        @base_url = 'http://example.com'
+        @base_url = 'https://api.example.com/endpoint'
 
         def to_s
           "#{base_url}?#{to_query(params)}"
@@ -34,19 +34,19 @@ module WhosGotDirt
 
     describe '.base_url' do
       it 'should return the base url' do
-        expect(klass.base_url).to eq('http://example.com')
+        expect(klass.base_url).to eq('https://api.example.com/endpoint')
       end
     end
 
     describe '#base_url' do
       it 'should return the base url' do
-        expect(klass.new.base_url).to eq('http://example.com')
+        expect(klass.new.base_url).to eq('https://api.example.com/endpoint')
       end
     end
 
     describe '#to_s' do
       it 'should return the query as a string' do
-        expect(instance.to_s).to eq('http://example.com?q=foo&bar=false&baz=')
+        expect(instance.to_s).to eq('https://api.example.com/endpoint?q=foo&bar=false&baz=')
       end
     end
   end

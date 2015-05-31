@@ -10,7 +10,7 @@ module WhosGotDirt
   #
   # @example Use the class in requesting a URL.
   #   response = Faraday.get(MyAPIRequest.new(name: 'John Smith').to_s)
-  #   #=> "https://api.example.com/endpoint?name=John%20Smith"
+  #   #=> "https://api.example.com/endpoint?name=John+Smith"
   class Request
     class << self
       # @return [String] the base URL to be used in the request

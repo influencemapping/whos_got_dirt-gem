@@ -34,12 +34,12 @@ params = {
   'open_corporates_api_key' => '...',
 }
 
-url = WhosGotDirt::Requests::People::OpenCorporates.new(params).to_s
+url = WhosGotDirt::Requests::Person::OpenCorporates.new(params).to_s
 #=> "https://api.opencorporates.com/officers/search?q=John+Smith&jurisdiction_code=gb%7Cie&date_of_birth=1950-01-01%3A1959-12-31&position=ceo&inactive=false&address=52+London&api_token=...&per_page=100&order=score"
 
 response = Farady.get(url)
 
-results = WhosGotDirt::Responses::People::OpenCorporates.new(response).to_a
+results = WhosGotDirt::Responses::Person::OpenCorporates.new(response).to_a
 #=> @todo
 ```
 

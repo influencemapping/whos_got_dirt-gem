@@ -40,7 +40,7 @@ module WhosGotDirt
     #     "type": "address",
     #     "value": "52 London"
     #   }]
-    module People
+    module Person
     end
   end
 end
