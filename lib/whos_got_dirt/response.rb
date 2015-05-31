@@ -15,7 +15,9 @@ module WhosGotDirt
     def to_a
       # @see http://api.opencorporates.com/documentation/REST-API-introduction
       if status == 200
-        JSON.load(body)
+        JSON.load(body)['results'].map do |result|
+          # @todo respect `null` in MQL
+        end
       else
         nil
       end

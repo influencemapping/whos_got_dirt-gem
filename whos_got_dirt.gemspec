@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.version     = WhosGotDirt::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["James McKinney"]
-  s.homepage    = "https://github.com/jpmckinney/whos_got_dirt"
+  s.homepage    = "https://github.com/influencemapping/whos_got_dirt"
   s.summary     = %q{A federated search API for people and organizations}
   s.license     = 'MIT'
 

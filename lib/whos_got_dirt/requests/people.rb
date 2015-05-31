@@ -1,6 +1,9 @@
 module WhosGotDirt
   module Requests
     # Requests for people.
+    #
+    # All APIs support the parameters below. For API-specific parameters, visit
+    # the API's request class.
     # 
     # @example Find people with a given birth date.
     #   "birth_date": "2010-01-01"
