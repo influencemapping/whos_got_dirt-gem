@@ -6,9 +6,6 @@ module WhosGotDirt
       #
       # @example Find people with one of many jurisdiction codes.
       #   "jurisdiction_code|=": ["gb", "ie"]
-      #
-      # @see http://api.opencorporates.com/documentation/REST-API-introduction
-      # @see http://api.opencorporates.com/documentation/API-Reference
       class OpenCorporates < Request
         @base_url = 'https://api.opencorporates.com/officers/search'
 
@@ -17,11 +14,12 @@ module WhosGotDirt
           #
           # @param [Hash] params the request's parameters
           # @return [Hash] OpenCorporates API parameters
+          # @see http://api.opencorporates.com/documentation/API-Reference
           def convert(params)
             hash = {}
 
-            if params['q']
-              hash['q'] = params['q']
+            if params['name'] || params['name~=']
+              hash['q'] = params['name'] || params['name~=']
             end
 
             if params['jurisdiction_code']

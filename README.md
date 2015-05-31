@@ -19,7 +19,7 @@ require 'whos_got_dirt'
 require 'faraday'
 
 params = {
-  'q' => 'John Smith',
+  'name~=' => 'John Smith',
   'jurisdiction_code|=' => ['gb', 'ie'],
   'birth_date>=' => '1950-01-01',
   'birth_date<=' => '1959-12-31',
@@ -31,16 +31,18 @@ params = {
     'type' => 'address',
     'value' => '52 London',
   }],
-  'open_corporates_api_key' => '123',
+  'open_corporates_api_key' => '...',
 }
 
 url = WhosGotDirt::Requests::People::OpenCorporates.new(params).to_s
-#=> https://api.opencorporates.com/officers/search?q=John+Smith&jurisdiction_code=gb%7Cie&date_of_birth=1950-01-01%3A1959-12-31&position=ceo&inactive=false&address=52+London&api_token=123&per_page=100&order=score
+#=> https://api.opencorporates.com/officers/search?q=John+Smith&jurisdiction_code=gb%7Cie&date_of_birth=1950-01-01%3A1959-12-31&position=ceo&inactive=false&address=52+London&api_token=...&per_page=100&order=score
 
-body = Farady.get(url).body
+response = Farady.get(url)
 
-results = WhosGotDirt::Responses::People::OpenCorporates.new(body).to_h
+results = WhosGotDirt::Responses::People::OpenCorporates.new(response).to_a
 #=> 
 ```
+
+Most terms are from [Popolo](http://www.popoloproject.com/). The request and response formats are inspired from the [Metaweb Query Language](http://mql.freebaseapps.com/index.html) and the [OpenRefine Reconciliation Service API](https://github.com/OpenRefine/OpenRefine/wiki/Reconciliation-Service-API).
 
 Copyright (c) 2015 James McKinney, released under the MIT license

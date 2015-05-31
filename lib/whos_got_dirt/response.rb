@@ -1,5 +1,5 @@
 module WhosGotDirt
-  # Accepts a response body and returns the results in a consistent format.
+  # Accepts a response and returns the results in a consistent format.
   #
   # @example Create a class.
   #   class MyAPIResponse < WhosGotDirt::Response
@@ -7,15 +7,18 @@ module WhosGotDirt
   #   end
   #
   # @example Use the class to parse a response.
-  #   MyAPIResponse.new(body) @todo
-  class Response
-    attr_reader :body
-
-    # Sets the response's body.
+  #   MyAPIResponse.new(response) @todo
+  class Response < SimpleDelegator
+    # Parses a response into results.
     #
-    # @param [String] body the response's body
-    def initialize(body)
-      @body = body
+    # @return [Array<Hash>] the results
+    def to_a
+      # @see http://api.opencorporates.com/documentation/REST-API-introduction
+      if status == 200
+        JSON.load(body)
+      else
+        nil
+      end
     end
   end
 end
