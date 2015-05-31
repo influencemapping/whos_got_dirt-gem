@@ -8,6 +8,39 @@
 
 ## Usage
 
-@todo
+This gem provides a common API to multiple APIs.
+
+To add support for new APIs, see the documentation for [Request](http://www.rubydoc.info/gems/whos_got_dirt/WhosGotDirt/Request) and [Response](http://www.rubydoc.info/gems/whos_got_dirt/WhosGotDirt/Response).
+
+In this example, we convert generic API parameters to an OpenCorporates API URL, and request the URL with [Faraday](https://github.com/lostisland/faraday). Then, we convert the OpenCorporates API response to a generic API response.
+
+```ruby
+require 'whos_got_dirt'
+require 'faraday'
+
+params = {
+  'q' => 'John Smith',
+  'jurisdiction_code|=' => ['gb', 'ie'],
+  'birth_date>=' => '1950-01-01',
+  'birth_date<=' => '1959-12-31',
+  'memberships' => [{
+    'role' => 'ceo',
+    'status' => 'active',
+  }],
+  'contact_details' => [{
+    'type' => 'address',
+    'value' => '52 London',
+  }],
+  'open_corporates_api_key' => '123',
+}
+
+url = WhosGotDirt::Requests::People::OpenCorporates.new(params).to_s
+#=> https://api.opencorporates.com/officers/search?q=John+Smith&jurisdiction_code=gb%7Cie&date_of_birth=1950-01-01%3A1959-12-31&position=ceo&inactive=false&address=52+London&api_token=123&per_page=100&order=score
+
+body = Farady.get(url).body
+
+results = WhosGotDirt::Responses::People::OpenCorporates.new(body).to_h
+#=> 
+```
 
 Copyright (c) 2015 James McKinney, released under the MIT license

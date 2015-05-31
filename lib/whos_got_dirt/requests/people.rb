@@ -1,6 +1,6 @@
 module WhosGotDirt
   module Requests
-    # Federated search for people.
+    # Requests for people.
     # 
     # @example Find people with a given birth date.
     #   "birth_date": "2010-01-01"

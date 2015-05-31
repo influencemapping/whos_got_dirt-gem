@@ -9,7 +9,7 @@ module WhosGotDirt
   #   end
   #
   # @example Use the class in requesting a URL.
-  #   Faraday.get(MyAPIRequest.new(q: 'foo').to_s).body
+  #   Faraday.get(MyAPIRequest.new(q: 'John Smith').to_s).body
   class Request
     class << self
       # @return [String] the base URL to be used in the request
