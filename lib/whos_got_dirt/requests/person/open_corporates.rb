@@ -1,6 +1,11 @@
 module WhosGotDirt
   module Requests
     module Person
+      # Requests for corporate officers from the OpenCorporates API.
+      #
+      # @example Supply an OpenCorporates API key.
+      #   "open_corporates_api_key": "..."
+      #
       # @example Find people with a given jurisdiction code.
       #   "jurisdiction_code": "gb"
       #
@@ -22,44 +27,50 @@ module WhosGotDirt
               hash['q'] = params['name'] || params['name~=']
             end
 
-            if params['jurisdiction_code']
-              hash['jurisdiction_code'] = params['jurisdiction_code']
-            elsif params['jurisdiction_code|=']
-              hash['jurisdiction_code'] = params['jurisdiction_code|='].join('|')
-            end
-
             if params['birth_date']
               hash['date_of_birth'] = "#{params['birth_date']}:#{params['birth_date']}"
             elsif params['birth_date>='] || params['birth_date>'] || params['birth_date<='] || params['birth_date<']
               hash['date_of_birth'] = "#{params['birth_date>='] || params['birth_date>']}:#{params['birth_date<='] || params['birth_date<']}"
             end
 
-            if params['memberships'] && params['memberships'][0]
-              if params['memberships'][0]['role']
-                hash['position'] = params['memberships'][0]['role']
-              end
+            if params['memberships']
+              params['memberships'].each do |membership|
+                if membership['role']
+                  hash['position'] = membership['role']
+                end
 
-              if params['memberships'][0]['status'] == 'inactive'
-                hash['inactive'] = 'true'
-              elsif params['memberships'][0]['status'] == 'active'
-                hash['inactive'] = 'false'
-              end
-            end
-
-            if params['contact_details'] && params['contact_details'][0]
-              if params['contact_details'][0]['type'] == 'address' && params['contact_details'][0]['value']
-                hash['address'] = params['contact_details'][0]['value']
+                if membership['status'] == 'inactive'
+                  hash['inactive'] = 'true'
+                elsif membership['status'] == 'active'
+                  hash['inactive'] = 'false'
+                end
               end
             end
 
-            if params['open_corporates_api_key']
-              hash['api_token'] = params['open_corporates_api_key']
+            if params['contact_details']
+              params['contact_details'].each do |contact_detail|
+                if contact_detail['type'] == 'address' && contact_detail['value']
+                  hash['address'] = contact_detail['value']
+                end
+              end
             end
 
             if params['limit']
               hash['per_page'] = params['limit']
             elsif params['open_corporates_api_key']
               hash['per_page'] = 100
+            end
+
+            # API-specific parameters.
+
+            if params['jurisdiction_code']
+              hash['jurisdiction_code'] = params['jurisdiction_code']
+            elsif params['jurisdiction_code|=']
+              hash['jurisdiction_code'] = params['jurisdiction_code|='].join('|')
+            end
+
+            if params['open_corporates_api_key']
+              hash['api_token'] = params['open_corporates_api_key']
             end
 
             hash
