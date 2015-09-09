@@ -1,7 +1,7 @@
 module WhosGotDirt
   # Accepts a response and returns the results in a consistent format.
   #
-  # @example Create a class.
+  # @example Create a new class for transforming responses to results.
   #   class MyAPIResponse < WhosGotDirt::Response
   #     def to_a
   #       JSON.load(body).map do |result|
@@ -14,6 +14,8 @@ module WhosGotDirt
   #   end
   #
   # @example Use the class to parse a response.
+  #   url = MyAPIRequest.new(name: 'John Smith').to_s
+  #   response = Faraday.get(url)
   #   MyAPIResponse.new(response).to_a
   #   # [{
   #   #   :request_url=>"https://api.example.com/endpoint?name=John+Smith",
@@ -30,6 +32,7 @@ module WhosGotDirt
     end
 
     # @!method initialize(response)
+    #   Sets the response's response.
     #   @param [Faraday::Response] response a response
 
     # @!method body

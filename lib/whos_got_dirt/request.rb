@@ -1,15 +1,18 @@
 module WhosGotDirt
   # Accepts parameters and return URLs to request.
   #
-  # @example Create a class.
+  # @example Create a new class for transforming parameters to URLs.
   #   class MyAPIRequest < WhosGotDirt::Request
+  #     @base_url = 'https://api.example.com'
+  #
   #     def to_s
-  #       "https://api.example.com/endpoint?#{to_query(params)}"
+  #       "#{base_url}/endpoint?#{to_query(params)}"
   #     end
   #   end
   #
   # @example Use the class in requesting a URL.
-  #   response = Faraday.get(MyAPIRequest.new(name: 'John Smith').to_s)
+  #   url = MyAPIRequest.new(name: 'John Smith').to_s
+  #   response = Faraday.get(url)
   #   #=> "https://api.example.com/endpoint?name=John+Smith"
   class Request
     class << self
