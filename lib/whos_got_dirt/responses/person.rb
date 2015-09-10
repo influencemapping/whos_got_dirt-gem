@@ -1,6 +1,6 @@
 module WhosGotDirt
   module Responses
-    # @todo
+    # Responses for people.
     module Person
     end
   end
