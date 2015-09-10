@@ -30,26 +30,18 @@ module WhosGotDirt
       attr_reader :template
     end
 
-    # @return [Renderer] the result renderer
-    attr_reader :renderer
-
-    # @return the parsed response body
-    attr_reader :parsed_body
-
-    # Sets the response, and initializes the renderer and parses the body.
+    # Returns the result renderer.
     #
-    # @param [Faraday::Response] response a response
-    def initialize(*args)
-      super
-      @renderer = Renderer.new(template)
-      @parsed_body = parse_body
+    # @return the result renderer
+    def renderer
+      @renderer ||= Renderer.new(self.class.template)
     end
 
-    # Returns the result template.
+    # Returns the parsed response body.
     #
-    # @return [Hash] the result template
-    def template
-      self.class.template
+    # @return the parsed response body
+    def parsed_body
+      @parsed_body ||= parse_body
     end
 
     # @abstract Subclass and override {#parse_body} to parse the response body
@@ -75,6 +67,10 @@ module WhosGotDirt
       }
       result
     end
+
+    # @!method initialize(response)
+    #   Sets the response's response.
+    #   @param [Faraday::Response] response a response
 
     # @!method body
     #   Returns the response body.

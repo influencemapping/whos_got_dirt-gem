@@ -54,22 +54,21 @@ module WhosGotDirt
       ]
     end
 
-    describe '#initialize' do
-      it 'should set the renderer and parsed body' do
-        expect(instance.renderer.template).to eq(template)
-        expect(instance.parsed_body).to eq(parsed_body)
-      end
-    end
-
     describe '.template' do
       it 'should return the template' do
         expect(klass.template).to eq(template)
       end
     end
 
-    describe '#template' do
-      it 'should return the template' do
-        expect(instance.template).to eq(template)
+    describe '#renderer' do
+      it 'should return the renderer' do
+        expect(instance.renderer.template).to eq(template)
+      end
+    end
+
+    describe '#parsed_body' do
+      it 'should return the parsed response body' do
+        expect(instance.parsed_body).to eq(parsed_body)
       end
     end
 
