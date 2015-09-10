@@ -39,6 +39,7 @@ task :schemas do
         process_value(value['items'], definitions)
       end
     end
+    schema
   end
 
   def define(name, url, definitions)
