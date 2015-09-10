@@ -59,6 +59,8 @@ module WhosGotDirt
     #
     # @param [Hash] result a result
     # @return [Hash] the result with the requested URL as a source
+    # @todo Consider moving to a new Result class if more methods added. The
+    #   result would need to keep a reference to the Response.
     def add_source(result)
       result['sources'] ||= []
       result['sources'] << {
