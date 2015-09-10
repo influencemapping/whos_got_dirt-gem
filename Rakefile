@@ -46,7 +46,6 @@ task :schemas do
     unless definitions.key?(name)
       definitions[name] = {} # to avoid recursion
       definitions[name] = process_schema(url, definitions)
-      definitions[name].delete('$schema')
       definitions[name].delete('id')
     end
   end

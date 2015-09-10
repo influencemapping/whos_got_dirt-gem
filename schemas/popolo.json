@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-03/schema#",
   "definitions": {
     "organization": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Organization",
       "description": "A group with a common purpose or reason for existence that goes beyond the set of people belonging to it",
       "type": "object",
@@ -183,6 +184,7 @@
       }
     },
     "other_name": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Other name",
       "description": "An alternate or former name",
       "type": "object",
@@ -259,6 +261,7 @@
       }
     },
     "identifier": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Identifier",
       "description": "An issued identifier",
       "type": "object",
@@ -278,6 +281,7 @@
       }
     },
     "area": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Area",
       "description": "A geographic area whose geometry may change over time",
       "type": "object",
@@ -382,6 +386,7 @@
       }
     },
     "membership": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Membership",
       "description": "A relationship between a member and an organization",
       "type": "object",
@@ -525,6 +530,7 @@
       }
     },
     "person": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Person",
       "description": "A real person, alive or dead",
       "type": "object",
@@ -734,6 +740,7 @@
       }
     },
     "contact_detail": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Contact detail",
       "description": "A means of contacting an entity",
       "type": "object",
@@ -804,6 +811,7 @@
       }
     },
     "link": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Link",
       "description": "A URL",
       "type": "object",
@@ -824,6 +832,7 @@
       }
     },
     "motion": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Motion",
       "description": "A formal step to introduce a matter for consideration by an organization",
       "type": "object",
@@ -944,6 +953,7 @@
       }
     },
     "event": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Event",
       "description": "An occurrence that people may attend",
       "type": "object",
@@ -1075,6 +1085,7 @@
       }
     },
     "vote_event": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Vote event",
       "description": "An event at which people's votes are recorded",
       "type": "object",
@@ -1196,6 +1207,7 @@
       }
     },
     "group_result": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Group result",
       "description": "A result of a vote event within a group of voters",
       "type": "object",
@@ -1222,6 +1234,7 @@
       }
     },
     "count": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Count",
       "description": "The number of votes for an option in a vote event",
       "type": "object",
@@ -1253,6 +1266,7 @@
       }
     },
     "vote": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Vote",
       "description": "A voter's vote in a vote event",
       "type": "object",
@@ -1335,6 +1349,7 @@
       }
     },
     "speech": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Speech",
       "description": "A speech, a scene, a narrative, or another part of a transcript",
       "type": "object",
@@ -1471,6 +1486,7 @@
       }
     },
     "post": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Post",
       "description": "A position that exists independent of the person holding it",
       "type": "object",
