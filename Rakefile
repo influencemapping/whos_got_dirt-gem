@@ -20,6 +20,8 @@ task :schemas do
   require 'json'
   require 'open-uri'
 
+  require 'json-schema'
+
   def process_value(value, definitions)
     ref = value['$ref']
     if ref
@@ -52,6 +54,7 @@ task :schemas do
     definitions = {} # passed by reference
     schema = process_schema("http://www.popoloproject.com/schemas/#{name}.json#", definitions)
     schema['definitions'] = definitions
+    JSON::Validator.validate!(schema, {}, validate_schema: true)
     File.open(File.expand_path(File.join('..', 'schemas', "#{name}.json"), __FILE__), 'w') do |f|
       f.write(JSON.pretty_generate(schema))
     end
