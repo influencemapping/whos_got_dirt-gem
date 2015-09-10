@@ -1,15 +1,12 @@
 module WhosGotDirt
-  # Renders a template in the context of a binding.
-  #
-  # In this gem's case, the template is a hash in which some values are
-  # [JSONPath](http://goessner.net/articles/JsonPath/) expressions, and the
-  # binding is a Ruby data structure loaded from a JSON source. The JSONPath
-  # expressions are evaluated against the binding to render the template.
+  # Accepts a template, which is a hash in which some values are
+  # [JSON Pointers](http://tools.ietf.org/html/rfc6901). The template is
+  # rendered by evaluating its JSON Pointers against JSON data.
   #
   # @example
-  #   renderer = WhosGotDirt::Renderer.new({'name' => '$.fn'})
-  #   b = {'fn' => 'John Smith'}
-  #   renderer.result(b)
+  #   renderer = WhosGotDirt::Renderer.new({'name' => '/fn'})
+  #   data = {'fn' => 'John Smith'}
+  #   renderer.result(data)
   #   #=> {'name' => 'John Smith'}
   #
   # @see http://ruby-doc.org/stdlib-2.2.3/libdoc/erb/rdoc/ERB.html
@@ -23,32 +20,35 @@ module WhosGotDirt
       @template = template
     end
 
-    # Renders the template in the context of the binding.
+    # Renders the template by evaluating its JSON Pointers against JSON data.
     #
-    # @param [Object] b a binding
+    # @param [Object] data the JSON data
     # @return [Object] the rendered template
-    def result(b)
-      walk(Marshal.load(Marshal.dump(template)), b)
+    def result(data)
+      walk(template, data)
     end
 
   private
 
     # @see https://github.com/pudo/jsonmapping/blob/master/jsonmapping/mapper.py
-    def walk(node, b)
+    def walk(node, data)
       case node
       when Hash
-        node.tap do |hash|
-          hash.each do |key,value|
-            node[key] = walk(value, b)
+        hash = {}
+        node.each do |key,value|
+          v = walk(value, data)
+          if v
+            hash[key] = v
           end
         end
+        hash
       when Array
         node.map do |child|
-          walk(child, b)
+          walk(child, data)
         end
       when String
-        if node.start_with?('$')
-          JsonPath.new(node).first(b)
+        if node.start_with?('/')
+          JsonPointer.new(data, node).value
         else
           node
         end

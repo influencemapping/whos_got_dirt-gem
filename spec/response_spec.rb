@@ -6,9 +6,9 @@ module WhosGotDirt
       Class.new(Response) do
         @template = {
           'id' => 123,
-          'name' => '$.fn',
+          'name' => '/fn',
           'identifiers' => [{
-            'identifier' => '$.id',
+            'identifier' => '/id',
             'scheme' => 'ACME',
           }]
         }
@@ -39,9 +39,9 @@ module WhosGotDirt
     let :template do
       {
         'id' => 123,
-        'name' => '$.fn',
+        'name' => '/fn',
         'identifiers' => [{
-          'identifier' => '$.id',
+          'identifier' => '/id',
           'scheme' => 'ACME',
         }]
       }

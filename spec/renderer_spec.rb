@@ -12,21 +12,23 @@ module WhosGotDirt
       it 'should render a result' do
         expect(Renderer.new({
           'id' => 123,
-          'name' => '$.fn',
+          'name' => '/fn',
           'identifiers' => [{
-            'identifier' => '$.id',
+            'identifier' => '/id',
             'scheme' => 'ACME',
-          }]
+          }],
+          'delete' => '/blank',
         }).result({
           'id' => 456,
           'fn' => 'John Smith',
+          'blank' => nil,
         })).to eq({
           'id' => 123,
           'name' => 'John Smith',
           'identifiers' => [{
             'identifier' => 456,
             'scheme' => 'ACME',
-          }]
+          }],
         })
       end
     end

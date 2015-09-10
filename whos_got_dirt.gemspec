@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency('activesupport', '~> 4.2.0')
-  s.add_runtime_dependency('jsonpath')
+  s.add_runtime_dependency('json-pointer')
 
   s.add_development_dependency('coveralls')
   s.add_development_dependency('faraday')

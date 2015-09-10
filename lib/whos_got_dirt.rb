@@ -1,7 +1,7 @@
 require 'cgi'
 
 require 'active_support/core_ext/hash/indifferent_access'
-require 'jsonpath'
+require 'json-pointer'
 
 require 'whos_got_dirt/renderer'
 
