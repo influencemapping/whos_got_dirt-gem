@@ -42,7 +42,7 @@ module WhosGotDirt
 
     # Returns the base URL to be used in the request.
     #
-    # @return the base URL to be used in the request
+    # @return [String] the base URL to be used in the request
     def base_url
       self.class.base_url
     end
