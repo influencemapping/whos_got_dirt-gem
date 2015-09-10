@@ -64,13 +64,13 @@ module WhosGotDirt::Requests::Person
           expect(OpenCorporates.convert('memberships' => [{'role' => 'ceo'}])).to eq('position' => 'ceo')
         end
 
-        it 'should return a status criterion' do
-          expect(OpenCorporates.convert('memberships' => [{'status' => 'active'}])).to eq('inactive' => 'false')
+        it 'should return an inactiv criterion' do
+          expect(OpenCorporates.convert('memberships' => [{'inactive' => false}])).to eq('inactive' => 'false')
         end
 
         it 'should not return a criterion' do
-          [ ['invalid' => 'active'],
-            ['status' => 'invalid'],
+          [ ['invalid' => true],
+            ['inactive' => 'invalid'],
           ].each do |memberships|
             expect(OpenCorporates.convert('memberships' => memberships)).to eq({})
           end

@@ -6,6 +6,16 @@ module WhosGotDirt
       # @example Supply an OpenCorporates API key.
       #   "open_corporates_api_key": "..."
       #
+      # @example Find active officers.
+      #   "memberships": [{
+      #     "inactive": false
+      #   }]
+      #
+      # @example Find inactive officers.
+      #   "memberships": [{
+      #     "inactive": true
+      #   }]
+      #
       # @example Find people with a given jurisdiction code.
       #   "jurisdiction_code": "gb"
       #
@@ -39,9 +49,9 @@ module WhosGotDirt
                   hash['position'] = membership['role']
                 end
 
-                if membership['status'] == 'inactive'
+                if membership['inactive'] == true
                   hash['inactive'] = 'true'
-                elsif membership['status'] == 'active'
+                elsif membership['inactive'] == false
                   hash['inactive'] = 'false'
                 end
               end

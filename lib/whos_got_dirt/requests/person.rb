@@ -31,16 +31,6 @@ module WhosGotDirt
     #     "role": "ceo"
     #   }]
     #
-    # @example Find people with an active membership status.
-    #   "memberships": [{
-    #     "status": "active"
-    #   }]
-    #
-    # @example Find people with an inactive membership status.
-    #   "memberships": [{
-    #     "status": "inactive"
-    #   }]
-    #
     # @example Find people by address (fuzzy match).
     #   "contact_details": [{
     #     "type": "address",
