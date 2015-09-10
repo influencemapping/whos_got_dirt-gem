@@ -1,6 +1,9 @@
 require 'cgi'
 
 require 'active_support/core_ext/hash/indifferent_access'
+require 'jsonpath'
+
+require 'whos_got_dirt/renderer'
 
 require 'whos_got_dirt/request'
 require 'whos_got_dirt/requests/person/open_corporates'
