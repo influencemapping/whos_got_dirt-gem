@@ -36,7 +36,9 @@ module WhosGotDirt
     # @return the parsed response body
     attr_reader :parsed_body
 
-    # Initializes the renderer and parses the body.
+    # Sets the response, and initializes the renderer and parses the body.
+    #
+    # @param [Faraday::Response] response a response
     def initialize(*args)
       super
       @renderer = Renderer.new(template)
@@ -73,10 +75,6 @@ module WhosGotDirt
       }
       result
     end
-
-    # @!method initialize(response)
-    #   Sets the response's response.
-    #   @param [Faraday::Response] response a response
 
     # @!method body
     #   Returns the response body.
