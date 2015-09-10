@@ -52,7 +52,7 @@ task :schemas do
     definitions = {} # passed by reference
     schema = process_schema("http://www.popoloproject.com/schemas/#{name}.json#", definitions)
     schema['definitions'] = definitions
-    File.open(File.expand_path(File.join('schemas', "#{name}.json"), File.dirname(__FILE__)), 'w') do |f|
+    File.open(File.expand_path(File.join('..', 'schemas', "#{name}.json"), __FILE__), 'w') do |f|
       f.write(JSON.pretty_generate(schema))
     end
   end
