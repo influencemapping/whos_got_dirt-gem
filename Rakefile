@@ -23,11 +23,11 @@ task :schemas do
   require 'json-schema'
 
   def process_value(value, definitions)
-    ref = value['$ref']
-    if ref
-      key = ref.rpartition('/')[2].chomp('.json#')
-      value['$ref'] = "#/definitions/#{key}"
-      process_ref(key, ref, definitions)
+    url = value['$ref']
+    if url
+      name = url.rpartition('/')[2].chomp('.json#')
+      value['$ref'] = "#/definitions/#{name}"
+      define(name, url, definitions)
     end
   end
 
@@ -41,19 +41,19 @@ task :schemas do
     end
   end
 
-  def process_ref(key, ref, definitions)
-    unless definitions.key?(key)
-      definitions[key] = {} # to avoid recursion
-      definitions[key] = process_schema(ref, definitions)
-      definitions[key].delete('$schema')
-      definitions[key].delete('id')
+  def define(name, url, definitions)
+    unless definitions.key?(name)
+      definitions[name] = {} # to avoid recursion
+      definitions[name] = process_schema(url, definitions)
+      definitions[name].delete('$schema')
+      definitions[name].delete('id')
     end
   end
 
   definitions = {} # passed by reference
 
-  %w(organization person).each do |key|
-    process_ref(key, "http://www.popoloproject.com/schemas/#{key}.json#", definitions)
+  %w(organization person).each do |name|
+    define(name, "http://www.popoloproject.com/schemas/#{name}.json#", definitions)
   end
 
   schema = {
@@ -62,6 +62,7 @@ task :schemas do
   }
 
   JSON::Validator.validate!(schema, {}, validate_schema: true)
+
   File.open(File.expand_path(File.join('..', 'schemas', 'popolo.json'), __FILE__), 'w') do |f|
     f.write(JSON.pretty_generate(schema))
   end
