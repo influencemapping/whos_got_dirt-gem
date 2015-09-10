@@ -16,7 +16,8 @@ module WhosGotDirt
   #   #=> "https://api.example.com/endpoint?name=John+Smith"
   class Request
     class << self
-      # @return [String] the base URL to be used in the request
+      # @!attribute [r] base_url
+      #   @return [String] the base URL to be used in the request
       attr_reader :base_url
 
       # Transforms a query string from a hash to a string.
@@ -30,7 +31,8 @@ module WhosGotDirt
       end
     end
 
-    # @return [Hash] the request's parameters
+    # @!attribute params
+    #   @return [Hash] the request's parameters
     attr_accessor :params
 
     # Sets the request's parameters.

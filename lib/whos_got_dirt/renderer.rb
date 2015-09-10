@@ -11,6 +11,8 @@ module WhosGotDirt
   #
   # @see http://ruby-doc.org/stdlib-2.2.3/libdoc/erb/rdoc/ERB.html
   class Renderer
+    # @!attribute [r] template
+    #   @return [Hash] the template
     attr_reader :template
 
     # Sets the template.

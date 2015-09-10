@@ -26,7 +26,8 @@ module WhosGotDirt
   #   # }]
   class Response < SimpleDelegator
     class << self
-      # @return [Hash] the result template
+      # @!attribute [r] template
+      #   @return [Hash] the result template
       attr_reader :template
     end
 
@@ -53,21 +54,6 @@ module WhosGotDirt
     #   body into results
     def to_a
       raise NotImplementedError
-    end
-
-    # Adds the requested URL as a source of a result.
-    #
-    # @param [Hash] result a result
-    # @return [Hash] the result with the requested URL as a source
-    # @todo Consider moving to a new Result class if more methods added. The
-    #   result would need to keep a reference to the Response.
-    def add_source(result)
-      result['sources'] ||= []
-      result['sources'] << {
-        'url' => env.url.to_s,
-        'note' => self.class.name,
-      }
-      result
     end
 
     # @!method initialize(response)
