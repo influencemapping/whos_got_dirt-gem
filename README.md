@@ -40,7 +40,9 @@ url = WhosGotDirt::Requests::Person::OpenCorporates.new(params).to_s
 response = Farady.get(url)
 
 results = WhosGotDirt::Responses::Person::OpenCorporates.new(response).to_a
-#=> @todo
+#=> {
+#   @todo
+# }
 ```
 
 ## Acknowledgements

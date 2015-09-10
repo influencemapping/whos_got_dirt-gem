@@ -33,13 +33,13 @@ module WhosGotDirt
     end
 
     describe '.base_url' do
-      it 'should return the base url' do
+      it 'should return the base URL' do
         expect(klass.base_url).to eq('https://api.example.com/endpoint')
       end
     end
 
     describe '#base_url' do
-      it 'should return the base url' do
+      it 'should return the base URL' do
         expect(klass.new.base_url).to eq('https://api.example.com/endpoint')
       end
     end

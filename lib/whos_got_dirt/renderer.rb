@@ -18,17 +18,17 @@ module WhosGotDirt
 
     # Sets the template.
     #
-    # @param [Object] a template
+    # @param [Object] template a template
     def initialize(template)
       @template = template
     end
 
     # Renders the template in the context of the binding.
     #
-    # @param [Object] a binding
+    # @param [Object] b a binding
     # @return [Object] the rendered template
     def result(b)
-      walk(template, b)
+      walk(Marshal.load(Marshal.dump(template)), b)
     end
 
   private
