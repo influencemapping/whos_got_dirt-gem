@@ -88,7 +88,7 @@ module WhosGotDirt
 
     describe '#to_a' do
       it 'should return the results' do
-        expect(klass.new(response).to_a).to eq([{
+        expect(instance.to_a).to eq([{
           '@type' => 'Person',
           'id' => '123',
           'name' => 'John Smith',

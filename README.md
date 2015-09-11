@@ -18,7 +18,7 @@ In this example, we convert generic API parameters to an OpenCorporates API URL,
 require 'whos_got_dirt'
 require 'faraday'
 
-params = {
+input = {
   'name~=' => 'John Smith',
   'jurisdiction_code|=' => ['gb', 'ie'],
   'memberships' => [{
@@ -27,7 +27,7 @@ params = {
   }],
 }
 
-url = WhosGotDirt::Requests::Person::OpenCorporates.new(params).to_s
+url = WhosGotDirt::Requests::Person::OpenCorporates.new(input).to_s
 #=> "https://api.opencorporates.com/officers/search?q=John+Smith&position=director&inactive=false&jurisdiction_code=gb%7Cie&order=score"
 
 response = Faraday.get(url)

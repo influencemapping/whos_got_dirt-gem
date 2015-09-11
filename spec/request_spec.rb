@@ -7,7 +7,7 @@ module WhosGotDirt
         @base_url = 'https://api.example.com/endpoint'
 
         def to_s
-          "#{base_url}?#{to_query(params)}"
+          "#{base_url}?#{to_query(input)}"
         end
       end
     end
@@ -24,7 +24,7 @@ module WhosGotDirt
 
     describe '#initialize' do
       it 'should set the query and parameters' do
-        expect(instance.params).to eq('q' => 'foo', 'bar' => false, 'baz' => nil)
+        expect(instance.input).to eq('q' => 'foo', 'bar' => false, 'baz' => nil)
       end
 
       it 'should accept no arguments' do
@@ -40,7 +40,51 @@ module WhosGotDirt
 
     describe '#base_url' do
       it 'should return the base URL' do
-        expect(klass.new.base_url).to eq('https://api.example.com/endpoint')
+        expect(instance.base_url).to eq('https://api.example.com/endpoint')
+      end
+    end
+
+    describe '#equal' do
+      let :fuzzy do
+        {
+          'source~=' => 'Smith John',
+        }
+      end
+
+      let :exact do
+        fuzzy.merge({
+          'source' => 'John Smith'
+        })
+      end
+
+      it 'should return a criterion' do
+        expect(klass.new(fuzzy).equal('target', 'source', 'source~=')).to eq('target' => 'Smith John')
+      end
+
+      it 'should prioritize exact match' do
+        expect(klass.new(exact).equal('target', 'source', 'source~=')).to eq('target' => 'John Smith')
+      end
+    end
+
+    describe '#one_of' do
+      let :many do
+        {
+          'source|=' => ['one', 'two'],
+        }
+      end
+
+      let :one do
+        many.merge({
+          'source' => 'three'
+        })
+      end
+
+      it 'should return a criterion' do
+        expect(klass.new(many).one_of('target', 'source')).to eq('target' => 'one|two')
+      end
+
+      it 'should prioritize exact match' do
+        expect(klass.new(one).one_of('target', 'source')).to eq('target' => 'three')
       end
     end
 

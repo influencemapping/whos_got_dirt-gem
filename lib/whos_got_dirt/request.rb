@@ -1,12 +1,12 @@
 module WhosGotDirt
-  # Accepts parameters and return URLs to request.
+  # Accepts MQL parameters and return URLs to request.
   #
   # @example Create a new class for transforming parameters to URLs.
   #   class MyAPIRequest < WhosGotDirt::Request
   #     @base_url = 'https://api.example.com'
   #
   #     def to_s
-  #       "#{base_url}/endpoint?#{to_query(params)}"
+  #       "#{base_url}/endpoint?#{to_query(input)}"
   #     end
   #   end
   #
@@ -31,15 +31,20 @@ module WhosGotDirt
       end
     end
 
-    # @!attribute params
-    #   @return [Hash] the request's parameters
-    attr_accessor :params
+    # @!attribute input
+    #   @return [Hash] the MQL parameters
+    attr_accessor :input
 
-    # Sets the request's parameters.
+    # @!attribute :output
+    #   @return [Hash] the API-specific parameters
+    attr_reader :output
+
+    # Sets the MQL parameters.
     #
-    # @param [Hash] params the request's parameters
-    def initialize(params = {})
-      @params = ActiveSupport::HashWithIndifferentAccess.new(params)
+    # @param [Hash] input the MQL parameters
+    def initialize(input = {})
+      @input = ActiveSupport::HashWithIndifferentAccess.new(input)
+      @output = {}
     end
 
     # Returns the base URL to be used in the request.
@@ -47,6 +52,35 @@ module WhosGotDirt
     # @return [String] the base URL to be used in the request
     def base_url
       self.class.base_url
+    end
+
+    # Helper method to map a parameter that supports the MQL equality operator.
+    #
+    # @param [String] target the API-specific parameter name
+    # @param [String] sources request parameter names, in descending order of priority
+    # @param [Hash] the API-specific parameters
+    def equal(target, *sources)
+      sources.each do |key|
+        if input[key]
+          output[target] = input[key]
+          return output
+        end
+      end
+      output
+    end
+
+    # Helper method to map a parameter that supports the MQL `|=` operator.
+    #
+    # @param [String] target the API-specific parameter name
+    # @param [String] source the request parameter name
+    # @param [Hash] the API-specific parameters
+    def one_of(target, source)
+      if input[source]
+        output[target] = input[source]
+      elsif input["#{source}|="]
+        output[target] = input["#{source}|="].join('|')
+      end
+      output
     end
 
     # @abstract Subclass and override {#to_s} to return the URL from which to

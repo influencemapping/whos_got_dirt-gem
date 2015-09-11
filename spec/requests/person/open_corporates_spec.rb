@@ -2,7 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
 module WhosGotDirt::Requests::Person
   RSpec.describe OpenCorporates do
-    describe '.convert' do
+    describe '#convert' do
       context 'when given a name' do
         let :fuzzy do
           {
@@ -17,11 +17,11 @@ module WhosGotDirt::Requests::Person
         end
 
         it 'should return a criterion' do
-          expect(OpenCorporates.convert(fuzzy)).to eq('q' => 'Smith John')
+          expect(OpenCorporates.new(fuzzy).convert).to eq('q' => 'Smith John')
         end
 
         it 'should prioritize exact name' do
-          expect(OpenCorporates.convert(exact)).to eq('q' => 'John Smith')
+          expect(OpenCorporates.new(exact).convert).to eq('q' => 'John Smith')
         end
       end
 
@@ -47,42 +47,42 @@ module WhosGotDirt::Requests::Person
         end
 
         it 'should return a criterion' do
-          expect(OpenCorporates.convert(strict)).to eq('date_of_birth' => '2010-01-02:2010-01-05')
+          expect(OpenCorporates.new(strict).convert).to eq('date_of_birth' => '2010-01-02:2010-01-05')
         end
 
         it 'should prioritize or-equal dates' do
-          expect(OpenCorporates.convert(nonstrict)).to eq('date_of_birth' => '2010-01-03:2010-01-04')
+          expect(OpenCorporates.new(nonstrict).convert).to eq('date_of_birth' => '2010-01-03:2010-01-04')
         end
 
         it 'should prioritize exact date' do
-          expect(OpenCorporates.convert(exact)).to eq('date_of_birth' => '2010-01-01:2010-01-01')
+          expect(OpenCorporates.new(exact).convert).to eq('date_of_birth' => '2010-01-01:2010-01-01')
         end
       end
 
       context 'when given a membership' do
         it 'should return a role criterion' do
-          expect(OpenCorporates.convert('memberships' => [{'role' => 'ceo'}])).to eq('position' => 'ceo')
+          expect(OpenCorporates.new('memberships' => [{'role' => 'ceo'}]).convert).to eq('position' => 'ceo')
         end
 
         it 'should return an inactiv criterion' do
-          expect(OpenCorporates.convert('memberships' => [{'inactive' => false}])).to eq('inactive' => 'false')
+          expect(OpenCorporates.new('memberships' => [{'inactive' => false}]).convert).to eq('inactive' => 'false')
         end
 
         it 'should not return a criterion' do
           [ ['invalid' => true],
             ['inactive' => 'invalid'],
           ].each do |memberships|
-            expect(OpenCorporates.convert('memberships' => memberships)).to eq({})
+            expect(OpenCorporates.new('memberships' => memberships).convert).to eq({})
           end
         end
       end
 
       context 'when given a contact detail' do
         it 'should return an address criterion' do
-          expect(OpenCorporates.convert('contact_details' => [
+          expect(OpenCorporates.new('contact_details' => [
             {'type' => 'voice', 'value' => '+1-555-555-0100'},
             {'type' => 'address', 'value' => 'foo'},
-          ])).to eq('address' => 'foo')
+          ]).convert).to eq('address' => 'foo')
         end
 
         it 'should not return a criterion' do
@@ -90,18 +90,18 @@ module WhosGotDirt::Requests::Person
             [{'type' => 'invalid', 'value' => 'foo'}],
             [{'type' => 'address', 'invalid' => 'foo'}],
           ].each do |contact_details|
-            expect(OpenCorporates.convert('contact_details' => contact_details)).to eq({})
+            expect(OpenCorporates.new('contact_details' => contact_details).convert).to eq({})
           end
         end
       end
 
       context 'when given a limit' do
         it 'should return a per-page limit' do
-          expect(OpenCorporates.convert('limit' => 5)).to eq('per_page' => 5)
+          expect(OpenCorporates.new('limit' => 5).convert).to eq('per_page' => 5)
         end
 
         it 'should override the default authenticated per-page limit' do
-          expect(OpenCorporates.convert('limit' => 5, 'open_corporates_api_key' => 123)).to eq('per_page' => 5, 'api_token' => 123)
+          expect(OpenCorporates.new('limit' => 5, 'open_corporates_api_key' => 123).convert).to eq('per_page' => 5, 'api_token' => 123)
         end
       end
 
@@ -119,17 +119,17 @@ module WhosGotDirt::Requests::Person
         end
 
         it 'should return a criterion' do
-          expect(OpenCorporates.convert(many)).to eq('jurisdiction_code' => 'gb|ie')
+          expect(OpenCorporates.new(many).convert).to eq('jurisdiction_code' => 'gb|ie')
         end
 
         it 'should prioritize exact jurisdiction' do
-          expect(OpenCorporates.convert(one)).to eq('jurisdiction_code' => 'gb')
+          expect(OpenCorporates.new(one).convert).to eq('jurisdiction_code' => 'gb')
         end
       end
 
       context 'when given an API key' do
         it 'should return an API key parameter' do
-          expect(OpenCorporates.convert('open_corporates_api_key' => 123)).to eq('api_token' => 123, 'per_page' => 100)
+          expect(OpenCorporates.new('open_corporates_api_key' => 123).convert).to eq('api_token' => 123, 'per_page' => 100)
         end
       end
     end
