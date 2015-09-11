@@ -7,7 +7,7 @@ module WhosGotDirt
       # @param [String] the name of the definition in the JSON Schema
       # @return [Array<ValidationError>] a list of validation errors
       def validate(data, name)
-        validator = validators[name]
+        validator = validators[name.downcase]
         # @see https://github.com/ruby-json-schema/json-schema/blob/fa316dc9d39b922935aed8ec9fa0e4139b724ef5/lib/json-schema/validator.rb#L40
         validator.instance_variable_set('@errors', [])
         # `JSON::Validator#initialize_data` does nothing, in our case.

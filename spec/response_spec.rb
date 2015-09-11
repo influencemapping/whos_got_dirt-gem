@@ -25,7 +25,7 @@ module WhosGotDirt
 
         def to_a
           parsed_body.map do |data|
-            Result.new(renderer.result(data), self, 'person').finalize!
+            Result.new('Person', renderer.result(data), self).finalize!
           end
         end
       end

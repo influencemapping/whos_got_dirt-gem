@@ -9,19 +9,19 @@ module WhosGotDirt
     #   @return [Response] the response from which the result was created
     attr_reader :response
 
-    # @!attribute [r] schema
-    #   @return [Response] the schema to validate against
-    attr_reader :schema
+    # @!attribute [r] type
+    #   @return [Response] the Popolo class to validate against
+    attr_reader :type
 
     # Sets the result and response.
     #
+    # @param [String] type the Popolo class to validate against
     # @param [Hash] result the rendered result
     # @param [Response] response the response from which the result was created
-    # @param [String] schema the schema to validate against
-    def initialize(result, response, schema)
+    def initialize(type, result, response)
+      @type = type
       @result = result
       @response = response
-      @schema = schema
     end
 
     # Adds the requested URL as a source.
@@ -52,7 +52,7 @@ module WhosGotDirt
       # we can delete items on a time and re-validate using this code skeleton:
       #
       # begin
-      #   Validator.validate(result, schema)
+      #   Validator.validate(result, type)
       # rescue JSON::Schema::ValidationError => e
       #   error = e.to_hash
       #   case error[:failed_attribute]
@@ -63,7 +63,7 @@ module WhosGotDirt
       #   end
       # end
 
-      errors = Validator.validate(result, schema)
+      errors = Validator.validate(result, type)
 
       if opts[:strict] && errors.any?
         raise ValidationError.new(errors * '\n')

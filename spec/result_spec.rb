@@ -24,14 +24,14 @@ module WhosGotDirt
     end
 
     let :instance do
-      Result.new(result, response, 'person')
+      Result.new('Person', result, response)
     end
 
     describe '#initialize' do
-      it 'should set the result, response and schema' do
+      it 'should set the type, result and response' do
+        expect(instance.type).to eq('Person')
         expect(instance.result).to eq(result)
         expect(instance.response).to eq(response)
-        expect(instance.schema).to eq('person')
       end
     end
 
