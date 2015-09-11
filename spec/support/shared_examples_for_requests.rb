@@ -31,11 +31,19 @@ RSpec.shared_examples 'one_of' do |target,source,values|
     many.merge(source => values.first)
   end
 
+  let :all do
+    many.merge(source => values)
+  end
+
   it 'should return a criterion' do
     expect(described_class.new(many).convert).to eq(target => values.join('|'))
   end
 
-  it 'should prioritize exact jurisdiction' do
+  it 'should prioritize exact match' do
     expect(described_class.new(one).convert).to eq(target => values.first)
+  end
+
+  it 'should prioritize all match' do
+    expect(described_class.new(all).convert).to eq(target => values.join(','))
   end
 end
