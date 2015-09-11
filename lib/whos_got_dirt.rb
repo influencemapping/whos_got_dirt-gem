@@ -5,6 +5,7 @@ require 'json-pointer'
 require 'json-schema'
 
 require 'whos_got_dirt/renderer'
+require 'whos_got_dirt/result'
 
 require 'whos_got_dirt/request'
 require 'whos_got_dirt/requests/person/open_corporates'
@@ -13,6 +14,9 @@ require 'whos_got_dirt/response'
 require 'whos_got_dirt/responses/person/open_corporates'
 
 module WhosGotDirt
+  class Error < StandardError; end
+  class ValidationError < Error; end
+
   class << self
     def schemas
       @schemas ||= {}.tap do |hash|

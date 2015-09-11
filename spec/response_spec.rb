@@ -4,6 +4,12 @@ module WhosGotDirt
   RSpec.describe Response do
     let :klass do
       Class.new(Response) do
+        class << self
+          def name
+            'MyResponse'
+          end
+        end
+
         @template = {
           'id' => 123,
           'name' => '/fn',
@@ -19,7 +25,7 @@ module WhosGotDirt
 
         def to_a
           parsed_body.map do |data|
-            add_source(renderer.result(data))
+            Result.new(renderer.result(data), self, 'person').finalize!
           end
         end
       end
@@ -81,7 +87,7 @@ module WhosGotDirt
     describe '#to_a' do
       it 'should return the results' do
         expect(klass.new(response).to_a).to eq([{
-          'id' => 123,
+          'id' => '123',
           'name' => 'John Smith',
           'identifiers' => [{
             'identifier' => 'john-smith',
@@ -89,10 +95,10 @@ module WhosGotDirt
           }],
           'sources' => [{
             'url' => 'https://api.example.com/endpoint?name~=John+Smith',
-            'note' => nil,
+            'note' => 'MyResponse',
           }],
         }, {
-          'id' => 123,
+          'id' => '123',
           'name' => 'John Aaron Smith',
           'identifiers' => [{
             'identifier' => 'john-aaron-smith',
@@ -100,17 +106,8 @@ module WhosGotDirt
           }],
           'sources' => [{
             'url' => 'https://api.example.com/endpoint?name~=John+Smith',
-            'note' => nil,
+            'note' => 'MyResponse',
           }],
-        }])
-      end
-    end
-
-    describe '#add_source' do
-      it 'should add a source to a result' do
-        expect(instance.add_source({})).to eq('sources' => [{
-          'url' => 'https://api.example.com/endpoint?name~=John+Smith',
-          'note' => nil,
         }])
       end
     end
