@@ -4,15 +4,15 @@ module WhosGotDirt
   RSpec.describe Result do
     let :result do
       {
-          'id' => 123,
-          'name' => 'John Smith',
-          'identifiers' => [{
-            'scheme' => 'ACME',
-          }, {
-            'identifier' => 'john-smith',
-          }, {
-            'scheme' => 'ACME',
-          }],
+        'id' => 123,
+        'name' => 'John Smith',
+        'identifiers' => [{
+          'scheme' => 'ACME',
+        }, {
+          'identifier' => 'john-smith',
+        }, {
+          'scheme' => 'ACME',
+        }],
       }
     end
 
