@@ -86,7 +86,9 @@ module WhosGotDirt
     # @param [String] source the request parameter name
     # @param [Hash] the API-specific parameters
     def one_of(target, source)
-      if input[source]
+      if Array === input[source]
+        output[target] = input[source].join(',')
+      elsif input[source]
         output[target] = input[source]
       elsif input["#{source}|="]
         output[target] = input["#{source}|="].join('|')

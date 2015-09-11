@@ -77,12 +77,20 @@ module WhosGotDirt
         many.merge('source' => 'three')
       end
 
+      let :all do
+        many.merge('source' => ['four', 'five'])
+      end
+
       it 'should return a criterion' do
         expect(klass.new(many).one_of('target', 'source')).to eq('target' => 'one|two')
       end
 
       it 'should prioritize exact match' do
         expect(klass.new(one).one_of('target', 'source')).to eq('target' => 'three')
+      end
+
+      it 'should prioritize all match' do
+        expect(klass.new(all).one_of('target', 'source')).to eq('target' => 'four,five')
       end
     end
 
