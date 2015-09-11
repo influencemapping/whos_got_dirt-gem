@@ -6,6 +6,7 @@ module WhosGotDirt
       # @see http://api.opencorporates.com/documentation/REST-API-introduction
       class OpenCorporates < Response
         @template = {
+          '@type' => 'Person',
           'name' => '/name',
           'birth_date' => '/date_of_birth',
           'updated_at' => '/retrieved_at',

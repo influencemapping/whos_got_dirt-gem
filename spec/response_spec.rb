@@ -11,6 +11,7 @@ module WhosGotDirt
         end
 
         @template = {
+          '@type' => 'Person',
           'id' => 123,
           'name' => '/fn',
           'identifiers' => [{
@@ -44,6 +45,7 @@ module WhosGotDirt
 
     let :template do
       {
+        '@type' => 'Person',
         'id' => 123,
         'name' => '/fn',
         'identifiers' => [{
@@ -87,6 +89,7 @@ module WhosGotDirt
     describe '#to_a' do
       it 'should return the results' do
         expect(klass.new(response).to_a).to eq([{
+          '@type' => 'Person',
           'id' => '123',
           'name' => 'John Smith',
           'identifiers' => [{
@@ -98,6 +101,7 @@ module WhosGotDirt
             'note' => 'MyResponse',
           }],
         }, {
+          '@type' => 'Person',
           'id' => '123',
           'name' => 'John Aaron Smith',
           'identifiers' => [{
