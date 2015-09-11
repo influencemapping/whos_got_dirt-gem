@@ -2,6 +2,10 @@ require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
 module WhosGotDirt::Requests::Person
   RSpec.describe OpenCorporates do
+    describe '#to_s' do
+      # @todo
+    end
+
     describe '#convert' do
       context 'when given a name' do
         let :fuzzy do

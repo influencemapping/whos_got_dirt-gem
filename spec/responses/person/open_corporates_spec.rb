@@ -12,9 +12,7 @@ module WhosGotDirt::Responses::Person
 
     describe '#to_a' do
       it 'should return the results' do
-        StackProf.run(mode: :cpu, out: '/tmp/whos_got_dirt.dump') do
-          expect{instance}.to_not raise_error
-        end
+        expect{instance}.to_not raise_error
       end
     end
 
