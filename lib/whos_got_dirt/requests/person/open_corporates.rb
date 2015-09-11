@@ -89,18 +89,17 @@ module WhosGotDirt
           end
         end
 
-        # Converts the request's parameters to OpenCorporates API parameters.
-        #
-        # @return [Hash] OpenCorporates API parameters
-        def convert
-          self.class.convert(params)
-        end
-
         # Returns the URL to request.
         #
         # @return [String] the URL to request
         def to_s
           "#{base_url}?#{to_query(convert.merge(order: 'score'))}"
+        end
+
+      private
+
+        def convert
+          self.class.convert(params)
         end
       end
     end

@@ -2,11 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
 module WhosGotDirt::Requests::Person
   RSpec.describe OpenCorporates do
-    describe '#to_s' do
-      # @todo
-    end
-
-    describe '#convert' do
+    describe '.convert' do
       context 'when given a name' do
         let :fuzzy do
           {
@@ -135,6 +131,12 @@ module WhosGotDirt::Requests::Person
         it 'should return an API key parameter' do
           expect(OpenCorporates.convert('open_corporates_api_key' => 123)).to eq('api_token' => 123, 'per_page' => 100)
         end
+      end
+    end
+
+    describe '#to_s' do
+      it 'should return the URL to request' do
+        expect(OpenCorporates.new(name: 'John Smith').to_s).to eq('https://api.opencorporates.com/officers/search?q=John+Smith&order=score')
       end
     end
   end
