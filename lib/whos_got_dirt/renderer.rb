@@ -1,5 +1,5 @@
 module WhosGotDirt
-  # Accepts a template, which is a hash in which some values are
+  # Accepts a JSON template, which is a hash in which some values are
   # [JSON Pointers](http://tools.ietf.org/html/rfc6901). The template is
   # rendered by evaluating its JSON Pointers against JSON data.
   #
