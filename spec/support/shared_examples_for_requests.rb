@@ -1,3 +1,9 @@
+RSpec.shared_examples 'equal' do |target,source,value|
+  it 'should return a criterion' do
+    expect(described_class.new(source => value).convert).to eq(target => value)
+  end
+end
+
 RSpec.shared_examples 'match' do |target,source,values|
   let :fuzzy do
     {"#{source}~=" => values.first}
