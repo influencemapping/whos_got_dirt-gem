@@ -69,14 +69,14 @@ module WhosGotDirt::Requests::Person
         it 'should return an address criterion' do
           expect(OpenCorporates.new('contact_details' => [
             {'type' => 'voice', 'value' => '+1-555-555-0100'},
-            {'type' => 'address', 'value' => 'foo'},
-          ]).convert).to eq('address' => 'foo')
+            {'type' => 'address', 'value' => '52 London'},
+          ]).convert).to eq('address' => '52 London')
         end
 
         it 'should not return a criterion' do
-          [ [{'invalid' => 'address', 'value' => 'foo'}],
-            [{'type' => 'invalid', 'value' => 'foo'}],
-            [{'type' => 'address', 'invalid' => 'foo'}],
+          [ [{'invalid' => 'address', 'value' => '52 London'}],
+            [{'type' => 'invalid', 'value' => '52 London'}],
+            [{'type' => 'address', 'invalid' => '52 London'}],
           ].each do |contact_details|
             expect(OpenCorporates.new('contact_details' => contact_details).convert).to eq({})
           end
