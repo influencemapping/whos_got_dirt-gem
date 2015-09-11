@@ -52,7 +52,7 @@ module WhosGotDirt
       # we can delete items on a time and re-validate using this code skeleton:
       #
       # begin
-      #   JSON::Validator.validate!(WhosGotDirt.schemas['popolo'], result, fragment: "#/definitions/#{schema}")
+      #   Validator.validate(result, schema)
       # rescue JSON::Schema::ValidationError => e
       #   error = e.to_hash
       #   case error[:failed_attribute]
@@ -63,7 +63,7 @@ module WhosGotDirt
       #   end
       # end
 
-      errors = JSON::Validator.fully_validate(WhosGotDirt.schemas['popolo'], result, fragment: "#/definitions/#{schema}", errors_as_objects: !opts[:strict])
+      errors = Validator.validate(result, schema)
 
       if opts[:strict] && errors.any?
         raise ValidationError.new(errors * '\n')
