@@ -33,25 +33,26 @@ url = WhosGotDirt::Requests::Person::OpenCorporates.new(params).to_s
 response = Faraday.get(url)
 
 results = WhosGotDirt::Responses::Person::OpenCorporates.new(response).to_a
-#=> [{"name"=>"JOHN SMITH",
-#   "updated_at"=>"2014-10-25T00:34:16+00:00",
-#   "identifiers"=>[{"identifier"=>"46065070", "scheme"=>"OpenCorporates"}],
-#   "contact_details"=>[],
-#   "links"=>[{"url"=>"https://opencorporates.com/officers/46065070", "note"=>"OpenCorporates URL"}],
-#   "memberships"=>
-#    [{"role"=>"director",
-#      "start_date"=>"2006-11-24",
-#      "organization"=>
-#       {"name"=>"EVOLUTION (GB) LIMITED",
-#        "identifiers"=>[{"identifier"=>"05997209", "scheme"=>"Company Register"}],
-#        "links"=>[{"url"=>"https://opencorporates.com/companies/gb/05997209", "note"=>"OpenCorporates URL"}],
-#        "jurisdiction_code"=>"gb"}}],
-#   "current_status"=>"CURRENT",
-#   "jurisdiction_code"=>"gb",
-#   "occupation"=>"MANAGER",
-#   "sources"=>
-#    [{"url"=>"https://api.opencorporates.com/officers/search?inactive=false&jurisdiction_code=gb%7Cie&order=score&position=director&q=John+Smith", "note"=>"OpenCorporates"}]},
-#   ...]
+#=> [{"@type"=>"Person",
+#  "name"=>"JOHN SMITH",
+#  "updated_at"=>"2014-10-25T00:34:16+00:00",
+#  "identifiers"=>[{"identifier"=>"46065070", "scheme"=>"OpenCorporates"}],
+#  "contact_details"=>[],
+#  "links"=>[{"url"=>"https://opencorporates.com/officers/46065070", "note"=>"OpenCorporates URL"}],
+#  "memberships"=>
+#   [{"role"=>"director",
+#     "start_date"=>"2006-11-24",
+#     "organization"=>
+#      {"name"=>"EVOLUTION (GB) LIMITED",
+#       "identifiers"=>[{"identifier"=>"05997209", "scheme"=>"Company Register"}],
+#       "links"=>[{"url"=>"https://opencorporates.com/companies/gb/05997209", "note"=>"OpenCorporates URL"}],
+#       "jurisdiction_code"=>"gb"}}],
+#  "current_status"=>"CURRENT",
+#  "jurisdiction_code"=>"gb",
+#  "occupation"=>"MANAGER",
+#  "sources"=>
+#   [{"url"=>"https://api.opencorporates.com/officers/search?inactive=false&jurisdiction_code=gb%7Cie&order=score&position=director&q=John+Smith", "note"=>"OpenCorporates"}]},
+#  ...]
 ```
 
 ## Acknowledgements
