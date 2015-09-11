@@ -3,6 +3,8 @@ module WhosGotDirt
     module Person
       # Requests for corporate officers from the OpenCorporates API.
       #
+      # The `date_of_birth` and `address` filters require an API key.
+      #
       # @example Supply an OpenCorporates API key.
       #   "open_corporates_api_key": "..."
       #

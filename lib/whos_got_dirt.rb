@@ -1,4 +1,5 @@
 require 'cgi'
+require 'json'
 
 require 'active_support/core_ext/hash/indifferent_access'
 require 'json-pointer'
