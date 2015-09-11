@@ -31,7 +31,7 @@ module WhosGotDirt
         # @return [Hash] OpenCorporates API parameters
         # @see http://api.opencorporates.com/documentation/API-Reference
         def convert
-          equal('q', 'name', 'name~=')
+          match('q', 'name')
 
           if input['birth_date']
             output['date_of_birth'] = "#{input['birth_date']}:#{input['birth_date']}"

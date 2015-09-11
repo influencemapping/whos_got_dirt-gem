@@ -4,25 +4,7 @@ module WhosGotDirt::Requests::Person
   RSpec.describe OpenCorporates do
     describe '#convert' do
       context 'when given a name' do
-        let :fuzzy do
-          {
-            'name~=' => 'Smith John',
-          }
-        end
-
-        let :exact do
-          fuzzy.merge({
-            'name' => 'John Smith'
-          })
-        end
-
-        it 'should return a criterion' do
-          expect(OpenCorporates.new(fuzzy).convert).to eq('q' => 'Smith John')
-        end
-
-        it 'should prioritize exact name' do
-          expect(OpenCorporates.new(exact).convert).to eq('q' => 'John Smith')
-        end
+        include_examples 'match', 'q', 'name', ['Smith John', 'John Smith']
       end
 
       context 'when given a birth date' do
@@ -106,25 +88,7 @@ module WhosGotDirt::Requests::Person
       end
 
       context 'when given a jurisdiction' do
-        let :many do
-          {
-            'jurisdiction_code|=' => ['gb', 'ie'],
-          }
-        end
-
-        let :one do
-          many.merge({
-            'jurisdiction_code' => 'gb'
-          })
-        end
-
-        it 'should return a criterion' do
-          expect(OpenCorporates.new(many).convert).to eq('jurisdiction_code' => 'gb|ie')
-        end
-
-        it 'should prioritize exact jurisdiction' do
-          expect(OpenCorporates.new(one).convert).to eq('jurisdiction_code' => 'gb')
-        end
+        include_examples 'one_of', 'jurisdiction_code', 'jurisdiction_code', ['gb', 'ie']
       end
 
       context 'when given an API key' do

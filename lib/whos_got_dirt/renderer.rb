@@ -4,7 +4,7 @@ module WhosGotDirt
   # rendered by evaluating its JSON Pointers against JSON data.
   #
   # @example
-  #   renderer = WhosGotDirt::Renderer.new({'name' => '/fn'})
+  #   renderer = WhosGotDirt::Renderer.new('name' => '/fn')
   #   data = {'fn' => 'John Smith'}
   #   renderer.result(data)
   #   #=> {'name' => 'John Smith'}

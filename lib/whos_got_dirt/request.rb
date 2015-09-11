@@ -57,14 +57,25 @@ module WhosGotDirt
     # Helper method to map a parameter that supports the MQL equality operator.
     #
     # @param [String] target the API-specific parameter name
-    # @param [String] sources request parameter names, in descending order of priority
+    # @param [String] sources the request parameter name
     # @param [Hash] the API-specific parameters
-    def equal(target, *sources)
-      sources.each do |key|
-        if input[key]
-          output[target] = input[key]
-          return output
-        end
+    def equal(target, source)
+      if input[source]
+        output[target] = input[source]
+      end
+      output
+    end
+
+    # Helper method to map a parameter that supports the MQL `~=` operator.
+    #
+    # @param [String] target the API-specific parameter name
+    # @param [String] sources the request parameter name
+    # @param [Hash] the API-specific parameters
+    def match(target, source)
+      if input[source]
+        output[target] = input[source]
+      elsif input["#{source}~="]
+        output[target] = input["#{source}~="]
       end
       output
     end

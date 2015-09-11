@@ -45,38 +45,36 @@ module WhosGotDirt
     end
 
     describe '#equal' do
+      it 'should return a criterion' do
+        expect(klass.new('source' => 'John Smith').equal('target', 'source')).to eq('target' => 'John Smith')
+      end
+    end
+
+    describe '#match' do
       let :fuzzy do
-        {
-          'source~=' => 'Smith John',
-        }
+        {'source~=' => 'Smith John'}
       end
 
       let :exact do
-        fuzzy.merge({
-          'source' => 'John Smith'
-        })
+        fuzzy.merge('source' => 'John Smith')
       end
 
       it 'should return a criterion' do
-        expect(klass.new(fuzzy).equal('target', 'source', 'source~=')).to eq('target' => 'Smith John')
+        expect(klass.new(fuzzy).match('target', 'source')).to eq('target' => 'Smith John')
       end
 
       it 'should prioritize exact match' do
-        expect(klass.new(exact).equal('target', 'source', 'source~=')).to eq('target' => 'John Smith')
+        expect(klass.new(exact).match('target', 'source')).to eq('target' => 'John Smith')
       end
     end
 
     describe '#one_of' do
       let :many do
-        {
-          'source|=' => ['one', 'two'],
-        }
+        {'source|=' => ['one', 'two']}
       end
 
       let :one do
-        many.merge({
-          'source' => 'three'
-        })
+        many.merge('source' => 'three')
       end
 
       it 'should return a criterion' do

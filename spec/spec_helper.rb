@@ -16,4 +16,6 @@ end
 
 require 'rspec'
 require 'faraday'
+
+Dir['./spec/support/**/*.rb'].sort.each { |f| require f}
 require File.dirname(__FILE__) + '/../lib/whos_got_dirt'
