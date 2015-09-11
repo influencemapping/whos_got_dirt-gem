@@ -26,6 +26,13 @@ module WhosGotDirt
       class OpenCorporates < Request
         @base_url = 'https://api.opencorporates.com/officers/search'
 
+        # Returns the URL to request.
+        #
+        # @return [String] the URL to request
+        def to_s
+          "#{base_url}?#{to_query(convert.merge(order: 'score'))}"
+        end
+
         # Converts the MQL parameters to OpenCorporates API parameters.
         #
         # @return [Hash] OpenCorporates API parameters
@@ -73,13 +80,6 @@ module WhosGotDirt
           equal('api_token', 'open_corporates_api_key')
 
           output
-        end
-
-        # Returns the URL to request.
-        #
-        # @return [String] the URL to request
-        def to_s
-          "#{base_url}?#{to_query(convert.merge(order: 'score'))}"
         end
       end
     end
