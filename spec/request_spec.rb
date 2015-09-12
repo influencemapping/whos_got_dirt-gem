@@ -50,11 +50,11 @@ module WhosGotDirt
       end
 
       it 'should accept valid values' do
-        expect(klass.new('source' => true).equal('target', 'source', [true, false])).to eq('target' => true)
+        expect(klass.new('source' => true).equal('target', 'source', valid: [true, false])).to eq('target' => true)
       end
 
       it 'should ignore invalid values' do
-        expect(klass.new('source' => 'John Smith').equal('target', 'source', [true, false])).to eq({})
+        expect(klass.new('source' => 'John Smith').equal('target', 'source', valid: [true, false])).to eq({})
       end
     end
 

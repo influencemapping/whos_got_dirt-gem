@@ -1,15 +1,15 @@
-RSpec.shared_examples 'equal' do |target,source,value,valid|
+RSpec.shared_examples 'equal' do |target,source,value,options|
   it 'should return a criterion' do
     expect(described_class.new(source => value).convert).to eq(target => value)
   end
 
-  if valid
+  if options && options.key?(:valid)
     it 'should accept valid values' do
-      expect(described_class.new(source => value).equal(target, source, valid)).to eq(target => value)
+      expect(described_class.new(source => value).equal(target, source, options)).to eq(target => value)
     end
 
     it 'should ignore invalid values' do
-      expect(described_class.new(source => 'invalid').equal(target, source, valid)).to eq({})
+      expect(described_class.new(source => 'invalid').equal(target, source, options)).to eq({})
     end
   end
 end
