@@ -96,6 +96,20 @@ module WhosGotDirt
       output
     end
 
+    # Helper method to map a date parameter that supports comparisons.
+    #
+    # @param [String] target the API-specific parameter name
+    # @param [String] source the request parameter name
+    # @param [Hash] the API-specific parameters
+    def date_range(target, source)
+      if input[source]
+        output[target] = "#{input[source]}:#{input[source]}"
+      elsif input["#{source}>="] || input["#{source}>"] || input["#{source}<="] || input["#{source}<"]
+        output[target] = "#{input["#{source}>="] || input["#{source}>"]}:#{input["#{source}<="] || input["#{source}<"]}"
+      end
+      output
+    end
+
     # @abstract Subclass and override {#to_s} to return the URL from which to
     #   `GET` the results
     def to_s

@@ -94,6 +94,40 @@ module WhosGotDirt
       end
     end
 
+    describe '#date_range' do
+      let :strict do
+        {
+          'source>' => '2010-01-02',
+          'source<' => '2010-01-05',
+        }
+      end
+
+      let :nonstrict do
+        strict.merge({
+          'source>=' => '2010-01-03',
+          'source<=' => '2010-01-04',
+        })
+      end
+
+      let :exact do
+        nonstrict.merge({
+          'source' => '2010-01-01',
+        })
+      end
+
+      it 'should return a criterion' do
+        expect(klass.new(strict).date_range('target', 'source')).to eq('target' => '2010-01-02:2010-01-05')
+      end
+
+      it 'should prioritize or-equal dates' do
+        expect(klass.new(nonstrict).date_range('target', 'source')).to eq('target' => '2010-01-03:2010-01-04')
+      end
+
+      it 'should prioritize exact date' do
+        expect(klass.new(exact).date_range('target', 'source')).to eq('target' => '2010-01-01:2010-01-01')
+      end
+    end
+
     describe '#to_s' do
       it 'should return the query as a string' do
         expect(instance.to_s).to eq('https://api.example.com/endpoint?q=foo&bar=false&baz=')

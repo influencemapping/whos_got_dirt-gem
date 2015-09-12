@@ -47,3 +47,37 @@ RSpec.shared_examples 'one_of' do |target,source,values|
     expect(described_class.new(all).convert).to eq(target => values.join(','))
   end
 end
+
+RSpec.shared_examples 'date_range' do |target,source|
+  let :strict do
+    {
+      "#{source}>" => '2010-01-02',
+      "#{source}<" => '2010-01-05',
+    }
+  end
+
+  let :nonstrict do
+    strict.merge({
+      "#{source}>=" => '2010-01-03',
+      "#{source}<=" => '2010-01-04',
+    })
+  end
+
+  let :exact do
+    nonstrict.merge({
+      source => '2010-01-01',
+    })
+  end
+
+  it 'should return a criterion' do
+    expect(described_class.new(strict).convert).to eq(target => '2010-01-02:2010-01-05')
+  end
+
+  it 'should prioritize or-equal dates' do
+    expect(described_class.new(nonstrict).convert).to eq(target => '2010-01-03:2010-01-04')
+  end
+
+  it 'should prioritize exact date' do
+    expect(described_class.new(exact).convert).to eq(target => '2010-01-01:2010-01-01')
+  end
+end

@@ -39,12 +39,7 @@ module WhosGotDirt
         # @see http://api.opencorporates.com/documentation/API-Reference
         def convert
           match('q', 'name')
-
-          if input['birth_date']
-            output['date_of_birth'] = "#{input['birth_date']}:#{input['birth_date']}"
-          elsif input['birth_date>='] || input['birth_date>'] || input['birth_date<='] || input['birth_date<']
-            output['date_of_birth'] = "#{input['birth_date>='] || input['birth_date>']}:#{input['birth_date<='] || input['birth_date<']}"
-          end
+          date_range('date_of_birth', 'birth_date')
 
           if input['memberships']
             input['memberships'].each do |membership|

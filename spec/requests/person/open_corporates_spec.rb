@@ -14,37 +14,7 @@ module WhosGotDirt::Requests::Person
       end
 
       context 'when given a birth date' do
-        let :strict do
-          {
-            'birth_date>' => '2010-01-02',
-            'birth_date<' => '2010-01-05',
-          }
-        end
-
-        let :nonstrict do
-          strict.merge({
-            'birth_date>=' => '2010-01-03',
-            'birth_date<=' => '2010-01-04',
-          })
-        end
-
-        let :exact do
-          nonstrict.merge({
-            'birth_date' => '2010-01-01',
-          })
-        end
-
-        it 'should return a criterion' do
-          expect(OpenCorporates.new(strict).convert).to eq('date_of_birth' => '2010-01-02:2010-01-05')
-        end
-
-        it 'should prioritize or-equal dates' do
-          expect(OpenCorporates.new(nonstrict).convert).to eq('date_of_birth' => '2010-01-03:2010-01-04')
-        end
-
-        it 'should prioritize exact date' do
-          expect(OpenCorporates.new(exact).convert).to eq('date_of_birth' => '2010-01-01:2010-01-01')
-        end
+        include_examples 'date_range', 'date_of_birth', 'birth_date'
       end
 
       context 'when given a membership' do
