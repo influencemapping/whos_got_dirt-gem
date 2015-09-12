@@ -58,10 +58,17 @@ module WhosGotDirt
     #
     # @param [String] target the API-specific parameter name
     # @param [String] sources the request parameter name
+    # @param [Set,Array] valid a list of valid values
     # @param [Hash] the API-specific parameters
-    def equal(target, source)
-      if input[source]
-        output[target] = input[source]
+    def equal(target, source, valid = [])
+      if valid.any?
+        if valid.include?(input[source])
+          output[target] = input[source]
+        end
+      else
+        if input[source]
+          output[target] = input[source]
+        end
       end
       output
     end

@@ -48,6 +48,14 @@ module WhosGotDirt
       it 'should return a criterion' do
         expect(klass.new('source' => 'John Smith').equal('target', 'source')).to eq('target' => 'John Smith')
       end
+
+      it 'should accept valid values' do
+        expect(klass.new('source' => true).equal('target', 'source', [true, false])).to eq('target' => true)
+      end
+
+      it 'should ignore invalid values' do
+        expect(klass.new('source' => 'John Smith').equal('target', 'source', [true, false])).to eq({})
+      end
     end
 
     describe '#match' do

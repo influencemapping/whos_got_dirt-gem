@@ -23,7 +23,7 @@ module WhosGotDirt::Requests::Person
         end
 
         it 'should return an inactiv criterion' do
-          expect(OpenCorporates.new('memberships' => [{'inactive' => false}]).convert).to eq('inactive' => 'false')
+          expect(OpenCorporates.new('memberships' => [{'inactive' => false}]).convert).to eq('inactive' => false)
         end
 
         it 'should not return a criterion' do

@@ -47,10 +47,8 @@ module WhosGotDirt
                 output['position'] = membership['role']
               end
 
-              if membership['inactive'] == true
-                output['inactive'] = 'true'
-              elsif membership['inactive'] == false
-                output['inactive'] = 'false'
+              if [true, false].include?(membership['inactive'])
+                output['inactive'] = membership['inactive']
               end
             end
           end
