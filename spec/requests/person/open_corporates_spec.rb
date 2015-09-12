@@ -22,7 +22,7 @@ module WhosGotDirt::Requests::Person
           expect(OpenCorporates.new('memberships' => [{'role' => 'ceo'}]).convert).to eq('position' => 'ceo')
         end
 
-        it 'should return an inactiv criterion' do
+        it 'should return an inactivity criterion' do
           expect(OpenCorporates.new('memberships' => [{'inactive' => false}]).convert).to eq('inactive' => false)
         end
 
