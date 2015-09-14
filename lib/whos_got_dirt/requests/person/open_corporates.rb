@@ -33,9 +33,9 @@ module WhosGotDirt
           "#{base_url}?#{to_query(convert.merge(order: 'score'))}"
         end
 
-        # Converts the MQL parameters to OpenCorporates API parameters.
+        # Converts the MQL parameters to API-specific parameters.
         #
-        # @return [Hash] OpenCorporates API parameters
+        # @return [Hash] API-specific parameters
         # @see http://api.opencorporates.com/documentation/API-Reference
         def convert
           match('q', 'name')
