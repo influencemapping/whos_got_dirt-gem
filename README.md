@@ -44,7 +44,7 @@ results = WhosGotDirt::Responses::Person::OpenCorporates.new(response).to_a
 #     "start_date"=>"2006-11-24",
 #     "organization"=>
 #      {"name"=>"EVOLUTION (GB) LIMITED",
-#       "identifiers"=>[{"identifier"=>"05997209", "scheme"=>"Company Registry"}],
+#       "identifiers"=>[{"identifier"=>"05997209", "scheme"=>"Company Register"}],
 #       "links"=>[{"url"=>"https://opencorporates.com/companies/gb/05997209", "note"=>"OpenCorporates URL"}],
 #       "jurisdiction_code"=>"gb"}}],
 #  "current_status"=>"CURRENT",

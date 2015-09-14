@@ -15,7 +15,7 @@ module WhosGotDirt
             'scheme' => 'OpenCorporates',
           }, {
             'identifier' => '/uid',
-            'scheme' => 'Company Registry',
+            'scheme' => 'Company Register',
           }],
           'contact_details' => [{
             'type' => 'address',
@@ -33,7 +33,7 @@ module WhosGotDirt
               'name' => '/company/name',
               'identifiers' => [{
                 'identifier' => '/company/company_number',
-                'scheme' => 'Company Registry',
+                'scheme' => 'Company Register',
               }],
               'links' => [{
                 'url' => '/company/opencorporates_url',
