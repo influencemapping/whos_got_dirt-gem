@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
 module WhosGotDirt::Responses::Organization
-  RSpec.describe OpenCorporates, :vcr => {cassette_name: 'opencorporates_organization'} do
+  RSpec.describe OpenCorporates, vcr: {cassette_name: 'opencorporates_organization'} do
     let :response do
       Faraday.get('https://api.opencorporates.com/companies/search')
     end
