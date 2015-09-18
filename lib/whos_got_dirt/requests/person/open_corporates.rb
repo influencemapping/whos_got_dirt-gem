@@ -1,19 +1,19 @@
 module WhosGotDirt
   module Requests
     module Person
-      # Requests for corporate officers from the OpenCorporates API.
+      # Requests for corporate officerships from the OpenCorporates API.
       #
       # The `date_of_birth` and `address` filters require an API key.
       #
       # @example Supply an OpenCorporates API key.
       #   "open_corporates_api_key": "..."
       #
-      # @example Find active officers.
+      # @example Find active officerships.
       #   "memberships": [{
       #     "inactive": false
       #   }]
       #
-      # @example Find inactive officers.
+      # @example Find inactive officerships.
       #   "memberships": [{
       #     "inactive": true
       #   }]

@@ -1,7 +1,7 @@
 module WhosGotDirt
   module Responses
     module Person
-      # Converts corporate officers from the OpenCorporates API to Popolo format.
+      # Converts corporate officerships from the OpenCorporates API to Popolo format.
       #
       # @see http://api.opencorporates.com/documentation/REST-API-introduction
       class OpenCorporates < Response
