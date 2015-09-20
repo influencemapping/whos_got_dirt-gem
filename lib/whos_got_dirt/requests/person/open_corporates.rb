@@ -55,8 +55,8 @@ module WhosGotDirt
 
           if input['contact_details']
             input['contact_details'].each do |contact_detail|
-              if contact_detail['type'] == 'address' && contact_detail['value']
-                output['address'] = contact_detail['value']
+              if contact_detail['type'] == 'address' && (contact_detail['value'] || contact_detail['value~='])
+                output['address'] = contact_detail['value'] || contact_detail['value~=']
               end
             end
           end

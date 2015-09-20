@@ -27,7 +27,7 @@ RSpec.shared_examples 'match' do |target,source,values|
     expect(described_class.new(fuzzy).convert).to eq('q' => values.first)
   end
 
-  it 'should prioritize exact name' do
+  it 'should prioritize exact value' do
     expect(described_class.new(exact).convert).to eq('q' => values.last)
   end
 end

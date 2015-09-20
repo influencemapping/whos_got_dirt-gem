@@ -34,7 +34,7 @@ module WhosGotDirt
     # @example Find people by address (fuzzy match).
     #   "contact_details": [{
     #     "type": "address",
-    #     "value": "52 London"
+    #     "value~=": "52 London"
     #   }]
     #
     # @example Limit the number of responses.
