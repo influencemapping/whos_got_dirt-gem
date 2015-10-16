@@ -1,6 +1,6 @@
 module WhosGotDirt
   module Requests
-    module Person
+    module Relation
       # Requests for corporate officerships from the OpenCorporates API.
       #
       # The `date_of_birth` and `address` filters require an API key.

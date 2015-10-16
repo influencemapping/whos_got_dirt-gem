@@ -27,12 +27,12 @@ input = {
   }],
 }
 
-url = WhosGotDirt::Requests::Person::OpenCorporates.new(input).to_s
+url = WhosGotDirt::Requests::Relation::OpenCorporates.new(input).to_s
 #=> "https://api.opencorporates.com/officers/search?q=John+Smith&position=director&inactive=false&jurisdiction_code=gb%7Cie&order=score"
 
 response = Faraday.get(url)
 
-results = WhosGotDirt::Responses::Person::OpenCorporates.new(response).to_a
+results = WhosGotDirt::Responses::Relation::OpenCorporates.new(response).to_a
 #=> [{"@type"=>"Person",
 #  "name"=>"JOHN SMITH",
 #  "updated_at"=>"2014-10-25T00:34:16+00:00",

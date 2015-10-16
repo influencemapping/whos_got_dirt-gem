@@ -1,7 +1,7 @@
 module WhosGotDirt
   module Responses
     # Responses for people.
-    module Person
+    module Relation
     end
   end
 end

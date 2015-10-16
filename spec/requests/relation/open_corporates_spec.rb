@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
-module WhosGotDirt::Requests::Person
+module WhosGotDirt::Requests::Relation
   RSpec.describe OpenCorporates do
     describe '#to_s' do
       it 'should return the URL to request' do

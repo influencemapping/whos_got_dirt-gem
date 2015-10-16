@@ -39,7 +39,7 @@ module WhosGotDirt
     #
     # @example Limit the number of responses.
     #   "limit": 5
-    module Person
+    module Relation
     end
   end
 end
