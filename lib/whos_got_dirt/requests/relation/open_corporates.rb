@@ -3,26 +3,22 @@ module WhosGotDirt
     module Relation
       # Requests for corporate officerships from the OpenCorporates API.
       #
-      # The `date_of_birth` and `address` filters require an API key.
+      # OpenCorporates' `date_of_birth` and `address` filters require an API key.
       #
       # @example Supply an OpenCorporates API key.
       #   "open_corporates_api_key": "..."
       #
-      # @example Find active officerships.
-      #   "memberships": [{
-      #     "inactive": false
-      #   }]
-      #
-      # @example Find inactive officerships.
-      #   "memberships": [{
-      #     "inactive": true
-      #   }]
-      #
-      # @example Find people with a given jurisdiction code.
+      # @example Find officerships with a given jurisdiction code.
       #   "jurisdiction_code": "gb"
       #
-      # @example Find people with one of many jurisdiction codes.
+      # @example Find officerships with one of many jurisdiction codes.
       #   "jurisdiction_code|=": ["gb", "ie"]
+      #
+      # @example Find active officerships.
+      #   "inactive": false
+      #
+      # @example Find inactive officerships.
+      #   "inactive": true
       class OpenCorporates < Request
         @base_url = 'https://api.opencorporates.com/officers/search'
 
@@ -38,23 +34,13 @@ module WhosGotDirt
         # @return [Hash] API-specific parameters
         # @see http://api.opencorporates.com/documentation/API-Reference
         def convert
-          match('q', 'name')
-          date_range('date_of_birth', 'birth_date')
+          equal('position', 'role')
 
-          if input['memberships']
-            input['memberships'].each do |membership|
-              if membership['role']
-                output['position'] = membership['role']
-              end
+          input['subject'] && input['subject'].each do |subject|
+            match('q', 'name', input: subject)
+            date_range('date_of_birth', 'birth_date', input: subject)
 
-              if [true, false].include?(membership['inactive'])
-                output['inactive'] = membership['inactive']
-              end
-            end
-          end
-
-          if input['contact_details']
-            input['contact_details'].each do |contact_detail|
+            subject['contact_details'] && subject['contact_details'].each do |contact_detail|
               if contact_detail['type'] == 'address' && (contact_detail['value'] || contact_detail['value~='])
                 output['address'] = contact_detail['value'] || contact_detail['value~=']
               end
@@ -69,8 +55,9 @@ module WhosGotDirt
 
           # API-specific parameters.
 
-          one_of('jurisdiction_code', 'jurisdiction_code')
           equal('api_token', 'open_corporates_api_key')
+          one_of('jurisdiction_code', 'jurisdiction_code')
+          equal('inactive', 'inactive', valid: [true, false])
 
           output
         end

@@ -4,35 +4,21 @@ module WhosGotDirt::Requests::Relation
   RSpec.describe OpenCorporates do
     describe '#to_s' do
       it 'should return the URL to request' do
-        expect(OpenCorporates.new(name: 'John Smith').to_s).to eq('https://api.opencorporates.com/officers/search?q=John+Smith&order=score')
+        expect(OpenCorporates.new(subject: [name: 'John Smith']).to_s).to eq('https://api.opencorporates.com/officers/search?q=John+Smith&order=score')
       end
     end
 
     describe '#convert' do
+      context 'when given a role' do
+        include_examples 'equal', 'position', 'role', 'ceo'
+      end
+
       context 'when given a name' do
-        include_examples 'match', 'q', 'name', ['Smith John', 'John Smith']
+        include_examples 'match', 'q', 'name', ['Smith John', 'John Smith'], scope: 'subject'
       end
 
       context 'when given a birth date' do
-        include_examples 'date_range', 'date_of_birth', 'birth_date'
-      end
-
-      context 'when given a membership' do
-        it 'should return a role criterion' do
-          expect(OpenCorporates.new('memberships' => [{'role' => 'ceo'}]).convert).to eq('position' => 'ceo')
-        end
-
-        it 'should return an inactivity criterion' do
-          expect(OpenCorporates.new('memberships' => [{'inactive' => false}]).convert).to eq('inactive' => false)
-        end
-
-        it 'should not return a criterion' do
-          [ ['invalid' => true],
-            ['inactive' => 'invalid'],
-          ].each do |memberships|
-            expect(OpenCorporates.new('memberships' => memberships).convert).to eq({})
-          end
-        end
+        include_examples 'date_range', 'date_of_birth', 'birth_date', scope: 'subject'
       end
 
       context 'when given a contact detail' do
@@ -48,11 +34,11 @@ module WhosGotDirt::Requests::Relation
         end
 
         it 'should return a criterion' do
-          expect(OpenCorporates.new('contact_details' => fuzzy).convert).to eq('address' => '52 London')
+          expect(OpenCorporates.new('subject' => ['contact_details' => fuzzy]).convert).to eq('address' => '52 London')
         end
 
         it 'should prioritize exact value' do
-          expect(OpenCorporates.new('contact_details' => exact).convert).to eq('address' => 'London 52')
+          expect(OpenCorporates.new('subject' => ['contact_details' => exact]).convert).to eq('address' => 'London 52')
         end
 
         it 'should not return a criterion' do
@@ -60,7 +46,7 @@ module WhosGotDirt::Requests::Relation
             [{'type' => 'invalid', 'value' => '52 London'}],
             [{'type' => 'address', 'invalid' => '52 London'}],
           ].each do |contact_details|
-            expect(OpenCorporates.new('contact_details' => contact_details).convert).to eq({})
+            expect(OpenCorporates.new('subject' => ['contact_details' => contact_details]).convert).to eq({})
           end
         end
       end
@@ -75,14 +61,18 @@ module WhosGotDirt::Requests::Relation
         end
       end
 
-      context 'when given a jurisdiction' do
-        include_examples 'one_of', 'jurisdiction_code', 'jurisdiction_code', ['gb', 'ie']
-      end
-
       context 'when given an API key' do
         it 'should return an API key parameter' do
           expect(OpenCorporates.new('open_corporates_api_key' => 123).convert).to eq('api_token' => 123, 'per_page' => 100)
         end
+      end
+
+      context 'when given a jurisdiction' do
+        include_examples 'one_of', 'jurisdiction_code', 'jurisdiction_code', ['gb', 'ie']
+      end
+
+      context 'when given an inactivity status' do
+        include_examples 'equal', 'inactive', 'inactive', false, valid: [true, false]
       end
     end
   end
