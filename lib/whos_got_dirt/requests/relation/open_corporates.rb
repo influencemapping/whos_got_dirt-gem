@@ -14,6 +14,9 @@ module WhosGotDirt
       # @example Find officerships with one of many jurisdiction codes.
       #   "jurisdiction_code|=": ["gb", "ie"]
       #
+      # @example Find officerships by role.
+      #   "role": "ceo"
+      #
       # @example Find active officerships.
       #   "inactive": false
       #
@@ -34,8 +37,6 @@ module WhosGotDirt
         # @return [Hash] API-specific parameters
         # @see http://api.opencorporates.com/documentation/API-Reference
         def convert
-          equal('position', 'role')
-
           input['subject'] && input['subject'].each do |subject|
             match('q', 'name', input: subject)
             date_range('date_of_birth', 'birth_date', input: subject)
@@ -57,6 +58,7 @@ module WhosGotDirt
 
           equal('api_token', 'open_corporates_api_key')
           one_of('jurisdiction_code', 'jurisdiction_code')
+          equal('position', 'role')
           equal('inactive', 'inactive', valid: [true, false])
 
           output

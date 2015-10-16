@@ -5,9 +5,6 @@ module WhosGotDirt
     # Many APIs support the parameters below. For API-specific parameters, visit
     # the API's request class.
     #
-    # @example Find relations by role.
-    #   "role": "ceo"
-    #
     # @example Find related entities by name (exact match).
     #   "subject": [{
     #     "name": "John Smith"

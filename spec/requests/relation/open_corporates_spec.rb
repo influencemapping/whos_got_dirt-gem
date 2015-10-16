@@ -9,10 +9,6 @@ module WhosGotDirt::Requests::Relation
     end
 
     describe '#convert' do
-      context 'when given a role' do
-        include_examples 'equal', 'position', 'role', 'ceo'
-      end
-
       context 'when given a name' do
         include_examples 'match', 'q', 'name', ['Smith John', 'John Smith'], scope: 'subject'
       end
@@ -69,6 +65,10 @@ module WhosGotDirt::Requests::Relation
 
       context 'when given a jurisdiction' do
         include_examples 'one_of', 'jurisdiction_code', 'jurisdiction_code', ['gb', 'ie']
+      end
+
+      context 'when given a role' do
+        include_examples 'equal', 'position', 'role', 'ceo'
       end
 
       context 'when given an inactivity status' do
