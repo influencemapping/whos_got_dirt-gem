@@ -4,7 +4,7 @@ module WhosGotDirt
       # Converts corporate officerships from the OpenCorporates API to Popolo format.
       #
       # @see http://api.opencorporates.com/documentation/REST-API-introduction
-      class OpenCorporates < Response
+      class OpenCorporates < Helpers::OpenCorporatesHelper
         @template = {
           '@type' => 'Relation',
           'subject' => {
@@ -52,13 +52,6 @@ module WhosGotDirt
           'role' => '/position',
         }
 
-        # Parses the response body.
-        #
-        # @return [Array<Hash>] the parsed response body
-        def parse_body
-          JSON.load(body)['results']
-        end
-
         # Transforms the parsed response body into results.
         #
         # @return [Array<Hash>] the results
@@ -66,20 +59,6 @@ module WhosGotDirt
           parsed_body['officers'].map do |data|
             Result.new('Person', renderer.result(data['officer']), self).finalize!
           end
-        end
-
-        # Returns the total number of matching results.
-        #
-        # @return [Fixnum] the total number of matching results
-        def count
-          parsed_body['total_count']
-        end
-
-        # Returns the current page number.
-        #
-        # @return [Fixnum] the current page number
-        def page
-          parsed_body['page']
         end
       end
     end

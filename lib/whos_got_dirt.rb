@@ -14,6 +14,7 @@ require 'whos_got_dirt/requests/entity/open_corporates'
 require 'whos_got_dirt/requests/relation/open_corporates'
 
 require 'whos_got_dirt/response'
+require 'whos_got_dirt/responses/helpers/open_corporates'
 require 'whos_got_dirt/responses/entity/open_corporates'
 require 'whos_got_dirt/responses/relation/open_corporates'
 
