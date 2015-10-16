@@ -4,7 +4,7 @@ module WhosGotDirt::Requests::Entity
   RSpec.describe LittleSis do
     describe '#to_s' do
       it 'should return the URL to request' do
-        expect(LittleSis.new(name: 'ACME Inc.').to_s).to eq('https://api.littlesis.org/entities.json?q=ACME+Inc.')
+        expect(LittleSis.new(name: 'ACME Inc.').to_s).to eq('https://api.littlesis.org/entities.xml?q=ACME+Inc.')
       end
     end
 

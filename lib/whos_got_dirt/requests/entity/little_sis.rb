@@ -13,7 +13,8 @@ module WhosGotDirt
       # @example Match descriptions and summaries on `name~=` queries.
       #   "search_all": 1
       class LittleSis < Request
-        @base_url = 'https://api.littlesis.org/entities.json'
+        # The JSON response has less metadata, e.g. number of results.
+        @base_url = 'https://api.littlesis.org/entities.xml'
 
         # Returns the URL to request.
         #
@@ -31,7 +32,6 @@ module WhosGotDirt
         def convert
           match('q', 'name')
           one_of('type_ids', 'classification')
-
           equal('num', 'limit')
 
           # API-specific parameters.
