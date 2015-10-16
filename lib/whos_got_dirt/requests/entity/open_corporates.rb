@@ -70,11 +70,7 @@ module WhosGotDirt
             end
           end
 
-          if input['limit']
-            output['per_page'] = input['limit']
-          elsif input['open_corporates_api_key']
-            output['per_page'] = 100
-          end
+          equal('per_page', 'limit', default: input['open_corporates_api_key'] && 100)
 
           # API-specific parameters.
 

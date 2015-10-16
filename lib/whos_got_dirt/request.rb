@@ -60,6 +60,7 @@ module WhosGotDirt
     # @param [String] sources the request parameter name
     # @param [Hash] opts options
     # @option opts [String] :input substitute MQL parameters
+    # @option opts [String] :default the default value
     # @option opts [Set,Array] :valid a list of valid values
     # @return [Hash] the API-specific parameters
     def equal(target, source, opts = {})
@@ -72,6 +73,8 @@ module WhosGotDirt
       else
         if params[source]
           output[target] = params[source]
+        elsif opts[:default]
+          output[target] = opts[:default]
         end
       end
 
