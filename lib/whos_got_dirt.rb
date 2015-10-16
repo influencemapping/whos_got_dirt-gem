@@ -12,6 +12,7 @@ require 'whos_got_dirt/validator'
 require 'whos_got_dirt/request'
 require 'whos_got_dirt/requests/entity/open_corporates'
 require 'whos_got_dirt/requests/relation/open_corporates'
+require 'whos_got_dirt/requests/list/open_corporates'
 
 require 'whos_got_dirt/response'
 require 'whos_got_dirt/responses/helpers/open_corporates'
