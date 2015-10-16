@@ -38,6 +38,8 @@ module WhosGotDirt
         # @return [Hash] API-specific parameters
         # @see http://api.opencorporates.com/documentation/API-Reference
         def convert
+          equal('per_page', 'limit', default: input['open_corporates_api_key'] && 100)
+
           input['subject'] && input['subject'].each do |subject|
             match('q', 'name', input: subject)
             date_range('date_of_birth', 'birth_date', input: subject)
@@ -49,10 +51,7 @@ module WhosGotDirt
             end
           end
 
-          equal('per_page', 'limit', default: input['open_corporates_api_key'] && 100)
-
           # API-specific parameters.
-
           equal('api_token', 'open_corporates_api_key')
           one_of('jurisdiction_code', 'jurisdiction_code')
           equal('position', 'role')

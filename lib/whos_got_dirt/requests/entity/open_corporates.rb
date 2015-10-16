@@ -63,17 +63,15 @@ module WhosGotDirt
           equal('created_since', 'created_at>=')
           date_range('incorporation_date', 'founding_date>=')
           date_range('dissolution_date', 'dissolution_date>=')
+          equal('per_page', 'limit', default: input['open_corporates_api_key'] && 100)
 
           input['contact_details'] && input['contact_details'].each do |contact_detail|
-            if contact_detail['type'] == 'address' && contact_detail['value']
-              output['registered_address'] = contact_detail['value']
+            if contact_detail['type'] == 'address' && (contact_detail['value'] || contact_detail['value~='])
+              output['registered_address'] = contact_detail['value'] || contact_detail['value~=']
             end
           end
 
-          equal('per_page', 'limit', default: input['open_corporates_api_key'] && 100)
-
           # API-specific parameters.
-
           equal('api_token', 'open_corporates_api_key')
           one_of('jurisdiction_code', 'jurisdiction_code')
           one_of('country_code', 'country_code')

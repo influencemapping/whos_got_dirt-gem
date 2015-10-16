@@ -23,11 +23,9 @@ module WhosGotDirt
         # @see http://api.opencorporates.com/documentation/API-Reference
         def convert
           match('q', 'name')
-
           equal('per_page', 'limit', default: input['open_corporates_api_key'] && 100)
 
           # API-specific parameters.
-
           equal('api_token', 'open_corporates_api_key')
 
           output
