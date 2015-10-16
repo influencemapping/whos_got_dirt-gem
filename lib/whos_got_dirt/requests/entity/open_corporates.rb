@@ -64,11 +64,9 @@ module WhosGotDirt
           date_range('incorporation_date', 'founding_date>=')
           date_range('dissolution_date', 'dissolution_date>=')
 
-          if input['contact_details']
-            input['contact_details'].each do |contact_detail|
-              if contact_detail['type'] == 'address' && contact_detail['value']
-                output['registered_address'] = contact_detail['value']
-              end
+          input['contact_details'] && input['contact_details'].each do |contact_detail|
+            if contact_detail['type'] == 'address' && contact_detail['value']
+              output['registered_address'] = contact_detail['value']
             end
           end
 
