@@ -1,6 +1,6 @@
 module WhosGotDirt
   module Requests
-    module Organization
+    module Entity
       # Requests for companies from the OpenCorporates API.
       #
       # The `fields` parameter and sorting options are not supported.

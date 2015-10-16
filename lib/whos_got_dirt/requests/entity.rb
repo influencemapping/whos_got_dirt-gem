@@ -1,6 +1,6 @@
 module WhosGotDirt
   module Requests
-    # Requests for organizations.
+    # Requests for entities.
     #
     # You may filter `dissolution_date` the same as `founding_date`.
     #
@@ -39,7 +39,7 @@ module WhosGotDirt
     #
     # @example Limit the number of responses.
     #   "limit": 5
-    module Organization
+    module Entity
     end
   end
 end

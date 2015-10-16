@@ -1,6 +1,6 @@
 module WhosGotDirt
   module Responses
-    module Organization
+    module Entity
       # Converts companies from the OpenCorporates API to Popolo format.
       #
       # @see http://api.opencorporates.com/documentation/REST-API-introduction

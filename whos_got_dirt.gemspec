@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["James McKinney"]
   s.homepage    = "https://github.com/influencemapping/whos_got_dirt"
-  s.summary     = %q{A federated search API for people and organizations}
+  s.summary     = %q{A federated search API for entities and relations}
   s.license     = 'MIT'
 
   s.files         = `git ls-files`.split("\n")
