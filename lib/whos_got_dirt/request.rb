@@ -108,10 +108,12 @@ module WhosGotDirt
       params = parameters(opts)
 
       if Array === params[source]
+        # @note OpenCorporates AND format.
         output[target] = params[source].join(',')
       elsif params[source]
         output[target] = params[source]
       elsif params["#{source}|="]
+        # @note OpenCorporates OR format.
         output[target] = params["#{source}|="].join('|')
       end
 
@@ -128,6 +130,7 @@ module WhosGotDirt
     def date_range(target, source, opts = {})
       params = parameters(opts)
 
+      # @note OpenCorporates date range format.
       if params[source]
         output[target] = "#{params[source]}:#{params[source]}"
       elsif params["#{source}>="] || params["#{source}>"] || params["#{source}<="] || params["#{source}<"]
