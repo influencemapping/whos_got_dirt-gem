@@ -1,6 +1,6 @@
 module WhosGotDirt
   module Responses
-    # Responses for people.
+    # Responses for relations.
     module Relation
     end
   end
