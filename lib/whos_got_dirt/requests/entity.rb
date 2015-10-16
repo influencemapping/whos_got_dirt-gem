@@ -2,6 +2,9 @@ module WhosGotDirt
   module Requests
     # Requests for entities.
     #
+    # Many APIs support the parameters below. For API-specific parameters, visit
+    # the API's request class.
+    #
     # You may filter `dissolution_date` the same as `founding_date`.
     #
     # @example Find entities by name (exact match).
