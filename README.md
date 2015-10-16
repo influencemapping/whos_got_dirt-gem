@@ -19,39 +19,38 @@ require 'whos_got_dirt'
 require 'faraday'
 
 input = {
-  'name~=' => 'John Smith',
-  'jurisdiction_code|=' => ['gb', 'ie'],
-  'memberships' => [{
-    'role' => 'director',
-    'inactive' => false,
+  'subject' => [{
+    'name~=' => 'John Smith',
   }],
+  'jurisdiction_code|=' => ['gb', 'ie'],
+  'role' => 'director',
+  'inactive' => false,
 }
 
 url = WhosGotDirt::Requests::Relation::OpenCorporates.new(input).to_s
-#=> "https://api.opencorporates.com/officers/search?q=John+Smith&position=director&inactive=false&jurisdiction_code=gb%7Cie&order=score"
+#=> "https://api.opencorporates.com/officers/search?q=John+Smith&jurisdiction_code=gb%7Cie&position=director&inactive=false&order=score"
 
 response = Faraday.get(url)
 
 results = WhosGotDirt::Responses::Relation::OpenCorporates.new(response).to_a
-#=> [{"@type"=>"Person",
-#  "name"=>"JOHN SMITH",
-#  "updated_at"=>"2014-10-25T00:34:16+00:00",
-#  "identifiers"=>[{"identifier"=>"46065070", "scheme"=>"OpenCorporates"}],
-#  "contact_details"=>[],
-#  "links"=>[{"url"=>"https://opencorporates.com/officers/46065070", "note"=>"OpenCorporates URL"}],
-#  "memberships"=>
-#   [{"role"=>"director",
-#     "start_date"=>"2006-11-24",
-#     "organization"=>
-#      {"name"=>"EVOLUTION (GB) LIMITED",
-#       "identifiers"=>[{"identifier"=>"05997209", "scheme"=>"Company Register"}],
-#       "links"=>[{"url"=>"https://opencorporates.com/companies/gb/05997209", "note"=>"OpenCorporates URL"}],
-#       "jurisdiction_code"=>"gb"}}],
+#=> [{"@type"=>"Relation",
+#  "subject"=>
+#   {"name"=>"JOHN SMITH",
+#    "contact_details"=>[{"type"=>"address"}],
+#    "occupation"=>"CONTRACTS DIRECTORS"},
+#  "object"=>
+#   {"name"=>"IMPERIAL DUCTWORK SERVICES HOLDINGS LIMITED",
+#    "identifiers"=>[{"identifier"=>"08484366", "scheme"=>"Company Register"}],
+#    "links"=>[{"url"=>"https://opencorporates.com/companies/gb/08484366", "note"=>"OpenCorporates URL"}],
+#    "jurisdiction_code"=>"gb"},
+#  "start_date"=>"2013-04-30",
+#  "identifiers"=>[{"identifier"=>"71863990", "scheme"=>"OpenCorporates"}],
+#  "links"=>[{"url"=>"https://opencorporates.com/officers/71863990", "note"=>"OpenCorporates URL"}],
+#  "updated_at"=>"2014-10-13T13:57:58+00:00",
 #  "current_status"=>"CURRENT",
 #  "jurisdiction_code"=>"gb",
-#  "occupation"=>"MANAGER",
-#  "sources"=>
-#   [{"url"=>"https://api.opencorporates.com/officers/search?inactive=false&jurisdiction_code=gb%7Cie&order=score&position=director&q=John+Smith", "note"=>"OpenCorporates"}]},
+#  "role"=>"director",
+#  "sources"=>[{"url"=>"https://api.opencorporates.com/officers/search?inactive=false&jurisdiction_code=gb%7Cie&order=score&position=director&q=John+Smith", "note"=>"OpenCorporates"}]},
 #  ...]
 ```
 

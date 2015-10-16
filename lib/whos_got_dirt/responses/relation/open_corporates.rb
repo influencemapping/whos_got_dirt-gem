@@ -6,10 +6,33 @@ module WhosGotDirt
       # @see http://api.opencorporates.com/documentation/REST-API-introduction
       class OpenCorporates < Response
         @template = {
-          '@type' => 'Person',
-          'name' => '/name',
-          'birth_date' => '/date_of_birth',
-          'updated_at' => '/retrieved_at',
+          '@type' => 'Relation',
+          'subject' => {
+            'name' => '/name',
+            'birth_date' => '/date_of_birth',
+            'contact_details' => [{
+              'type' => 'address',
+              'value' => '/address',
+            }],
+            # API-specific.
+            'nationality' => '/nationality',
+            'occupation' => '/occupation',
+          },
+          'object' => {
+            'name' => '/company/name',
+            'identifiers' => [{
+              'identifier' => '/company/company_number',
+              'scheme' => 'Company Register',
+            }],
+            'links' => [{
+              'url' => '/company/opencorporates_url',
+              'note' => 'OpenCorporates URL',
+            }],
+            # API-specific.
+            'jurisdiction_code' => '/company/jurisdiction_code',
+          },
+          'start_date' => '/start_date',
+          'end_date' => '/end_date',
           'identifiers' => [{
             'identifier' => '/id',
             'scheme' => 'OpenCorporates',
@@ -17,39 +40,16 @@ module WhosGotDirt
             'identifier' => '/uid',
             'scheme' => 'Company Register',
           }],
-          'contact_details' => [{
-            'type' => 'address',
-            'value' => '/address',
-          }],
           'links' => [{
             'url' => '/opencorporates_url',
             'note' => 'OpenCorporates URL',
           }],
-          'memberships' => [{
-            'role' => '/position',
-            'start_date' => '/start_date',
-            'end_date' => '/end_date',
-            'organization' => {
-              'name' => '/company/name',
-              'identifiers' => [{
-                'identifier' => '/company/company_number',
-                'scheme' => 'Company Register',
-              }],
-              'links' => [{
-                'url' => '/company/opencorporates_url',
-                'note' => 'OpenCorporates URL',
-              }],
-              # API-specific.
-              'jurisdiction_code' => '/company/jurisdiction_code',
-            },
-            # API-specific.
-            'inactive' => '/inactive',
-          }],
+          'updated_at' => '/retrieved_at',
           # API-specific.
+          'inactive' => '/inactive',
           'current_status' => '/current_status',
           'jurisdiction_code' => '/jurisdiction_code',
-          'nationality' => '/nationality',
-          'occupation' => '/occupation',
+          'role' => '/position',
         }
 
         # Parses the response body.
