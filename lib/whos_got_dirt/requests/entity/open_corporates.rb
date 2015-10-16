@@ -80,6 +80,7 @@ module WhosGotDirt
 
           # API-specific parameters.
 
+          equal('api_token', 'open_corporates_api_key')
           one_of('jurisdiction_code', 'jurisdiction_code')
           one_of('country_code', 'country_code')
           equal('current_status', 'current_status')
@@ -87,7 +88,6 @@ module WhosGotDirt
           equal('inactive', 'inactive', valid: [true, false])
           equal('branch', 'branch', valid: [true, false])
           equal('nonprofit', 'nonprofit', valid: [true, false])
-          equal('api_token', 'open_corporates_api_key')
 
           output
         end
