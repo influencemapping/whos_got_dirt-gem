@@ -8,40 +8,40 @@ module WhosGotDirt
       # @example Supply an OpenCorporates API key.
       #   "open_corporates_api_key": "..."
       #
-      # @example Find organizations by name prefix.
+      # @example Find companies by name prefix.
       #   "name~=" "ACME*"
       #
-      # @example Find organizations with a given jurisdiction code.
+      # @example Find companies with a given jurisdiction code.
       #   "jurisdiction_code": "gb"
       #
-      # @example Find organizations with one of many jurisdiction codes.
+      # @example Find companies with one of many jurisdiction codes.
       #   "jurisdiction_code|=": ["gb", "ie"]
       #
-      # @example Find organizations with a given country code.
+      # @example Find companies with a given country code.
       #   "country_code": "gb"
       #
-      # @example Find organizations with one of many country codes.
+      # @example Find companies with one of many country codes.
       #   "country_code|=": ["gb", "ie"]
       #
-      # @example Find organizations with a given status.
+      # @example Find companies with a given status.
       #   "current_status": "Dissolved"
       #
-      # @example Find organizations with a given industry code.
+      # @example Find companies with a given industry code.
       #   "industry_codes": "be_nace_2008-66191"
       #
-      # @example Find organizations with all the given country codes.
+      # @example Find companies with all the given country codes.
       #   "industry_codes": ["be_nace_2008-66191", "be_nace_2008-66199"]
       #
-      # @example Find organizations with one of many country codes.
+      # @example Find companies with one of many country codes.
       #   "industry_codes|=": ["be_nace_2008-66191", "be_nace_2008-66199"]
       #
-      # @example Find active organizations (`true` for inactive).
+      # @example Find active companies (`true` for inactive).
       #   "inactive": false
       #
-      # @example Find branch organizations (`false` for non-branch).
+      # @example Find branch companies (`false` for non-branch).
       #   "branch": true
       #
-      # @example Find nonprofit organizations (`false` for others).
+      # @example Find nonprofit companies (`false` for others).
       #   "nonprofit": true
       class OpenCorporates < Request
         @base_url = 'https://api.opencorporates.com/companies/search'

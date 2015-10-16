@@ -6,7 +6,7 @@ module WhosGotDirt
       # @see http://api.opencorporates.com/documentation/REST-API-introduction
       class OpenCorporates < Response
         @template = {
-          '@type' => 'Organization',
+          '@type' => 'Entity',
           'name' => '/name',
           'classification' => '/company_type',
           'founding_date' => '/incorporation_date',
