@@ -3,7 +3,7 @@ module WhosGotDirt
     module Entity
       # Requests for companies from the OpenCorporates API.
       #
-      # The `fields` parameter and sorting options are not supported.
+      # OpenCorporates' `fields` and `order` parameters are not supported.
       #
       # @example Supply an OpenCorporates API key.
       #   "open_corporates_api_key": "..."

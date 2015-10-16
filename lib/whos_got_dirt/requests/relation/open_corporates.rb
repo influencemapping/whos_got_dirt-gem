@@ -3,7 +3,8 @@ module WhosGotDirt
     module Relation
       # Requests for corporate officerships from the OpenCorporates API.
       #
-      # OpenCorporates' `date_of_birth` and `address` filters require an API key.
+      # OpenCorporates' `date_of_birth` and `address` filters require an API
+      # key. Its `order` parameter is not supported.
       #
       # @example Supply an OpenCorporates API key.
       #   "open_corporates_api_key": "..."
