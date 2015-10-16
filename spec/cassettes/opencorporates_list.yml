@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.opencorporates.com/corporate_groupings/search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-type:
+      - application/json;charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-content-type-options:
+      - nosniff
+      date:
+      - Fri, 16 Oct 2015 20:53:29 GMT
+      x-powered-by:
+      - Phusion Passenger 5.0.20
+      server:
+      - nginx/1.8.0 + Phusion Passenger 5.0.20
+      access-control-allow-origin:
+      - 'null'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-methods:
+      - GET
+      access-control-allow-headers:
+      - DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+    body:
+      encoding: ASCII-8BIT
+      string: '{"api_version":"0.4.1","results":{"page":1,"per_page":30,"total_pages":28,"total_count":813,"corporate_groupings":[{"corporate_grouping":{"name":"scottish
+        and southern energy","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/scottish+and+southern+energy","wikipedia_id":"Scottish_and_Southern_Energy"}},{"corporate_grouping":{"name":"kcom","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/kcom","wikipedia_id":"KCOM_Group"}},{"corporate_grouping":{"name":"premier
+        foods","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/premier+foods","wikipedia_id":"Premier_Foods"}},{"corporate_grouping":{"name":"cookson","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/cookson","wikipedia_id":"Cookson_Group"}},{"corporate_grouping":{"name":"standard
+        chartered bank","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/standard+chartered+bank","wikipedia_id":"Standard_Chartered_Bank"}},{"corporate_grouping":{"name":"charles
+        stanley","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/charles+stanley","wikipedia_id":"Charles_Stanley_Group"}},{"corporate_grouping":{"name":"lonmin","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/lonmin","wikipedia_id":"Lonmin"}},{"corporate_grouping":{"name":"stagecoach","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2015-10-15T21:05:12+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/stagecoach","wikipedia_id":"Stagecoach_Group"}},{"corporate_grouping":{"name":"marshalls","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/marshalls","wikipedia_id":"Marshalls_plc"}},{"corporate_grouping":{"name":"rotork","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/rotork","wikipedia_id":"Rotork"}},{"corporate_grouping":{"name":"pearson","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2015-10-10T13:52:27+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/pearson","wikipedia_id":"Pearson_PLC"}},{"corporate_grouping":{"name":"ultrasis","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/ultrasis","wikipedia_id":"Ultrasis"}},{"corporate_grouping":{"name":"carpetright","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/carpetright","wikipedia_id":"Carpetright"}},{"corporate_grouping":{"name":"daily
+        mail and general trust","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/daily+mail+and+general+trust","wikipedia_id":"Daily_Mail_and_General_Trust"}},{"corporate_grouping":{"name":"costain","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/costain","wikipedia_id":"Costain_Group"}},{"corporate_grouping":{"name":"french
+        connection","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/french+connection","wikipedia_id":"French_Connection_%28clothing%29"}},{"corporate_grouping":{"name":"sabmiller","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/sabmiller","wikipedia_id":"SABMiller"}},{"corporate_grouping":{"name":"william
+        hill","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/william+hill","wikipedia_id":"William_Hill_%28bookmaker%29"}},{"corporate_grouping":{"name":"carter
+        and carter","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/carter+and+carter","wikipedia_id":"Carter_&_Carter"}},{"corporate_grouping":{"name":"cosalt","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/cosalt","wikipedia_id":"Cosalt"}},{"corporate_grouping":{"name":"tullett
+        prebon","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/tullett+prebon","wikipedia_id":"Tullett_Prebon"}},{"corporate_grouping":{"name":"konami","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/konami","wikipedia_id":"Konami"}},{"corporate_grouping":{"name":"savills","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/savills","wikipedia_id":"Savills"}},{"corporate_grouping":{"name":"hit
+        entertainment","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/hit+entertainment","wikipedia_id":"HiT_Entertainment"}},{"corporate_grouping":{"name":"renova
+        energy","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/renova+energy","wikipedia_id":"Renova_Energy"}},{"corporate_grouping":{"name":"body
+        shop","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/body+shop","wikipedia_id":"The_Body_Shop"}},{"corporate_grouping":{"name":"bss","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/bss","wikipedia_id":"BSS_Group"}},{"corporate_grouping":{"name":"woolworths","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/woolworths","wikipedia_id":"Woolworths_Group"}},{"corporate_grouping":{"name":"burren
+        energy","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/burren+energy","wikipedia_id":"Burren_Energy"}},{"corporate_grouping":{"name":"toray
+        industries","created_at":"2011-05-30T17:33:44+00:00","updated_at":"2011-06-21T13:47:02+00:00","opencorporates_url":"https://opencorporates.com/corporate_groupings/toray+industries","wikipedia_id":"Toray_Industries"}}]}}'
+    http_version: 
+  recorded_at: Fri, 16 Oct 2015 20:53:29 GMT
+recorded_with: VCR 2.9.3
