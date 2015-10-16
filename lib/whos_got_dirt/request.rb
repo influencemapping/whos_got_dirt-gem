@@ -59,18 +59,22 @@ module WhosGotDirt
     # @param [String] target the API-specific parameter name
     # @param [String] sources the request parameter name
     # @param [Hash] opts options
+    # @option opts [String] :input substitute MQL parameters
     # @option opts [Set,Array] :valid a list of valid values
-    # @param [Hash] the API-specific parameters
+    # @return [Hash] the API-specific parameters
     def equal(target, source, opts = {})
+      params = parameters(opts)
+
       if opts.key?(:valid)
-        if opts[:valid].include?(input[source])
-          output[target] = input[source]
+        if opts[:valid].include?(params[source])
+          output[target] = params[source]
         end
       else
-        if input[source]
-          output[target] = input[source]
+        if params[source]
+          output[target] = params[source]
         end
       end
+
       output
     end
 
@@ -78,13 +82,18 @@ module WhosGotDirt
     #
     # @param [String] target the API-specific parameter name
     # @param [String] sources the request parameter name
-    # @param [Hash] the API-specific parameters
-    def match(target, source)
-      if input[source]
-        output[target] = input[source]
-      elsif input["#{source}~="]
-        output[target] = input["#{source}~="]
+    # @param [Hash] opts options
+    # @option opts [String] :input substitute MQL parameters
+    # @return [Hash] the API-specific parameters
+    def match(target, source, opts = {})
+      params = parameters(opts)
+
+      if params[source]
+        output[target] = params[source]
+      elsif params["#{source}~="]
+        output[target] = params["#{source}~="]
       end
+
       output
     end
 
@@ -92,15 +101,20 @@ module WhosGotDirt
     #
     # @param [String] target the API-specific parameter name
     # @param [String] source the request parameter name
-    # @param [Hash] the API-specific parameters
-    def one_of(target, source)
-      if Array === input[source]
-        output[target] = input[source].join(',')
-      elsif input[source]
-        output[target] = input[source]
-      elsif input["#{source}|="]
-        output[target] = input["#{source}|="].join('|')
+    # @param [Hash] opts options
+    # @option opts [String] :input substitute MQL parameters
+    # @return [Hash] the API-specific parameters
+    def one_of(target, source, opts = {})
+      params = parameters(opts)
+
+      if Array === params[source]
+        output[target] = params[source].join(',')
+      elsif params[source]
+        output[target] = params[source]
+      elsif params["#{source}|="]
+        output[target] = params["#{source}|="].join('|')
       end
+
       output
     end
 
@@ -108,13 +122,18 @@ module WhosGotDirt
     #
     # @param [String] target the API-specific parameter name
     # @param [String] source the request parameter name
-    # @param [Hash] the API-specific parameters
-    def date_range(target, source)
-      if input[source]
-        output[target] = "#{input[source]}:#{input[source]}"
-      elsif input["#{source}>="] || input["#{source}>"] || input["#{source}<="] || input["#{source}<"]
-        output[target] = "#{input["#{source}>="] || input["#{source}>"]}:#{input["#{source}<="] || input["#{source}<"]}"
+    # @param [Hash] opts options
+    # @option opts [String] :input substitute MQL parameters
+    # @return [Hash] the API-specific parameters
+    def date_range(target, source, opts = {})
+      params = parameters(opts)
+
+      if params[source]
+        output[target] = "#{params[source]}:#{params[source]}"
+      elsif params["#{source}>="] || params["#{source}>"] || params["#{source}<="] || params["#{source}<"]
+        output[target] = "#{params["#{source}>="] || params["#{source}>"]}:#{params["#{source}<="] || params["#{source}<"]}"
       end
+
       output
     end
 
@@ -128,6 +147,14 @@ module WhosGotDirt
 
     def to_query(params)
       self.class.to_query(params)
+    end
+
+    def parameters(opts)
+      if opts.key?(:input)
+        opts[:input]
+      else
+        input
+      end
     end
   end
 end

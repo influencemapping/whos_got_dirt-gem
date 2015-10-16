@@ -49,6 +49,10 @@ module WhosGotDirt
         expect(klass.new('source' => 'John Smith').equal('target', 'source')).to eq('target' => 'John Smith')
       end
 
+      it 'should return a criterion when input is overridden' do
+        expect(klass.new(nil).equal('target', 'source', input: {'source' => 'John Smith'})).to eq('target' => 'John Smith')
+      end
+
       it 'should accept valid values' do
         expect(klass.new('source' => true).equal('target', 'source', valid: [true, false])).to eq('target' => true)
       end
@@ -71,6 +75,10 @@ module WhosGotDirt
         expect(klass.new(fuzzy).match('target', 'source')).to eq('target' => 'Smith John')
       end
 
+      it 'should return a criterion when input is overridden' do
+        expect(klass.new(nil).match('target', 'source', input: fuzzy)).to eq('target' => 'Smith John')
+      end
+
       it 'should prioritize exact match' do
         expect(klass.new(exact).match('target', 'source')).to eq('target' => 'John Smith')
       end
@@ -91,6 +99,10 @@ module WhosGotDirt
 
       it 'should return a criterion' do
         expect(klass.new(many).one_of('target', 'source')).to eq('target' => 'one|two')
+      end
+
+      it 'should return a criterion when input is overridden' do
+        expect(klass.new(nil).one_of('target', 'source', input: many)).to eq('target' => 'one|two')
       end
 
       it 'should prioritize exact match' do
@@ -125,6 +137,10 @@ module WhosGotDirt
 
       it 'should return a criterion' do
         expect(klass.new(strict).date_range('target', 'source')).to eq('target' => '2010-01-02:2010-01-05')
+      end
+
+      it 'should return a criterion when input is overridden' do
+        expect(klass.new(nil).date_range('target', 'source', input: strict)).to eq('target' => '2010-01-02:2010-01-05')
       end
 
       it 'should prioritize or-equal dates' do
