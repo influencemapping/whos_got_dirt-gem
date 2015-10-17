@@ -28,20 +28,20 @@ module WhosGotDirt
 
           # Class-specific.
           'start_date' => lambda{|data|
-            v = JsonPointer.new(data, '/start_date').value
             if JsonPointer.new(data, '/primary_type').value == 'Person'
-              ['birth_date', v]
+              k = 'birth_date'
             else # 'Org'
-              ['founding_date', v]
+              k = 'founding_date'
             end
+            [k, JsonPointer.new(data, '/start_date').value]
           },
           'end_date' => lambda{|data|
-            v = JsonPointer.new(data, '/end_date').value
             if JsonPointer.new(data, '/primary_type').value == 'Person'
-              ['death_date', v]
+              k = 'death_date'
             else # 'Org'
-              ['dissolution_date', v]
+              k = 'dissolution_date'
             end
+            [k, JsonPointer.new(data, '/end_date').value]
           },
           'parent_id' => '/parent_id',
 
