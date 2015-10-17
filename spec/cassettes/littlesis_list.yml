@@ -1,0 +1,159 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.littlesis.org/lists.xml?_key=bf2ddbf0538a577c3e50ca2e42e6a07384017718&q=united
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - cloudflare-nginx
+      date:
+      - Sat, 17 Oct 2015 02:51:21 GMT
+      content-type:
+      - application/xml; charset=utf-8
+      content-length:
+      - '3140'
+      connection:
+      - close
+      set-cookie:
+      - __cfduid=dd9b197c1ff15db20a5138b508f0d75901445050280; expires=Sun, 16-Oct-16
+        02:51:20 GMT; path=/; domain=.littlesis.org; HttpOnly, symfony=pfcqrv1lnmq4rr124lue1d9d00;
+        path=/
+      x-powered-by:
+      - PHP/5.5.9-1ubuntu4.6
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      ls-execution-time:
+      - '1445050322.5097'
+      etag:
+      - '"6f4f55707a649315fae917fdfa68679e"'
+      vary:
+      - Accept-Encoding
+      access-control-allow-origin:
+      - "*"
+      cf-ray:
+      - 2368b38019f427f2-YYZ
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Response>\n  <Meta>\n
+        \           <ResultCount>\n          <Lists>17</Lists>        </ResultCount>\n
+        \           <Parameters>\n          <q>united</q>      \n        </Parameters>\n
+        \     </Meta>\n  <Data>\n    <Lists>\n  <List>\n    <id>79</id><name>United
+        States</name><description>People and organizations with significant influence
+        on the policies of the United States.</description><is_ranked>0</is_ranked><updated_at>2015-10-16
+        21:27:07</updated_at>    <num_entities>194275</num_entities>\n  </List>\n
+        \ <List>\n    <id>96</id><name>United Kingdom</name><description>People and
+        organizations with significant influence on the policies of the United Kingdom.</description><is_ranked>0</is_ranked><updated_at>2015-08-03
+        17:38:01</updated_at>    <num_entities>4694</num_entities>\n  </List>\n  <List>\n
+        \   <id>146</id><name>Medical Schools in the United States</name><description></description><is_ranked>0</is_ranked><updated_at>2014-12-22
+        14:14:00</updated_at>    <num_entities>155</num_entities>\n  </List>\n  <List>\n
+        \   <id>966</id><name>Largest Landholders in the United States (2014)</name><description>Who
+        owns the most land property in the U.S.?</description><is_ranked>1</is_ranked><updated_at>2015-08-22
+        18:34:20</updated_at>    <num_entities>100</num_entities>\n  </List>\n  <List>\n
+        \   <id>363</id><name>Historically Black Schools, Colleges, and Universities</name><description>The
+        Higher Education Act of 1965 defined the HBCU's as any historically black
+        college that was both established before 1964 and whose primary purpose was
+        to educate African Americans. This &#13;&#10;is the list of the 98 historically
+        Black schools, colleges, and universities in the United States. 27 of HBCU
+        universities offer doctoral programs and 52 schools provide Master's programs,
+        while 83 colleges have only Bachelor's degree and 38 schools offer associate
+        degrees.</description><is_ranked>0</is_ranked><updated_at>2012-12-13 19:16:06</updated_at>
+        \   <num_entities>98</num_entities>\n  </List>\n  <List>\n    <id>517</id><name>Carlyle
+        Group | U.S. Buyout Team</name><description>The Carlyle U.S. Buyout team engages
+        in buyouts, privatizations and strategic minority investments in partnership
+        with experienced management teams throughout the United States and Canada.</description><is_ranked>0</is_ranked><updated_at>2014-01-06
+        16:32:59</updated_at>    <num_entities>69</num_entities>\n  </List>\n  <List>\n
+        \   <id>380</id><name>Attorneys General of the United States - February 2013</name><description>Attorneys
+        General of each of the US states and territories as of February 2013. </description><is_ranked>0</is_ranked><updated_at>2013-02-07
+        21:36:47</updated_at>    <num_entities>56</num_entities>\n  </List>\n  <List>\n
+        \   <id>683</id><name>Mayors who wrote FCC in favor of Time Warner-Comcast
+        Merger</name><description>52 mayors from across the United States commented
+        to the FCC in favor of the merger, citing benefits \"from increased network
+        investment, faster Internet speeds, improved video options and leading community
+        development programs to help us tackle important community challenges like
+        the digital divide\" and \"a company with the scale and scope to invest in
+        innovation and deliver products and services on a regional basis.\"</description><is_ranked>0</is_ranked><updated_at>2014-08-27
+        13:30:48</updated_at>    <num_entities>49</num_entities>\n  </List>\n  <List>\n
+        \   <id>767</id><name>Largest individual landowners in the United States (2014)</name><description>Published
+        by Land Report. Missing numbers represent the collective holding of families.
+        </description><is_ranked>1</is_ranked><updated_at>2015-08-22 18:33:32</updated_at>
+        \   <num_entities>33</num_entities>\n  </List>\n  <List>\n    <id>82</id><name>31
+        House Republicans that cosponsored honorary resolution for James O' Keefe</name><description>These
+        Republican Congressman signed a measure, which declared that O'Keefe was \"owed
+        a debt of gratitude by the people of the United States\" for his role in \"in
+        their investigation in the fraudulent and illegal practices and misuse of
+        taxpayer dollars by the Association of Community Organization for Reform Now
+        (ACORN).</description><is_ranked>0</is_ranked><updated_at>2013-10-07 12:09:55</updated_at>
+        \   <num_entities>32</num_entities>\n  </List>\n  <List>\n    <id>407</id><name>House
+        Managers of Clinton Impeachment</name><description>The Senate impeachment
+        trial pf William Jefferson Clinton began on January 7, 1999, with Chief Justice
+        of the United States William Rehnquist presiding. &#13;&#10;&#13;&#10;These
+        13 House Republicans from the Judiciary Committee served as \"managers,\"
+        the equivalent of prosecutors. </description><is_ranked>0</is_ranked><updated_at>2013-04-22
+        15:46:48</updated_at>    <num_entities>13</num_entities>\n  </List>\n  <List>\n
+        \   <id>595</id><name>Top 11 Hedge Fund Moguls - 2013</name><description>Hedge
+        fund managers heavily populate the so-called 1 percent in the United States.
+        And they are getting richer.&#13;&#10;&#13;&#10;The 25 highest-earning hedge
+        fund managers in the United States took home a total of $21.15 billion in
+        compensation in 2013, according to an annual ranking published on Tuesday
+        by Institutional Investor&#226;&#128;&#153;s Alpha magazine.&#13;&#10;&#13;&#10;They
+        earned that hefty sum in a year when most hedge fund managers fell short of
+        the market&#226;&#128;&#153;s returns. The multibillion-dollar payday is the
+        highest since 2010, and it is 50 percent more than in 2012, according to the
+        survey.</description><is_ranked>1</is_ranked><updated_at>2014-05-07 12:22:10</updated_at>
+        \   <num_entities>11</num_entities>\n  </List>\n  <List>\n    <id>17</id><name>United
+        States Supreme Court Justices</name><description></description><is_ranked>0</is_ranked><updated_at>2009-09-05
+        18:18:11</updated_at>    <num_entities>9</num_entities>\n  </List>\n  <List>\n
+        \   <id>50</id><name>Health Insurance Executives &#38; Directors</name><description>A
+        list of the top executives and board members of the largest health insurance
+        companies in the United States.  </description><is_ranked>0</is_ranked><updated_at>2009-10-04
+        09:16:00</updated_at>    <num_entities>8</num_entities>\n  </List>\n  <List>\n
+        \   <id>395</id><name>Time Magazine's FCC Chair Short List</name><description>On
+        June 30th, Federal Communications Commission chairman Julius Genachowski&#226;&#128;&#153;s
+        five-year term will expire. Although the FCC chair is not a cabinet-level
+        position, the FCC holds broad regulatory power over the most important media,
+        communications, and technology companies in the United States.</description><is_ranked>0</is_ranked><updated_at>2013-02-21
+        16:20:41</updated_at>    <num_entities>8</num_entities>\n  </List>\n  <List>\n
+        \   <id>97</id><name>United Kingdom Featured Profiles</name><description></description><is_ranked>0</is_ranked><updated_at>2010-05-09
+        04:02:30</updated_at>    <num_entities>6</num_entities>\n  </List>\n  <List>\n
+        \   <id>901</id><name>Top 5 Hedge Fund Earners in 2014</name><description>The
+        top 25 hedge fund managers reaped $11.62 billion in compensation in 2014,
+        according to an annual ranking by Institutional Investor&#226;&#128;&#153;s
+        Alpha magazine.&#13;&#10;&#13;&#10;Mr. Griffin started by trading convertible
+        bonds out of his dormitory at Harvard. His firm, Citadel, posted returns of
+        18 percent to investors in its flagship Kensington and Wellington funds.&#13;&#10;&#13;&#10;At
+        Renaissance, the best performing equities fund was up 14.5 percent and its
+        institutional futures fund gained 7.4 percent. Mr. Simons' wealth, however,
+        is tied up in the firm&#226;&#128;&#153;s secretive Medallion fund, which
+        manages only employees&#226;&#128;&#153; money and has earned average annual
+        returns of more than 30 percent over two decades.&#13;&#10;&#13;&#10;Mr. Dalio
+        runs the world&#226;&#128;&#153;s biggest hedge fund, Bridgewater Associates,
+        with more than $170 billion in assets under management. Bridgewater started
+        the year strong, with well-placed bets on interest rates in Europe and the
+        United States, but momentum slowed in the second half of the year. He made
+        3.6 percent and 8.7 percent in his two main Pure Alpha funds.&#13;&#10;&#13;&#10;Mr.
+        Ackman is known for making large and concentrated bets, and for being outspoken
+        about them. His Pershing Square Capital funds gained 36 percent and 40 percent,
+        the best returns in the 2014 ranking.&#13;&#10;&#13;&#10;Mr. Englander's firm,
+        Millennium, made returns of 12 percent in 2014. Based in New York, Millennium
+        uses a platform model to invest with 170 individual managers who each use
+        their own trading strategies. Mr. Englander does not charge a management fee.
+        Instead, investors share the costs of running the firm. </description><is_ranked>1</is_ranked><updated_at>2015-05-05
+        14:09:13</updated_at>    <num_entities>5</num_entities>\n  </List>\n</Lists>\n\n
+        \ </Data>\n</Response>"
+    http_version: 
+  recorded_at: Sat, 17 Oct 2015 02:51:21 GMT
+recorded_with: VCR 2.9.3
