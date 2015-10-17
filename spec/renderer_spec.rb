@@ -31,6 +31,18 @@ module WhosGotDirt
           }],
         })
       end
+
+      it 'should render a result using lambdas' do
+        expect(Renderer.new({
+          'lambda' => lambda{|data|
+            ['key', 'value']
+          },
+        }).result({
+          'lambda' => 123,
+        })).to eq({
+          'key' => 'value',
+        })
+      end
     end
   end
 end

@@ -38,9 +38,13 @@ module WhosGotDirt
       when Hash
         hash = {}
         node.each do |key,value|
-          v = walk(value, data)
+          if value.respond_to?(:call)
+            k, v = value.call(data)
+          else
+            v = walk(value, data)
+          end
           if v
-            hash[key] = v
+            hash[k || key] = v
           end
         end
         hash
