@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.littlesis.org/entities.xml?_key=bf2ddbf0538a577c3e50ca2e42e6a07384017718&q=bar
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - cloudflare-nginx
+      date:
+      - Sat, 17 Oct 2015 02:45:17 GMT
+      content-type:
+      - application/xml; charset=utf-8
+      content-length:
+      - '1279'
+      connection:
+      - close
+      set-cookie:
+      - __cfduid=d9b8c8274b68d48e282a1deb886f272d71445049917; expires=Sun, 16-Oct-16
+        02:45:17 GMT; path=/; domain=.littlesis.org; HttpOnly, symfony=spi9n61updi47ncsgvkupgkva0;
+        path=/
+      x-powered-by:
+      - PHP/5.5.9-1ubuntu4.6
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      ls-execution-time:
+      - '1445049958.5218'
+      etag:
+      - '"c660a5870b25e5366d29dcf250265914"'
+      vary:
+      - Accept-Encoding
+      access-control-allow-origin:
+      - "*"
+      cf-ray:
+      - 2368aa9d9d4b27f2-YYZ
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Response>\n  <Meta>\n
+        \       <TotalCount>1423</TotalCount>\n            <ResultCount>\n          <Entities>20</Entities>
+        \       </ResultCount>\n            <Parameters>\n          <q>bar</q>      \n
+        \       </Parameters>\n      </Meta>\n  <Data>\n    <Entities>\n  <Entity><id>33379</id><name>Texas
+        Bar Foundation</name><description>Foundation supporting the State Bar of Texas</description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2008-12-04
+        08:20:34</updated_at><uri>http://littlesis.org/org/33379/Texas_Bar_Foundation</uri><api_uri>http://api.littlesis.org/entity/33379.xml</api_uri></Entity>
+        \ <Entity><id>11051</id><name>Roselyn R Bar</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Person</primary_type><parent_id></parent_id><updated_at>2010-09-03
+        00:34:56</updated_at><uri>http://littlesis.org/person/11051/Roselyn_R_Bar</uri><api_uri>http://api.littlesis.org/entity/11051.xml</api_uri></Entity>
+        \ <Entity><id>33205</id><name>American Bar Association</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2015-09-16
+        17:56:10</updated_at><uri>http://littlesis.org/org/33205/American_Bar_Association</uri><api_uri>http://api.littlesis.org/entity/33205.xml</api_uri></Entity>
+        \ <Entity><id>33380</id><name>State Bar of Texas</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2011-10-28
+        02:53:22</updated_at><uri>http://littlesis.org/org/33380/State_Bar_of_Texas</uri><api_uri>http://api.littlesis.org/entity/33380.xml</api_uri></Entity>
+        \ <Entity><id>35260</id><name>Boston Bar Association</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2010-01-19
+        11:37:54</updated_at><uri>http://littlesis.org/org/35260/Boston_Bar_Association</uri><api_uri>http://api.littlesis.org/entity/35260.xml</api_uri></Entity>
+        \ <Entity><id>35338</id><name>Federal Communications Bar Association</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2013-10-31
+        13:28:21</updated_at><uri>http://littlesis.org/org/35338/Federal_Communications_Bar_Association</uri><api_uri>http://api.littlesis.org/entity/35338.xml</api_uri></Entity>
+        \ <Entity><id>35501</id><name>American Bar Foundation</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2015-10-14
+        14:51:47</updated_at><uri>http://littlesis.org/org/35501/American_Bar_Foundation</uri><api_uri>http://api.littlesis.org/entity/35501.xml</api_uri></Entity>
+        \ <Entity><id>38091</id><name>Association of the Bar of the City of New York</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2015-09-24
+        17:28:05</updated_at><uri>http://littlesis.org/org/38091/Association_of_the_Bar_of_the_City_of_New_York</uri><api_uri>http://api.littlesis.org/entity/38091.xml</api_uri></Entity>
+        \ <Entity><id>38114</id><name>Hispanic Bar Association</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2009-05-26
+        11:26:27</updated_at><uri>http://littlesis.org/org/38114/Hispanic_Bar_Association</uri><api_uri>http://api.littlesis.org/entity/38114.xml</api_uri></Entity>
+        \ <Entity><id>38115</id><name>Puerto Rican Bar Association</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2009-05-26
+        11:26:36</updated_at><uri>http://littlesis.org/org/38115/Puerto_Rican_Bar_Association</uri><api_uri>http://api.littlesis.org/entity/38115.xml</api_uri></Entity>
+        \ <Entity><id>38117</id><name>New York Women's Bar Association</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2009-05-26
+        11:26:41</updated_at><uri>http://littlesis.org/org/38117/New_York_Women's_Bar_Association</uri><api_uri>http://api.littlesis.org/entity/38117.xml</api_uri></Entity>
+        \ <Entity><id>40567</id><name>State Bar of California</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2011-10-24
+        19:35:59</updated_at><uri>http://littlesis.org/org/40567/State_Bar_of_California</uri><api_uri>http://api.littlesis.org/entity/40567.xml</api_uri></Entity>
+        \ <Entity><id>47792</id><name>Women's Bar Association of Massachusetts</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2010-01-19
+        11:39:28</updated_at><uri>http://littlesis.org/org/47792/Women's_Bar_Association_of_Massachusetts</uri><api_uri>http://api.littlesis.org/entity/47792.xml</api_uri></Entity>
+        \ <Entity><id>47796</id><name>Women's Bar Association of Massachusetts</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2010-01-19
+        11:39:03</updated_at><uri>http://littlesis.org/org/47796/Women's_Bar_Association_of_Massachusetts</uri><api_uri>http://api.littlesis.org/entity/47796.xml</api_uri></Entity>
+        \ <Entity><id>51522</id><name>Northeast Energy Bar Association</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2010-04-04
+        13:21:00</updated_at><uri>http://littlesis.org/org/51522/Northeast_Energy_Bar_Association</uri><api_uri>http://api.littlesis.org/entity/51522.xml</api_uri></Entity>
+        \ <Entity><id>52558</id><name>Hispanic Bar Association of DC Foundation</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2010-04-26
+        12:06:39</updated_at><uri>http://littlesis.org/org/52558/Hispanic_Bar_Association_of_DC_Foundation</uri><api_uri>http://api.littlesis.org/entity/52558.xml</api_uri></Entity>
+        \ <Entity><id>67493</id><name>Paul &#38; Bar Harder</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2010-11-23
+        15:06:56</updated_at><uri>http://littlesis.org/org/67493/Paul_&#38;_Bar_Harder</uri><api_uri>http://api.littlesis.org/entity/67493.xml</api_uri></Entity>
+        \ <Entity><id>76815</id><name>Raise the Bar 2000</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2011-03-21
+        00:46:34</updated_at><uri>http://littlesis.org/org/76815/Raise_the_Bar_2000</uri><api_uri>http://api.littlesis.org/entity/76815.xml</api_uri></Entity>
+        \ <Entity><id>85231</id><name>Bar Organization of Washington, D.C.</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2011-09-23
+        21:31:39</updated_at><uri>http://littlesis.org/org/85231/Bar_Organization_of_Washington,_D.C.</uri><api_uri>http://api.littlesis.org/entity/85231.xml</api_uri></Entity>
+        \ <Entity><id>87416</id><name>Atlanta Bar Association</name><description></description><summary></summary><start_date></start_date><end_date></end_date><website></website><is_current></is_current><primary_type>Org</primary_type><parent_id></parent_id><updated_at>2011-11-05
+        01:20:16</updated_at><uri>http://littlesis.org/org/87416/Atlanta_Bar_Association</uri><api_uri>http://api.littlesis.org/entity/87416.xml</api_uri></Entity></Entities>\n\n
+        \ </Data>\n</Response>"
+    http_version: 
+  recorded_at: Sat, 17 Oct 2015 02:45:17 GMT
+recorded_with: VCR 2.9.3
