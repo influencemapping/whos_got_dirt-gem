@@ -1,20 +1,15 @@
 module WhosGotDirt
   module Requests
-    module Entity
-      # Requests for entities from the LittleSis API.
+    module List
+      # Requests for lists from the LittleSis API.
       #
-      # Tokens less than two characters long will be ignored by LittleSis' `q`
-      # filter. The `q` parameter matches names and aliases. If `search_all` is
-      # `1`, it also matches descriptions and summaries.
+      # The `q` parameter matches names and descriptions.
       #
       # @example Supply a LittleSis API key.
       #   "little_sis_api_key": "..."
-      #
-      # @example Match descriptions and summaries on `name~=` queries.
-      #   "search_all": 1
       class LittleSis < Request
         # The JSON response has less metadata, e.g. number of results.
-        @base_url = 'https://api.littlesis.org/entities.xml'
+        @base_url = 'https://api.littlesis.org/lists.xml'
 
         # Returns the URL to request.
         #
@@ -26,16 +21,13 @@ module WhosGotDirt
         # Converts the MQL parameters to API-specific parameters.
         #
         # @return [Hash] API-specific parameters
-        # @see http://api.littlesis.org/documentation#entities
-        # @see http://api.littlesis.org/entities/types.json
+        # @see http://api.littlesis.org/documentation#lists
         def convert
           match('q', 'name')
-          one_of('type_ids', 'classification')
           equal('num', 'limit')
 
           # API-specific parameters.
           equal('_key', 'little_sis_api_key')
-          equal('search_all', 'search_all', valid: [1])
 
           output
         end
