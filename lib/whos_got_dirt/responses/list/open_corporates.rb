@@ -6,7 +6,7 @@ module WhosGotDirt
       # @see http://api.opencorporates.com/documentation/REST-API-introduction
       class OpenCorporates < Helpers::OpenCorporatesHelper
         @template = {
-          '@type' => 'ListItem',
+          '@type' => 'List',
           'name' => '/name',
           'created_at' => '/created_at',
           'updated_at' => '/updated_at',
@@ -25,7 +25,7 @@ module WhosGotDirt
         # @return [Array<Hash>] the results
         def to_a
           parsed_body['corporate_groupings'].map do |data|
-            Result.new('ListItem', renderer.result(data['corporate_grouping']), self).finalize!
+            Result.new('List', renderer.result(data['corporate_grouping']), self).finalize!
           end
         end
       end
