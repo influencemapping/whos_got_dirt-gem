@@ -36,7 +36,7 @@ results = WhosGotDirt::Responses::Relation::OpenCorporates.new(response).to_a
 #=> [{"@type"=>"Relation",
 #  "subject"=>
 #   {"name"=>"JOHN SMITH",
-#    "contact_details"=>[{"type"=>"address"}],
+#    "contact_details"=>[],
 #    "occupation"=>"CONTRACTS DIRECTORS"},
 #  "object"=>
 #   {"name"=>"IMPERIAL DUCTWORK SERVICES HOLDINGS LIMITED",
