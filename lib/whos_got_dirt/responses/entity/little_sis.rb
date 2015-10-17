@@ -4,7 +4,9 @@ module WhosGotDirt
       # Converts entities from the LittleSis API to Popolo format.
       #
       # @see http://api.littlesis.org/documentation
-      class LittleSis < Response
+      class LittleSis < Helpers::LittleSisHelper
+        @count_field = 'Entities'
+
         @template = {
           '@type' => 'Entity',
           'type' => '/primary_type',
@@ -50,13 +52,6 @@ module WhosGotDirt
           'summary' => '/summary',
         }
 
-        # Parses the response body.
-        #
-        # @return [Array<Hash>] the parsed response body
-        def parse_body
-          Nori.new.parse(body)['Response']
-        end
-
         # Transforms the parsed response body into results.
         #
         # @return [Array<Hash>] the results
@@ -64,20 +59,6 @@ module WhosGotDirt
           parsed_body['Data']['Entities']['Entity'].map do |data|
             Result.new('Entity', renderer.result(data), self).finalize!
           end
-        end
-
-        # Returns the total number of matching results.
-        #
-        # @return [Fixnum] the total number of matching results
-        def count
-          Integer(parsed_body['Meta']['TotalCount'])
-        end
-
-        # Returns the current page number.
-        #
-        # @return [Fixnum] the current page number
-        def page
-          Integer(parsed_body['Meta']['Parameters']['page'] || 1)
         end
       end
     end
