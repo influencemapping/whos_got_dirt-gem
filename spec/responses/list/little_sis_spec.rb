@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
 module WhosGotDirt::Responses::List
-  RSpec.describe LittleSis, vcr: {cassette_name: 'littlesis_list'} do
+  RSpec.describe LittleSis, vcr: {cassette_name: 'little_sis_list'} do
     let :response do
       Faraday.get("https://api.littlesis.org/lists.xml?q=united&_key=#{ENV['LITTLE_SIS_API_KEY']}")
     end
