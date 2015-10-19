@@ -27,7 +27,7 @@ module WhosGotDirt
         # Converts the MQL parameters to API-specific parameters.
         #
         # @return [Hash] API-specific parameters
-        # @see https://api.opencorporates.com/documentation/API-Reference
+        # @see http://openoil.net/openoil-api/
         def convert
           equal('per_page', 'limit')
 
