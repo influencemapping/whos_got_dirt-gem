@@ -24,7 +24,7 @@ module WhosGotDirt
       # Memoizes and returns validators using a fragment of the schema.
       def validators
         @validators ||= Hash.new do |hash,name|
-          v = validator
+          v = validator.dup
           # @see https://github.com/ruby-json-schema/json-schema/blob/fa316dc9d39b922935aed8ec9fa0e4139b724ef5/lib/json-schema/validator.rb#L73
           v.instance_variable_set('@base_schema', v.schema_from_fragment(v.instance_variable_get('@base_schema'), "#/definitions/#{name}"))
           hash[name] = v
@@ -33,7 +33,8 @@ module WhosGotDirt
 
       # Memoizes a validator using the schema.
       def validator
-        @@validator ||= JSON::Validator.new(schema, {}, {
+        # `JSON::Validator#initialize_schema` runs faster if given a `Hash`.
+        @@validator ||= JSON::Validator.new(JSON.load(File.read(File.expand_path(File.join('..', '..', '..', 'schemas', 'popolo.json'), __FILE__))), {}, {
           # Keep the cache - whatever it is.
           clear_cache: false,
           # It's safe to skip data parsing if the data is a `Hash`.
@@ -45,11 +46,6 @@ module WhosGotDirt
           # `ValidationError#to_string`, but it is not yet a bottleneck.
           errors_as_objects: true,
         })
-      end
-
-      # `JSON::Validator#initialize_schema` runs faster if given a `Hash`.
-      def schema
-        @schema ||= JSON.load(File.read(File.expand_path(File.join('..', '..', '..', 'schemas', 'popolo.json'), __FILE__)))
       end
     end
   end

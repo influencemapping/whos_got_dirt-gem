@@ -1,6 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-03/schema#",
   "definitions": {
+    "entity": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
+      "type": "object"
+    },
+    "list": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
+      "type": "object"
+    },
+    "relation": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
+      "type": "object"
+    },
     "organization": {
       "$schema": "http://json-schema.org/draft-03/schema#",
       "title": "Organization",
