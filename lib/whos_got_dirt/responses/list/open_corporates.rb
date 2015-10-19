@@ -16,7 +16,7 @@ module WhosGotDirt
           }],
           'links' => [{
             'url' => '/opencorporates_url',
-            'note' => 'OpenCorporates URL',
+            'note' => 'OpenCorporates page',
           }],
         }
 

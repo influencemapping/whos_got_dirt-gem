@@ -29,10 +29,10 @@ module WhosGotDirt
           }],
           'links' => [{
             'url' => '/opencorporates_url',
-            'note' => 'OpenCorporates URL',
+            'note' => 'OpenCorporates page',
           }, {
             'url' => '/registry_url',
-            'note' => 'Register URL',
+            'note' => 'Register page',
           }],
           'sources' => [{
             'url' => '/sources/url',

@@ -7,7 +7,7 @@ module WhosGotDirt
       class OpenCorporates < Helpers::OpenCorporatesHelper
         @template = {
           '@type' => 'Relation',
-          'subject' => {
+          'subject' => [{
             'name' => '/name',
             'birth_date' => '/date_of_birth',
             'contact_details' => [{
@@ -17,7 +17,7 @@ module WhosGotDirt
             # API-specific.
             'nationality' => '/nationality',
             'occupation' => '/occupation',
-          },
+          }],
           'object' => {
             'name' => '/company/name',
             'identifiers' => [{
@@ -26,7 +26,7 @@ module WhosGotDirt
             }],
             'links' => [{
               'url' => '/company/opencorporates_url',
-              'note' => 'OpenCorporates URL',
+              'note' => 'OpenCorporates page',
             }],
             # API-specific.
             'jurisdiction_code' => '/company/jurisdiction_code',
@@ -42,7 +42,7 @@ module WhosGotDirt
           }],
           'links' => [{
             'url' => '/opencorporates_url',
-            'note' => 'OpenCorporates URL',
+            'note' => 'OpenCorporates page',
           }],
           'updated_at' => '/retrieved_at',
           # API-specific.

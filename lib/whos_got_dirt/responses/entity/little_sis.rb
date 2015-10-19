@@ -21,10 +21,10 @@ module WhosGotDirt
             'note' => 'Website',
           }, {
             'url' => '/uri',
-            'note' => 'LittleSis URL',
+            'note' => 'LittleSis page',
           }, {
             'url' => '/api_uri',
-            'note' => 'LittleSis API URL',
+            'note' => 'LittleSis API detail',
           }],
           'updated_at' => '/updated_at',
 
