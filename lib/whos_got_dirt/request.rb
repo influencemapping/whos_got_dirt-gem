@@ -61,6 +61,7 @@ module WhosGotDirt
     # @param [Hash] opts options
     # @option opts [String] :input substitute MQL parameters
     # @option opts [String] :default the default value
+    # @option opts [String] :transform a transformation to apply to the value
     # @option opts [Set,Array] :valid a list of valid values
     # @return [Hash] the API-specific parameters
     def equal(target, source, opts = {})
@@ -68,11 +69,11 @@ module WhosGotDirt
 
       if opts.key?(:valid)
         if opts[:valid].include?(params[source])
-          output[target] = params[source]
+          output[target] = transform(params[source], opts)
         end
       else
         if params[source]
-          output[target] = params[source]
+          output[target] = transform(params[source], opts)
         elsif opts[:default]
           output[target] = opts[:default]
         end
@@ -160,6 +161,14 @@ module WhosGotDirt
         opts[:input]
       else
         input
+      end
+    end
+
+    def transform(value, opts)
+      if opts.key?(:transform)
+        opts[:transform].call(value)
+      else
+        value
       end
     end
   end

@@ -53,6 +53,10 @@ module WhosGotDirt
         expect(klass.new(nil).equal('target', 'source', input: {'source' => 'John Smith'})).to eq('target' => 'John Smith')
       end
 
+      it 'should return a criterion when value is transformed' do
+        expect(klass.new('source' => 'John Smith').equal('target', 'source', transform: lambda{|v| v.upcase})).to eq('target' => 'JOHN SMITH')
+      end
+
       it 'should accept valid values' do
         expect(klass.new('source' => true).equal('target', 'source', valid: [true, false])).to eq('target' => true)
       end
