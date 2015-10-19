@@ -17,6 +17,7 @@ require 'whos_got_dirt/requests/entity/open_corporates'
 require 'whos_got_dirt/requests/list/little_sis'
 require 'whos_got_dirt/requests/list/open_corporates'
 require 'whos_got_dirt/requests/relation/open_corporates'
+require 'whos_got_dirt/requests/relation/open_oil'
 
 require 'whos_got_dirt/response'
 require 'whos_got_dirt/responses/helpers/little_sis'

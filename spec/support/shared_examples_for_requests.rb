@@ -6,15 +6,23 @@ def input(variable, options)
   end
 end
 
+def transform(value, options)
+  if options && options.key?(:transformed)
+    options[:transformed]
+  else
+    value
+  end
+end
+
 RSpec.shared_examples 'equal' do |target,source,value,options|
   it 'should return a criterion' do
-    expect(described_class.new(input({source => value}, options)).convert).to eq(target => value)
+    expect(described_class.new(input({source => value}, options)).convert).to eq(target => transform(value, options))
   end
 
   if options && options.key?(:valid)
     it 'should accept valid values' do
       options[:valid].each do |value|
-        expect(described_class.new(input({source => value}, options)).convert).to eq(target => value)
+        expect(described_class.new(input({source => value}, options)).convert).to eq(target => transform(value, options))
       end
     end
 
