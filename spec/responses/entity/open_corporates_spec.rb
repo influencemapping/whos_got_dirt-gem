@@ -12,7 +12,7 @@ module WhosGotDirt::Responses::Entity
 
     describe '#to_a' do
       it 'should return the results' do
-        expect{instance}.to_not raise_error
+        expect{instance.to_a}.to_not raise_error
       end
     end
 
