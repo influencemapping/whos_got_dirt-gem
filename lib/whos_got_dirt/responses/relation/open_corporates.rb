@@ -3,7 +3,7 @@ module WhosGotDirt
     module Relation
       # Converts corporate officerships from the OpenCorporates API to Popolo format.
       #
-      # @see http://api.opencorporates.com/documentation/REST-API-introduction
+      # @see https://api.opencorporates.com/documentation/API-Reference
       class OpenCorporates < Helpers::OpenCorporatesHelper
         @template = {
           '@type' => 'Relation',

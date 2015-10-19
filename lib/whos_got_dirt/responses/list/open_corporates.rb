@@ -3,7 +3,7 @@ module WhosGotDirt
     module List
       # Converts corporate groupings from the OpenCorporates API to Popolo format.
       #
-      # @see http://api.opencorporates.com/documentation/REST-API-introduction
+      # @see https://api.opencorporates.com/documentation/API-Reference
       class OpenCorporates < Helpers::OpenCorporatesHelper
         @template = {
           '@type' => 'List',
