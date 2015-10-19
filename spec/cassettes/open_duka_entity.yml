@@ -1,0 +1,1149 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.openduka.org/index.php/api/search?key=c99add984e8fd921b0763a975f1ee658&term=the
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 19 Oct 2015 19:24:44 GMT
+      server:
+      - Apache
+      set-cookie:
+      - ci_session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22200dfaf02942d5da3f1a064f50986750%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A14%3A%22198.48.204.118%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A14%3A%22Faraday+v0.9.1%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1445282684%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7Db2da01d13ea45b3dffe3e33c28c5b45d;
+        expires=Mon, 19-Oct-2015 21:24:44 GMT; path=/
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+      content-type:
+      - text/html
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"ID":"63","Name":"The Coffee Research Foundation"},{"ID":"67","Name":"The
+        Kenya Trade Network Agency Order"},{"ID":"74","Name":"Board Of Directors Of
+        The Anti-counterfeit Agency"},{"ID":"76","Name":"The Kenya Polytechnic University
+        College Council"},{"ID":"88","Name":"Taskforce On Alignment Of The Education,
+        Science And Technology Sector With The Constitution"},{"ID":"136","Name":"Board
+        Of The Kenya Industrial Estate"},{"ID":"186","Name":"Esther Wanjugu Kamweru
+        ms."},{"ID":"195","Name":"The Town Council Of Ol Kalou"},{"ID":"201","Name":"The
+        Lake Victoria South Water Services Board"},{"ID":"271","Name":"The Town Council
+        Of Karuri"},{"ID":"292","Name":"Board Of The Export Promotion Council"},{"ID":"309","Name":"Esther
+        Mugure"},{"ID":"315","Name":"Board Of The Nzoia Sugar Company Limited"},{"ID":"325","Name":"Board
+        Of Directors Of The Kenya Pipeline Company Limited"},{"ID":"360","Name":"The
+        Permanent Secretary, Office Of The Deputy Prime Minister And Ministry Of Finance"},{"ID":"361","Name":"The
+        Permanent Secretary, Ministry Of State For Planning, National Development
+        And Vision 2030"},{"ID":"362","Name":"The Permanent Secretary, Ministry Of
+        Trade"},{"ID":"391","Name":"Theuri Charles Kabiru"},{"ID":"466","Name":"Permanent
+        Secretary To The Treasury"},{"ID":"488","Name":"Esther Jerop Maiyo"},{"ID":"554","Name":"George
+        Kuria Murathe"},{"ID":"565","Name":"Task Force On Alignment Of The Higher
+        Education, Science And Technology Sector With The Constitution"},{"ID":"569","Name":"Harie
+        Kinosthe Ndungu"},{"ID":"584","Name":"Board Of The Kenya Investment Authority"},{"ID":"587","Name":"Board
+        Of The Kenya Investment Authority"},{"ID":"592","Name":"Board Of The Kenya
+        Post Office Savings Bank"},{"ID":"597","Name":"Board Of The Capital Markets
+        Authority"},{"ID":"639","Name":"Complaints Commission Of The Media Council"},{"ID":"654","Name":"Catherine
+        Musakali"},{"ID":"674","Name":"Permanent Secretary, Office Of The Deputy Prime
+        Minister And Minister For Finance"},{"ID":"702","Name":"Kenya Leather Development
+        Council kldc"},{"ID":"41021","Name":"Science And Technology Sector With The
+        Constitution"},{"ID":"717","Name":"Alice N. Mathenge"},{"ID":"745","Name":"Esther
+        Kaaria"},{"ID":"842","Name":"Advisory Committee On The Power Of Mercy"},{"ID":"931","Name":"Esther
+        Nkata M`ithiria"},{"ID":"935","Name":"Geothermal Development Company"},{"ID":"973","Name":"The
+        Minister Of State For Planning, National Development And Vision 2030"},{"ID":"975","Name":"Permanent
+        Secretary, Office Of The Deputy Prime Minister And Ministry Of Finance"},{"ID":"981","Name":"Mwende
+        Kathethia Mwendwa ms."},{"ID":"986","Name":"The Chief Executive Officer, Nepad
+        Kenya Secretariat"},{"ID":"1029","Name":"Task Force On The Conservation Of
+        The Mau Forest Complex"},{"ID":"1044","Name":"The Task Force On The Conservation
+        Of The Mau Forest Complex Extention Of Time"},{"ID":"1071","Name":"The Kisii
+        University Order 2007 Appointment"},{"ID":"1099","Name":"Permanent Secretary,
+        Office Of The Deputy Prime Minister And Ministry Of Local Government"},{"ID":"1110","Name":"The
+        Law Of Succession Act Appointment"},{"ID":"1130","Name":"The Magistrate`s
+        Courts Act Increase Limits Of Jurisdiction"},{"ID":"1132","Name":"Office Of
+        The Deputy Prime Minister And Ministry Of Local Government Tender Committee"},{"ID":"1136","Name":"The
+        Magistrate`s Courts Act Increase Limits Of Jurisdiction"},{"ID":"1138","Name":"The
+        Magistrate`s Courts Act Increase Limits Of Jurisdiction"},{"ID":"1149","Name":"The
+        Magistrate`s Courts Act Increase Limits Of Jurisdiction"},{"ID":"1161","Name":"Board
+        Of The Consolidated Bank Of Kenya Limited"},{"ID":"1168","Name":"The Kenya
+        National Commission On Human Rights Act Appointment"},{"ID":"1222","Name":"The
+        Sugar Board Appointment"},{"ID":"1223","Name":"Rosemary Mkok; Chief Executive
+        And Secretary To The Board Of The Kenya Sugar Board"},{"ID":"1232","Name":"The
+        Bukura Agricultural College Appointment"},{"ID":"1234","Name":"The Maseno
+        University Act Appointment"},{"ID":"1235","Name":"Florida Amakobe Karan prof
+        Chancellor Of The Maseno University"},{"ID":"1305","Name":"Ps, Office Of The
+        Deputy Prime Minister And Ministry Of Finance"},{"ID":"1306","Name":"Clerk
+        Of The National Assembly"},{"ID":"1322","Name":"The Agricultural Wages Council"},{"ID":"1330","Name":"The
+        General Wages Council"},{"ID":"1337","Name":"The Industrial Court"},{"ID":"1339","Name":"The
+        National Council For Occupational Safety And Health"},{"ID":"1354","Name":"Board
+        Of The Kenya Veterinary Board"},{"ID":"1356","Name":"The Kenya Veternary Board"},{"ID":"1367","Name":"The
+        Childrens Act"},{"ID":"1382","Name":"The Board Of Export Promotion Council"},{"ID":"1388","Name":"David
+        Mburu Githere"},{"ID":"1499","Name":"Esther J. Maindi ms."},{"ID":"1537","Name":"Task
+        Force On The Development For The Protection Of Traditional Knowledge, Genetic
+        Resources And Folklore"},{"ID":"1560","Name":"The Kenya Tourist Development
+        Corporation"},{"ID":"1572","Name":"The Kenya Plant Health Inspectorate Service"},{"ID":"1574","Name":"The
+        Export Promotion Council"},{"ID":"1578","Name":"The Lamu County Council"},{"ID":"1586","Name":"Charles
+        Mwathe"},{"ID":"1589","Name":"The Municipal Council Of Mombasa"},{"ID":"1630","Name":"Mathenge
+        Wanderi"},{"ID":"1674","Name":"O. Ontweka, Alternate Director To The Permanent
+        Secretary, Ministry Of Finance"},{"ID":"1675","Name":"A. R. C. Nzano, Alternate
+        Director To The Permanent Secretary, Ministry Of State For Defence"},{"ID":"1678","Name":"Lt.-gen.
+        S. J. Mwathethe, Former Navy Commander"},{"ID":"1679","Name":"B. Masinga,
+        Former Alternate Director To The Permanent Secretary, Ministry Of Finance"},{"ID":"1687","Name":"Cllr.
+        Esther W. Njogu"},{"ID":"1703","Name":"David Muriithi Githendu"},{"ID":"1735","Name":"Esther
+        Njeri Wamaitha"},{"ID":"1755","Name":"The Municipal Council Of Nyahururu"},{"ID":"1768","Name":"The
+        Kenya Cultural Center Council"},{"ID":"1778","Name":"Gladys W. Gatheru; Deputy
+        Director Of Culture"},{"ID":"1810","Name":"The Mombasa Local Committee"},{"ID":"1841","Name":"The
+        Capital Markets Authority"},{"ID":"1844","Name":"The Municipal Council Of
+        Nyanyuki"},{"ID":"1846","Name":"The Municipal Council Of Kehacha"},{"ID":"1848","Name":"The
+        South Nyanza Sugar Company Of Kenya"},{"ID":"1851","Name":"The Central Agricultural
+        Board"},{"ID":"1858","Name":"The Kenya Agricultural Research Institute"},{"ID":"1885","Name":"James
+        Kibugi Muthee"},{"ID":"1939","Name":"The Kenya Police Force"},{"ID":"1941","Name":"The
+        Horticultural Crops Development Authority"},{"ID":"1956","Name":"The Science
+        And Technology Institute"},{"ID":"1958","Name":"The Kenya Meat Commission"},{"ID":"1959","Name":"The
+        Permanent Secretary To The Treasury Or A Person Deputed By Him"},{"ID":"1960","Name":"The
+        Permanent Secretary To The Ministry Of Of Livestock Department Or A Person
+        Deputed By Him"},{"ID":"1963","Name":"Easther Koimeett; Investment Secretary,
+        Office Of The Deputy Prime Minister And Ministry Of Finance"},{"ID":"1970","Name":"Dr.
+        Joseph Mailutha; Director, Institute Of Environmental Technology, The Jomo
+        Kenyatta University Of Agriculture And Technology"},{"ID":"1989","Name":"The
+        Director-general, Kenya Rural Roads Authority"},{"ID":"1999","Name":"The Director-
+        General, Kenya National Highways Authority"},{"ID":"2010","Name":"The Director-general,
+        Kura"},{"ID":"2016","Name":"The National Steering Committee On Child Labour"},{"ID":"2026","Name":"Representative
+        Of The Attorney General"},{"ID":"2032","Name":"Regional Director, African
+        Network For The Protection And Prevention Of Child Abuse And Neglect anppcan"},{"ID":"2038","Name":"The
+        General Wages Council"},{"ID":"2045","Name":"Muthembwa James Mutuvi"},{"ID":"2052","Name":"The
+        Kenya Year Book Board"},{"ID":"2062","Name":"The Ministry Of Livestock Development"},{"ID":"2068","Name":"Dr.
+        Ng`ethe Esther Wangari"},{"ID":"2157","Name":"The Meru Trade Development Joint
+        Loan Board"},{"ID":"2170","Name":"Office Of The Attorney General"},{"ID":"2187","Name":"The
+        Kenya Medical Supplies Agency Board"},{"ID":"2191","Name":"The Tea Research
+        Foundation Of Kenya"},{"ID":"2195","Name":"The Auctionners Licensing Board"},{"ID":"2223","Name":"The
+        Arthi Water Service Board"},{"ID":"2229","Name":"Mbuvi Kathenge"},{"ID":"2241","Name":"The
+        Tanathi Water Service Board"},{"ID":"2245","Name":"The Water Resources Management
+        Authority"},{"ID":"2248","Name":"The Water Appeals Board"},{"ID":"2260","Name":"The
+        Water Services Trust Fund"},{"ID":"2262","Name":"The Keripo Valley Development
+        Authority"},{"ID":"2263","Name":"The Managing Director, Kenya Electricity
+        Generating Company"},{"ID":"2264","Name":"The Coast Development Authority"},{"ID":"2266","Name":"The
+        National Tourism Crisis Management Committee"},{"ID":"2278","Name":"Easther
+        Kamweru"},{"ID":"2291","Name":"Public Prosecutors For The Purposes Of Environmental
+        Management And Co-ordination Act no. 8 Of 1999"},{"ID":"2297","Name":"Ublic
+        Prosecutor For The Purposes Of The Local Government"},{"ID":"2299","Name":"Chairman
+        Of The Pwani University College Council"},{"ID":"2309","Name":"Inquire Into
+        The Sale Of The Grand Regency Hotel"},{"ID":"2326","Name":"Mathew Kimanzi"},{"ID":"40992","Name":"The
+        Director Of Employment"},{"ID":"2355","Name":"George Kamau, The Director Of
+        Employment"},{"ID":"2356","Name":"Edna Ameyo Nyaloti, The Director Of Micro
+        And Small Enterprises Development,"},{"ID":"2357","Name":"Francis Atwoli,the
+        Director Of Occupational Safety And Health Services"},{"ID":"2358","Name":"Isaiah
+        Kubai, The Director Of Industrial Training"},{"ID":"2359","Name":"George Muchai,the
+        Registrar Of The Industrial Court"},{"ID":"2360","Name":"Jacqueline A. Mugo,
+        The Registrar Of Trade Unions"},{"ID":"2363","Name":"Mathew Kipyator Tuitoek"},{"ID":"2376","Name":"Office
+        Of The Vice-president And Ministry Of Home Affairs"},{"ID":"41014","Name":"Northern
+        Water Service Board"},{"ID":"2506","Name":"Esther Njeri Kibera"},{"ID":"2554","Name":"The
+        Managing Director, Kenya Wildlife Service"},{"ID":"2607","Name":"Chairman,
+        Northern Water Service Board"},{"ID":"2647","Name":"Ps, Office Of The Deputy
+        Prime Minister And Ministry Of Finance"},{"ID":"2720","Name":"Esther Gathoni
+        Gichimu"},{"ID":"2796","Name":"Virginia Mathenge mrs."},{"ID":"2844","Name":"Thedius
+        Bwire Ojiambo"},{"ID":"2860","Name":"Esther Titi Mwita"},{"ID":"2885","Name":"Catherine
+        Wanjiru Thaithi"},{"ID":"2898","Name":"the copy cat ltd."},{"ID":"2931","Name":"the
+        kenya institute of management"},{"ID":"3166","Name":"Thedius Bwire Ojiambo"},{"ID":"3183","Name":"Catherine
+        Wanjiru Thaithi"},{"ID":"3208","Name":"Esther Titi Mwita"},{"ID":"3234","Name":"Peter
+        Kilonzo Katheka"},{"ID":"3259","Name":"Hannah Waitherero Mureithi"},{"ID":"40995","Name":"The
+        Registrar Of Trade Unions"},{"ID":"40994","Name":"The Director Of Industrial
+        Training"},{"ID":"40993","Name":"The Director Of Micro And Small Enterprises
+        Development"},{"ID":"3330","Name":"OFFICE OF THE PRESIDENT"},{"ID":"40983","Name":"African
+        Network For The Protection And Prevention Of Child Abuse And Neglect (anppcan)"},{"ID":"3393","Name":"Northern
+        Water Services Board"},{"ID":"3394","Name":"Northern Water Services Board"},{"ID":"40972","Name":"The
+        Jomo Kenyatta University Of Agriculture And Technology"},{"ID":"3417","Name":"Northern
+        Water Services Board"},{"ID":"3423","Name":"THE COMMISSION ON ADMINSTRATIVE
+        JUSTICE"},{"ID":"3427","Name":"MINISTRY OF STATE FOR THE DEVELOPMENT OF NORTHERN
+        KENYA AND OTHER ARID LANDS"},{"ID":"3428","Name":"MINISTRY OF STATE FOR THE
+        DEVELOPMENT OF NORTHERN KENYA AND OTHER ARID LANDS"},{"ID":"3434","Name":"GEOTHERMAL
+        DEVELOPMENT CORPORATION"},{"ID":"3492","Name":"M\/s N.K. Brothers"},{"ID":"40963","Name":"Former
+        Alternate Director To The Permanent Secretary"},{"ID":"3732","Name":"M\/S
+        NOTHERN CONSTRUCTION LTD"},{"ID":"3799","Name":"N.K BROTHERS LTD"},{"ID":"3824","Name":"M\/s
+        Eurocopter Southern Africa"},{"ID":"40958","Name":"Alternate Director To The
+        Permanent Secretary"},{"ID":"3950","Name":"Northern liberty builders ltd"},{"ID":"4075","Name":"Leonard
+        N Ngithe"},{"ID":"4167","Name":"Catherine RainiMrs"},{"ID":"4169","Name":"Catherine
+        NgarachuMrs"},{"ID":"4192","Name":"Patrick K Githendu"},{"ID":"4295","Name":"Stephen
+        Nthei"},{"ID":"4343","Name":"Catheine Munene"},{"ID":"4405","Name":"Catherine
+        NgahuMs"},{"ID":"4493","Name":"Catherine W Munene"},{"ID":"4511","Name":"J
+        MathengeMr"},{"ID":"4553","Name":"Catherine Kimura"},{"ID":"4566","Name":"Catherine
+        Kola"},{"ID":"4598","Name":"Crowther PepelaDr"},{"ID":"4602","Name":"Theodorah
+        Malla-KilukumiDr"},{"ID":"4604","Name":"Eng. Crowther Pepela"},{"ID":"4677","Name":"Esther
+        KoimettMrs"},{"ID":"4721","Name":"Yasmin JetherDr"},{"ID":"4775","Name":"Catherine
+        Karita"},{"ID":"4824","Name":"Catherine Olaka"},{"ID":"4842","Name":"Bhekithemba
+        Thabo Gamedze"},{"ID":"4860","Name":"Esther KoimettMs"},{"ID":"5014","Name":"Nelly
+        Matheka"},{"ID":"5041","Name":"Pauline Kirathe"},{"ID":"5112","Name":"Mumo
+        Muthengi"},{"ID":"5134","Name":"Waweru G Mathenge"},{"ID":"5184","Name":"Catherine
+        R. Omweno"},{"ID":"5269","Name":"Catherine Muyeka Mumma Ms"},{"ID":"5273","Name":"The
+        Judicial Service Commission"},{"ID":"5274","Name":"The Public Service Commission"},{"ID":"5275","Name":"The
+        Teachers Service Commission"},{"ID":"5276","Name":"The Commission of Administrative
+        Justice\/Office of the Ombudsman"},{"ID":"5277","Name":"The National Gender
+        and Equality Commission"},{"ID":"5279","Name":"The National Land Commission"},{"ID":"5280","Name":"The
+        Independent Electoral and Boundaries Commission"},{"ID":"5281","Name":"The
+        Parliamentary Service Commission"},{"ID":"5282","Name":"The Commission on
+        Revenue Allocation"},{"ID":"5284","Name":"The National Police Service Commission"},{"ID":"5285","Name":"Commission
+        for the Implementation of the Constitution"},{"ID":"5291","Name":"Report of
+        the Joint Committees"},{"ID":"5293","Name":"Report of the Public Accounts
+        Committee \/ Boni Khalwale Report"},{"ID":"5294","Name":"Report of the Parliamentary
+        Select Committee"},{"ID":"5295","Name":"Report of the Defense Committee"},{"ID":"5296","Name":"The
+        Maize Scandal Report"},{"ID":"5391","Name":"John Gathenge"},{"ID":"5445","Name":"Father
+        Moses Mahuho"},{"ID":"5502","Name":"Mr. Mbuthi Gathenji"},{"ID":"5661","Name":"Immediate
+        former members of the NHIF Board"},{"ID":"5664","Name":"The registrar general"},{"ID":"5677","Name":"Office
+        of the Prime Minister and the line Ministries who took part"},{"ID":"5804","Name":"Mathew
+        Lontome"},{"ID":"6254","Name":"Mathenge Dickson Maina"},{"ID":"6299","Name":"Fondo
+        Theophilus Kalama"},{"ID":"6303","Name":"Kadenge Mwathethe Adamson"},{"ID":"6332","Name":"Mathenge
+        David Munyi"},{"ID":"6358","Name":"Kitheka Catherine Kasyoka"},{"ID":"6430","Name":"Katheke
+        Eunice Mwathi"},{"ID":"6523","Name":"Kitheka Cornelius Musyoka"},{"ID":"6527","Name":"Matheka
+        Francis Musyoki"},{"ID":"6542","Name":"Ndeto Festus Muthembwa"},{"ID":"6671","Name":"Theuri
+        Joan Gacheri"},{"ID":"6687","Name":"Mathew David Chacha"},{"ID":"6759","Name":"Munywoki
+        Esther Nyakio"},{"ID":"6860","Name":"Chege Stephen Ngethe"},{"ID":"6864","Name":"Githenji
+        Daniel Kamau"},{"ID":"6870","Name":"Kangethe Peter Njenga"},{"ID":"6911","Name":"Warothe
+        Jonathan Kuria"},{"ID":"6980","Name":"Nyaanga Theresa Nyaboke"},{"ID":"7080","Name":"Onduru
+        Matthew Odeny"},{"ID":"7135","Name":"Mwabu Peter Muthengi"},{"ID":"7156","Name":"Nyarango
+        Mathews Maciira"},{"ID":"7706","Name":"Theta Ward"},{"ID":"7943","Name":"Muthetheni
+        Ward"},{"ID":"7973","Name":"Muthesya Ward"},{"ID":"8006","Name":"Gither Ward"},{"ID":"8443","Name":"Thegu
+        River Ward"},{"ID":"8540","Name":"Mitheru Ward"},{"ID":"20025","Name":"Antone
+        Omondi Adede (suing on behalf of the Estate of Sheila Anyango Omondi &ndash;
+        Deceased)"},{"ID":"19963","Name":"In Re the Matter of L B (Baby)"},{"ID":"19962","Name":"In
+        Re the Matter of Baby K"},{"ID":"19944","Name":"Hussein Khalid and 16 others"},{"ID":"19868","Name":"Alexander
+        Kang`ethe Mwanje"},{"ID":"19852","Name":"Catherine Muthoni Mureithi"},{"ID":"19800","Name":"In
+        Re the adoption of Baby S (Minor)"},{"ID":"19791","Name":"Estate of the Deceased
+        Marian Nicholas"},{"ID":"19758","Name":"In the Matter of Adoption of Baby
+        MW"},{"ID":"19745","Name":"J O O (suing as the personal representative on
+        behalf of the estate of P O O)"},{"ID":"19698","Name":"Phillip Mathenge Muraya"},{"ID":"19675","Name":"In
+        the Matter of R M M"},{"ID":"19549","Name":"In the Matter of B.T"},{"ID":"19544","Name":"In
+        Re The Matter Of Baby Pauline"},{"ID":"19534","Name":"In Re The Matter Of
+        Baby D- Minor"},{"ID":"19513","Name":"Esther Gathoni Mwaura"},{"ID":"19507","Name":"In
+        Re The Matter of C A N (Baby)"},{"ID":"19495","Name":"Tiku Kitheka"},{"ID":"19494","Name":"Matheka
+        Mulonzya"},{"ID":"19472","Name":"Speaker of the  Cou"},{"ID":"19455","Name":"Speaker
+        of the County As"},{"ID":"19421","Name":"Mercy Catherine Wanjiku Giptahi Olivia
+        Wangu (Suing Thro` Their Guardian Judith Nyakeru Wang`ombe)"},{"ID":"19393","Name":"William
+        Kinyanjui Kinuthia  another"},{"ID":"19380","Name":"Mutua Kivaya Nthenge"},{"ID":"19376","Name":"In
+        Re the Estate of Muturi Gatuku (Deceased)"},{"ID":"19331","Name":"Esther Kahai
+        Kihima"},{"ID":"19250","Name":"Esther Wambui Gitahi"},{"ID":"19182","Name":"Gidraph
+        Gathenya Kimondo"},{"ID":"19169","Name":"Esther Khasoa Shiundu"},{"ID":"19115","Name":"In
+        Re the Matter of J A (Minor)"},{"ID":"19116","Name":"In The Matter of M O
+        (Child)"},{"ID":"19109","Name":"Esther Wambui Karango"},{"ID":"19100","Name":"In
+        Re The Matter Of Baby J"},{"ID":"19094","Name":"Kadima Linet Kasandi (Suing
+        as the wife and administrix of the estate of Henry Akongo Odero-Deceased)"},{"ID":"19055","Name":"Mathews
+        Okanya Odhiambo"},{"ID":"19053","Name":"Alice Muoki (Suing As The Administrator
+        Of The Estate Of"},{"ID":"19052","Name":"Flavian Kabuthi (Suing As The Administrator
+        Of The Estate Of  Woi Philip Ngui Kabuthi)"},{"ID":"40939","Name":"Office
+        Of The Deputy Prime Minister And Ministry Of Local Government"},{"ID":"17867","Name":"Mathew
+        John Anyara Emukule"},{"ID":"40936","Name":"Office Of The Deputy Prime Minister
+        And Ministry Of Finance"},{"ID":"40928","Name":"Office Of The Deputy Prime
+        Minister And Minister For Local Government"},{"ID":"40929","Name":"Office
+        Of The Deputy Prime Minister And Minister For Finance"},{"ID":"17869","Name":"Mathews
+        Nderi Nduma"},{"ID":"40912","Name":"Office Of The Deputy Prime Minister And
+        Ministry  Of Finance"},{"ID":"10342","Name":"The University Of Nairobi"},{"ID":"18970","Name":"Grace
+        Njambi Irungu  (Suing as the administratrix of the estate of  Lucy Njeri Njambi
+        (Deceased))"},{"ID":"18949","Name":"Fredrick Odhiambo Ongong suing as  the
+        administrator of the estate of Erick"},{"ID":"18945","Name":"Samwel Ndehi
+        Maina (Suing through the Next of Kin Gabriel Maina Kamau"},{"ID":"18847","Name":"Mathew
+        Lekaota Sinteria"},{"ID":"18780","Name":"James Ngethe Kageni"},{"ID":"18761","Name":"In
+        the Matter of the Estate of Francis M`ikiara Alias Ikiara Kimotho Alias M`ikiara
+        Kimotho - Deceased"},{"ID":"18732","Name":"In Re The Matter Of Baby Anika
+        Happylife Alias Anika Amara"},{"ID":"18727","Name":"Johnson Mutabari (suing
+        as the legal representative of the estate of Priscilla Kinya-Deceased)"},{"ID":"18724","Name":"Peterson
+        Mokaya Kaguga Suing As The Administrators Of The Estate Of Jackline Mokaya"},{"ID":"18690","Name":"In
+        the Matter of Adoption of Baby A K"},{"ID":"18614","Name":"Catherine Wambui
+        Muriithi"},{"ID":"18584","Name":"In Re The Estate Of Simeon Kamau Kuria"},{"ID":"18571","Name":"In
+        the Matter of Adoption of Baby R R"},{"ID":"18523","Name":"Evans Muthemba
+        Chege"},{"ID":"18517","Name":"George Gaitho Gatheca"},{"ID":"18494","Name":"In
+        Re The Matter Of Baby M Alias A"},{"ID":"18471","Name":"Stanley Mathenge Karani"},{"ID":"18448","Name":"Martin
+        Lurther Omondi Ocholla"},{"ID":"18089","Name":"Mathew John Anyara Emukule"},{"ID":"18021","Name":"Esther
+        Nyambura Maina"},{"ID":"18659","Name":"John Wainaina Ndungu and Peter Kibe
+        Mutiga (suing as the officials of Zimman Settlement Scheme Society)"},{"ID":"18526","Name":"Educational
+        Institutions Hospitals  and Allied Workers Union (Suing on Behalf of Its Members;
+        List of the  Members Attached Herewith)"},{"ID":"18948","Name":"Fredrick Odhiambo
+        Ongong suing as the administrator of the estate of Collins Ochieng Obambla
+        (Deceased)"},{"ID":"18739","Name":"Wines of the World Limited"},{"ID":"18730","Name":"In
+        Re The Matter Of Baby D T G - Minor"},{"ID":"18080","Name":"Mathews Nderi
+        Nduma"},{"ID":"20091","Name":"In Re the Matter of Baby A.K"},{"ID":"18710","Name":"In
+        the Matter of Baby S H"},{"ID":"19209","Name":"Esther Wanjira Kamau"},{"ID":"18989","Name":"In
+        Re The Matter of A W (Baby)"},{"ID":"18820","Name":"In the Matter of B.S.W
+        Alias S.W.K(Minor)"},{"ID":"19961","Name":"In Re the Matter of baby J G N"},{"ID":"19556","Name":"Joseph
+        Munyao Dishon Suing in his Capacity as the Person Representative of the Estate
+        of the Late Liliam Mwikali Andre"},{"ID":"19453","Name":"Clerk of the Senate"},{"ID":"19391","Name":"Joseph
+        Njuguna Mwaura (Suing In His Capacity  As The Personal Representative Of Ann
+        Nduta)"},{"ID":"19637","Name":"Maua Mutie Ndunda (Suing on behalf of the Estate
+        of  Mutie Ndunda Makau)"},{"ID":"19452","Name":"Speaker of the Senate"},{"ID":"19345","Name":"Esther
+        Muthoni Wangui"},{"ID":"19350","Name":"In the Matter of Baby M.K"},{"ID":"19518","Name":"In
+        Re The Matter of The Estate of Kanyo Njuki (Deceased)"},{"ID":"19043","Name":"Esther
+        Chesoimo Letich"},{"ID":"18805","Name":"In Re the Matter of M N M (Baby)"},{"ID":"18342","Name":"In
+        Re the the Estate of C O O (Patient)"},{"ID":"40881","Name":"The Salaries
+        and Remuneration Commission"},{"ID":"40877","Name":"Catherine Muyeka Mumma
+        (Ms)"},{"ID":"19633","Name":"Esther Cianjoka M`Mantu"},{"ID":"19244","Name":"Kagai
+        Kangethe"},{"ID":"19232","Name":"Wilson Mathenge Gitahi"},{"ID":"18783","Name":"Charles
+        Ngatia Nguyo (Suing on Behalf of the Estate of Wairimu Nguyo)"},{"ID":"19469","Name":"Clerk
+        of the Senate"},{"ID":"19798","Name":"Yuvinaris Nyambega Zachariah (Bringing
+        this Petition on their own Behalf and on Behalf of 100 Others )"},{"ID":"19260","Name":"Margaret
+        Njeri Muiruri (Being The Administrator of The Estate of The Late Joseph Muiruri
+        Gachoka (Deceased)"},{"ID":"17999","Name":"Esther Nyambura Maina"},{"ID":"19517","Name":"In
+        Re The Matter of J W (Baby)"},{"ID":"13420","Name":"Stephen Wamugi Theuri"},{"ID":"13425","Name":"Mungai
+        Ngethe"},{"ID":"13547","Name":"Esther Njeri Kimani"},{"ID":"13601","Name":"John
+        Moffat Githere alias John Githere Mbugua"},{"ID":"13707","Name":"Edward Mutheca
+        Karanja"},{"ID":"13732","Name":"Esther Nyagacheke Miano"},{"ID":"13774","Name":"Christina
+        Nipha Amos and others"},{"ID":"13812","Name":"Estheri Muthoni Mutonyi"},{"ID":"13822","Name":"Peter
+        Kangethe Murithi"},{"ID":"13824","Name":"Hannah Wanjiku Nginyo of Muguga in
+        the Republic of Kenya"},{"ID":"13839","Name":"Catherine Njeri Kamau"},{"ID":"13924","Name":"Esther
+        Muthoni Gicuki"},{"ID":"13932","Name":"The Church of Jesus Christ of Kenya"},{"ID":"13933","Name":"Catherine
+        Wambui Mwangi"},{"ID":"13971","Name":"Mathew Kibagendi Angwenyi"},{"ID":"13997","Name":"Esther
+        Nduku Mutuku"},{"ID":"14027","Name":"Peninah Waithera Karanja"},{"ID":"14144","Name":"George
+        Muthui Kathembe"},{"ID":"14208","Name":"Felistas Nungari Mathe"},{"ID":"14209","Name":"Hannah
+        Waitherero Njuguna"},{"ID":"14227","Name":"The Church Commissioners for Kenya"},{"ID":"14239","Name":"Esther
+        Njeri Munga"},{"ID":"14300","Name":"Esther Jerop Maiyo"},{"ID":"14331","Name":"The
+        Public Trustees"},{"ID":"14339","Name":"Stanley Ngumbu Mathenge"},{"ID":"14512","Name":"The
+        Presbyterian Foundation"},{"ID":"14521","Name":"Anna Waithera Kinyanjui"},{"ID":"14523","Name":"Elizabeth
+        Mbithe Njuguna"},{"ID":"14569","Name":"Esther Njeri Muriu"},{"ID":"14591","Name":"Isaac
+        Ndiritu Thekia"},{"ID":"14603","Name":"Theluji Dry Cleaners Limited"},{"ID":"14611","Name":"Anne
+        Waithera Njuguna"},{"ID":"14643","Name":"Catherine Watare Munyori"},{"ID":"14662","Name":"James
+        Gathenya Kinyua"},{"ID":"14744","Name":"Esther Ncoro M`Arimba"},{"ID":"14765","Name":"Nguru
+        Ngethe Chogi"},{"ID":"14774","Name":"Alfred Jefither Njiru Wamai"},{"ID":"14839","Name":"Esther
+        Wairimu Thomas"},{"ID":"14855","Name":"George Miringu Kangethe"},{"ID":"14864","Name":"Margaret
+        Wanjiru Kangethe"},{"ID":"14880","Name":"Francis Kamau Kangethe"},{"ID":"14888","Name":"Ngatia
+        Gatheca"},{"ID":"14904","Name":"Charles Karita Matheri"},{"ID":"14964","Name":"Mathews
+        Njeru Elijah"},{"ID":"15031","Name":"Faustin Muitherero Mbugua"},{"ID":"15034","Name":"Miriam
+        Catherine Wambui"},{"ID":"15046","Name":"Mathew Achar Otieno"},{"ID":"15132","Name":"Mathew
+        Murene Shilabula"},{"ID":"15195","Name":"Philomena Wambui Kangethe"},{"ID":"15202","Name":"Esther
+        Wambui Njonjo"},{"ID":"15210","Name":"Nelson Theuri Kihara"},{"ID":"15222","Name":"Baptist
+        Mission of Kenya&ndash;International Mission Board of Southern Baptist Convention"},{"ID":"15250","Name":"The
+        Registered Trustees of Pentecostal Assembles of God"},{"ID":"15260","Name":"Esther
+        Wanjiku Nyaga"},{"ID":"15265","Name":"Muthoni John Muthee"},{"ID":"15284","Name":"Mathew
+        Nyaga Njeru"},{"ID":"15298","Name":"Muthee Karanja"},{"ID":"15356","Name":"Joseph
+        Njuki Gathecha"},{"ID":"15449","Name":"Esther Mutile Musia"},{"ID":"15462","Name":"Waithera
+        Wanugi (ID\/0201794)"},{"ID":"15474","Name":"Maragoli in the Republic of Kenya"},{"ID":"15475","Name":"is
+        registered as proprietor in absolute ownership interest of that piece of land
+        containing 0.25 hectare or thereabouts"},{"ID":"15476","Name":"situate in
+        the district of Sabatia"},{"ID":"15509","Name":"David Kungu Githehu"},{"ID":"15659","Name":"Loc.
+        10\/Gatheru\/728"},{"ID":"15794","Name":"Ontulili\/Ontulili Block Katheri\/1441"},{"ID":"15804","Name":"Kiambogo\/Miroreni
+        Block I\/2614 (Itherero)"},{"ID":"15840","Name":"Kiambogo\/Miroreni Block
+        1\/1152 (Itherero)"},{"ID":"15909","Name":"Thegenge\/Gathuthi\/1091"},{"ID":"15920","Name":"Magutu\/Gathehu\/791"},{"ID":"16084","Name":"Evurore\/Kathera\/104"},{"ID":"16295","Name":"Evurore\/Kathera\/1143"},{"ID":"16850","Name":"Thegenge\/Karia\/1310"},{"ID":"16858","Name":"Thegenge\/Karia\/1311"},{"ID":"17024","Name":"Longonot\/Kijabe
+        Block 2\/7766 (Utheri wa Lari)"},{"ID":"17191","Name":"Evurore\/Kathera\/2216"},{"ID":"17250","Name":"Inoi\/Kaitheri\/671"},{"ID":"17741","Name":"Kiambogo\/Miroreni
+        Block 1\/963 (Itherero)"},{"ID":"20131","Name":"Southern Eastern Univeristy
+        College"},{"ID":"20158","Name":"In Re The Matter Of Baby J J M- Minor"},{"ID":"20204","Name":"Muthengi
+        Munyoki"},{"ID":"20248","Name":"Simon Kangethe"},{"ID":"20257","Name":"In
+        Re The Matter Of Baby L- Minor"},{"ID":"20332","Name":"In the matter of E.T.N
+        (suing as the next friend of E.T.K (Minor)"},{"ID":"20376","Name":"Esther
+        Omutanyi Wakhungu"},{"ID":"20415","Name":"Karim Lalji (Legal Representative  of
+        the estate of"},{"ID":"20439","Name":"In the matter of Wilfred Maingi"},{"ID":"20458","Name":"Beatrice
+        Nthenya Sila"},{"ID":"20493","Name":"Mathew Obuko Osinya"},{"ID":"20514","Name":"William
+        Recha Songwa (Suing as the Father and Legal Representative of the Estate of
+        the Late Manase Reche Songwa (Deceased)"},{"ID":"20540","Name":"Francis Nthenge
+        Mwovwa"},{"ID":"20543","Name":"Republic &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..Applicant   Versus
+        The Procurement"},{"ID":"20548","Name":"In the Matter of J.W.M"},{"ID":"20575","Name":"Catherine
+        Wanjiru Watoro"},{"ID":"20604","Name":"Mary Njeri (Suing as the Legal Representative
+        of the Estate of James Kariuki Nganga"},{"ID":"20641","Name":"Gerald Muchiri
+        Mathenge"},{"ID":"20669","Name":"In Re the Estate of Laban K Waithaka (Deceased)"},{"ID":"20709","Name":"In
+        the Matter of Baby J.M."},{"ID":"20730","Name":"In the Matter of Baby M.I."},{"ID":"20736","Name":"In
+        Re the Matter of Baby T D L"},{"ID":"20737","Name":"In The Matter Of Baby
+        T. M."},{"ID":"20756","Name":"Resident Magistrate at The Chief Magistrates
+        Court at Thika (Hon. S.N. Telewa)  Ex-parte John Waithaka Wanjiku"},{"ID":"20769","Name":"Carolyne
+        Wafula  Namalwa (Suing as the Personal  Representative of the  Estate of Fred
+        Waziri Wafula)"},{"ID":"20797","Name":"M`kuura Kiraithe"},{"ID":"20817","Name":"Southern
+        Credit Banking Corporation Ltd"},{"ID":"20858","Name":"Beatrice W Murage (Suing
+        as the legal Representative and administrator of the estate of the late Isaac
+        Gicheru Murage)"},{"ID":"20914","Name":"In Re the Estate of Rumuri Kireri"},{"ID":"20930","Name":"Benard
+        Odhiambo Ogecha (Suing As Brother And Legal Representative And Administrator
+        Af The Estate Of The Late Oscar Onyango Ogecha (Decease"},{"ID":"20957","Name":"Harun
+        Rashid Khator as Legal Representative of the Estate of Rashid Khator (Deceased)"},{"ID":"20976","Name":"In
+        Re The Matter Of Baby Z"},{"ID":"20979","Name":"Esther Wangui Ritho"},{"ID":"21011","Name":"In
+        the Matter of Baby C.L"},{"ID":"21025","Name":"Geothermal Development Company
+        Limited"},{"ID":"21031","Name":"Joseph Tommy Nguma (The Administrator of the
+        Estate of Thomas Nguma Gona)"},{"ID":"21056","Name":"In the Matter of African
+        Safari Club Limited"},{"ID":"21083","Name":"Apolina Muthoni Waithuguri (Suing
+        as the personal representative of  the estate of the late Peter Waithuguri
+        Kinuthia)"},{"ID":"21086","Name":"Martha Ngima Muthini (Suing As The Legal
+        Representative Of The Estate Of The Late Stephen Mirau Muthini)"},{"ID":"21087","Name":"Permanent
+        Secretary Office of the President Ex-parte Patrick Mutual Mbith"},{"ID":"21100","Name":"Kibuga
+        Kinyua Kariithi (All Four Duly Appointed Executors and Holders of a Grant
+        of Probate of the Wi"},{"ID":"21103","Name":"John Musyoka Muthengi"},{"ID":"21122","Name":"In
+        Re The Adoption Of Baby A M N By S O M And A C M"},{"ID":"21143","Name":"Esther
+        Wanjiku Nderitu (Suing as Administrator\/Personal representative of the Estate
+        of James Marekia hereinafter referred to as the Deceased)"},{"ID":"21180","Name":"Hellen
+        Nyangena (Suing as the Personal  Representative of the Estate of Christopher
+        Bosire Matoke (Deceased) )"},{"ID":"21202","Name":"Waithera Kamau"},{"ID":"21215","Name":"Catherine
+        Muriuki"},{"ID":"21238","Name":"In the Matter of Baby K. J"},{"ID":"21240","Name":"In
+        the Matter of D. T. (Child)"},{"ID":"21257","Name":"Catherine K. Mungatana"},{"ID":"21281","Name":"In
+        Re The Matter Of Baby J. M."},{"ID":"21289","Name":"In the Matter of Baby
+        T B - Minor"},{"ID":"21371","Name":"Joseph Musyoka Kitheka"},{"ID":"21379","Name":"Inspector
+        General of the National Police"},{"ID":"21382","Name":"Commission for Implementation
+        of the Constitution"},{"ID":"21417","Name":"In the Matter of Baby E"},{"ID":"21448","Name":"Peterson
+        Muthee Muraga"},{"ID":"21508","Name":"In the Matter of Baby I.M."},{"ID":"21509","Name":"Francis
+        Chege Muthee"},{"ID":"21513","Name":"In Re The Matter Of Baby I N"},{"ID":"21524","Name":"William
+        Muthee Muthami"},{"ID":"21611","Name":"Mburu Njuguna (Suing on Behalf of the
+        Estate of John Macharia Mburu (Deceased))"},{"ID":"21615","Name":"Stephen
+        Mbugua Ikigu (Suing through his Father as Next Friend Douglas K. Ikigu"},{"ID":"21625","Name":"In
+        the Matter of an Application By Jaldesa Tuke Dabelo"},{"ID":"21665","Name":"Evans
+        Mathenge Wachira"},{"ID":"21686","Name":"Matheka Ngui"},{"ID":"21747","Name":"Zeitun
+        Juma Hassan Petitioning On Behalf Of The Estate Of Abdul Ramadhan  Biringe
+        (Deceased)"},{"ID":"21824","Name":"District Land Registrar Kisii District
+        and 2 others"},{"ID":"21854","Name":"Johnson Mose Nyaundi(Minor Suing Through
+        Next Friend And Father Wilfred Wadimbe Nyaundi"},{"ID":"21875","Name":"Speaker
+        of the County Assembly"},{"ID":"22016","Name":"Lochab Brothers Ltd"},{"ID":"22029","Name":"Mwangi
+        Theuri"},{"ID":"22034","Name":"Francisca Munini Mbithe"},{"ID":"22041","Name":"David
+        Gitahi Suing as the Chairman of Othaya Residents` Foundation"},{"ID":"22043","Name":"Esther
+        Mutuma"},{"ID":"22050","Name":"Speaker of the National Assembly"},{"ID":"22091","Name":"In
+        the Matter of Baby T.B"},{"ID":"22140","Name":"Principal Secretary Ministry
+        Of Interior And Coordination of National Government Exparte Mwangi Mathenge"},{"ID":"22180","Name":"Joseph
+        Muthengi Mulungu"},{"ID":"22188","Name":"In Re The Matter Of Adoption Of Baby
+        C"},{"ID":"22199","Name":"William Kirui Korir and Karen Korir (Both suing
+        as the Administrators of the estate of Simon Cheruiyot Korir)"},{"ID":"22216","Name":"Matheka
+        Makau"},{"ID":"22382","Name":"In Re the Estate of Gedion Kitivo Ndambuki (Deceased)"},{"ID":"22451","Name":"Principal
+        Secretary Incharge of  Internal Security office of the President exparte James
+        Mwangi Nyambura"},{"ID":"22475","Name":"Justus Mwenda Kathenge"},{"ID":"22529","Name":"Stephen
+        Kimuyu Muthembwa"},{"ID":"22609","Name":"Moses Onchiri (suing on his own behalf
+        and in the interest of 475 other persons being former inhabitants of KPA Maasai
+        Village Embakasi within Nairobi)"},{"ID":"22668","Name":"In the matter of
+        David Kimathi M`maitima"},{"ID":"22704","Name":"In the Matter of Baby B"},{"ID":"22720","Name":"In
+        Re The Estate of Thomas Mutua Mukumbu &ndash; (Deceased)"},{"ID":"22736","Name":"Esther
+        Waithira Chege"},{"ID":"22805","Name":"Kenya Revenue Authority (Through the
+        Commissioner of Domestic Taxes)"},{"ID":"22848","Name":"Bashir Mohamed Jama
+        Abdi (on Behalf of the Subject: Abdi Bashir Mohamed alias Cabdiqani Bashir
+        Maxamed)"},{"ID":"22872","Name":"Lochab Brothers Limited"},{"ID":"22921","Name":"RCK
+        (a child suing through her mother and next friend KRC)"},{"ID":"22925","Name":"Nelson
+        Maingi Waithera"},{"ID":"22937","Name":"Inspector General of Police  through
+        the Divisional Criminal Investigation Officer (DCIO) Gigiri Police Station
+        Ex-parte Team Construction Limited"},{"ID":"22969","Name":"Benson Riitho Mureithi
+        (Suing On His Behalf  and on Behalf of the General Public"},{"ID":"22983","Name":"Catherine
+        Ngore Obare"},{"ID":"23027","Name":"Paul Kariru Kangethe"},{"ID":"23028","Name":"In
+        Re The Matter Of The Estate Of Eva Wanjiku Mararo"},{"ID":"23076","Name":"National
+        Agency f or the Campaign Against Drug Abuse (Nacada)"},{"ID":"23119","Name":"Simon
+        Letenyo Ethele"},{"ID":"23121","Name":"Channan Singh Chatthe"},{"ID":"23122","Name":"Satwant
+        Singh Chatthe"},{"ID":"23124","Name":"Raghbir Singh Chatthe (All T\/A Channan"},{"ID":"23153","Name":"Raghbir
+        Singh Chatthe  (All T\/A Channan Agricultural Contractors)"},{"ID":"23160","Name":"T
+        W ( A minor suing through her mother and next friend M N N"},{"ID":"23227","Name":"Gerald
+        Kariuki Murathe"},{"ID":"23326","Name":"Karsan Velji Velani (Suing As The
+        Administrator Of The Estate Of  Velji Parbat)"},{"ID":"23377","Name":"Boniface
+        Ndegwa Mathenge"},{"ID":"23417","Name":"In the Matter of Baby C"},{"ID":"23419","Name":"Esther
+        Osama Macharia"},{"ID":"23426","Name":"Julius Mutheee M`Murithi"},{"ID":"23439","Name":"In
+        the Matter of Baby P.N.S"},{"ID":"23444","Name":"Daniel Mathenge Kimutai"},{"ID":"23469","Name":"Jane
+        Catherine K. Karani"},{"ID":"23471","Name":"Barnabas Mungo Longit(Suing As  The
+        Attorney Of Priscilla Chebet"},{"ID":"23476","Name":"Richard Kiosi And Six
+        Others"},{"ID":"23490","Name":"The Kuria West District (Masaba Division)  Land
+        Disputes Tribunal"},{"ID":"23491","Name":"The Senior Resident Magistrate"},{"ID":"23492","Name":"The
+        District Land Registrar"},{"ID":"23493","Name":"The District Surveyor Kuria
+        West District"},{"ID":"23508","Name":"Registered Trustees of the National  Council
+        of Churches of Kenya"},{"ID":"23524","Name":"In the Matter of Baby S.W - Minor"},{"ID":"23525","Name":"Giancarlo
+        Falasconi (as the administrator of the estate of Santuzza Billioti alias Mei
+        Santuzza)"},{"ID":"23603","Name":"WALTER OSAPIRI BARASA vTHE CABINET SECRETARY
+        MINISTRY OF INTERIOR AND NATIONAL CO-ORDINATION"},{"ID":"23605","Name":"THE
+        DIRECTOR OF PUBLIC PROSECUTIONS"},{"ID":"23606","Name":"THE INSPECTOR GENERAL
+        OF POLICE  AND WILFRED NGUNJIRI NDERI"},{"ID":"23630","Name":"Mweru Kingethe"},{"ID":"23632","Name":"In
+        Re The Matter Of The Estate Of Beatrice Wanjiru Ndegwa &ndash; (Deceased)"},{"ID":"23638","Name":"in
+        re Matter of the Estate of Augustino Ndirangu Mbuthia &ndash; (Deceased)"},{"ID":"23642","Name":"In
+        Re of the Estate of Francis Gikumu Wanjohi &ndash; (Deceased)"},{"ID":"23649","Name":"Esther
+        Mugure Mwangi"},{"ID":"23654","Name":"Daniel Murimi (Suing as the Personal
+        Representative of Josiah Mairu Murimi &ndash; Deceased)"},{"ID":"23718","Name":"In
+        Re of Baby J ( the Child) [2014) eKLR"},{"ID":"23759","Name":"Margaret Rwamba
+        (Suing as legal  representative of the estate of Moffat  Kariuki Nyanga)"},{"ID":"23816","Name":"Republic                    others"},{"ID":"23840","Name":"Mathew
+        Cheruyiot"},{"ID":"23845","Name":"Eston Kidiga Adambi [Appealing As The Promoters  Of
+        Kenya Union Of Employees Of Polyt"},{"ID":"23848","Name":"In Re The Matter
+        Of Baby A W Alias Baby W M"},{"ID":"23856","Name":"Muthui Kitheka"},{"ID":"23866","Name":"Masaku
+        School for the Physically Disabled"},{"ID":"23945","Name":"In the Matter of
+        W C"},{"ID":"23946","Name":"In the Matter of Baby C M"},{"ID":"23947","Name":"In
+        the Matter of Baby J P"},{"ID":"23948","Name":"In the Matter of A M"},{"ID":"23976","Name":"Alice
+        Eremon Emathe"},{"ID":"23980","Name":"Owners of the Motor Vessel &ldquo;Indian
+        Ocean Explorer 2&rdquo;"},{"ID":"23992","Name":"Mrs Monica Odhiambo Odote  (Sued
+        In Her Capacity As Legal Representative Of The Estate Of (George Odote Mududa"},{"ID":"23999","Name":"In
+        the Matter of Baby J N"},{"ID":"24000","Name":"In the Matter of Baby E M A"},{"ID":"24001","Name":"In
+        the Matter of Baby R K"},{"ID":"24002","Name":"In the Matter of Baby G B"},{"ID":"24003","Name":"In
+        the Matter of Baby M"},{"ID":"24004","Name":"In the Matter of Baby L K"},{"ID":"24012","Name":"Kwame
+        Ochola Otinda V Office  of the Registrar Academic Kenyatta  University"},{"ID":"24015","Name":"Mandeep
+        Chauhan                                                                                                                                                        And  The
+        Kenyatta National Hospital"},{"ID":"24016","Name":"The Univers"},{"ID":"24027","Name":"Florence
+        Mutheu"},{"ID":"24074","Name":"Florence Mutheu."},{"ID":"24111","Name":"Northern
+        Nomadic Disabled Person`s Organization (Nondo)"},{"ID":"24128","Name":"Esther
+        Nyambura Mbogo"},{"ID":"24186","Name":"Bernard Kamau Theuri"},{"ID":"24188","Name":"The
+        Wrigley Co. (E.A) Limited"},{"ID":"24194","Name":"Esther Njoki Muigai"},{"ID":"24196","Name":"Francis
+        Mathenge Nderitu  V Nicholsa Nderitu Muita"},{"ID":"24203","Name":"Jeremiah
+        Muthengi Mathinyo V Republic"},{"ID":"24258","Name":"Esther Moraa Nyangoto"},{"ID":"24313","Name":"Dr.
+        Thuo Mathenge"},{"ID":"24353","Name":"Benedict Kitheka Kitui"},{"ID":"24366","Name":"Nicholas
+        Muthemwa Mwandi"},{"ID":"24444","Name":"Peter Kitheka"},{"ID":"24450","Name":"John
+        Nzomo Matheka"},{"ID":"24474","Name":"Rehab Waithera Njuguna"},{"ID":"24518","Name":"Mathew
+        Garero Mwaruwa"},{"ID":"24533","Name":"Peter Muthengi Kitemange"},{"ID":"24536","Name":"In
+        Re The Matter Of Baby D W"},{"ID":"24540","Name":"In Re The Matter of Baby
+        P K a.k.a P K"},{"ID":"24544","Name":"In Re The Matter Of Baby S Minor"},{"ID":"24547","Name":"In
+        Re The Matter Of Baby W W Alias M W"},{"ID":"24548","Name":"In Re The Matter
+        Of Baby T"},{"ID":"24549","Name":"In Re The Matter Of Baby H V"},{"ID":"24551","Name":"In
+        Re The Matter Of Baby G A.K.A S W"},{"ID":"24560","Name":"Mary Wanjiku Kibe
+        alias Wagathee"},{"ID":"24724","Name":"In Re the Dairy World Limited"},{"ID":"24760","Name":"In
+        Re The Matter of Baby J K M - Minor"},{"ID":"24778","Name":"In Re the Estate
+        of Kiguta Mukei alias Kiguta Mukii (Deceased)"},{"ID":"24814","Name":"Esther
+        Akiru Adui"},{"ID":"24815","Name":"Ethekon Edhan Akironya"},{"ID":"24829","Name":"Joshua
+        Mulei Muthembe"},{"ID":"25010","Name":"John Muguthi Kang`ethe"},{"ID":"25041","Name":"Theresa
+        Constabir"},{"ID":"25130","Name":"Simon Kiathe Mureithi"},{"ID":"25165","Name":"Kombo
+        Hassan Kombo (Suing as the Administrator of the Estate of Mwishahali Kombo
+        Mwinyihaji"},{"ID":"25178","Name":"Timotheo Rayamo Okwach"},{"ID":"25187","Name":"Abdullahi
+        Ibrahim Ahmed (Suing As The Personal Representative Of The Estate Of Anisa
+        Sheikh Hassan (Deceased))"},{"ID":"25190","Name":"Muthee Ndambiri Mithamo"},{"ID":"25210","Name":"Stephen
+        Muthee Wakuthiye"},{"ID":"25242","Name":"Muthenya Daudi"},{"ID":"25278","Name":"In
+        Re the Estate of Cecilia Wanjiku Ndung`u"},{"ID":"25281","Name":"In the Matter
+        of an Application By Salt Manufacturers for Orders of Mandamus"},{"ID":"25296","Name":"In
+        the Matter of Hezron Odhiambo Abok"},{"ID":"25311","Name":"IN THE MATTER OF
+        BABY J (MINOR)"},{"ID":"25312","Name":"IN THE MATTER OF BABY R S N (MINOR)"},{"ID":"25357","Name":"Steven
+        George and 64 Others"},{"ID":"25478","Name":"Ruth Thuguri Mathenge"},{"ID":"25479","Name":"Margaret
+        Waruguru W\/O Githegi"},{"ID":"25483","Name":"City Council of Nairobi and
+        23 others Ex-Parte Jane Wairimu Mwangi"},{"ID":"25544","Name":"Zacheus Sang
+        (Legal Representative Of The Estate Of  Kipsang Maina"},{"ID":"25549","Name":"Governor
+        of the County Of Nairobi"},{"ID":"25566","Name":"In The Matter Of Baby R"},{"ID":"25568","Name":"In
+        The Matter Of Baby S A"},{"ID":"25571","Name":"IN THE MATTER OF BABY C I also
+        known as C W [minor]"},{"ID":"25572","Name":"IN THE MATTER OF BABY R W [minor]"},{"ID":"25599","Name":"Peter
+        Njabi Njoroge (Suing as The Administrator or The Estate of Paul Muchiri Ngaruiya  A.K.A
+        Paul Muchiri Ole Ngaruiya"},{"ID":"25603","Name":"Esther Gachambi Mwangi"},{"ID":"25659","Name":"Chairman
+        Board of Directors Berea Theological College"},{"ID":"25709","Name":"Mary
+        Waithera Irungu"},{"ID":"25732","Name":"Hon The Attorney General"},{"ID":"25742","Name":"Joseph
+        Njenga Ngethe"},{"ID":"25744","Name":"B.O.G The Mary Immaculate Teachers Training
+        College"},{"ID":"25791","Name":"Leather Life Epz Limited"},{"ID":"25818","Name":"In
+        Re the Estate of Julius Wachira"},{"ID":"25821","Name":"In Re The of  Estate
+        Of Henry Mungai Muikamba (Deceased)"},{"ID":"25834","Name":"Boniface Muigai
+        Wanjenga and 318 others"},{"ID":"25839","Name":"Registered Trustees of the
+        Keny"},{"ID":"25863","Name":"Nairobi County (Thro` The Nairobi County Governor)"},{"ID":"25883","Name":"Southern
+        Engineering Company"},{"ID":"25961","Name":"Mathew Kipeme Lempurkel"},{"ID":"25980","Name":"Chairman
+        the Selection Panel for Appointment of Chair"},{"ID":"25998","Name":"In the
+        Matter of Baby A R Alias A T (Minor)"},{"ID":"26029","Name":"In the Matter
+        of Baby B(Minor)"},{"ID":"26034","Name":"Stephen Kang`ethe Karanu"},{"ID":"26074","Name":"The
+        Director of Planning City Council of Nairobi"},{"ID":"26091","Name":"Esther
+        Waithira Chege V Manoah Karega Mboku"},{"ID":"26120","Name":"Mugo Theuri"},{"ID":"26144","Name":"Joseph
+        Kamande Gatheya"},{"ID":"26150","Name":"Charles Makokha Opondo (Suing as the
+        Legal Representative of the Estate of David Makokha (Deceased))"},{"ID":"26154","Name":"Theresiah
+        Wayua King`oo"},{"ID":"26195","Name":"Francisca Katumbi Ndwili (suing as Legal
+        Representative of the Estate of Shadrack Kyalo Mwania)"},{"ID":"26205","Name":"Kima
+        International School of Theology"},{"ID":"26234","Name":"In the matter of
+        Baby M T (Minor)"},{"ID":"26319","Name":"John Mathenge"},{"ID":"26325","Name":"Kiraithe
+        Mwangi"},{"ID":"26349","Name":"Esther Njok"},{"ID":"26351","Name":"Mathew
+        Lempurkel"},{"ID":"26410","Name":"Independent Electrol and Boundaries Commission
+        interested party Margaret Nenkai Yenko ex-parte Catherine Kimaren"},{"ID":"26411","Name":"In
+        Re the Matter of Baby J M"},{"ID":"26429","Name":"The Independent Electoral
+        And  Boundaries Commission  Interested Party United Republican Party"},{"ID":"26519","Name":"In
+        Re the Matter of Baby F Alias Abandoned Baby (Minor)"},{"ID":"26521","Name":"The
+        Industrial Court Of Kenya Ex-parte Oserian Development Company Limited"},{"ID":"26526","Name":"The
+        Director Of Public Prosecution Victor Maina Ngunjiri George Gacuma Njoroge
+        John Njoroge Kinyua John Njau Karanja Stephen Ng`ang`a Kamau"},{"ID":"26535","Name":"The
+        Trustees Catholic Diocese of Nakuru"},{"ID":"26588","Name":"Esther  Nyathira  Muhia"},{"ID":"26619","Name":"In
+        Re The Matter of Baby E I (Minor)"},{"ID":"26620","Name":"In Re the Matter
+        of Baby M (Minor)"},{"ID":"26649","Name":"In the Matter of L P Aka M C O  -
+        Minor"},{"ID":"26688","Name":"Hebatullah Brothers Limited"},{"ID":"26699","Name":"In
+        the Matter of Baby J K"},{"ID":"26703","Name":"In Re the Matter Of Baby J
+        T (Minor) [2013] eKLR"},{"ID":"26726","Name":"Zachary N Mwaura - PS office
+        of the President"},{"ID":"26727","Name":"General Jeremiah Mutinda Kianga -
+        Chief of the General Staff"},{"ID":"26776","Name":"Mkutano Kitsao Nthenge"},{"ID":"26805","Name":"Commissioner
+        for the Implementation of the Constitution"},{"ID":"26813","Name":"The Commissioner
+        Of Lands"},{"ID":"26834","Name":"James Chutha Gathere"},{"ID":"26841","Name":"Southern
+        Credit Banking Corporation Limited"},{"ID":"26848","Name":"Joseph Kang`ethe
+        Kamande"},{"ID":"26876","Name":"Boniface Gathege Wacheke"},{"ID":"26880","Name":"Anthony
+        Kangethe Mwangi"},{"ID":"26882","Name":"In Re the Matter of Baby J B B (minor)"},{"ID":"26914","Name":"APPLICATION
+        FOR THE ADOPTION OF MASTER G N"},{"ID":"26932","Name":"Joseph Muthee Kamau"},{"ID":"26936","Name":"Ex-Parte
+        Richard Kangethe Karanja"},{"ID":"26941","Name":"Daniel Kuria Nganga (Suing
+        as a Legal Representative of the Estate of Samson Njoroge  Kuria (Deceased
+        )"},{"ID":"26985","Name":"SAMUEL MUKIRA MOHOCHI V ATTORNEY GENERAL OF THE
+        REPUBLIC OF UGANDA"},{"ID":"26987","Name":"IN THE MATTER OF BABY P.N"},{"ID":"26992","Name":"SECRETARY
+        GENERAL OF THE EAST AFRICAN COMMUNITY"},{"ID":"27006","Name":"Catherine Kinyany"},{"ID":"27007","Name":"Mathew
+        Nyanjong"},{"ID":"27018","Name":"IN THE MATTER OF BABY D"},{"ID":"27019","Name":"IN
+        THE MATTER OF BABY R.G"},{"ID":"27021","Name":"IN THE MATTER OF BABY O"},{"ID":"27022","Name":"IN
+        THE MATTER OF BABY A W"},{"ID":"27023","Name":"IN THE MATTER OF BABY M.M"},{"ID":"27024","Name":"IN
+        THE MATTER OF BABY A.K"},{"ID":"27028","Name":"IN THE MATTER OF BABY K.E"},{"ID":"27029","Name":"IN
+        THE MATTER OF BABY G.A (MINOR)"},{"ID":"27031","Name":"SECRETARY GENERAL OFTHE
+        EAST AFRICAN COMMUNITY"},{"ID":"27038","Name":"IN THE MATTER OF M.M (MINOR)"},{"ID":"27045","Name":"THE
+        CHIEF KADHI"},{"ID":"27047","Name":"IN THE MATTER OF BABY N.P.M"},{"ID":"27050","Name":"Secretary
+        Teachers Service Commission Ex-Parte Stephen muthengi  Kanui"},{"ID":"27057","Name":"IN
+        THE MATTER OF BABY BWM"},{"ID":"27062","Name":"IN THE MATTER OF BABY P. N.
+        8"},{"ID":"27063","Name":"IN THE MATTER OF BABY MC"},{"ID":"27064","Name":"IN
+        THE MATTER OF BABY D (MINOR)"},{"ID":"27070","Name":"IN THE MATTER OF BABY
+        T.J.H"},{"ID":"27072","Name":"IN THE MATTER OF R.F(A MINOR)"},{"ID":"27079","Name":"Charles
+        Karaithe Kiarie"},{"ID":"27081","Name":"Jacob Muthee"},{"ID":"27094","Name":"IN
+        THE MATTER OF BABY J.M.M"},{"ID":"27096","Name":"REPUBLIC  V THE COMMISSIONER
+        OF POLICE EX-PARTE  JAMES OTIENO OPONDO"},{"ID":"27098","Name":"IN THE MATTER
+        OF BABY J.M"},{"ID":"27106","Name":"IN THE MATTER OF BABY CR"},{"ID":"27110","Name":"IN
+        THE MATTER OF BABY MF"},{"ID":"27128","Name":"IN THE MATTER OF BABY M. (MINOR)"},{"ID":"27135","Name":"IN
+        THE MATTER OF S. B. (BABY)"},{"ID":"27137","Name":"Southern Shield Holdings
+        Limited"},{"ID":"27143","Name":"IN THE MATTER OF BABY M.W"},{"ID":"27144","Name":"IN
+        THE MATTER OF BABY J.T"},{"ID":"27145","Name":"IN THE MATTER OF BABY A.N"},{"ID":"27146","Name":"IN
+        THE MATTER OF BABY R.I.A"},{"ID":"27150","Name":"IN RE THE ADOPTION OF B.E.N"},{"ID":"27169","Name":"IN
+        THE MATTER OF BABY L"},{"ID":"27170","Name":"IN THE MATTER OF BABY H.M"},{"ID":"27172","Name":"IN
+        THE MATTER OF BABY A.C"},{"ID":"27175","Name":"IN THE MATTER OF BABY M.B"},{"ID":"27197","Name":"JOSEPH
+        NDUMIA THEURI"},{"ID":"27214","Name":"Jane Wambui Muigai and 14 others"},{"ID":"27217","Name":"IN
+        THE MATTER OF BABY L.K (MINOR)"},{"ID":"27218","Name":"IN THE MATTER OF BABY
+        E.W (MINOR)"},{"ID":"27219","Name":"IN THE MATTER OF BABY A.M (MINOR)"},{"ID":"27220","Name":"ALFRED
+        NDAMBIRI V REGISTERED TRUSTEES OF THE LEGAL RESOURCESFOUNDATION TRUSTS"},{"ID":"27237","Name":"IN
+        THE MATTER OF BABY A.M"},{"ID":"27242","Name":"IN THE MATTER OF BABY C.M.
+        (MINOR)"},{"ID":"27243","Name":"IN THE MATTER OF BABY M. K. (MINOR)"},{"ID":"27246","Name":"THE
+        EAST AFRICAN LAW SOCIETY"},{"ID":"27247","Name":"THE SECRETARY GENERAL OF
+        THE EASTAFRICAN COMMUNITY"},{"ID":"27254","Name":"IN RE THE MATTER K.L.H (MINOR)"},{"ID":"27255","Name":"IN
+        THE MATTER OF AN APPLICATION FOR ADOPTION BABY H"},{"ID":"27257","Name":"IN
+        THE MATTER OF AN APPLICATION FOR ADOPTION BABY D"},{"ID":"27261","Name":"IN
+        THE MATTER OF BABY S. K.W.(MINOR)"},{"ID":"27306","Name":"MWANGI MACHARIA
+        ALIAS GATHEE"},{"ID":"27329","Name":"IN THE MATTER OF BABY M (THE CHILD)"},{"ID":"27352","Name":"IN
+        THE MATTER OF BABY  F.M"},{"ID":"27353","Name":"IN THE MATTER OF BABY C.M"},{"ID":"27354","Name":"IN
+        THE MATTER OF BABY G.M.T(THE CHILD)"},{"ID":"27355","Name":"IN THE MATTER
+        OF BABY A.A"},{"ID":"27356","Name":"IN THE MATTER OF BABY A.W"},{"ID":"27357","Name":"IN
+        THE MATTER OF BABY M AN B"},{"ID":"27360","Name":"IN THE MATTER OF BABY L
+        (THE CHILD)"},{"ID":"27367","Name":"IN THE MATTER OF ADOPTION OF E. T.(THE
+        CHILD)"},{"ID":"27368","Name":"IN THE MATTER OF ADOPTION OF S. W. I. (THE
+        CHILD)"},{"ID":"27369","Name":"IN THE MATTER OF ADOPTION OF M. K. (THE CHILD)"},{"ID":"27373","Name":"IN
+        THE MATTER OF B.O"},{"ID":"27374","Name":"IN THE MATTER OF AN APPLICATION
+        FOR ADOPTION OF E.N.(MINOR)"},{"ID":"27375","Name":"IN THE MATTER FOR ADOPTION
+        OF BABY B.P.N(MINOR)"},{"ID":"27376","Name":"IN THE MATTER OF AN APPLICATION
+        FOR ADOPTION OF B.N(CHILD)"},{"ID":"27377","Name":"IN THE MATTER OF AN APPLICATION
+        FOR ADOPTION OF BABY R"},{"ID":"27378","Name":"IN THE MATTER OF AN APPLICATION
+        FOR ADOPTION OF BABY M.M"},{"ID":"27379","Name":"IN THE MATTER OF BABY M.M(INFANT)"},{"ID":"27380","Name":"IN
+        THE MATTER FOR ADOPTION OF A"},{"ID":"27381","Name":"IN THE MATTER OF J K
+        N -CHILD"},{"ID":"27382","Name":"IN THE MATTER OF AN APPLCIATION FOR ADOPTION
+        OF BABY C.M"},{"ID":"27383","Name":"IN THE MATTER OF AN APPLICATION FOR ADOPTION
+        OF I.A"},{"ID":"27386","Name":"IN THE MATTER OF BABY H.R"},{"ID":"27387","Name":"IN
+        THE MATTER FOR ADOPTION OF D.N(THE INFANT)"},{"ID":"27388","Name":"IN THE
+        MATTER OF AN APPLICATION FOR ADOPTION OF BABY L.L(CHILD)"},{"ID":"27389","Name":"IN
+        THE MATTER OF BABY G.H.Z"},{"ID":"27390","Name":"IN THE MATTER OF S(INFANT)"},{"ID":"27391","Name":"IN
+        THE MATTER OF BABY M.W.K (THE INFANT)"},{"ID":"27402","Name":"PUBLIC TRUSTEE  V
+        ESTHER JEPSONGOK KETER"},{"ID":"27413","Name":"IN THE MATTER OF BABY  C.N"},{"ID":"27414","Name":"IN
+        THE MATTER OF BABY E.W"},{"ID":"27415","Name":"IN THE MATTER OF BABY F"},{"ID":"27431","Name":"KILUNGI
+        KITHEKA  V REPUBLIC"},{"ID":"27449","Name":"IN THE MATTER OF BABY S.N"},{"ID":"27454","Name":"Samuel
+        Gashegwa Waithera"},{"ID":"27455","Name":"Beatrice Wangui Waithera V Republic"},{"ID":"27460","Name":"IN
+        THE MATTER OF BABY N.N.I"},{"ID":"27472","Name":"IN THE MATTER OF BABY A.R."},{"ID":"27487","Name":"IN
+        THE MATTER OF THE ESTATE OFJONATHAN KIPTOO KIRUI"},{"ID":"27506","Name":"JOHN
+        WACHIRA GATHERA  V REPUBLIC"},{"ID":"27512","Name":"LAKE NAIVASHA FRIENDS
+        OF THE ENVIRONMENT V ATTORNEY GENERAL"},{"ID":"27515","Name":"THE BAHATI LAND
+        DISPUTES TRIBUNAL"},{"ID":"27534","Name":"THE INDUSTRIAL COURT OF KENYA"},{"ID":"27552","Name":"MUTUA
+        KIVAYA NTHENGE V REPUBLIC"},{"ID":"27568","Name":"MBATHA KANGETHE V REPUBLIC"},{"ID":"27575","Name":"MULU
+        NZAMBUYA V RACHAEL MUTHEU MULU"},{"ID":"27580","Name":"THE PERMANENT SECRETARY
+        MINISTRY OFAGRICULTURE"},{"ID":"27657","Name":"IN THE MATTER OF THE ESTATE
+        OF PAUL MUTHIANI MUSAU-DECEASED"},{"ID":"27663","Name":"Tabitha Waithera Murigi"},{"ID":"27664","Name":"Esther
+        Wahu Mwangi"},{"ID":"27717","Name":"THE CHAIRMAN"},{"ID":"27727","Name":"REPUBLIC  V
+        THE CHAIRMAN KANDUYI LAND DISPUTES TRIBUNAL EX-PARTE SAULWEKESA NYONGESA"},{"ID":"27762","Name":"THE
+        LAND REGISTRAR"},{"ID":"27773","Name":"Dhajalala Bothers Ltd"},{"ID":"27794","Name":"JOSEPH
+        GATHECA GICHOHI"},{"ID":"27805","Name":"Esther Wambui  Kimari"},{"ID":"27826","Name":"IN
+        THE MATTER OF BABY  M.U."},{"ID":"27837","Name":"IN THE MATTER OF BABY N.N"},{"ID":"27870","Name":"IN
+        RE THE MATTER OF SAMMY HOSEA NJOROGE (DECEASED)"},{"ID":"27874","Name":"LUCY
+        NJERI NGUNYANGI 3 Others"},{"ID":"27875","Name":"THE CHIEF LAND REGISTRAR"},{"ID":"27891","Name":"IN
+        THE MATTER OF ADOPTION OF BABY  J. M. THE INFANT"},{"ID":"27893","Name":"EPHANTUS
+        MUTHEE WANJIKU V REPUBLIC"},{"ID":"27899","Name":"GEORGE GATHERE GICHORA"},{"ID":"27903","Name":"IN
+        THE MATTER OF ADOPTION OF BABY B. M. aka N. aka N. THE INFANT"},{"ID":"27904","Name":"IN
+        THE MATTER OF ADOPTION OF BABY S. M. THE INFANT"},{"ID":"27956","Name":"DR.
+        WILLY MUTUNGA THE CHIEF JUSTICE OF THE REPUBLIC OF KENYA"},{"ID":"27976","Name":"IN
+        THE ESTATE OF JAMES THUITA KARIUKI &ndash; DECEASED"},{"ID":"28022","Name":"ATTORNEY
+        GENERAL ON BEHALF OF THE MARAKWET DISRICT LANDDISPUTES TRIBUNAL"},{"ID":"28023","Name":"THE
+        SENIOR RESIDENT MAGISTRATE`SCOURT AT ITEN"},{"ID":"28024","Name":"THE KEIYO
+        \/MARAKWET DISTRICT LAND REGISTRAR AND THE MARAKWET DISTRICTSURVEYO"},{"ID":"28026","Name":"FRANCIS
+        WAWERU GATHENJI V REPUBLIC"},{"ID":"28037","Name":"IN THE MATTER OF BABY BI"},{"ID":"28043","Name":"IN
+        THE MATTER OF BABY K. M"},{"ID":"28044","Name":"IN THE MATTER OF BABY J.I"},{"ID":"28045","Name":"IN
+        RE THE MATTER OF BABY DLK"},{"ID":"28118","Name":"HANNAH WAITHERA KANGETHE"},{"ID":"28155","Name":"IN
+        THE MATTER OF BABY S. M"},{"ID":"28173","Name":"Benard Kilonzo (suing as theadministrator
+        of the Estate of the late Maurice Mutinda Kilonzo"},{"ID":"28185","Name":"IN
+        RE THE MATTER OF BABY D"},{"ID":"28232","Name":"IN RE THE MATTER OF THE ESTATE
+        OF SIMON KILEL CHELELMET"},{"ID":"28248","Name":"IN THE MATTER OF BABY SH"},{"ID":"28254","Name":"GABRIEL
+        MWANGI GATHERE"},{"ID":"28264","Name":"JULIUS THETHE KOI"},{"ID":"28274","Name":"THE
+        INDUSTRIAL COURT   Exparte JOEL KANDIE CHEBII"},{"ID":"28285","Name":"THE
+        HON. ATTORNEY GENERAL"},{"ID":"28299","Name":"IN THE MATTER OF WINDING UP
+        OF AKAMBA STOCK TRADERS LTD"},{"ID":"28313","Name":"IN THE MATTER OF BABY
+        P.B"},{"ID":"28315","Name":"IN THE MATTER OF K.K"},{"ID":"28319","Name":"IN
+        RE THE MATTER OF C A T (BABY)"},{"ID":"28369","Name":"IN THE MATTER OF BABY
+        C.A"},{"ID":"28370","Name":"IN THE MATTER OF BABY A.O.O"},{"ID":"28373","Name":"WINFRED
+        MUTHEU KIAMUKO"},{"ID":"28378","Name":"IN THE MATTER OF BABY S.O"},{"ID":"28397","Name":"CHARLES
+        KINYANJUI KANG`ETHE V GEORGE GACHANJA MWANGI"},{"ID":"28432","Name":"IN THE
+        MATTER OF AN APPLICATION FOR ADOPTION OF BABY M.W"},{"ID":"28442","Name":"IN
+        THE MATTER OF L.O (CHILD)"},{"ID":"28443","Name":"IN THE MATTER OF G.L.A"},{"ID":"28447","Name":"In
+        the Matter of Baby T.G[2012]eklr"},{"ID":"28452","Name":"IN THE MATTER OF
+        BABY F.G"},{"ID":"28453","Name":"IN RE THE MATTER OF S.W.G (BABY)"},{"ID":"28454","Name":"Pius
+        Majani Shisala (suing as the legal representative and administrator of the
+        estate of Regina Shikkoya)"},{"ID":"28462","Name":"I.B. THRO`  HER FATHER
+        AND NEXT FRIEND B. B."},{"ID":"28478","Name":"Attorney General of the Republic
+        of Uganda"},{"ID":"28493","Name":"IN RE THE ESTATE OF THE LATE PHARIS MWANGI
+        NGIGE (Deceased)"},{"ID":"28552","Name":"Republic V The Kenya National Commission
+        On Human Rights Ex-partewilliam Ruto"},{"ID":"28572","Name":"The Provincial
+        Police Officer Central Province"},{"ID":"28573","Name":"The Officer Commanding
+        Police Divison Gatundu Division"},{"ID":"28574","Name":"and the Honourable
+        Attorney General"},{"ID":"28583","Name":"THE COMMISSIONER FOR CO-OPERATIVE
+        DEVELOPMENT EX-PARTETHIKA COFFEE MILLS LIMITED"},{"ID":"28597","Name":"IN
+        THE MATTER OF THE ESTATE OF PAULO KIPLAGAT BOIWO (DECEASED)"},{"ID":"28601","Name":"IN
+        RE THE MATTER OF JANE MBITHE WAMBUA"},{"ID":"28602","Name":"IN THE MATTER
+        OF THE ESTATE OF SYEVOSE MUKULU (DECEASED)"},{"ID":"28620","Name":"Rahab Micere
+        Murage (Suing As A Representative of the Estate of  Esther Wakiini Murage"},{"ID":"28626","Name":"IN
+        RE THE MATTER OF COMPLETE TRANSPORT SOLUTIONS LIMITED"},{"ID":"28676","Name":"CENTRAL
+        ORGANIZATION OF  TRADE UNIONS (K)  V THE NATIONAL HOSPITALINSURANCE FUND BOARD
+        MANAGEMENT"},{"ID":"28710","Name":"THE STANDARD LIMITED"},{"ID":"28722","Name":"IN
+        THE MATTER OF AN APPLICATION FOR ADOPTION OF G. K. P (AN INFANT)"},{"ID":"28725","Name":"THE
+        MATTER OF AN APPLICATION FOR ADOPTION OF C.A(A BABY)"},{"ID":"28775","Name":"ESTHER
+        NJERI NJENGA"},{"ID":"28808","Name":"G M O (minor suing Through his father
+        andnext friend F E O)"},{"ID":"28813","Name":"IN THE MATTER OF THE ESTATE
+        OF HEZRON N. NGUTI"},{"ID":"28817","Name":"IN THE MATTER OF THE ESTATE OF
+        EVA MAYAA MANASE(DECEASED)"},{"ID":"28832","Name":"Benard Mutua Matheka"},{"ID":"28874","Name":"IN
+        THE MATTER OF THE ESTATE OF PETER NJOROGE GACHIE"},{"ID":"28876","Name":"IN
+        THE MATTER OF H.M(MINOR)"},{"ID":"28881","Name":"IN THE MATTER OF E.C.C"},{"ID":"28882","Name":"REPUBLIC
+        V DISCIPLINARY COMMITTEE OF THE LAW SOCIETY OF KENYA EX-PARTESTEPHEN OWINO"},{"ID":"28883","Name":"IN
+        THE MATTER OF BABY W.M"},{"ID":"28893","Name":"IN THE MATTER OF AN APPLICATION
+        FOR ADOPTION OF B.J[2012]eKLR"},{"ID":"28914","Name":"COMMISSIONER OF POLICE
+        ANDTHE DIRECTOR OF CRIMINALINVESTIGATIONS DEPARTMENT  INTERESTED PARTYBENJOH
+        AMALGAMATED LTD"},{"ID":"28924","Name":"THEODORA ATIENO OKAL"},{"ID":"28935","Name":"Simon
+        Muteti Nthenge"},{"ID":"28938","Name":"Japheth A Agura being the Iterim Secretary  General
+        and Promoter of Kenya Union of Employees  of Polytechnic Colleges"},{"ID":"28939","Name":"The
+        Registar of Trade Unions"},{"ID":"28974","Name":"In Re Matter of  the Estate
+        of Karanja   Njoroge Thuo"},{"ID":"29027","Name":"Land Dispute Tribunal Kakuzi  Ex-parte
+        Muathe Kaleli"},{"ID":"29045","Name":"MWANGI MATHENGE"},{"ID":"29048","Name":"IN
+        THE MATTER OF BABY P.T.H"},{"ID":"29049","Name":"IN THE MATTER OF AN APPLICATION
+        FOR ADOPTION OF BABY K.M"},{"ID":"29052","Name":"JOSEPH MARUNGA GITONGA V  THE
+        ADMINISTRATORS OF THE ESTATE OF RAHAB WANJIRU EVANS (DECEASED)"},{"ID":"29062","Name":"FLORIDA
+        KAVUU NTHENGE"},{"ID":"29063","Name":"IN THE MATTER OF AN APPLICATION FOR
+        ADOPTION OF BABY J.I"},{"ID":"29107","Name":"IN THE MATTER OF THE ESTATE OF
+        THE LATE VERONICA NDUTA MACHARIA (DECEASED)"},{"ID":"29122","Name":"BONFACE
+        MATHEW BWIRE"},{"ID":"29123","Name":"R.H.N another"},{"ID":"29136","Name":"MOSES
+        NGUGI KANGETHE"},{"ID":"29139","Name":"FRANCIS NGARI WANGITHI  another"},{"ID":"29156","Name":"IN
+        THE MATTER OF THE ESTATE OF FRANCIS KAMBO NDIRANGU &ndash; DECEASED"},{"ID":"29159","Name":"FAIRMONT
+        THE NORFOLK HOTEL V THE INDUSTRIAL COURT OF KENYA"},{"ID":"29199","Name":"CATHERINE
+        WAMBOI KARARI"},{"ID":"29224","Name":"I.A.K suing through mother and next
+        friend C.A.O."},{"ID":"29276","Name":"IN THE MATTER OF THE ESTATE OF NGANGA
+        NJUGUNA (DECEASED)"},{"ID":"29327","Name":"JOSEPHAT OMUKAGA EKISA(suing as
+        father and next friend to JOHN EKISA)"},{"ID":"29358","Name":"Stephen Muthee
+        (as legal representative of  Estate of Evelyn Karambu (Deceased) V Samson
+        Nderitu Murithi"},{"ID":"29361","Name":"W.K (Minor Suing Through Next Friend
+        and Mother L. K"},{"ID":"29364","Name":"CHARLES NJOROGE THECHE V REPUBLIC"},{"ID":"29385","Name":"BERNARD
+        OTIENO OKOTH (Suing as the Administrator to the Estate of ELIZABETH AUMA AGUNDA
+        Deceased)"},{"ID":"29393","Name":"THE PERMANENT SECRETARY MINISTRY OF TRANSPORT"},{"ID":"29406","Name":"MARTIN
+        NZIOKA KITHEKA"},{"ID":"29411","Name":"THE ATTORNEY GENERAL"},{"ID":"29422","Name":"THOMAS
+        KIBE AND 114 OTHERS"},{"ID":"29430","Name":"MATHEW KIRIAGO AKAMA"},{"ID":"29431","Name":"MATHEW
+        KANGWANA"},{"ID":"29441","Name":"IN THE MATTER OF THE ESTATE OF KARINGITHI
+        KIBIA (DECEASED)"},{"ID":"29448","Name":"In Re the Estate of Ibrahim Gikaria
+        Ndogo"},{"ID":"29588","Name":"In the Re Estate of SUSAN MBOGA MANDU(Deceased)"},{"ID":"29612","Name":"IN
+        THE  MATTER OF AN APPLICTAION FOR THE ADOPTION OF:L.Z &ndash; MINOR"},{"ID":"29637","Name":"PERSONAL
+        REPRESENTATIVES OF THEESTATE OF: CHUNILAL MADAN (DECEASED)"},{"ID":"29672","Name":"IN
+        THE MATTER OF THE ESTATE OF ALLOYCE M. OBIERO(DECEASED)"},{"ID":"29694","Name":"PATRICK
+        GITHERU GATONYE"},{"ID":"29695","Name":"MARY WANJIRU GITHEHU"},{"ID":"29699","Name":"IN
+        THE MATTER OF R &ndash; MINOR"},{"ID":"29702","Name":"IN THE MATTER OF THE
+        ESTATE OF NJUGUNA NGENGI(DECEASED)"},{"ID":"29704","Name":"ODUOR ONG`WEN AND
+        20 OTHERS"},{"ID":"29757","Name":"MICHAEL NTHENGE NZIOKI"},{"ID":"29758","Name":"PETERSON
+        MUNENE GATHERU"},{"ID":"29762","Name":"WILFRED KAMAU NJAU  (A minor suingthro`
+        his father and  next friend Hezekiah Njau Njoroge)"},{"ID":"29765","Name":"In
+        The Estate of JOHN KANGETHE (DECEASED)"},{"ID":"29788","Name":"CIRIO DEL MONTHE
+        (K) LTD"},{"ID":"29790","Name":"IN THE MATTER OF THE ESTATE OF HEZEKIAH WAMURWA
+        OKORA(DECEASED)"},{"ID":"29807","Name":"IN THE MATTER OF THE ESTATE OF MUTHIGURO
+        KIGANDA (DECEASED)"},{"ID":"29811","Name":"ANDERSON OGAWO ACHOLA Suing as
+        father and Administrator of the Estate of REISA GETURA OGAWO(Deceased)"},{"ID":"29839","Name":"ESTHER
+        WAMBUI MWANGI"},{"ID":"29843","Name":"IN THE MATTER OF THE ESTATE OF RUBIRI
+        GATHEGE(DECEASED)"},{"ID":"29852","Name":"EDWARD MUTHENGI"},{"ID":"29853","Name":"In
+        Re the matter of Mukhebi Sichululu (Deceased)"},{"ID":"29860","Name":"DIONESIO
+        NJERU MUNYIRI (Suing as legal representative\/Administrator of the estate
+        of the late PAUL MUGENDI NJERU &ndash; Deceased)"},{"ID":"29863","Name":"STANLEY
+        GATITHI NGWERIINI  (Suing as legal rep of the estate of Paul Kinyua Gatithi
+        (deceased)"},{"ID":"29872","Name":"IN RE THE MATTER OF PETER KABIARU KABUNGU"},{"ID":"29885","Name":"IN
+        THE MATTER OF BABY F.N [INFANT]"},{"ID":"29887","Name":"IN RE THE MATTER OF
+        KENYA DATA NETWORKS LIMITED"},{"ID":"29907","Name":"In the Matter of BABY
+        A. R ( MINOR)"},{"ID":"29908","Name":"IN THE MATTER OF BABY A &ndash; MINOR"},{"ID":"29920","Name":"IN
+        THE MATTER OF AN APPLICATION FOR ADOPTION OF BABY F.M"},{"ID":"29922","Name":"THE
+        TOWN CLERK MUNICIPAL COUNCIL OF ELDORET"},{"ID":"29923","Name":"CHARLES MATHENGE
+        WAHOME"},{"ID":"29925","Name":"THE DISTRICT LAND DISPUTE TRIBUNAL KIPKAREN
+        INTERESTED PARTY SARAH K. KISORIO EX-PARTE DORCAS J. KISORIO"},{"ID":"29958","Name":"SAMUEL
+        MUTHEE BERNARD"},{"ID":"29991","Name":"ESTHER JEPKEMBOI KIPLAGAT"},{"ID":"30025","Name":"IN
+        THE MATTER OF BABY A.M.M"},{"ID":"30027","Name":"In Re the matter of Chapara
+        Taraya Nangunye"},{"ID":"30057","Name":"IN THE MATTER OF  BABY S (MINOR)"},{"ID":"30067","Name":"CHARLES
+        MATHENGE NJOGO"},{"ID":"30087","Name":"ISDORA OPIYO YOGO  V ESTHER A. NGICHO"},{"ID":"30105","Name":"THE
+        SECRETARY"},{"ID":"30120","Name":"Government of the United States of America"},{"ID":"30127","Name":"EDWIN
+        MATHENGE MACHANJAMI"},{"ID":"30158","Name":"IN THE MATTER OF BABY C.H - INFANT"},{"ID":"30174","Name":"IN
+        THE MATTER OF BABY L &ndash; MINOR"},{"ID":"30175","Name":"IN THE MATTER OF
+        J.M"},{"ID":"30215","Name":"In Re the Adoption of B.N. (CHILD)"},{"ID":"30216","Name":"IN
+        THE MATTER OF ADOPTION OF BABY C.T"},{"ID":"30255","Name":"PETER  MUTUA  NDETO  AND  4  OTHERS"},{"ID":"30263","Name":"ESTHER
+        WAMBUI GITHINJI"},{"ID":"30406","Name":"LEADING RESORTS OF THE WORLD LTD"},{"ID":"30416","Name":"The
+        District Land Disputes Tribunal"},{"ID":"30452","Name":"JOYCE KWAMBOKA ONG`ONG`A
+        Suing as the Personal and Legal Representative of FRANCIS ONG`ONG`A MOGIRE
+        (DECEASED)"},{"ID":"30455","Name":"MATIKU KYENGO KAVINGO through NZELI MATIKU
+        the legal Representative"},{"ID":"30531","Name":"H.M.M. (suing as the legal
+        representative of the Estate of K.M. (DECEASED)"},{"ID":"30547","Name":"MATHEW
+        MBAM MAJOR"},{"ID":"30592","Name":"MOSES MUTHERI KANATHI"},{"ID":"30598","Name":"ESTHER
+        KETER"},{"ID":"30642","Name":"In Re The Matter of P.H. (Minor)"},{"ID":"30649","Name":"MATHEW
+        OYOO OGONDO"},{"ID":"30650","Name":"PIUS MUKANZI (suing as the Administrator
+        of the estate of Desterio Mukanzi and Florence K. Imbenzi)"},{"ID":"30663","Name":"CATHERINE
+        OMUSINA AWINJA"},{"ID":"30736","Name":"CATHERINE WANJIKU KARIUKI"},{"ID":"30783","Name":"CATHERINE
+        WAMBUI KINYUA"},{"ID":"30825","Name":"MARY AKELO DEDA (Suing as Administrator
+        of the Estate of DALMAS DEDA CHOL - deceased)"},{"ID":"30827","Name":"WILFRED
+        NYAMBATI  KERAITA (suing as the personal representative of) MARY NYABOKE KERAITA-
+        Deceased"},{"ID":"30844","Name":"SOUTHERN CREDIT BANK CORPORATION"},{"ID":"30879","Name":"FRANCIS
+        GITARI MATHENGE"},{"ID":"30893","Name":"From the judgment of the Senior Resident
+        Magistrate"},{"ID":"30932","Name":"THE DISTRICT FOREST OFFICER KOBATEK DISTRICT"},{"ID":"30995","Name":"THE
+        HON.ATTORNEY GENERAL"},{"ID":"31107","Name":"CHARLES OSANO KIJANAH (suing
+        as the legal representative of the estate of the late MICHAEL OSANO"},{"ID":"31273","Name":"IN
+        RE THE MATTER OF PETER NDEGWA WAWERU"},{"ID":"31282","Name":"IN THE MATTER
+        OF AN APPLICATION FOR ADOPTION OF R"},{"ID":"31307","Name":"JAMES GITHIRI
+        NGETHE"},{"ID":"31450","Name":"SHIVALI HOLDINGS LTD 3 Others"},{"ID":"31451","Name":"In
+        Re the matter of Daniel Mathenge Ruthi"},{"ID":"31497","Name":"THE BOARD OF
+        TRUSTEES KAMUSINDE SALAVATION ARMY CHURCH"},{"ID":"31595","Name":"Lutheran
+        World Federation"},{"ID":"31629","Name":"ESTHER WANGUI NYAGA"},{"ID":"31630","Name":"HOTEL
+        LE-RHINO LIMITED V PERMANENT SECRETARY IN THE MINISTRY OF MEDICAL HEALTH"},{"ID":"31672","Name":"JOSEPH
+        NJOROGE MATHERI"},{"ID":"31736","Name":"PETER MAINGI MITHEKO"},{"ID":"31762","Name":"LUCY
+        WAITHERERO MWANGI"},{"ID":"31789","Name":"THE STANDARD GROUP LIMITED"},{"ID":"31791","Name":"JOHN
+        NTHE WA KASSIM"},{"ID":"31817","Name":"In the matter of an application for
+        vesting order by David Karanja Wakaba"},{"ID":"31818","Name":"In the matter
+        of LR. No. 209\/136\/197 Nairobi Estate of Samuel Ngina Munenge"},{"ID":"31851","Name":"In
+        Re the Estate of Francis Nyaga Muchiri (Deceased)"},{"ID":"31977","Name":"LIZA
+        CATHERINE WANGARI MWANGI"},{"ID":"31993","Name":"DISCIPLINARY COMMITTEE OF
+        THE LAW SOCIETY OF KENYA"},{"ID":"32017","Name":"HELLEN NYOKABI THEURI"},{"ID":"32021","Name":"In
+        Re the matter of Matic General Contractors Limited"},{"ID":"32047","Name":"THE
+        SETTLEMENT FUND TRUSTEES"},{"ID":"32067","Name":"ESTHER AUMA OKAL"},{"ID":"32114","Name":"ALICE
+        WAITHERA MWAURA"},{"ID":"32283","Name":"DISCIPLINARY COMMITTEE OF THE LAW
+        SOCIETY OF KENYA Exparte Robinson ONyango Malombo"},{"ID":"32305","Name":"YOHANA
+        OMUMIA (Suing on behalf of the Estate of PIUS WERE ABONYO)"},{"ID":"32354","Name":"FREDRICK
+        MWEKE MATHEKA"},{"ID":"32375","Name":"Dennis Muthee Chokera"},{"ID":"32408","Name":"THE
+        BOARD OF GOVERNORS MICHINDA BOARDING PRIMARY SCHOOL"},{"ID":"32421","Name":"ATHENUS
+        OKETCH NDURURU"},{"ID":"32440","Name":"ESTHER NYABIAGE ONKWARE"},{"ID":"32477","Name":"ESTHER
+        WANGECHI"},{"ID":"32485","Name":"New Leather Manufacturing Factory Limited"},{"ID":"32506","Name":"THE
+        CHAIRMAN MERU"},{"ID":"32510","Name":"Hannah Wambui (Suing on behalf of the
+        estate of Ndung`u Nganga (Deceased)"},{"ID":"32533","Name":"MUTHEKI MUCHONJORU"},{"ID":"32538","Name":"IN
+        THE MATTER OF THE ESTATE OF MARTIN MUTHURI MBURUGU (DECEASED)"},{"ID":"32565","Name":"In
+        Re Estate of Alexander Mathenge Njeru (Deceased)"},{"ID":"32599","Name":"JANE
+        WAMBUI KAGWIMA (suing as the administratix of the estate of the late ) JAMES
+        KAGWIMA NG`ANG`A)"},{"ID":"32680","Name":"IN THE MATTER OF THE ESTATE OF KIMANI
+        NYAITUGA (DECEASED)"},{"ID":"32734","Name":"IN Re THE MATTER OF THE ESTATE
+        OF M`MUKINDIA M`ARACHI (DECEASED)"},{"ID":"32740","Name":"IN THE MATTER OF
+        THE ESTATE OF WAIGWA KIBINGA ALIAS JOSHUA  WAIGWA KABINGA &ndash; DECEASED   JANE
+        WANGARI WAIGWA"},{"ID":"32743","Name":"ESTHER NKATHA"},{"ID":"32749","Name":"FRANCIS
+        MATHEKA KATING`AYA"},{"ID":"32757","Name":"In Re The Matter of H.W. (Subject)"},{"ID":"32762","Name":"PAMELA
+        KILELO MAGHANGA V D.I.M (Minor suing through L.W.M as the next friend)"},{"ID":"32766","Name":"SAMUEL
+        MUNA NTHEGA"},{"ID":"32768","Name":"SAMUEL MUNA NTHEGA  V REPUBLIC"},{"ID":"32771","Name":"ROY
+        PARCELS SERVICES LIMITED V ESTHER W. NGURE"},{"ID":"32809","Name":"MOSES KINYANJUI
+        KANGETHE V LUCY NYAKERU NJAU"},{"ID":"32819","Name":"CATHERINE KAGWIRIA"},{"ID":"32893","Name":"SOCFINAF
+        COMPANY LIMITED V MARGARET WAITHERA MBUGUA"},{"ID":"32928","Name":"In Re the
+        Estate of Ndegwa Kuria (Deceased)"},{"ID":"32983","Name":"MARK NJOROGE NGUTHI
+        V JAMES MUTHEMBUA"},{"ID":"32986","Name":"RUFUS KANGETHE MANYEKI"},{"ID":"33012","Name":"KENYATTA
+        UNIVERSITY V GEORGE KAMAU GITHERE T\/A KOM STOCKISTS"},{"ID":"33036","Name":"ERASTUS
+        RIUNGU MUTIGA (Suing as the administrators and personal representatives of
+        the estate of the late JAMES MURITHI RUTERE V ATTORNEY GENERAL"},{"ID":"33098","Name":"JULIUS
+        KANG`ETHE MWANGI"},{"ID":"33179","Name":"ALICE WAITHERA"},{"ID":"33188","Name":"In
+        Re The Matter of F. M. (Child)"},{"ID":"33191","Name":"In Re The Matter of
+        S.N. (Child)"},{"ID":"33192","Name":"in re the matter of s.n.(baby)"},{"ID":"33246","Name":"In
+        Re The Matter Of J.H. (Child)"},{"ID":"33249","Name":"IN RE THE MATTER OF
+        F.W. (MINOR)"},{"ID":"33255","Name":"FRANCIS GATHEKIA"},{"ID":"33258","Name":"Christopher
+        Nyoike Kangethe"},{"ID":"33279","Name":"ISAAC MAINA MURATHE"},{"ID":"33280","Name":"JESIDAH
+        WANJIRU MURATHE"},{"ID":"33303","Name":"In Re the Matter of the Estate of
+        Karanja Kinyanjui (Deceased)"},{"ID":"33311","Name":"SAMSON JOHN NDERITU V
+        THE ATTORNEY GENERAL"},{"ID":"33312","Name":"KIBERA SILANGA SELF-HELP GROUP
+        DAY NURSARY SCHOOL V THE PRESBYRERIAN FOUNDATION"},{"ID":"33403","Name":"In
+        Re The Estate of George Musau Matheka (Deceased)"},{"ID":"33429","Name":"ANTONY
+        KANGETHE MWANGI"},{"ID":"33451","Name":"JOSEPH MUTHECA MWANGI"},{"ID":"33478","Name":"ESTHER
+        WAMBUI MAINA"},{"ID":"33521","Name":"SAMUEL KIMONDO GATHERU"},{"ID":"33555","Name":"In
+        Re The Matter of The Estate of Edith Wangui Muiruri (Deceased)"},{"ID":"33581","Name":"PAUL
+        MUTHEE MWANGI"},{"ID":"33659","Name":"ESTHER MWANGO KERANDI"},{"ID":"33723","Name":"SAMSON
+        OLE TIAN V THE CLERK"},{"ID":"33732","Name":"Peterson Gatheru Wachira"},{"ID":"33737","Name":"ESTHER
+        NJERI KARIUKI"},{"ID":"33796","Name":"DENNIS KITHINJI MUTHEE"},{"ID":"33885","Name":"ISAYA
+        THEURI M`LINTARI"},{"ID":"33921","Name":"In Re The Matter of Baby K.H. (Child)"},{"ID":"33945","Name":"JOSEPH
+        KIBITHE SIRONGA"},{"ID":"33974","Name":"ESTHER WAMBUI NJUGUNA"},{"ID":"33975","Name":"ERNEST
+        NJUGUNA MUTHEE"},{"ID":"34032","Name":"ALEXANDER GEORGE KIRAITHE"},{"ID":"34079","Name":"ESTHER
+        WANGUI NDUNGU"},{"ID":"34165","Name":"MICHAEL MUTHEE MUAZI"},{"ID":"34225","Name":"ESTHER
+        GITURA"},{"ID":"34260","Name":"THEURI KAHOYA GITUNE"},{"ID":"34272","Name":"ESTHER
+        MUTHONI NGUGI"},{"ID":"34359","Name":"THOMAS NYAOMA ONGONDO  V . THE DISTRICT
+        LAND REGISTRAR"},{"ID":"34363","Name":"IN THE MATTER OF THE ESTATE OF MWAURA
+        KIMANI"},{"ID":"34388","Name":"IN THE MATTER OF ADOPTION OF BABY RV alias
+        EOJ V JKN"},{"ID":"34389","Name":"IN THE MATTER OF ADOPTION OF BABY RA"},{"ID":"34432","Name":"CLOVER
+        FOODS (K) LTD  V THE CITY COUNCIL OF NAIROBI"},{"ID":"34476","Name":"IN THE
+        MATTER OF THE ESTATE OF GIBSON KAMAU WAIRIRE (DECEASED"},{"ID":"34484","Name":"Catherine
+        Nyaguthii Mbauni"},{"ID":"34490","Name":"THE KENYA TRYPANOSOMIASIS RESEARCH
+        INSTITUTE"},{"ID":"34496","Name":"CATHERINE KAWIRA MURUNGI"},{"ID":"34544","Name":"PETER
+        W. MIGWI KANGETHE V JOHN L. KARANJA MWANGI"},{"ID":"34545","Name":"GEORGE
+        ONYANGO ATHEMBO"},{"ID":"34558","Name":"IN THE MATTER OF ADOPTION OF BABY
+        PMK"},{"ID":"34633","Name":"IN THE MATTER OF ADOPTION OF SSK  &ndash; INFANT"},{"ID":"34674","Name":"IN
+        THE MATTER OF ADOPTION OF BABY L"},{"ID":"34675","Name":"STEPHEN K. KIMUYA
+        V BOARD OF TRUSTEES OF THETHE BOARD OF TRUSTEES OF THE NATIONAL SOCIAL SECURITY
+        FUND"},{"ID":"34755","Name":"SOLOMON MUATHE MITAU"},{"ID":"34791","Name":"In
+        the matter of Co-operative Societies Act"},{"ID":"34823","Name":"REPUBLIC
+        V THE KENYA NATIONAL"},{"ID":"34825","Name":"KENYA NATIONAL EXAMINATION COUNCIL
+        Ex-parte KEMUNTO REGINA OURU (Suing through father and next friend JAMES OURU)
+        AND 128 OTHERS"},{"ID":"34827","Name":"FRANCIS KANGETHE THUO"},{"ID":"34829","Name":"In
+        Re The Estate of Mugo Wandia (Deceased)"},{"ID":"34832","Name":"In RE The
+        Estate of Cheruiyot Tapnantet (Deceased)"},{"ID":"34866","Name":"In Re Estate
+        of Erastus Muriuki Munyuthe (Deceased)"},{"ID":"34901","Name":"ORDER LIII
+        OF THE CIVIL PROCEDURE RULES"},{"ID":"34905","Name":"ELIZABETH NGINA MUTHOKA
+        (Suing as the Administratrix of the Estate ofPROF. PAUL MUTHOKA MUSAU (DECEASED)"},{"ID":"34921","Name":"ANTHONY
+        KANYI MATHENGE"},{"ID":"34945","Name":"Patrick William Ateku (suing as personal
+        representative of the estate of William Marende Ateku-Deceased"},{"ID":"34946","Name":"ESTHER
+        WAMBURA WAMGUGU"},{"ID":"34970","Name":"PHILLIP ANTHONY MATHEWS"},{"ID":"34981","Name":"CATHERINE
+        ONYANGO"},{"ID":"35025","Name":"Al- Malik Bothers Motors Limited"},{"ID":"35102","Name":"In
+        Re The Estate of Chege Njuguna (Deceased)"},{"ID":"35113","Name":"Paul Wagiita
+        Theuri"},{"ID":"35120","Name":"SAMUEL GITHINJI WAITHERA"},{"ID":"35168","Name":"TRUSTEE
+        AND EXECUTOR OF THE ESTATE OF GULAMHUSSEIN EBRAHIMJI POTHIWALLA"},{"ID":"35202","Name":"CATHERINE
+        WAMBUI GICHANGA"},{"ID":"35216","Name":"MARGARET WAITHERA WACHIRA"},{"ID":"35247","Name":"Francis
+        Kang`ethe Warai"},{"ID":"35276","Name":"In Re The Estate of MUYA (Deceased)"},{"ID":"35277","Name":"IN
+        Re THE ESTATE OF MWANGI KIRIIRI(Deceased)"},{"ID":"35280","Name":"In Re the
+        Estate of Mwangi Kiriiri (Deceased)"},{"ID":"35293","Name":"PETER KANGETHE
+        MAKARI"},{"ID":"35304","Name":"IN THE MATTER OF ANNAH GATHONI MWANGI"},{"ID":"35377","Name":"ESTHER
+        WAIRIMU WANGUI V DAVID NJUKI"},{"ID":"35395","Name":"PHILIP NTHEI"},{"ID":"35440","Name":"CHARLES
+        MATHEKA"},{"ID":"35493","Name":"NDUNGU NGETHE"},{"ID":"35542","Name":"ESTHER
+        NYAMBURA NJENGA"},{"ID":"35582","Name":"GITHAIGA  V ESTHER MUTHONI MWANIKI"},{"ID":"35594","Name":"MATHEW
+        MUNGAI KIMANI"},{"ID":"35630","Name":"In Re The Estate of Gaitugi (Deceased)"},{"ID":"35701","Name":"ESTHER
+        WANJIRU TWARA"},{"ID":"35715","Name":"JOHN IRUNGU KANGETHE"},{"ID":"35724","Name":"JOEL
+        MATHERE MWITARI"},{"ID":"35806","Name":"GEORGE NTHENGE"},{"ID":"35844","Name":"NJOROGE  V
+        CATHERINE WANJIKU KIHARA"},{"ID":"35846","Name":"Catherine Wanjiku Kihara
+        ( In Re the Estate of Daniel Githinji Njoroge)"},{"ID":"35848","Name":"SEYANI
+        BROTHERS CO. LTD"},{"ID":"35855","Name":"PETER ITHEBU MWANGI"},{"ID":"35868","Name":"PETER
+        ITHEBU MWANGI V REPUBLIC"},{"ID":"35875","Name":"PETER P.M. NDURURI V THE
+        ATTORNEY GENERAL"},{"ID":"35938","Name":"EDWARD MUTHEE GITIMU"},{"ID":"35939","Name":"JOSEPH
+        MATHENGE GITIMU"},{"ID":"35953","Name":"AGNES NTHENYA MUTUA"},{"ID":"35976","Name":"DANCUN
+        NJUKI THEURI"},{"ID":"35983","Name":"THE VICE CHANCELLOR JOMO KENYATTA"},{"ID":"36013","Name":"GEOFFREY
+        MWANGI NGUTHE"},{"ID":"36128","Name":"DUNCAN MUTHEE KAHAMA"},{"ID":"36139","Name":"STEPHEN
+        WANJAU MATHENGE"},{"ID":"36143","Name":"RICHARD GATHEE NGECHU"},{"ID":"36174","Name":"MATHEW
+        OTIENO ONUKO V KENYA WILDLIFE SERVICES LTD"},{"ID":"36190","Name":"PANTHEON
+        LIMITED"},{"ID":"36221","Name":"ESTHER DORCA BOCHERE ONYANCHA"},{"ID":"36245","Name":"Jane
+        Gachoki Gathecha"},{"ID":"36299","Name":"EVANGELICAL LUTHERAN CHURCH IN KENYA
+        REGISTERED TRUSTEES"},{"ID":"36307","Name":"LOICE KEMUNTO MOGIRE(suing on
+        behalf of the estate of DAVID MOGIRE OMWEGA)v JAMES KERINDI OMWEGA"},{"ID":"36343","Name":"PETER
+        NJERU GATIMU V THE HON. ATTORNEY GENERAL"},{"ID":"36385","Name":"JOEL TUWEI
+        KOECH (Minor suing through Mother and next friend ESTHER KOECH CHEROP)"},{"ID":"36448","Name":"JOHN
+        KANGETHE KINYANJUI"},{"ID":"36450","Name":"ROSELYNE WESONGA SHIYUKA (suing
+        on behalf of the estate of ROMANO SHITANDA WESONGA) AND MAURICE WESONGA (suing
+        thro` next of Kin ROSELYNE SHIYU"},{"ID":"36456","Name":"ESTHER WANJIRU KIARIE"},{"ID":"36471","Name":"In
+        Re The Matter f the Estate of John Thuo Wanjohi (Deceased)"},{"ID":"36526","Name":"ANDREW
+        MWATHE NABEA V REPUBLIC"},{"ID":"36558","Name":"GICHANE MATHENGE"},{"ID":"36559","Name":"PAUL
+        WANJOHI MATHENGE"},{"ID":"36560","Name":"In Re the Estate Robert Wahome Ndegwa
+        (Deceased)"},{"ID":"36595","Name":"IN THE MATTER OF THE ESTATE OF KIMANI WAYNORO
+        &ndash; DECEASED"},{"ID":"36636","Name":"MATHEW GICOBI KARANI"},{"ID":"36648","Name":"IN
+        RE THE ESTATE OF GIDEON WEKESA WEBI"},{"ID":"36656","Name":"JOSHUA MUSEMBI
+        MATHEKA V REPUBLIC"},{"ID":"36670","Name":"ESTHER ADHIAMBO ALOO"},{"ID":"36675","Name":"IN
+        RE THE ESTATE OF KIPKEINO ARAP BOIT"},{"ID":"36690","Name":"Felix Mathenge"},{"ID":"36746","Name":"STEPHEN
+        CHUMO AND OTHERS"},{"ID":"36752","Name":"KECIA WAMBUI AND ANOTHER"},{"ID":"36758","Name":"BERNARD
+        MIAKO KANG`ETHE"},{"ID":"36761","Name":"TABITHA NJAMBI KANGETHE"},{"ID":"36796","Name":"RICHARD
+        GITHENYA GICHURU"},{"ID":"36809","Name":"PATRICK MATHENGE MUCHEMI"},{"ID":"36848","Name":"Mathew
+        Ndau Kanyi"},{"ID":"36855","Name":"Abdul Janmohamed as Administrators of the
+        Estate of the late Navinchand  Hirji Shah (cited as the 2nd Defendant in the
+        superior court who die"},{"ID":"36856","Name":"PETER N. MIGWI KANG`ETHE"},{"ID":"36862","Name":"In
+        Re The Matter of The Estate of M`Makathimo Miruri (Deceased)"},{"ID":"36864","Name":"MARY
+        WANGARE NDAIRE AND JOSEPH MACHARIA NDAIRE (Suing through next of kin ESTHER
+        WANJIKU NJUGUNA)"},{"ID":"36879","Name":"GIDEON GITHENI AND SAMUEL ODHIAMBO"},{"ID":"36928","Name":"ESTHER
+        W. THUO"},{"ID":"36941","Name":"Esther Michere Gatimu"},{"ID":"36958","Name":"ESTHER
+        WANGECHI MAINA"},{"ID":"36973","Name":"ESTHER KARUANA MUNUNO"},{"ID":"37041","Name":"JONAH
+        MUTHEE"},{"ID":"37042","Name":"PETERSON WATHEKA WANJOHI"},{"ID":"37062","Name":"ESTHER
+        KABUI KURUTA AND JEMMIMAH WAMBUI KURUTA"},{"ID":"37077","Name":"Esther Nyanchama
+        Omabia   [2007] eKLR"},{"ID":"37094","Name":"Fridah Mercy Chebii Kiplagat
+        ( aminor suing thro her fathere and next of kin)"},{"ID":"37145","Name":"IN
+        RE THE ESTATE OF KARUGU NGURU (DECEASED)"},{"ID":"37191","Name":"In Re The
+        Matter of The Estate of Samson Karanja Chori (Deceased)"},{"ID":"37235","Name":"ESTHER
+        MMBONE"},{"ID":"37247","Name":"MATHEW WAREMA GITHUI"},{"ID":"37274","Name":"ESTHER
+        KILONZO"},{"ID":"37275","Name":"GIDEON WAMBUA MATHENDU"},{"ID":"37299","Name":"FRANCIS
+        MUTHEE MIGWI"},{"ID":"37311","Name":"Isabella G. Matheka"},{"ID":"37315","Name":"JAMES
+        WAHOME NGATHU (FATHER) Suing on behalf of PAUL KIIRITHO WAHOME (deceased son)"},{"ID":"37417","Name":"Heather
+        Mary Nedwell"},{"ID":"37445","Name":"STEPHEN MAINA MITHEKO"},{"ID":"37446","Name":"In
+        Re the Estate of Leah Tapkitany Kosgei (Deceased)"},{"ID":"37463","Name":"Esther
+        Karambu"},{"ID":"37547","Name":"EASTERN AND SOUTHERN AFRICAN TRADE AND DEVELOPMENT
+        BANK (THE PTA BANK)"},{"ID":"37584","Name":"PARLIAMENTARY SERVICE COMMISSION
+        AND SECRETARY PARLIAMENTARY SERVICE COMMISSION CLERK OF THE NATIONAL ASSEMBLY
+        Exparte ABDI YARE MOHAMMED"},{"ID":"37587","Name":"PARLIAMENTARY SERVICECOMMISSION
+        AND SECRETARY PARLIAMENTARY SERVICE COMMISSION CLERK OF THE NATIONAL ASSEMBLY  Ex-parte
+        ABDI YARE MOHAMMED"},{"ID":"37589","Name":"PROVINCIAL ADMINISTRATION AND ANOTHER"},{"ID":"37599","Name":"JEREMIAH
+        MATHENGI MATHINYO"},{"ID":"37615","Name":"AFRICANAS NTHEKE NGUNGA"},{"ID":"37665","Name":"THERESA
+        MARGARET WILLIAMS"},{"ID":"37667","Name":"VICTOR NGURE MATHENGE"},{"ID":"37686","Name":"SAMUEL
+        KARORI MUTHEE"},{"ID":"37733","Name":"RUTH NTHENYA KILONZO"},{"ID":"37742","Name":"ABRAHAM
+        KIPNGETICH BII ANOTHER"},{"ID":"37754","Name":"JACKSON KIRAITHE"},{"ID":"37760","Name":"MAURO
+        MUTHENGI"},{"ID":"37788","Name":"IN THE MATTER OF THE ESTATE OF DUNCAN KAMAU
+        KIMANI (DECEASED) JULIA KABURA KAMAU"},{"ID":"37799","Name":"MICHAEL WANJOHI
+        MATHENGE"},{"ID":"37801","Name":"IN THE MATTER OF THE CHILDREN ACT"},{"ID":"37848","Name":"EDWARD
+        MUTHEE GITIMO"},{"ID":"37858","Name":"IN THE MATTER OF BABY I W N (AN INFANT)"},{"ID":"37860","Name":"IN
+        THE MATTER OF BABY HR(THE INFANT)"},{"ID":"37862","Name":"IN THE MATTER OF
+        BABY SW(AN INFANT)"},{"ID":"37867","Name":"IN THE MATTER OF BABY SK"},{"ID":"37896","Name":"IN
+        THE MATTER OF NW (INFANT)"},{"ID":"37906","Name":"IN THE MATTER OF: EJA &ndash;
+        AN INFANT"},{"ID":"37914","Name":"IN THE MATTER of BABY G N alias B N"},{"ID":"37933","Name":"ESTHER
+        WANJIRU MUCHERU"},{"ID":"37947","Name":"LEAH WANJIRU ASHIALI(As Administratix
+        of the Estate of NELSON ASHIALI OMASHEBELA)"},{"ID":"38045","Name":"MARGARET
+        KALIESA INDUMWA AND ERIC O. INDUMWA (both suing as personal representative
+        Of the estate of the late DAVID INDUMWA GALO)"},{"ID":"38059","Name":"ESTHER
+        WANJIKU KINYANJUI"},{"ID":"38066","Name":"MUNICIPAL COUNCIL OF MOMBASA Exparte
+        HUBERT SEIFERT AND OTHERS"},{"ID":"38067","Name":"Wangeci Kibithe"},{"ID":"38073","Name":"CATHERINE
+        NKIROTE"},{"ID":"38084","Name":"Lydia Nyambura Muthee"},{"ID":"38120","Name":"STEPHEN
+        MUTURI WAITHERA"},{"ID":"38124","Name":"Mary Wanguii Kimani (Suing as Personal
+        Representative of the Estate of James Kinuthia Kimani-Deceased)"},{"ID":"38192","Name":"THE
+        HON. THE ATTORNEY GENERAL"},{"ID":"38210","Name":"IBRAHIM MUNGAI WAITHERA"},{"ID":"38219","Name":"JOHN
+        KIHENJO KANG`ETHE AND JAMES MAMBO KANG`ETHE"},{"ID":"38226","Name":"HANNAH
+        WAMBUI KIBE (The Administratrix and beneficiaryof the Estate of JOHN KIBE
+        RAGAE)"},{"ID":"38227","Name":"MARGARET NJERI NJOROGE (The Administratrix
+        and beneficiary of the Estate of NDUA THIONGO)"},{"ID":"38244","Name":"Edward
+        Njagi Nkariama (suing as Legal Representative of the Estate of Fredrick Mutegi
+        alias Manager (Deceased)"},{"ID":"38255","Name":"CHRISTOPHER ISANYA AND THE
+        ATTORNEY GENERAL"},{"ID":"38259","Name":"TITUS THEURI MUTHONI  AND SAMSON
+        NGUGI NGAO"},{"ID":"38272","Name":"JEREMIAH MWATHE RIMBERIA"},{"ID":"38290","Name":"IN
+        THE MATTER OF VM (A CHILD)"},{"ID":"38294","Name":"ESTHER OPONDO"},{"ID":"38298","Name":"GERALD
+        THEURI MUCHEMI"},{"ID":"38305","Name":"PETER KURIA WAITITU AND 3 OTHERS"},{"ID":"38338","Name":"The
+        Council of legal education"},{"ID":"38347","Name":"THE COUNCIL OF LEGAL EDUCATION
+        EX-PARTE JAMES NJUGUNA"},{"ID":"38366","Name":"KUYA OLE MASIKONDE AND 11 OTHERS"},{"ID":"38374","Name":"IN
+        THE MATTER OF YA ( A CHILD)"},{"ID":"38376","Name":"THE DELPHIS BANK LIMITED"},{"ID":"38392","Name":"IN
+        THE MATTER OF ON (CHILD)"},{"ID":"38402","Name":"OWNERS AND MASTER OF THE
+        MOTOR VESSEL &ldquo;JOEY&rdquo;"},{"ID":"38403","Name":"OWNERS AND MASTERS
+        OF THE  MOTOR TUGS &ldquo;BARBARA&rdquo; AND &ldquo;STEVE B&rdquo;"},{"ID":"38404","Name":"IN
+        THE MATTER OF BABY RM alias CM ( A CHILD)"},{"ID":"38412","Name":"THE REPUBLIC"},{"ID":"38434","Name":"THE
+        MUNICIPAL COUNCIL OF NAKURU"},{"ID":"38449","Name":"MANAZ HABIB GHULAM FATHEL"},{"ID":"38486","Name":"MINISTRY
+        OF FINANCE AND KENYA REVENUE AUTHORITY Ex parte-The Commodity House Ltd"},{"ID":"38489","Name":"PS
+        MINISTRY OF DEFENCE OFFICE OF THE PRESIDENT GENERAL JEREMIAH MUTINDA KIANGA
+        CHIEF OF GENERAL STAFF AND  LIEUTENAN"},{"ID":"38493","Name":"OFFICE OF THE
+        PRESIDENT GENERAL JEREMIAH MUTINDA KIANGA CHIEF OF GENERAL STAFF"},{"ID":"38506","Name":"J
+        W (Suing through her mother and next of friend)  J W M"},{"ID":"38555","Name":"IN
+        THE MATTER OF BABY WM(AN INFANT)"},{"ID":"38617","Name":"In Re The Matter
+        of the Estate of Geoffrey Mwaura Mutunguri (Deceased)"},{"ID":"38623","Name":"JOYCE
+        NYAWIRA MATHENGE"},{"ID":"38669","Name":"JOHN GAKURE KARURI AND 148 OTHERS
+        EMPLOYEES OF DAWA PHUARMACEUTICALS LTD WHOSE NAMES AND SIGNATURES APPEARS
+        IN THE WRITTEN AUTHORITY given under order 1 rule 12 of the Civil Procedure
+        rules filed herewith"},{"ID":"38694","Name":"THE HON. ATTORNEY GENERAL AND
+        THE MINISTER FOR PUBLIC WORK"},{"ID":"38731","Name":"In Re The Matter of the
+        Estate of Njoka Kiarie (Deceased)"},{"ID":"38758","Name":"Another"},{"ID":"38767","Name":"Daniel
+        Muthee"},{"ID":"38779","Name":"RAMADHAN MOHAMED MWAMGUNO (suing on their own
+        behalf and on behalf of the below named members of the Avirizi"},{"ID":"38810","Name":"SUKHWINDER
+        SINGH JUTLEY AND ANOTHER"},{"ID":"38852","Name":"THE CHIEF MAGISTRATE"},{"ID":"38870","Name":"JAMES
+        KIENJI MAINA  AND JOSEPH KINGORI MATHENGE"},{"ID":"38895","Name":"JULIUS MUTHENGI
+        NYAMU"},{"ID":"38914","Name":"PETER KIMANI GICHUHI AND ESTHER WANJIKU NDERITU"},{"ID":"38919","Name":"JAMES
+        NGETHE KARIUKI AND PETER KINYANJUI MWAURA"},{"ID":"38940","Name":"Simon Ngethe
+        Nyambura"},{"ID":"38952","Name":"MATHEW K. BIRGEN"},{"ID":"38956","Name":"ESTHER
+        CHEPKEMOI KESUI"},{"ID":"38962","Name":"In Re THE ESTATE OF GATHOKORE MUGO
+        (DECEASED)"},{"ID":"38990","Name":"GERALD MUSUNGU OTWANI (MINOR SUING THROUGH
+        HIS FATHER AND NEXT FRIEND FENINARD EMMANUEL OTWANI)"},{"ID":"39000","Name":"In
+        Re THE ESTATE OF BENTHAM CHUCHUNEY (DECEASED)"},{"ID":"39001","Name":"In Re
+        The Matter of The Estate of Gatama Waweru Muraya (Deceased)"},{"ID":"39003","Name":"JAMES
+        GITHENJI NDUNGU"},{"ID":"39026","Name":"FRANCIS LOKAI EWATON AND JAMES EMATHE
+        EWATON v  REPUBLIC"},{"ID":"39030","Name":"IN RE THE ESTATE OF KIPLETING KISORIO"},{"ID":"39034","Name":"IN
+        THE MATTER OF THE ESTATE OF KIPLETING KISORIO (DECEASED)"},{"ID":"39046","Name":"ESTHER
+        CHERUIYOT"},{"ID":"39075","Name":"IN THE MATTER OF THE ESTATE OF RISPER ACHIENG
+        AWUOCHE (DECEASED)"},{"ID":"39094","Name":"NTHAMBI PAUL MUTISYA ( A minor
+        suing through her father and next friend"},{"ID":"39099","Name":"NTHAMBI PAUL
+        MUTISYA ( A minor suing through her father and next friend"},{"ID":"39156","Name":"DAVID
+        OMUNDI RASUGU Suing as a personal Rep. of the Estate of George Rasugu Omundi
+        (Deceased)"},{"ID":"39202","Name":"Charles Muthee Kariuki"},{"ID":"39253","Name":"LYDIA
+        MWENDWA KITHEKA"},{"ID":"39377","Name":"Permanent Secretary Office of The
+        President"},{"ID":"39421","Name":"Esther Akinyi Odidi"},{"ID":"39470","Name":"MARION
+        WAITHERA GACHERU"},{"ID":"39475","Name":"David Muthee Mwangi"},{"ID":"39480","Name":"JOHN
+        JAMES MUTHEE"},{"ID":"39580","Name":"FREDRICK KIRAITHE KAITHE"},{"ID":"39584","Name":"JOHN
+        KIRAITHE (NEXT FRIEND OF EVELYN MAKENA)"},{"ID":"39617","Name":"Benson Matheka
+        Juma"},{"ID":"39623","Name":"Southern Credit Banking Corporation"},{"ID":"39645","Name":"BENSON
+        KANG`ETHE NJOROGE V REPUBLIC"},{"ID":"39664","Name":"David Gachiri Gatheru"},{"ID":"39679","Name":"Kenya
+        Commercial Bank Ltd (Suing  as The Administrator  of The Estate of Paul Njoroge
+        Muchene (Deceased)"},{"ID":"39744","Name":"The Copy Cat (U) Ltd"},{"ID":"39750","Name":"Southern
+        Business Solution Ltd"},{"ID":"39838","Name":"SOUTHERN RANGE NYANZA LTD"},{"ID":"40026","Name":"Southern
+        Business Solutions Ltd"},{"ID":"40045","Name":"United Brothers Investments
+        Ltd"},{"ID":"40129","Name":"The Tea Board of Kenya"},{"ID":"40136","Name":"Northen
+        Water Services Board"},{"ID":"40157","Name":"M\/s The Copy cat Limited"},{"ID":"40188","Name":"Esther
+        Wanjugu Kamweru (ms.)"},{"ID":"40213","Name":"The Permanent Secretary"},{"ID":"40214","Name":"
+        Office Of The Deputy Prime Minister And Ministry  Of Finance"},{"ID":"40281","Name":"
+        Office Of The Deputy Prime Minister And Minister For Local Government"},{"ID":"40282","Name":"
+        Office Of The Deputy Prime Minister And Minister For Finance"},{"ID":"40314","Name":"The
+        Minister Of State For Planning"},{"ID":"40316","Name":" Office Of The Deputy
+        Prime Minister And Ministry Of Finance"},{"ID":"40318","Name":"Mwende Kathethia
+        Mwendwa (ms.)"},{"ID":"40320","Name":"The Chief Executive Officer"},{"ID":"40346","Name":"
+        Office Of The Deputy Prime Minister And Ministry Of Local Government"},{"ID":"40379","Name":"Florida
+        Amakobe Karan (prof) Chancellor Of The Maseno University"},{"ID":"40419","Name":"Esther
+        J. Maindi (ms.)"},{"ID":"40467","Name":" Alternate Director To The Permanent
+        Secretary"},{"ID":"40474","Name":"Lt.-gen. S. J. Mwathethe"},{"ID":"40477","Name":"
+        Former Alternate Director To The Permanent Secretary"},{"ID":"40525","Name":"The
+        Permanent Secretary To The Ministry Of Of Livestock Department Or  A Person
+        Deputed By Him"},{"ID":"40528","Name":"Easther Koimeett; Investment Secretary"},{"ID":"40543","Name":"
+        The Jomo Kenyatta University Of Agriculture And Technology"},{"ID":"40551","Name":"The
+        Director-general"},{"ID":"40553","Name":"The Director- General"},{"ID":"40577","Name":"
+        African Network For The Protection And Prevention Of Child Abuse And Neglect
+        (anppcan)"},{"ID":"40598","Name":"0ffice Of The Deputy Prime Minister And
+        Ministry Of Local Government"},{"ID":"40600","Name":"The Managing Director"},{"ID":"40612","Name":"
+        The Director Of Employment"},{"ID":"40614","Name":" The Director Of Micro
+        And Small Enterprises Development"},{"ID":"40616","Name":"the Director Of
+        Occupational Safety And Health Services"},{"ID":"40617","Name":" The Director
+        Of Industrial Training"},{"ID":"40618","Name":"the Registrar Of The Industrial
+        Court"},{"ID":"40620","Name":" The Registrar Of Trade Unions"},{"ID":"40680","Name":"
+        Northern Water Service Board"},{"ID":"40705","Name":"Virginia Mathenge (mrs.)"},{"ID":"40748","Name":"Taskforce
+        On Alignment Of The Education"},{"ID":"40749","Name":" Science And Technology
+        Sector With The Constitution"},{"ID":"40751","Name":"Board Of The Kenya Seed
+        Company Limited"},{"ID":"40758","Name":"Kenya Leather Development Council
+        (kldc)"},{"ID":"40766","Name":"The High Court"},{"ID":"40768","Name":"Task
+        Force On The Development For The Protection Of Traditional Knowledge"},{"ID":"40770","Name":"The
+        Kenya Wine Agencies Limited"},{"ID":"40771","Name":"The Kenya Seed Company"},{"ID":"40772","Name":"The
+        Constituencies Development Fund"},{"ID":"40777","Name":"The Postal Corporation
+        Of Kenya"},{"ID":"40778","Name":"The Kenya Pipeline Company"},{"ID":"40781","Name":"Public
+        Prosecutors For The Purposes Of Environmental Management And Co-ordination
+        Act (no. 8 Of 1999)"},{"ID":"41032","Name":"<p>Gazette Notice No. 5926<\/p>\r\n<p
+        align=\"center\">THE REGISTERED LAND ACT<\/p>\r\n<p align=\"center\">(<em>Cap.<\/em>
+        300"},{"ID":"41034","Name":"<p>Gazette Notice No. 7110<\/p>\r\n<p align=\"center\">THE
+        REGISTERED LAND ACT<\/p>\r\n<p align=\"center\">(<em>Cap.<\/em> 300"},{"ID":"41036","Name":"<p>Gazette
+        Notice No. 7111<\/p>\r\n<p align=\"center\">THE REGISTERED LAND ACT<\/p>\r\n<p
+        align=\"center\">(<em>Cap.<\/em> 300"},{"ID":"41038","Name":"<p>Gazette Notice
+        No. 7116<\/p>\r\n<p align=\"center\">THE REGISTERED LAND ACT<\/p>\r\n<p align=\"center\">(<em>Cap.<\/em>
+        300"},{"ID":"41040","Name":"<p>Gazette Notice No. 7117<\/p>\r\n<p align=\"center\">THE
+        REGISTERED LAND ACT<\/p>\r\n<p align=\"center\">(<em>Cap.<\/em> 300"},{"ID":"41042","Name":"<p>Gazette
+        Notice No. 7118<\/p>\r\n<p align=\"center\">THE REGISTERED LAND ACT<\/p>\r\n<p
+        align=\"center\">(<em>Cap.<\/em> 300"},{"ID":"41064","Name":"<p>Gazette Notice
+        No. 2664<\/p>\r\n<p align=\"center\">THE REGISTERED LAND ACT<\/p>\r\n<p align=\"center\">(<em>Cap.<\/em>
+        300"},{"ID":"41098","Name":"Catherine Raini(Mrs)"},{"ID":"41100","Name":"Catherine
+        Ngarachu(Mrs)"},{"ID":"41134","Name":"Catherine Ngahu(Ms)"},{"ID":"41168","Name":"J
+        Mathenge(Mr)"},{"ID":"41210","Name":"Crowther Pepela(Dr)"},{"ID":"41211","Name":"Theodorah
+        Malla-Kilukumi(Dr)"},{"ID":"41238","Name":"Esther Koimett(Mrs)"},{"ID":"41279","Name":"Yasmin
+        Jether(Dr)"},{"ID":"41318","Name":"Esther Koimett(Ms)"},{"ID":"41399","Name":"(Suing
+        On Their Own Behalf And On Behalf Of All Person"},{"ID":"41414","Name":"THE
+        BOARD OF GOVERNORS MICHINDA BOARDING \r\nPRIMARY SCHOOL"},{"ID":"41415","Name":"ESTHER
+        NYABIAGE \r\nONKWARE"},{"ID":"41418","Name":"JANE WAMBUI KAGWIMA (suing as
+        the administratix of the estate of the \r\nlate ) JAMES KAGWIMA NG`ANG`A)"},{"ID":"41431","Name":"In
+        the \r\nmatter of Co-operative Societies Act"},{"ID":"41433","Name":"TRUSTEE
+        AND \r\nEXECUTOR OF THE ESTATE OF GULAMHUSSEIN EBRAHIMJI POTHIWALLA"},{"ID":"41439","Name":"NJOROGE
+        NJAGI \u00a0V CATHERINE WANJIKU KIHARA"},{"ID":"41440","Name":"Catherine Wanjiku
+        Kihara ( In Re the Estate of \r\nDaniel Githinji Njoroge)"},{"ID":"41445","Name":"LOICE
+        KEMUNTO MOGIRE(suing on behalf of the estate of DAVID MOGIRE \r\nOMWEGA)v
+        JAMES KERINDI OMWEGA"},{"ID":"41447","Name":"JOEL TUWEI KOECH (Minor suing
+        through \r\nMother and next friend ESTHER KOECH CHEROP)"},{"ID":"41481","Name":"Esther
+        Ncoro M&rsquo;Arimba"},{"ID":"41518","Name":"JAMES WAHOME NGATHU (FATHER)
+        Suing on behalf of PAUL KIIRITHO WAHOME \r\n(deceased son)"},{"ID":"41521","Name":"2001
+        AND IN THE MATTER OF F a.k.a. FKW (A CHILD) CONSOLIDATED WITH IN THE MATTER
+        OF THE CHILDREN ACT"},{"ID":"41522","Name":"2001 AND IN THE MATTER OF JMKW
+        (A CHILD)"},{"ID":"41524","Name":"2001 AND IN THE MATTER OF LM (A CHILD)"},{"ID":"41525","Name":"2001
+        AND IN THE MATTER OF BABY JW ( A CHILD)"},{"ID":"41527","Name":"2001 AND IN
+        THE MATTER OF DN (A CHILD)"},{"ID":"41531","Name":"LEAH WANJIRU ASHIALI(As
+        Administratix of the Estate of NELSON \r\nASHIALI OMASHEBELA)"},{"ID":"41533","Name":"2001
+        AND IN THER MATTER OF BABY D (A CHILD)"},{"ID":"41536","Name":"MARGARET KALIESA
+        INDUMWA AND ERIC O. INDUMWA (both suing as personal \r\nrepresentative Of
+        the estate of the late DAVID INDUMWA GALO)"},{"ID":"41537","Name":"ESTHER
+        WANJIKU \r\nKINYANJUI"},{"ID":"41538","Name":"MUNICIPAL COUNCIL OF MOMBASA
+        Exparte HUBERT SEIFERT AND \r\nOTHERS"},{"ID":"41544","Name":"HANNAH WAMBUI
+        KIBE (The Administratrix and beneficiary\r\nof the Estate of JOHN KIBE RAGAE)"},{"ID":"41545","Name":"MARGARET
+        NJERI NJOROGE (The \r\nAdministratrix and beneficiary of the Estate of NDUA
+        THIONGO)"},{"ID":"41551","Name":"OWNERS AND MASTERS OF \r\nTHE  MOTOR TUGS
+        &ldquo;BARBARA&rdquo; AND &ldquo;STEVE B&rdquo;"},{"ID":"41558","Name":"PS
+        MINISTRY OF DEFENCE OFFICE OF THE \r\nPRESIDENT GENERAL JEREMIAH MUTINDA KIANGA
+        CHIEF OF GENERAL STAFF \r\nAND  LIEUTENAN"},{"ID":"41564","Name":"In Re The
+        Matter of the Estate of Geoffrey Mwaura Mutunguri \r\n(Deceased)"},{"ID":"41565","Name":"JOHN
+        GAKURE KARURI AND 148 OTHERS EMPLOYEES OF DAWA PHUARMACEUTICALS \r\nLTD WHOSE
+        NAMES AND SIGNATURES APPEARS IN THE WRITTEN AUTHORITY \r\ngiven under order
+        1 rule 12 of the Civil Procedure rules filed \r\nherewith"},{"ID":"41575","Name":"JAMES
+        NGETHE KARIUKI AND PETER \r\nKINYANJUI MWAURA"},{"ID":"41577","Name":"GERALD
+        MUSUNGU OTWANI (MINOR SUING THROUGH HIS FATHER AND NEXT \r\nFRIEND FENINARD
+        EMMANUEL OTWANI)"},{"ID":"41579","Name":"FRANCIS LOKAI EWATON AND JAMES EMATHE
+        EWATON \r\nv  REPUBLIC"},{"ID":"41580","Name":"NTHAMBI PAUL MUTISYA ( A minor
+        suing through \r\nher father and next friend"},{"ID":"41581","Name":"DAVID
+        OMUNDI RASUGU Suing as a personal Rep. of the Estate of George \r\nRasugu
+        Omundi (Deceased)"},{"ID":"41592","Name":"Office  of the Registrar Academic
+        Kenyatta  University"},{"ID":"41601","Name":"Francis Mathenge Nderitu"},{"ID":"41603","Name":"Jeremiah
+        Muthengi Mathinyo"},{"ID":"41672","Name":"REGISTERED TRUSTEES OF THE LEGAL
+        RESOURCESFOUNDATION TRUSTS"},{"ID":"41714","Name":"ESTHER JEPSONGOK KETER"},{"ID":"41726","Name":"KILUNGI
+        KITHEKA"},{"ID":"41734","Name":"Beatrice Wangui Waithera"},{"ID":"41762","Name":"JOHN
+        WACHIRA GATHERA"},{"ID":"41769","Name":"LAKE NAIVASHA FRIENDS OF THE ENVIRONMENT"},{"ID":"41792","Name":"MBATHA
+        KANGETHE"},{"ID":"41801","Name":"RACHAEL MUTHEU MULU"},{"ID":"41951","Name":"EPHANTUS
+        MUTHEE WANJIKU"},{"ID":"42028","Name":"FRANCIS WAWERU GATHENJI"},{"ID":"42244","Name":"CHARLES
+        KINYANJUI KANG`ETHE"},{"ID":"42305","Name":"The Kenya National Commission
+        On Human Rights"},{"ID":"42333","Name":"THE NATIONAL HOSPITAL INSURANCE FUND
+        BOARD MANAGEMENT"},{"ID":"42406","Name":"FAIRMONT THE NORFOLK HOTEL"},{"ID":"42428","Name":"Stephen
+        Muthee"},{"ID":"42431","Name":"CHARLES NJOROGE THECHE"},{"ID":"42483","Name":"ESTHER
+        A. NGICHO"},{"ID":"42624","Name":"GEORGE KAMAU GITHERE"},{"ID":"42580","Name":"ESTHER
+        W. NGURE"},{"ID":"42583","Name":"MOSES KINYANJUI KANGETHE"},{"ID":"42600","Name":"MARGARET
+        WAITHERA MBUGUA"},{"ID":"42615","Name":"JAMES MUTHEMBUA"},{"ID":"42674","Name":"THE
+        PRESBYRERIAN \r\nFOUNDATION"},{"ID":"42719","Name":"THE CLERK"},{"ID":"42740","Name":".
+        THE DISTRICT LAND REGISTRAR"},{"ID":"42770","Name":"THE CITY COUNCIL OF NAIROBI"},{"ID":"42800","Name":"PETER
+        W. MIGWI KANGETHE"},{"ID":"42845","Name":"BOARD OF TRUSTEES OF THETHE BOARD
+        OF TRUSTEES OF THE NATIONAL SOCIAL SECURITY FUND"},{"ID":"42880","Name":"THE
+        KENYA NATIONAL"},{"ID":"42923","Name":"ESTHER WAIRIMU WANGUI"},{"ID":"42940","Name":"ESTHER
+        MUTHONI MWANIKI"},{"ID":"42950","Name":"MATHEW OTIENO ONUKO"},{"ID":"42981","Name":"ANDREW
+        MWATHE NABEA"},{"ID":"43028","Name":"JOSHUA MUSEMBI MATHEKA"},{"ID":"43046","Name":"BENSON
+        KANG`ETHE NJOROGE"},{"ID":"43064","Name":"POLYCARP IGATHE\u00a0"},{"ID":"43095","Name":"Esther
+        Gicheru"},{"ID":"43134","Name":"Esther J. Bungei"},{"ID":"43137","Name":"Florence
+        Muthua Muthee"},{"ID":"43139","Name":"Esther N. Mungai"},{"ID":"43218","Name":"Daniel
+        Githegi"},{"ID":"43306","Name":"Esther Kache"},{"ID":"43360","Name":"Geothermal
+        Development Company Limited Board"},{"ID":"43390","Name":"THE NATIONAL TREASURY"},{"ID":"43391","Name":"THE
+        TECHNICAL UNIVERSITY OF KENYA(TU-K)"},{"ID":"43426","Name":"NATIONAL AUTHORITY
+        FOR THE CAMPAIGN AGAINST ALCOHOL AND DRUG ABUSE (NACADA)"},{"ID":"43645","Name":"THE
+        JUBILEE INSURANCE COMPANY OF KENYA LTD"},{"ID":"43648","Name":"The Copy Cat
+        Ltd"},{"ID":"43703","Name":"Northern Star Co. Ltd"},{"ID":"43724","Name":"THE
+        SOLUTION TEAM"},{"ID":"44066","Name":"The Monarch Insurance Co. Ltd"},{"ID":"44208","Name":"Northern
+        frontier Enterprises"},{"ID":"44345","Name":"Northern Services"},{"ID":"44382","Name":"Northern
+        Star Company Limited"},{"ID":"44458","Name":"The Copy Cat Limited"},{"ID":"44480","Name":"Northern
+        Star Company Ltd"},{"ID":"44635","Name":"Southern Engineering Co. Limited."}]'
+    http_version: 
+  recorded_at: Mon, 19 Oct 2015 19:24:44 GMT
+recorded_with: VCR 2.9.3
