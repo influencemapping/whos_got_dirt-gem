@@ -36,7 +36,7 @@ module WhosGotDirt
         # Converts the MQL parameters to API-specific parameters.
         #
         # @return [Hash] API-specific parameters
-        # @see http://api.opencorporates.com/documentation/API-Reference
+        # @see https://api.opencorporates.com/documentation/API-Reference
         def convert
           equal('per_page', 'limit', default: input['open_corporates_api_key'] && 100)
 
