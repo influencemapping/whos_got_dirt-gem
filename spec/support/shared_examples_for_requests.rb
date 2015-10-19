@@ -42,11 +42,11 @@ RSpec.shared_examples 'match' do |target,source,values,options|
   end
 
   it 'should return a criterion' do
-    expect(described_class.new(input(fuzzy, options)).convert).to eq('q' => values.first)
+    expect(described_class.new(input(fuzzy, options)).convert).to eq(target => values.first)
   end
 
   it 'should prioritize exact value' do
-    expect(described_class.new(input(exact, options)).convert).to eq('q' => values.last)
+    expect(described_class.new(input(exact, options)).convert).to eq(target => values.last)
   end
 end
 
