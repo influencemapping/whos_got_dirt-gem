@@ -1,0 +1,640 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openoil.net/concession/search?apikey=oo_e6w89rd34mowpuryn
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 19 Oct 2015 18:07:50 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      server:
+      - gunicorn/19.3.0
+      x-frame-options:
+      - SAMEORIGIN
+    body:
+      encoding: UTF-8
+      string: '{"per_page": 100, "results": [{"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "BAR-M-340", "licensees": ["BG Brasil"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/BAR-M-340", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "BG Brasil", "Vencimento1\u00ba":
+        "06.08.2018", "Contrato": "BAR-M-340_R11", "Observacao": "", "Concession\u00e1rios":
+        "*BG Brasil - 100%"}, "identifier": "BR/BAR-M-340", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "REC-T-106", "licensees": ["Alvopetro"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/REC-T-106", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Alvopetro", "Vencimento1\u00ba":
+        "30.08.2016", "Contrato": "REC-T-106_R11", "Observacao": "", "Concession\u00e1rios":
+        "*Alvopetro - 100%"}, "identifier": "BR/REC-T-106", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SEAL-T-56", "licensees": ["G3 \u00d3leo e G\u00e1s"], "country":
+        "BR", "url_api": "http://api.openoil.net/concession/BR/SEAL-T-56", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "G3 \u00d3leo e G\u00e1s", "Vencimento1\u00ba": "30.08.2016",
+        "Contrato": "SEAL-T-56_R11", "Observacao": "", "Concession\u00e1rios": "*G3
+        \u00d3leo e G\u00e1s - 100%"}, "identifier": "BR/SEAL-T-56", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "CE-M-603", "licensees": ["ExxonMobil Brasil", "OGX"], "country":
+        "BR", "url_api": "http://api.openoil.net/concession/BR/CE-M-603", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "ExxonMobil Brasil", "Vencimento1\u00ba": "30.08.2018", "Contrato":
+        "CE-M-603_R11", "Observacao": "", "Concession\u00e1rios": "*ExxonMobil Brasil
+        - 50%, OGX - 50%"}, "identifier": "BR/CE-M-603", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SEAL-T-360", "licensees": ["Petrobras", "Nova Petr\u00f3leo"], "country":
+        "BR", "url_api": "http://api.openoil.net/concession/BR/SEAL-T-360", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "Petrobras", "Vencimento1\u00ba": "15.05.2017", "Contrato": "SEAL-T-360_R12",
+        "Observacao": "", "Concession\u00e1rios": "*Petrobras - 50%, Nova Petr\u00f3leo
+        - 50%"}, "identifier": "BR/SEAL-T-360", "type": "", "source_date": "2014-01-12"},
+        {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt", "name":
+        "184- West Esh El Mallaha (ESHPETCO)", "licensees": ["Lukoil"], "country":
+        "EG", "url_api": "http://api.openoil.net/concession/EG/184- West Esh El Mallaha
+        (ESHPETCO)", "source_document": "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/SuezGulfMapV7.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/184- West
+        Esh El Mallaha (ESHPETCO)", "type": "", "source_date": ""}, {"status": "",
+        "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name": "ES-M-525",
+        "licensees": ["Petrobras", "PTTEP Brasil", "Inpex"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/ES-M-525", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "20.01.2012", "Contrato": "BM-ES-23", "Observacao": "", "Concession\u00e1rios":
+        "*Petrobras - 65%, Inpex - 15%, PTTEP Brasil - 20%"}, "identifier": "BR/ES-M-525",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "BM-S-24", "licensees": ["Petrobras", "Petrogal Brasil"], "country":
+        "BR", "url_api": "http://api.openoil.net/concession/BR/BM-S-24", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "Petrobras", "Vencimento1\u00ba": "29.08.2004", "Contrato": "BM-S-24",
+        "Observacao": "", "Concession\u00e1rios": "*Petrobras - 80%, Petrogal Brasil
+        - 20%"}, "identifier": "BR/BM-S-24", "type": "", "source_date": "2014-01-12"},
+        {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name":
+        "FZA-M-252", "licensees": ["Petrobras"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/FZA-M-252",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Petrobras", "Vencimento1\u00ba": "26.11.2008", "Contrato":
+        "BM-FZA-4", "Observacao": "AD REFERENDUM", "Concession\u00e1rios": "*Petrobras
+        - 100%"}, "identifier": "BR/FZA-M-252", "type": "", "source_date": "2014-01-12"},
+        {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name":
+        "TUC-T-140", "licensees": ["Cowan Petr\u00f3leo e G\u00e1s", "Petrobras"],
+        "country": "BR", "url_api": "http://api.openoil.net/concession/BR/TUC-T-140",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Cowan Petr\u00f3leo e G\u00e1s", "Vencimento1\u00ba":
+        "30.08.2016", "Contrato": "TUC-T-140_R11", "Observacao": "", "Concession\u00e1rios":
+        "*Cowan Petr\u00f3leo e G\u00e1s - 50%, Petrobras - 50%"}, "identifier": "BR/TUC-T-140",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SF-T-106", "licensees": ["Petra Energia"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SF-T-106", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petra Energia", "Vencimento1\u00ba":
+        "12.03.2010", "Contrato": "BT-SF-3A", "Observacao": "EM AN\u00c1LISE", "Concession\u00e1rios":
+        "*Petra Energia - 100%"}, "identifier": "BR/SF-T-106", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "FZA-M-254", "licensees": ["Brasoil Manati"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/FZA-M-254", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Brasoil Manati",
+        "Vencimento1\u00ba": "17.09.2018", "Contrato": "FZA-M-254_R11", "Observacao":
+        "", "Concession\u00e1rios": "*Brasoil Manati - 100%"}, "identifier": "BR/FZA-M-254",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "BAR-M-215", "licensees": ["BG Brasil", "PTTEP Brasil"], "country":
+        "BR", "url_api": "http://api.openoil.net/concession/BR/BAR-M-215", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "BG Brasil", "Vencimento1\u00ba": "06.08.2018", "Contrato": "BAR-M-215_R11",
+        "Observacao": "", "Concession\u00e1rios": "*BG Brasil - 75%, PTTEP Brasil
+        - 25%"}, "identifier": "BR/BAR-M-215", "type": "", "source_date": "2014-01-12"},
+        {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name":
+        "SF-T-94", "licensees": ["Petra Energia"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/SF-T-94",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Petra Energia", "Vencimento1\u00ba": "12.03.2010",
+        "Contrato": "BT-SF-3A", "Observacao": "EM AN\u00c1LISE", "Concession\u00e1rios":
+        "*Petra Energia - 100%"}, "identifier": "BR/SF-T-94", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "REC-T-129", "licensees": ["Gran Tierra"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/REC-T-129", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Gran Tierra", "Vencimento1\u00ba":
+        "24.12.2011", "Contrato": "BT-REC-39", "Observacao": "PAD EM AN\u00c1LISE",
+        "Concession\u00e1rios": "*Gran Tierra - 100%"}, "identifier": "BR/REC-T-129",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "East Ras Budran Offshore", "licensees": ["EGPC Bid"], "country":
+        "EG", "url_api": "http://api.openoil.net/concession/EG/East Ras Budran Offshore",
+        "source_document": "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/SuezGulfMapV7.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/East Ras
+        Budran Offshore", "type": "", "source_date": ""}, {"status": "", "url_wiki":
+        "http://repository.openoil.net/wiki/Egypt", "name": "311- North El Maghara",
+        "licensees": ["Petzed"], "country": "EG", "url_api": "http://api.openoil.net/concession/EG/311-
+        North El Maghara", "source_document": "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/EgyptMapv6.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/311- North
+        El Maghara", "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "P-M-1353", "licensees": ["Petrobras"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/P-M-1353", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "14.12.2010", "Contrato": "BM-P-2", "Observacao": "SUSPENSO", "Concession\u00e1rios":
+        "*Petrobras - 100%"}, "identifier": "BR/P-M-1353", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "199- Rass El Barr", "licensees": ["BP"], "country": "EG", "url_api":
+        "http://api.openoil.net/concession/EG/199- Rass El Barr", "source_document":
+        "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/EgyptMapv6.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/199- Rass
+        El Barr", "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "329- N. Demiatta Offshore", "licensees": ["BP"], "country": "EG",
+        "url_api": "http://api.openoil.net/concession/EG/329- N. Demiatta Offshore",
+        "source_document": "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/EgyptMapv6.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/329- N. Demiatta
+        Offshore", "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "324- South Sinai", "licensees": ["Gujarat State"], "country": "EG",
+        "url_api": "http://api.openoil.net/concession/EG/324- South Sinai", "source_document":
+        "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/SuezGulfMapV7.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/324- South
+        Sinai", "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SEAL-M-499", "licensees": ["Petrobras"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SEAL-M-499", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "23.12.2010", "Contrato": "BM-SEAL-10", "Observacao": "", "Concession\u00e1rios":
+        "*Petrobras - 100%"}, "identifier": "BR/SEAL-M-499", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "PN-T-114", "licensees": ["Ouro Preto"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/PN-T-114", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Ouro Preto", "Vencimento1\u00ba":
+        "13.11.2017", "Contrato": "PN-T-114_R11", "Observacao": "", "Concession\u00e1rios":
+        "*Ouro Preto - 100%"}, "identifier": "BR/PN-T-114", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SOL-T-191", "licensees": ["Rosneft", "HRT O&G"], "country": "BR",
+        "url_api": "http://api.openoil.net/concession/BR/SOL-T-191", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "Rosneft", "Vencimento1\u00ba": "20.03.2010", "Contrato": "BT-SOL-4A",
+        "Observacao": "PAD EM AN\u00c1LISE", "Concession\u00e1rios": "*Rosneft - 51%,
+        HRT O&G - 49%"}, "identifier": "BR/SOL-T-191", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "POT-T-485", "licensees": ["Imetame"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/POT-T-485", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Imetame", "Vencimento1\u00ba":
+        "30.08.2016", "Contrato": "POT-T-485_R11", "Observacao": "", "Concession\u00e1rios":
+        "*Imetame - 100%"}, "identifier": "BR/POT-T-485", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SEAL-T-229", "licensees": ["Petrobras"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SEAL-T-229", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "15.05.2017", "Contrato": "SEAL-T-229_R12", "Observacao": "", "Concession\u00e1rios":
+        "*Petrobras - 100%"}, "identifier": "BR/SEAL-T-229", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "242- Tinah Offshore", "licensees": ["IEOC"], "country": "EG", "url_api":
+        "http://api.openoil.net/concession/EG/242- Tinah Offshore", "source_document":
+        "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/EgyptMapv6.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/242- Tinah
+        Offshore", "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SF-T-138", "licensees": ["Petra Energia"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SF-T-138", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petra Energia", "Vencimento1\u00ba":
+        "12.03.2010", "Contrato": "BT-SF-3A", "Observacao": "EM AN\u00c1LISE", "Concession\u00e1rios":
+        "*Petra Energia - 100%"}, "identifier": "BR/SF-T-138", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "REC-T-144", "licensees": ["Alvopetro"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/REC-T-144", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Alvopetro", "Vencimento1\u00ba":
+        "18.10.2012", "Contrato": "BT-REC-47", "Observacao": "PAD EM AN\u00c1LISE",
+        "Concession\u00e1rios": "*Alvopetro - 100%"}, "identifier": "BR/REC-T-144",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "BAR-M-314", "licensees": ["Chariot Brasil"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/BAR-M-314", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Chariot Brasil",
+        "Vencimento1\u00ba": "30.08.2018", "Contrato": "BAR-M-314_R11", "Observacao":
+        "", "Concession\u00e1rios": "*Chariot Brasil - 100%"}, "identifier": "BR/BAR-M-314",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SF-T-132", "licensees": ["Cemes", "Codemig"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SF-T-132", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Cemes", "Vencimento1\u00ba":
+        "12.01.2010", "Contrato": "BT-SF-5", "Observacao": "", "Concession\u00e1rios":
+        "*Cemes - 51%, Codemig - 49%"}, "identifier": "BR/SF-T-132", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "BM-C-14", "licensees": ["Petrobras"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/BM-C-14", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "29.08.2004", "Contrato": "BM-C-14A", "Observacao": "", "Concession\u00e1rios":
+        "*Petrobras - 100%"}, "identifier": "BR/BM-C-14", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SEAL-M-426", "licensees": ["Petrobras", "IBV Brasil Petr\u00f3leo"],
+        "country": "BR", "url_api": "http://api.openoil.net/concession/BR/SEAL-M-426",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Petrobras", "Vencimento1\u00ba": "25.07.2011", "Contrato":
+        "BM-SEAL-11", "Observacao": "", "Concession\u00e1rios": "*Petrobras - 60%,
+        IBV Brasil Petr\u00f3leo - 40%"}, "identifier": "BR/SEAL-M-426", "type": "",
+        "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "PN-T-150", "licensees": ["Petrobras", "Galp Energia Brasil"], "country":
+        "BR", "url_api": "http://api.openoil.net/concession/BR/PN-T-150", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "Petrobras", "Vencimento1\u00ba": "30.08.2017", "Contrato": "PN-T-150_R11",
+        "Observacao": "", "Concession\u00e1rios": "*Petrobras - 50%, Galp Energia
+        Brasil - 50%"}, "identifier": "BR/PN-T-150", "type": "", "source_date": "2014-01-12"},
+        {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name":
+        "SEAL-T-154", "licensees": ["TOG Brasil"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/SEAL-T-154",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "TOG Brasil", "Vencimento1\u00ba": "06.06.2017", "Contrato":
+        "SEAL-T-154_R12", "Observacao": "", "Concession\u00e1rios": "*TOG Brasil -
+        100%"}, "identifier": "BR/SEAL-T-154", "type": "", "source_date": "2014-01-12"},
+        {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name":
+        "PEPB-M-896", "licensees": ["Queiroz Galv\u00e3o", "Petra Energia"], "country":
+        "BR", "url_api": "http://api.openoil.net/concession/BR/PEPB-M-896", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "Queiroz Galv\u00e3o", "Vencimento1\u00ba": "17.09.2018", "Contrato":
+        "PEPB-M-896_R11", "Observacao": "", "Concession\u00e1rios": "*Queiroz Galv\u00e3o
+        - 30%, Petra Energia - 70%"}, "identifier": "BR/PEPB-M-896", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "240- W. Med. Deep Water", "licensees": ["BP"], "country": "EG", "url_api":
+        "http://api.openoil.net/concession/EG/240- W. Med. Deep Water", "source_document":
+        "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/EgyptMapv6.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/240- W. Med.
+        Deep Water", "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SEAL-T-30", "licensees": ["Imetame"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SEAL-T-30", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Imetame", "Vencimento1\u00ba":
+        "30.08.2016", "Contrato": "SEAL-T-30_R11", "Observacao": "", "Concession\u00e1rios":
+        "*Imetame - 100%"}, "identifier": "BR/SEAL-T-30", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "51- E. Almein (El Alamein)", "licensees": ["Kriti"], "country": "EG",
+        "url_api": "http://api.openoil.net/concession/EG/51- E. Almein (El Alamein)",
+        "source_document": "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/EgyptMapv6.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/51- E. Almein
+        (El Alamein)", "type": "", "source_date": ""}, {"status": "", "url_wiki":
+        "http://repository.openoil.net/wiki/Brazil", "name": "AM-T-83", "licensees":
+        ["Petra Energia", "STR"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/AM-T-83",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Petra Energia", "Vencimento1\u00ba": "29.06.2014",
+        "Contrato": "AM-T-83_R10", "Observacao": "AD REFERENDUM", "Concession\u00e1rios":
+        "*Petra Energia - 80%, STR - 20%"}, "identifier": "BR/AM-T-83", "type": "",
+        "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "262- West Ghazalat", "licensees": ["Apache"], "country": "EG", "url_api":
+        "http://api.openoil.net/concession/EG/262- West Ghazalat", "source_document":
+        "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/EgyptMapv6.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/262- West
+        Ghazalat", "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "106- S. Razzik", "licensees": ["BP"], "country": "EG", "url_api":
+        "http://api.openoil.net/concession/EG/106- S. Razzik", "source_document":
+        "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/EgyptMapv6.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/106- S. Razzik",
+        "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "283- Alam El Shawish West", "licensees": ["Shell"], "country": "EG",
+        "url_api": "http://api.openoil.net/concession/EG/283- Alam El Shawish West",
+        "source_document": "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/EgyptMapv6.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/283- Alam
+        El Shawish West", "type": "", "source_date": ""}, {"status": "", "url_wiki":
+        "http://repository.openoil.net/wiki/Brazil", "name": "TUC-T-150", "licensees":
+        ["Petra Energia"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/TUC-T-150",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Petra Energia", "Vencimento1\u00ba": "17.09.2016",
+        "Contrato": "TUC-T-150_R11", "Observacao": "", "Concession\u00e1rios": "*Petra
+        Energia - 100%"}, "identifier": "BR/TUC-T-150", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SF-T-128", "licensees": ["Petra Energia"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SF-T-128", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petra Energia", "Vencimento1\u00ba":
+        "12.03.2010", "Contrato": "BT-SF-3A", "Observacao": "EM AN\u00c1LISE", "Concession\u00e1rios":
+        "*Petra Energia - 100%"}, "identifier": "BR/SF-T-128", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "J-M-115", "licensees": ["Petrobras"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/J-M-115", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "30.04.2013", "Contrato": "BM-J-4", "Observacao": "SUSPENSO", "Concession\u00e1rios":
+        "*Petrobras - 100%"}, "identifier": "BR/J-M-115", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "302- West Obaiyed", "licensees": ["Hellenic"], "country": "EG", "url_api":
+        "http://api.openoil.net/concession/EG/302- West Obaiyed", "source_document":
+        "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/EgyptMapv6.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/302- West
+        Obaiyed", "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "CAL-M-372", "licensees": ["Petrobras", "OP Energia", "Queiroz Galv\u00e3o"],
+        "country": "BR", "url_api": "http://api.openoil.net/concession/BR/CAL-M-372",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Petrobras", "Vencimento1\u00ba": "25.05.2014", "Contrato":
+        "BM-CAL-12", "Observacao": "SUSPENSO", "Concession\u00e1rios": "*Petrobras
+        - 60%, Queiroz Galv\u00e3o - 20%, OP Energia - 20%"}, "identifier": "BR/CAL-M-372",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SEAL-T-62", "licensees": ["Imetame"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SEAL-T-62", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Imetame", "Vencimento1\u00ba":
+        "30.08.2016", "Contrato": "SEAL-T-62_R11", "Observacao": "", "Concession\u00e1rios":
+        "*Imetame - 100%"}, "identifier": "BR/SEAL-T-62", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "PN-T-85", "licensees": ["Parna\u00edba G\u00e1s", "BPMB Parna\u00edba"],
+        "country": "BR", "url_api": "http://api.openoil.net/concession/BR/PN-T-85",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Parna\u00edba G\u00e1s", "Vencimento1\u00ba": "12.03.2012",
+        "Contrato": "BT-PN-10", "Observacao": "PAD EM AN\u00c1LISE", "Concession\u00e1rios":
+        "*Parna\u00edba G\u00e1s - 70%, BPMB Parna\u00edba - 30%"}, "identifier":
+        "BR/PN-T-85", "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki":
+        "http://repository.openoil.net/wiki/Brazil", "name": "SEAL-T-372", "licensees":
+        ["Petrobras"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/SEAL-T-372",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Petrobras", "Vencimento1\u00ba": "15.05.2017", "Contrato":
+        "SEAL-T-372_R12", "Observacao": "", "Concession\u00e1rios": "*Petrobras -
+        100%"}, "identifier": "BR/SEAL-T-372", "type": "", "source_date": "2014-01-12"},
+        {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name":
+        "REC-T-61", "licensees": ["Petrobras"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/REC-T-61",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Petrobras", "Vencimento1\u00ba": "15.05.2017", "Contrato":
+        "REC-T-61_R12", "Observacao": "", "Concession\u00e1rios": "*Petrobras - 100%"},
+        "identifier": "BR/REC-T-61", "type": "", "source_date": "2014-01-12"}, {"status":
+        "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name": "PEPB-M-783",
+        "licensees": ["Petrobras", "Petrogal Brasil"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/PEPB-M-783", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "12.03.2013", "Contrato": "BM-PEPB-1", "Observacao": "", "Concession\u00e1rios":
+        "*Petrobras - 80%, Petrogal Brasil - 20%"}, "identifier": "BR/PEPB-M-783",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "S-M-417", "licensees": ["Petrobras"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/S-M-417", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "24.07.2012", "Contrato": "BM-S-42", "Observacao": "", "Concession\u00e1rios":
+        "*Petrobras - 100%"}, "identifier": "BR/S-M-417", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "FZA-M-125", "licensees": ["Total E&P Brasil", "BP Energy", "Petrobras"],
+        "country": "BR", "url_api": "http://api.openoil.net/concession/BR/FZA-M-125",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Total E&P Brasil", "Vencimento1\u00ba": "06.08.2018",
+        "Contrato": "FZA-M-125_R11", "Observacao": "", "Concession\u00e1rios": "*Total
+        E&P Brasil - 40%, Petrobras - 30%, BP Energy - 30%"}, "identifier": "BR/FZA-M-125",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SEAL-T-118", "licensees": ["TOG Brasil"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SEAL-T-118", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "TOG Brasil", "Vencimento1\u00ba":
+        "06.06.2017", "Contrato": "SEAL-T-118_R12", "Observacao": "", "Concession\u00e1rios":
+        "*TOG Brasil - 100%"}, "identifier": "BR/SEAL-T-118", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "TUC-T-177", "licensees": ["Alvopetro"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/TUC-T-177", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Alvopetro", "Vencimento1\u00ba":
+        "30.08.2016", "Contrato": "TUC-T-177_R11", "Observacao": "", "Concession\u00e1rios":
+        "*Alvopetro - 100%"}, "identifier": "BR/TUC-T-177", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SF-T-115", "licensees": ["Petra Energia"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SF-T-115", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petra Energia", "Vencimento1\u00ba":
+        "12.03.2010", "Contrato": "BT-SF-3A", "Observacao": "EM AN\u00c1LISE", "Concession\u00e1rios":
+        "*Petra Energia - 100%"}, "identifier": "BR/SF-T-115", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "FZA-M-539", "licensees": ["Brasoil Manati"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/FZA-M-539", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Brasoil Manati",
+        "Vencimento1\u00ba": "17.09.2018", "Contrato": "FZA-M-539_R11", "Observacao":
+        "", "Concession\u00e1rios": "*Brasoil Manati - 100%"}, "identifier": "BR/FZA-M-539",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/China",
+        "name": "64/26", "licensees": [""], "country": "CN", "url_api": "http://api.openoil.net/concession/CN/64/26",
+        "source_document": "http://en.cnooc.com.cn/data/html/news/2014-09-10/english/360759.html",
+        "retrieved_date": "", "details": {"Status": "Open"}, "identifier": "CN/64/26",
+        "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "190- N. W. Gemsa", "licensees": ["Vegas"], "country": "EG", "url_api":
+        "http://api.openoil.net/concession/EG/190- N. W. Gemsa", "source_document":
+        "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/SuezGulfMapV7.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/190- N. W.
+        Gemsa", "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "REC-T-107", "licensees": ["Alvopetro"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/REC-T-107", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Alvopetro", "Vencimento1\u00ba":
+        "30.08.2016", "Contrato": "REC-T-107_R11", "Observacao": "", "Concession\u00e1rios":
+        "*Alvopetro - 100%"}, "identifier": "BR/REC-T-107", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "319- E. Abu Sennan", "licensees": ["Tharwa"], "country": "EG", "url_api":
+        "http://api.openoil.net/concession/EG/319- E. Abu Sennan", "source_document":
+        "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/EgyptMapv6.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/319- E. Abu
+        Sennan", "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "207- LL 87 (1 and 2)", "licensees": ["BP"], "country": "EG", "url_api":
+        "http://api.openoil.net/concession/EG/207- LL 87 (1 and 2)", "source_document":
+        "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/SuezGulfMapV7.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/207- LL 87
+        (1 and 2)", "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SEAL-T-31", "licensees": ["Imetame"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SEAL-T-31", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Imetame", "Vencimento1\u00ba":
+        "30.08.2016", "Contrato": "SEAL-T-31_R11", "Observacao": "", "Concession\u00e1rios":
+        "*Imetame - 100%"}, "identifier": "BR/SEAL-T-31", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "REC-T-95", "licensees": ["Brasoil Manati"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/REC-T-95", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Brasoil Manati",
+        "Vencimento1\u00ba": "17.09.2016", "Contrato": "REC-T-95_R11", "Observacao":
+        "", "Concession\u00e1rios": "*Brasoil Manati - 100%"}, "identifier": "BR/REC-T-95",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "C-M-146", "licensees": ["Petrobras"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/C-M-146", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "26.02.2008", "Contrato": "BM-C-27", "Observacao": "EM AN\u00c1LISE", "Concession\u00e1rios":
+        "*Petrobras - 100%"}, "identifier": "BR/C-M-146", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SEAL-T-142", "licensees": ["Petrobras"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SEAL-T-142", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "15.05.2017", "Contrato": "SEAL-T-142_R12", "Observacao": "", "Concession\u00e1rios":
+        "*Petrobras - 100%"}, "identifier": "BR/SEAL-T-142", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "PN-T-137", "licensees": ["Ouro Preto"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/PN-T-137", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Ouro Preto", "Vencimento1\u00ba":
+        "13.11.2017", "Contrato": "PN-T-137_R11", "Observacao": "", "Concession\u00e1rios":
+        "*Ouro Preto - 100%"}, "identifier": "BR/PN-T-137", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "BM-S-11", "licensees": ["Petrobras", "BG Brasil", "Petrogal Brasil"],
+        "country": "BR", "url_api": "http://api.openoil.net/concession/BR/BM-S-11",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Petrobras", "Vencimento1\u00ba": "15.09.2003", "Contrato":
+        "BM-S-11", "Observacao": "", "Concession\u00e1rios": "*Petrobras - 65%, Petrogal
+        Brasil - 10%, BG Brasil - 25%"}, "identifier": "BR/BM-S-11", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "POT-T-569", "licensees": ["Imetame"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/POT-T-569", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Imetame", "Vencimento1\u00ba":
+        "30.08.2016", "Contrato": "POT-T-569_R11", "Observacao": "", "Concession\u00e1rios":
+        "*Imetame - 100%"}, "identifier": "BR/POT-T-569", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SEAL-T-268", "licensees": ["Geopark Brasil"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SEAL-T-268", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Geopark Brasil",
+        "Vencimento1\u00ba": "15.05.2017", "Contrato": "SEAL-T-268_R12", "Observacao":
+        "", "Concession\u00e1rios": "*Geopark Brasil - 100%"}, "identifier": "BR/SEAL-T-268",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SOL-T-218", "licensees": ["Rosneft", "HRT O&G"], "country": "BR",
+        "url_api": "http://api.openoil.net/concession/BR/SOL-T-218", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "Rosneft", "Vencimento1\u00ba": "03.03.2011", "Contrato": "BT-SOL-4",
+        "Observacao": "", "Concession\u00e1rios": "*Rosneft - 51%, HRT O&G - 49%"},
+        "identifier": "BR/SOL-T-218", "type": "", "source_date": "2014-01-12"}, {"status":
+        "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name": "POT-M-853",
+        "licensees": ["Petrobras", "Petrogal Brasil"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/POT-M-853", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "12.01.2012", "Contrato": "BM-POT-17", "Observacao": "", "Concession\u00e1rios":
+        "*Petrobras - 80%, Petrogal Brasil - 20%"}, "identifier": "BR/POT-M-853",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "FZA-M-59", "licensees": ["BP Energy", "Petrobras"], "country": "BR",
+        "url_api": "http://api.openoil.net/concession/BR/FZA-M-59", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "BP Energy", "Vencimento1\u00ba": "06.08.2018", "Contrato": "FZA-M-59_R11",
+        "Observacao": "", "Concession\u00e1rios": "*BP Energy - 70%, Petrobras - 30%"},
+        "identifier": "BR/FZA-M-59", "type": "", "source_date": "2014-01-12"}, {"status":
+        "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name": "BAR-M-377",
+        "licensees": ["Petrobras"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/BAR-M-377",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Petrobras", "Vencimento1\u00ba": "04.11.2009", "Contrato":
+        "BM-BAR-4", "Observacao": "SUSPENSO", "Concession\u00e1rios": "*Petrobras
+        - 100%"}, "identifier": "BR/BAR-M-377", "type": "", "source_date": "2014-01-12"},
+        {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name":
+        "REC-T-157", "licensees": ["Alvopetro"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/REC-T-157",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Alvopetro", "Vencimento1\u00ba": "18.10.2012", "Contrato":
+        "BT-REC-43", "Observacao": "PAD EM AN\u00c1LISE", "Concession\u00e1rios":
+        "*Alvopetro - 100%"}, "identifier": "BR/REC-T-157", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "BAR-M-342", "licensees": ["BG Brasil", "Petrobras", "Galp Energia
+        Brasil"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/BAR-M-342",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "BG Brasil", "Vencimento1\u00ba": "30.08.2018", "Contrato":
+        "BAR-M-342_R11", "Observacao": "", "Concession\u00e1rios": "*BG Brasil - 50%,
+        Galp Energia Brasil - 10%, Petrobras - 40%"}, "identifier": "BR/BAR-M-342",
+        "type": "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SF-T-133", "licensees": ["Cisco"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/SF-T-133",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Cisco", "Vencimento1\u00ba": "12.01.2010", "Contrato":
+        "BT-SF-6", "Observacao": "EM AN\u00c1LISE", "Concession\u00e1rios": "*Cisco
+        - 100%"}, "identifier": "BR/SF-T-133", "type": "", "source_date": "2014-01-12"},
+        {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name":
+        "REC-T-76", "licensees": ["Imetame"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/REC-T-76",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Imetame", "Vencimento1\u00ba": "30.08.2016", "Contrato":
+        "REC-T-76_R11", "Observacao": "", "Concession\u00e1rios": "*Imetame - 100%"},
+        "identifier": "BR/REC-T-76", "type": "", "source_date": "2014-01-12"}, {"status":
+        "", "url_wiki": "http://repository.openoil.net/wiki/Egypt", "name": "45- W.
+        Razzak", "licensees": ["IEOC"], "country": "EG", "url_api": "http://api.openoil.net/concession/EG/45-
+        W. Razzak", "source_document": "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/EgyptMapv6.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/45- W. Razzak",
+        "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SF-T-95", "licensees": ["Petra Energia"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SF-T-95", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petra Energia", "Vencimento1\u00ba":
+        "12.03.2010", "Contrato": "BT-SF-3A", "Observacao": "EM AN\u00c1LISE", "Concession\u00e1rios":
+        "*Petra Energia - 100%"}, "identifier": "BR/SF-T-95", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "231- N. Bahariya", "licensees": ["Sahara Oil and Gas"], "country":
+        "EG", "url_api": "http://api.openoil.net/concession/EG/231- N. Bahariya",
+        "source_document": "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/EgyptMapv6.swf",
+        "retrieved_date": "2015-02-03", "details": "", "identifier": "EG/231- N. Bahariya",
+        "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Egypt",
+        "name": "29- Merged (GUPCO)", "licensees": ["BP"], "country": "EG", "url_api":
+        "http://api.openoil.net/concession/EG/29- Merged (GUPCO)", "source_document":
+        "http://www.petroleum.gov.eg/Style%20Library/en-us/MOP/flash/SuezGulfMapV7.swf",
+        "retrieved_date": "2017-02-03", "details": "", "identifier": "EG/29- Merged
+        (GUPCO)", "type": "", "source_date": ""}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SEAL-T-155", "licensees": ["TOG Brasil"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SEAL-T-155", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "TOG Brasil", "Vencimento1\u00ba":
+        "06.06.2017", "Contrato": "SEAL-T-155_R12", "Observacao": "", "Concession\u00e1rios":
+        "*TOG Brasil - 100%"}, "identifier": "BR/SEAL-T-155", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "POT-T-794", "licensees": ["Sonangol Starfish", "Petrobras"], "country":
+        "BR", "url_api": "http://api.openoil.net/concession/BR/POT-T-794", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "Sonangol Starfish", "Vencimento1\u00ba": "12.01.2008", "Contrato":
+        "BT-POT-55", "Observacao": "SUSPENSO", "Concession\u00e1rios": "*Sonangol
+        Starfish - 30%, Petrobras - 70%"}, "identifier": "BR/POT-T-794", "type": "",
+        "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SEAL-T-165", "licensees": ["Petrobras"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SEAL-T-165", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "15.05.2017", "Contrato": "SEAL-T-165_R12", "Observacao": "", "Concession\u00e1rios":
+        "*Petrobras - 100%"}, "identifier": "BR/SEAL-T-165", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "TUC-T-155", "licensees": ["Petra Energia"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/TUC-T-155", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petra Energia", "Vencimento1\u00ba":
+        "17.09.2016", "Contrato": "TUC-T-155_R11", "Observacao": "", "Concession\u00e1rios":
+        "*Petra Energia - 100%"}, "identifier": "BR/TUC-T-155", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SF-T-130", "licensees": ["Petra Energia"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/SF-T-130", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petra Energia", "Vencimento1\u00ba":
+        "12.03.2010", "Contrato": "BT-SF-3", "Observacao": "EM AN\u00c1LISE", "Concession\u00e1rios":
+        "*Petra Energia - 100%"}, "identifier": "BR/SF-T-130", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "J-M-165", "licensees": ["Petrobras"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/J-M-165", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "30.04.2013", "Contrato": "BM-J-4", "Observacao": "SUSPENSO", "Concession\u00e1rios":
+        "*Petrobras - 100%"}, "identifier": "BR/J-M-165", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "REC-T-115", "licensees": ["Nova Petr\u00f3leo"], "country": "BR",
+        "url_api": "http://api.openoil.net/concession/BR/REC-T-115", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "Nova Petr\u00f3leo", "Vencimento1\u00ba": "30.08.2016", "Contrato":
+        "REC-T-115_R11", "Observacao": "", "Concession\u00e1rios": "*Nova Petr\u00f3leo
+        - 100%"}, "identifier": "BR/REC-T-115", "type": "", "source_date": "2014-01-12"},
+        {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name":
+        "PAR-T-198", "licensees": ["Petrobras"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/PAR-T-198",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Petrobras", "Vencimento1\u00ba": "15.05.2018", "Contrato":
+        "PAR-T-198_R12", "Observacao": "", "Concession\u00e1rios": "*Petrobras - 100%"},
+        "identifier": "BR/PAR-T-198", "type": "", "source_date": "2014-01-12"}, {"status":
+        "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name": "C-M-333",
+        "licensees": ["Petrobras"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/C-M-333",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Petrobras", "Vencimento1\u00ba": "26.02.2008", "Contrato":
+        "BM-C-28", "Observacao": "EM AN\u00c1LISE", "Concession\u00e1rios": "*Petrobras
+        - 100%"}, "identifier": "BR/C-M-333", "type": "", "source_date": "2014-01-12"},
+        {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name":
+        "REC-T-225", "licensees": ["Petrobras", "Ouro Preto", "GDF Suez Brasil"],
+        "country": "BR", "url_api": "http://api.openoil.net/concession/BR/REC-T-225",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Petrobras", "Vencimento1\u00ba": "15.05.2017", "Contrato":
+        "REC-T-225_R12", "Observacao": "", "Concession\u00e1rios": "*Petrobras - 40%,
+        GDF Suez Brasil - 25%, Ouro Preto - 35%"}, "identifier": "BR/REC-T-225", "type":
+        "", "source_date": "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "CE-M-665", "licensees": ["Premier Oil Brasil", "CEPSA"], "country":
+        "BR", "url_api": "http://api.openoil.net/concession/BR/CE-M-665", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "Premier Oil Brasil", "Vencimento1\u00ba": "30.08.2018", "Contrato":
+        "CE-M-665_R11", "Observacao": "", "Concession\u00e1rios": "*Premier Oil Brasil
+        - 50%, CEPSA - 50%"}, "identifier": "BR/CE-M-665", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "REC-T-70", "licensees": ["Petrobras"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/REC-T-70", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "15.05.2017", "Contrato": "REC-T-70_R12", "Observacao": "", "Concession\u00e1rios":
+        "*Petrobras - 100%"}, "identifier": "BR/REC-T-70", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "ES-T-485", "licensees": ["Petrobras"], "country": "BR", "url_api":
+        "http://api.openoil.net/concession/BR/ES-T-485", "source_document": "http://www.anp.gov.br/?pg=57559",
+        "retrieved_date": "2014-08-12", "details": {"Operador": "Petrobras", "Vencimento1\u00ba":
+        "06.08.2016", "Contrato": "ES-T-485_R11", "Observacao": "", "Concession\u00e1rios":
+        "*Petrobras - 100%"}, "identifier": "BR/ES-T-485", "type": "", "source_date":
+        "2014-01-12"}, {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil",
+        "name": "SOL-T-197", "licensees": ["Rosneft", "HRT O&G"], "country": "BR",
+        "url_api": "http://api.openoil.net/concession/BR/SOL-T-197", "source_document":
+        "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12", "details":
+        {"Operador": "Rosneft", "Vencimento1\u00ba": "03.03.2011", "Contrato": "BT-SOL-4",
+        "Observacao": "", "Concession\u00e1rios": "*Rosneft - 51%, HRT O&G - 49%"},
+        "identifier": "BR/SOL-T-197", "type": "", "source_date": "2014-01-12"}, {"status":
+        "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name": "S-M-1037",
+        "licensees": ["Karoon", "Pacific Brasil"], "country": "BR", "url_api": "http://api.openoil.net/concession/BR/S-M-1037",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Karoon", "Vencimento1\u00ba": "12.03.2011", "Contrato":
+        "BM-S-61", "Observacao": "", "Concession\u00e1rios": "*Karoon - 65%, Pacific
+        Brasil - 35%"}, "identifier": "BR/S-M-1037", "type": "", "source_date": "2014-01-12"},
+        {"status": "", "url_wiki": "http://repository.openoil.net/wiki/Brazil", "name":
+        "FZA-M-127", "licensees": ["Total E&P Brasil", "BP Energy", "Petrobras"],
+        "country": "BR", "url_api": "http://api.openoil.net/concession/BR/FZA-M-127",
+        "source_document": "http://www.anp.gov.br/?pg=57559", "retrieved_date": "2014-08-12",
+        "details": {"Operador": "Total E&P Brasil", "Vencimento1\u00ba": "06.08.2018",
+        "Contrato": "FZA-M-127_R11", "Observacao": "", "Concession\u00e1rios": "*Total
+        E&P Brasil - 40%, Petrobras - 30%, BP Energy - 30%"}, "identifier": "BR/FZA-M-127",
+        "type": "", "source_date": "2014-01-12"}], "page": 1, "api_version": 0.1,
+        "result_count": 18038}'
+    http_version: 
+  recorded_at: Mon, 19 Oct 2015 18:07:50 GMT
+recorded_with: VCR 2.9.3

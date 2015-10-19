@@ -27,6 +27,7 @@ require 'whos_got_dirt/responses/entity/open_corporates'
 require 'whos_got_dirt/responses/list/little_sis'
 require 'whos_got_dirt/responses/list/open_corporates'
 require 'whos_got_dirt/responses/relation/open_corporates'
+require 'whos_got_dirt/responses/relation/open_oil'
 
 module WhosGotDirt
   class Error < StandardError; end
