@@ -6,7 +6,7 @@ module WhosGotDirt
       # OpenCorporates' `date_of_birth` and `address` filters require an API
       # key. Its `order` parameter is not supported.
       #
-      # @example Supply an OpenCorporates API key.
+      # @example Supply an API key.
       #   "open_corporates_api_key": "..."
       #
       # @example Find officerships with a given jurisdiction code.

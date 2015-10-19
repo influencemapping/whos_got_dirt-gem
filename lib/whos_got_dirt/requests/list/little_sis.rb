@@ -5,7 +5,7 @@ module WhosGotDirt
       #
       # The `q` parameter matches names and descriptions.
       #
-      # @example Supply a LittleSis API key.
+      # @example Supply an API key.
       #   "little_sis_api_key": "..."
       class LittleSis < Request
         # The JSON response has less metadata, e.g. number of results.

@@ -5,7 +5,7 @@ module WhosGotDirt
       #
       # OpenCorporates' `q` filter performs a prefix search.
       #
-      # @example Supply an OpenCorporates API key.
+      # @example Supply an API key.
       #   "open_corporates_api_key": "..."
       class OpenCorporates < Request
         @base_url = 'https://api.opencorporates.com/corporate_groupings/search'

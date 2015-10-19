@@ -5,7 +5,7 @@ module WhosGotDirt
       #
       # OpenCorporates' `fields` and `order` parameters are not supported.
       #
-      # @example Supply an OpenCorporates API key.
+      # @example Supply an API key.
       #   "open_corporates_api_key": "..."
       #
       # @example Find companies by name prefix.

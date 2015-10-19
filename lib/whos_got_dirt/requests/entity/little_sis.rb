@@ -7,7 +7,7 @@ module WhosGotDirt
       # filter. The `q` parameter matches names and aliases. If `search_all` is
       # `1`, it also matches descriptions and summaries.
       #
-      # @example Supply a LittleSis API key.
+      # @example Supply an API key.
       #   "little_sis_api_key": "..."
       #
       # @example Match descriptions and summaries on `name~=` queries.
