@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.poderopedia.org/visualizacion/search?alias=juan&entity=persona&user_key=dd88190daab4754b60b77c5db71b4e96
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 19 Oct 2015 19:48:08 GMT
+      server:
+      - Apache/2.2.15 (CentOS)
+      x-powered-by:
+      - web2py
+      expires:
+      - Mon, 19 Oct 2015 19:48:09 GMT
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      set-cookie:
+      - session_id_api=198.48.204.118-b57a83b1-b473-40bd-a0eb-87db8846f187; Path=/
+      content-length:
+      - '3249'
+      connection:
+      - close
+      content-type:
+      - text/html; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |
+        {"person": [{"shortBio": "Abogado. Actual senador de la Uni\u00f3n Dem\u00f3crata Independiente (UDI) por la Circunscripci\u00f3n X, VII Regi\u00f3n del Maule desde 2002 por dos periodos consecutivos. \r\nAntes hab\u00eda sido diputado por el Distrito N\u00b0 31 (Alhu\u00e9, Curacav\u00ed, El Monte, Isla de Maipo, Mar\u00eda Pinto Melipilla, Pe\u00f1aflor, San Pedro y Talagante) durante tres periodos legislativos desde desde 1990 a 2002. En el a\u00f1o 2008 fue elegido presidente de su partido.  Hermano de Fernando Coloma, superintendente de Valores y Seguros durante el Gobierno de Sebasti\u00e1n Pi\u00f1era, y de Pablo Coloma, militante PPD que lider\u00f3 el Fosis bajo la presidencia de Michelle Bachelet. Su hijo Juan Antonio Coloma \u00c1lamos fue jefe territorial del ex ministro de Obras P\u00fablicas, Laurence Golborne, despu\u00e9s ejerci\u00f3 el mismo cargo en el comando del ex candidato presidencial de la UDI, Pablo Longueira y actualmente es diputado por el distrito 31. El senador Coloma est\u00e1 casado con Mar\u00eda Cecilia \u00c1lamos, hermana de Jimena \u00c1lamos, esposa del diputado UDI Ernesto Silva.", "id": 2657, "alias": "Juan Antonio Coloma"}, {"shortBio": "Senador del Partido Socialista por la 9\u00aa Circunscripci\u00f3n, Regi\u00f3n de O`Higgins,\r\ndesde 2006 a la fecha por dos periodos consecutivos. Diputado por el Distrito N\u00ba 33, Regi\u00f3n de O'Higgins, por cuatro periodo consecutivos, entre 1990 y 2006. Es hijo del ex canciller y\r\nex embajador chileno en Washington DC, Orlando Letelier del Solar, quien fue asesinado por agentes de la Direcci\u00f3n de Inteligencia Nacional (DINA), el 21 de septiembre de 1976 en Washington DC, Estados Unidos.\r\n\r\n", "id": 2671, "alias": "Juan Pablo Letelier"}, {"shortBio": "Abogado. Hijo del senador y ex presidente de la UDI, Juan Antonio Coloma. Es diputado por el Distrito N\u00ba 31, Regi\u00f3n Metropolitana (Alhue, Curacav\u00ed, El Monte, Isla De Maipo, Mar\u00eda Pinto, Melipilla, Padre Hurtado, Pe\u00f1aflor, San Pedro, Talagante), por el per\u00edodo 2014-2018. Participa en las comisiones permanentes de Constituci\u00f3n, Legislaci\u00f3n y Justicia y Derechos Humanos y Pueblos Originarios. Trabaj\u00f3 de forma determinante en el rescate de los 33 mineros atrapados en una mina de Copiap\u00f3, cuando era el hombre de confianza del ex presidenciable Laurence Golborne, llegando a ser su jefe de campa\u00f1a. Dentro de su curr\u00edculo pol\u00edtico, resalta el haber sido por 3 a\u00f1os consecutivos vicepresidente de las Juventud UDI. Adem\u00e1s de ser en el a\u00f1o 2012, la primera mayor\u00eda de la Comisi\u00f3n Pol\u00edtica del gremialismo.", "id": 2713, "alias": "Juan Antonio Coloma \u00c1lamos"}, {"shortBio": null, "id": 2768, "alias": "Juan de Dios Larra\u00edn Matte"}, {"shortBio": null, "id": 2785, "alias": "Juan Andr\u00e9s Prokurica de Las Heras"}, {"shortBio": null, "id": 2796, "alias": "Juan Tuma Masso"}, {"shortBio": null, "id": 2835, "alias": "Juana Guerrero Y\u00e1\u00f1ez"}, {"shortBio": null, "id": 2839, "alias": "Juan Arenas"}, {"shortBio": null, "id": 2889, "alias": "Juan Francisco Calder\u00f3n Quezada"}, {"shortBio": null, "id": 2898, "alias": "Juan Crist\u00f3bal Cardemil Palacios"}]}
+    http_version: 
+  recorded_at: Mon, 19 Oct 2015 19:48:08 GMT
+recorded_with: VCR 2.9.3
