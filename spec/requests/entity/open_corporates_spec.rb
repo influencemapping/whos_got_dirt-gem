@@ -84,7 +84,7 @@ module WhosGotDirt::Requests::Entity
       end
 
       context 'when given a status' do
-        include_examples 'equal', 'current_status', 'current_status', 'Dissolved'
+        include_examples 'equal', 'current_status', 'status', 'Dissolved'
       end
 
       context 'when given an industry' do
