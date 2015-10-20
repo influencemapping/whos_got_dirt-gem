@@ -27,13 +27,13 @@ module WhosGotDirt
       #   "current_status": "Dissolved"
       #
       # @example Find companies with a given industry code.
-      #   "industry_codes": "be_nace_2008-66191"
+      #   "industry_code": "be_nace_2008-66191"
       #
       # @example Find companies with all the given country codes.
-      #   "industry_codes": ["be_nace_2008-66191", "be_nace_2008-66199"]
+      #   "industry_code": ["be_nace_2008-66191", "be_nace_2008-66199"]
       #
       # @example Find companies with one of many country codes.
-      #   "industry_codes|=": ["be_nace_2008-66191", "be_nace_2008-66199"]
+      #   "industry_code|=": ["be_nace_2008-66191", "be_nace_2008-66199"]
       #
       # @example Find active companies (`true` for inactive).
       #   "inactive": false
@@ -76,7 +76,7 @@ module WhosGotDirt
           one_of('jurisdiction_code', 'jurisdiction_code')
           one_of('country_code', 'country_code')
           equal('current_status', 'current_status')
-          one_of('industry_codes', 'industry_codes')
+          one_of('industry_codes', 'industry_code')
           equal('inactive', 'inactive', valid: [true, false])
           equal('branch', 'branch', valid: [true, false])
           equal('nonprofit', 'nonprofit', valid: [true, false])

@@ -88,7 +88,7 @@ module WhosGotDirt::Requests::Entity
       end
 
       context 'when given an industry' do
-        include_examples 'one_of', 'industry_codes', 'industry_codes', ['be_nace_2008-66191', 'be_nace_2008-66199']
+        include_examples 'one_of', 'industry_codes', 'industry_code', ['be_nace_2008-66191', 'be_nace_2008-66199']
       end
 
       context 'when given an inactivity status' do
