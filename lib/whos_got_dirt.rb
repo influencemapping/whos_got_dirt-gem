@@ -1,7 +1,9 @@
 require 'cgi'
 require 'json'
 
+require 'active_support/core_ext/hash/except'
 require 'active_support/core_ext/hash/indifferent_access'
+require 'active_support/core_ext/hash/slice'
 require 'json-pointer'
 require 'json-schema'
 require 'nokogiri'
@@ -12,6 +14,7 @@ require 'whos_got_dirt/result'
 require 'whos_got_dirt/validator'
 
 require 'whos_got_dirt/request'
+require 'whos_got_dirt/requests/entity/corp_watch'
 require 'whos_got_dirt/requests/entity/little_sis'
 require 'whos_got_dirt/requests/entity/open_corporates'
 require 'whos_got_dirt/requests/entity/open_duka'
