@@ -109,6 +109,12 @@ module WhosGotDirt
         expect(klass.new(nil).one_of('target', 'source', input: many)).to eq('target' => 'one|two')
       end
 
+      it 'should return a criterion when values are transformed' do
+        expect(klass.new(many).one_of('target', 'source', transform: lambda{|v| v.upcase})).to eq('target' => 'ONE|TWO')
+        expect(klass.new(one).one_of('target', 'source', transform: lambda{|v| v.upcase})).to eq('target' => 'THREE')
+        expect(klass.new(all).one_of('target', 'source', transform: lambda{|v| v.upcase})).to eq('target' => 'FOUR,FIVE')
+      end
+
       it 'should prioritize exact match' do
         expect(klass.new(one).one_of('target', 'source')).to eq('target' => 'three')
       end

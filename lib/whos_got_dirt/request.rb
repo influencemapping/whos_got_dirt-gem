@@ -60,8 +60,8 @@ module WhosGotDirt
     # @param [String] sources the request parameter name
     # @param [Hash] opts options
     # @option opts [String] :input substitute MQL parameters
-    # @option opts [String] :default the default value
     # @option opts [String] :transform a transformation to apply to the value
+    # @option opts [String] :default the default value
     # @option opts [Set,Array] :valid a list of valid values
     # @return [Hash] the API-specific parameters
     def equal(target, source, opts = {})
@@ -107,18 +107,19 @@ module WhosGotDirt
     # @param [String] source the request parameter name
     # @param [Hash] opts options
     # @option opts [String] :input substitute MQL parameters
+    # @option opts [String] :transform a transformation to apply to the value
     # @return [Hash] the API-specific parameters
     def one_of(target, source, opts = {})
       params = parameters(opts)
 
       if Array === params[source]
         # @note OpenCorporates AND format.
-        output[target] = params[source].join(',')
+        output[target] = params[source].map{|v| transform(v, opts)}.join(',')
       elsif params[source]
-        output[target] = params[source]
+        output[target] = transform(params[source], opts)
       elsif params["#{source}|="]
         # @note OpenCorporates OR format.
-        output[target] = params["#{source}|="].join('|')
+        output[target] = params["#{source}|="].map{|v| transform(v, opts)}.join('|')
       end
 
       output
