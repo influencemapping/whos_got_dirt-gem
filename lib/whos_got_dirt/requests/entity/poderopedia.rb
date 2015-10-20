@@ -9,6 +9,9 @@ module WhosGotDirt
       #
       # @example Supply an API key.
       #   "poderopedia_api_key": "..."
+      #
+      # @example Find entities of the class `Person` or `Organization`.
+      #   "entity": "Person"
       class Poderopedia < Request
         @base_url = 'http://api.poderopedia.org/visualizacion/search'
 
