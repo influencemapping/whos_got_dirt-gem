@@ -64,15 +64,15 @@ RSpec.shared_examples 'one_of' do |target,source,values,options|
   end
 
   it 'should return a criterion' do
-    expect(described_class.new(input(many, options)).convert).to eq(target => values.join('|'))
+    expect(described_class.new(input(many, options)).convert).to eq(target => transform(values, options).join('|'))
   end
 
   it 'should prioritize exact match' do
-    expect(described_class.new(input(one, options)).convert).to eq(target => values.first)
+    expect(described_class.new(input(one, options)).convert).to eq(target => transform(values, options).first)
   end
 
   it 'should prioritize all match' do
-    expect(described_class.new(input(all, options)).convert).to eq(target => values.join(','))
+    expect(described_class.new(input(all, options)).convert).to eq(target => transform(values, options).join(','))
   end
 end
 

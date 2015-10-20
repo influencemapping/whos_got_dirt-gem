@@ -50,11 +50,11 @@ module WhosGotDirt::Requests::Entity
       end
 
       context 'when given a jurisdiction' do
-        include_examples 'one_of', 'jurisdiction_code', 'jurisdiction_code', ['gb', 'ie']
+        include_examples 'one_of', 'jurisdiction_code', 'jurisdiction_code', ['GB', 'IE'], transformed: ['gb', 'ie']
       end
 
       context 'when given a country' do
-        include_examples 'one_of', 'country_code', 'country_code', ['gb', 'ie']
+        include_examples 'one_of', 'country_code', 'country_code', ['GB', 'IE'], transformed: ['gb', 'ie']
       end
 
       context 'when given a status' do

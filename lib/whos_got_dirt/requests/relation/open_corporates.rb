@@ -53,7 +53,7 @@ module WhosGotDirt
 
           # API-specific parameters.
           equal('api_token', 'open_corporates_api_key')
-          one_of('jurisdiction_code', 'jurisdiction_code')
+          one_of('jurisdiction_code', 'jurisdiction_code', transform: lambda{|v| v.downcase})
           equal('position', 'role')
           equal('inactive', 'inactive', valid: [true, false])
 

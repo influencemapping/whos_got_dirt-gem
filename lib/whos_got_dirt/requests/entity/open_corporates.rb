@@ -73,8 +73,8 @@ module WhosGotDirt
 
           # API-specific parameters.
           equal('api_token', 'open_corporates_api_key')
-          one_of('jurisdiction_code', 'jurisdiction_code')
-          one_of('country_code', 'country_code')
+          one_of('jurisdiction_code', 'jurisdiction_code', transform: lambda{|v| v.downcase})
+          one_of('country_code', 'country_code', transform: lambda{|v| v.downcase})
           equal('current_status', 'status')
           one_of('industry_codes', 'industry_code')
           equal('inactive', 'inactive', valid: [true, false])
