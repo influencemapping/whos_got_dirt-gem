@@ -24,7 +24,7 @@ module WhosGotDirt
       #   "country_code|=": ["gb", "ie"]
       #
       # @example Find companies with a given status.
-      #   "status": "Dissolved"
+      #   "current_status": "Dissolved"
       #
       # @example Find companies with a given industry code.
       #   "industry_code": "be_nace_2008-66191"
@@ -75,7 +75,7 @@ module WhosGotDirt
           equal('api_token', 'open_corporates_api_key')
           one_of('jurisdiction_code', 'jurisdiction_code', transform: lambda{|v| v.downcase})
           one_of('country_code', 'country_code', transform: lambda{|v| v.downcase})
-          equal('current_status', 'status')
+          equal('current_status', 'current_status')
           one_of('industry_codes', 'industry_code')
           equal('inactive', 'inactive', valid: [true, false])
           equal('branch', 'branch', valid: [true, false])
