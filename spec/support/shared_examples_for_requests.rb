@@ -109,3 +109,33 @@ RSpec.shared_examples 'date_range' do |target,source,options|
     expect(described_class.new(input(exact, options)).convert).to eq(target => '2010-01-01:2010-01-01')
   end
 end
+
+RSpec.shared_examples 'contact_details' do |target,source,values,options|
+  let :fuzzy do
+    [
+      {'type' => 'voice', 'value' => '+1-555-555-0100'},
+      {'type' => source, 'value~=' => values.first},
+    ]
+  end
+
+  let :exact do
+    fuzzy << {'type' => source, 'value' => values.last}
+  end
+
+  it 'should return a criterion' do
+    expect(described_class.new(input({'contact_details' => fuzzy}, options)).convert).to eq(target => values.first)
+  end
+
+  it 'should prioritize exact value' do
+    expect(described_class.new(input({'contact_details' => exact}, options)).convert).to eq(target => values.last)
+  end
+
+  it 'should not return a criterion' do
+    [ [{'invalid' => source, 'value' => values.first}],
+      [{'type' => 'invalid', 'value' => values.first}],
+      [{'type' => source, 'invalid' => values.first}],
+    ].each do |contact_details|
+      expect(described_class.new(input({'contact_details' => contact_details}, options)).convert).to eq({})
+    end
+  end
+end

@@ -30,33 +30,7 @@ module WhosGotDirt::Requests::Entity
       end
 
       context 'when given a contact detail' do
-        let :fuzzy do
-          [
-            {'type' => 'voice', 'value' => '+1-555-555-0100'},
-            {'type' => 'address', 'value~=' => '52 London'},
-          ]
-        end
-
-        let :exact do
-          fuzzy << {'type' => 'address', 'value' => 'London 52'}
-        end
-
-        it 'should return a criterion' do
-          expect(OpenCorporates.new('contact_details' => fuzzy).convert).to eq('registered_address' => '52 London')
-        end
-
-        it 'should prioritize exact value' do
-          expect(OpenCorporates.new('contact_details' => exact).convert).to eq('registered_address' => 'London 52')
-        end
-
-        it 'should not return a criterion' do
-          [ [{'invalid' => 'address', 'value' => '52 London'}],
-            [{'type' => 'invalid', 'value' => '52 London'}],
-            [{'type' => 'address', 'invalid' => '52 London'}],
-          ].each do |contact_details|
-            expect(OpenCorporates.new('contact_details' => contact_details).convert).to eq({})
-          end
-        end
+        include_examples 'contact_details', 'registered_address', 'address', ['52 London', 'London 52']
       end
 
       context 'when given a limit' do
