@@ -51,48 +51,48 @@ module WhosGotDirt::Requests::Entity
         include_examples 'equal', 'sic_code', 'industry_code', '2011'
       end
 
-      context 'when given an industry sector' do
-        include_examples 'equal', 'sic_sector', 'industry_sector', '4100'
+      context 'when given a sector code' do
+        include_examples 'equal', 'sic_sector', 'sector_code', '4100'
       end
 
       context 'when given a "substring_match all" flag' do
         include_examples 'equal', 'substring_match', 'substring_match', 1, valid: [1]
       end
 
-      context 'when given a country_code' do
+      context 'when given a country code' do
         include_examples 'equal', 'country_code', 'country_code', 'us', transformed: 'US'
       end
 
-      context 'when given a subdivision_code' do
-        include_examples 'equal', 'subdiv_code', 'subdivision_code', 'or', transformed: 'OR'
+      context 'when given a country subdivision code' do
+        include_examples 'equal', 'subdiv_code', 'subdiv_code', 'or', transformed: 'OR'
       end
 
       context 'when given a year' do
         include_examples 'equal', 'year', 'year', '2005'
       end
 
-      context 'when given a year>=' do
+      context 'when given a minimum year' do
         include_examples 'equal', 'min_year', 'year>=', '2003'
       end
 
-      context 'when given a year<=' do
+      context 'when given a maximum year' do
         include_examples 'equal', 'max_year', 'year<=', '2007'
       end
 
-      context 'when given a source_type' do
+      context 'when given a source type' do
         include_examples 'equal', 'source_type', 'source_type', 'filers'
       end
 
-      context 'when given a children_count' do
-        include_examples 'equal', 'num_children', 'children_count', 3
+      context 'when given a number of children' do
+        include_examples 'equal', 'num_children', 'num_children', 3
       end
 
-      context 'when given a parents_count' do
-        include_examples 'equal', 'num_parents', 'parents_count', 2
+      context 'when given a number of parents' do
+        include_examples 'equal', 'num_parents', 'num_parents', 2
       end
 
-      context 'when given a root_id' do
-        include_examples 'equal', 'top_parent_id', 'root_id', 'cw_7324'
+      context 'when given a root company identifier' do
+        include_examples 'equal', 'top_parent_id', 'top_parent_id', 'cw_7324'
       end
     end
   end

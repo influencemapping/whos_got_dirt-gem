@@ -28,7 +28,7 @@ module WhosGotDirt
       #   "industry_code": "2011"
       #
       # @example Find companies with a given SIC sector.
-      #   "industry_sector": "4100"
+      #   "sector_code": "4100"
       #
       # @example Match within words on name and address queries.
       #   "substring_match": 1
@@ -37,7 +37,7 @@ module WhosGotDirt
       #   "country_code": "US"
       #
       # @example Find companies with a given country subdivision code.
-      #   "country_code": "OR"
+      #   "subdiv_code": "OR"
       #
       # @example Find companies with SEC filings in a given year.
       #   "year": 2005
@@ -53,13 +53,13 @@ module WhosGotDirt
       #   "source_type": "relationships"
       #
       # @example Find companies with three direct descendants in a hierarchy.
-      #   "children_count": 3
+      #   "num_children": 3
       #
       # @example Find companies with two direct ancestors in a hierarchy.
-      #   "parents_count": 2
+      #   "num_parents": 2
       #
       # @example Find companies within the hierarchy of another company.
-      #   "root_id": "cw_7324"
+      #   "top_parent_id": "cw_7324"
       class CorpWatch < Request
         @base_url = 'http://api.corpwatch.org/%<year>s/companies.json'
 
@@ -102,18 +102,18 @@ module WhosGotDirt
           equal('key', 'corp_watch_api_key')
           # http://api.corpwatch.org/documentation/api_examples.html#A35
           equal('sic_code', 'industry_code')
-          equal('sic_sector', 'industry_sector')
+          equal('sic_sector', 'sector_code')
           equal('substring_match', 'substring_match', valid: [1])
           # http://api.corpwatch.org/documentation/api_examples.html#A36
           equal('country_code', 'country_code', transform: lambda{|v| v.upcase})
-          equal('subdiv_code', 'subdivision_code', transform: lambda{|v| v.upcase})
+          equal('subdiv_code', 'subdiv_code', transform: lambda{|v| v.upcase})
           equal('year', 'year')
           equal('min_year', 'year>=')
           equal('max_year', 'year<=')
           equal('source_type', 'source_type')
-          equal('num_children', 'children_count')
-          equal('num_parents', 'parents_count')
-          equal('top_parent_id', 'root_id')
+          equal('num_children', 'num_children')
+          equal('num_parents', 'num_parents')
+          equal('top_parent_id', 'top_parent_id')
 
           output
         end
