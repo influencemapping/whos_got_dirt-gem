@@ -37,6 +37,12 @@ module WhosGotDirt
     # @example Find organizations with a founding date less than a given value.
     #   "founding_date<": "2010-01-05"
     #
+    # @example Find entities by identifier.
+    #   "identifiers": [{
+    #     "identifier": "911653725",
+    #     "scheme": "IRS Employer Identification Number"
+    #   }]
+    #
     # @example Find entities by address (fuzzy match).
     #   "contact_details": [{
     #     "type": "address",
