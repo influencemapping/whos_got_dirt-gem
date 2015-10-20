@@ -7,7 +7,7 @@ module WhosGotDirt
       #   "open_oil_api_key": "..."
       #
       # @example Find concessions with a given country code.
-      #   "country_code": "br"
+      #   "country_code": "BR"
       #
       # @example Find concessions with a "licensed" or "unlicensed" status.
       #   "status": "licensed"
