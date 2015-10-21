@@ -42,11 +42,11 @@ RSpec.shared_examples 'match' do |target,source,values,options|
   end
 
   it 'should return a criterion' do
-    expect(described_class.new(input(fuzzy, options)).convert).to eq(target => values.first)
+    expect(described_class.new(input(fuzzy, options)).convert).to eq(target => transform(values.first, options))
   end
 
   it 'should prioritize exact value' do
-    expect(described_class.new(input(exact, options)).convert).to eq(target => values.last)
+    expect(described_class.new(input(exact, options)).convert).to eq(target => transform(values.last, options))
   end
 end
 
@@ -61,6 +61,28 @@ RSpec.shared_examples 'one_of' do |target,source,values,or_separator,options|
 
   it 'should return a criterion' do
     expect(described_class.new(input(many, options)).convert).to eq(target => transform(values, options).join(or_separator))
+  end
+
+  it 'should prioritize exact match' do
+    expect(described_class.new(input(one, options)).convert).to eq(target => transform(values, options).first)
+  end
+end
+
+RSpec.shared_examples 'all_of' do |target,source,values,or_separator,options|
+  let :many do
+    {}.tap do |hash|
+      values.each_with_index do |value,index|
+        h["#{(97 + index).chr}:#{source}"] = value
+      end
+    end
+  end
+
+  let :one do
+    many.merge(source => values.first)
+  end
+
+  it 'should return a criterion' do
+    expect(described_class.new(input(many, options)).convert).to eq(target => transform(values, options).join(and_separator))
   end
 
   it 'should prioritize exact match' do

@@ -54,6 +54,13 @@ module WhosGotDirt
           "#{base_url}?#{to_query(convert.merge(order: 'score'))}"
         end
 
+        # Returns the "AND" operator's serialization.
+        #
+        # @return [String] the "AND" operator's serialization
+        def and_operator
+          ','
+        end
+
         # Returns the "OR" operator's serialization.
         #
         # @return [String] the "OR" operator's serialization
@@ -84,7 +91,7 @@ module WhosGotDirt
           one_of('jurisdiction_code', 'jurisdiction_code', transform: lambda{|v| v.downcase})
           one_of('country_code', 'country_code', transform: lambda{|v| v.downcase})
           equal('current_status', 'current_status')
-          one_of('industry_codes', 'industry_code')
+          all_of('industry_codes', 'industry_code', backup: :one_of)
           equal('inactive', 'inactive', valid: [true, false])
           equal('branch', 'branch', valid: [true, false])
           equal('nonprofit', 'nonprofit', valid: [true, false])

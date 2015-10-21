@@ -10,6 +10,10 @@ module WhosGotDirt
           "#{base_url}?#{to_query(input)}"
         end
 
+        def and_operator
+          ','
+        end
+
         def or_operator
           '|'
         end
@@ -121,6 +125,36 @@ module WhosGotDirt
 
       it 'should prioritize exact match' do
         expect(klass.new(one).one_of('target', 'source')).to eq('target' => 'three')
+      end
+    end
+
+    describe '#all_of' do
+      let :many do
+        {
+          'a:source' => 'one',
+          'b:source' => 'two',
+        }
+      end
+
+      let :one do
+        many.merge('source' => 'three')
+      end
+
+      it 'should return a criterion' do
+        expect(klass.new(many).all_of('target', 'source')).to eq('target' => 'one,two')
+      end
+
+      it 'should return a criterion when input is overridden' do
+        expect(klass.new(nil).all_of('target', 'source', input: many)).to eq('target' => 'one,two')
+      end
+
+      it 'should return a criterion when values are transformed' do
+        expect(klass.new(many).all_of('target', 'source', transform: lambda{|v| v.upcase})).to eq('target' => 'ONE,TWO')
+        expect(klass.new(one).all_of('target', 'source', transform: lambda{|v| v.upcase})).to eq('target' => 'THREE')
+      end
+
+      it 'should prioritize exact match' do
+        expect(klass.new(one).all_of('target', 'source')).to eq('target' => 'three')
       end
     end
 

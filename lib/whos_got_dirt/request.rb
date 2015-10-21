@@ -122,6 +122,39 @@ module WhosGotDirt
       output
     end
 
+    # Helper method to map a parameter that supports MQL `AND`-like constraints.
+    #
+    # @param [String] target the API-specific parameter name
+    # @param [String] source the request parameter name
+    # @param [Hash] opts options
+    # @option opts [String] :input substitute MQL parameters
+    # @option opts [String] :transform a transformation to apply to the value
+    # @option opts [String] :transform a transformation to apply to the value
+    # @return [Hash] the API-specific parameters
+    def all_of(target, source, opts = {})
+      params = parameters(opts)
+
+      if params[source]
+        equal(target, source, opts)
+      else
+        values = []
+        params.each do |key,value|
+          if key[/:([a-z_]+)$/, 1] == source
+            values << value
+          end
+        end
+        if values.empty?
+          if opts.key?(:backup)
+            send(opts[:backup], target, source, opts)
+          end
+        else
+          output[target] = values.map{|v| transform(v, opts)}.join(and_operator)
+        end
+      end
+
+      output
+    end
+
     # Helper method to map a date parameter that supports comparisons.
     #
     # @param [String] target the API-specific parameter name
@@ -145,6 +178,12 @@ module WhosGotDirt
     # @abstract Subclass and override {#to_s} to return the URL from which to
     #   `GET` the results
     def to_s
+      raise NotImplementedError
+    end
+
+    # @abstract Subclass and override {#and_operator} to return the "AND"
+    #   operator's serialization
+    def and_operator
       raise NotImplementedError
     end
 
