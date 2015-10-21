@@ -23,6 +23,13 @@ module WhosGotDirt
           "#{base_url}?#{to_query(convert)}"
         end
 
+        # Returns the "OR" operator's serialization.
+        #
+        # @return [String] the "OR" operator's serialization
+        def or_operator
+          ','
+        end
+
         # Converts the MQL parameters to API-specific parameters.
         #
         # @return [Hash] API-specific parameters

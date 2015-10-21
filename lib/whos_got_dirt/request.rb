@@ -88,14 +88,15 @@ module WhosGotDirt
     # @param [String] sources the request parameter name
     # @param [Hash] opts options
     # @option opts [String] :input substitute MQL parameters
+    # @option opts [String] :transform a transformation to apply to the value
     # @return [Hash] the API-specific parameters
     def match(target, source, opts = {})
       params = parameters(opts)
 
       if params[source]
-        output[target] = params[source]
+        equal(target, source, opts)
       elsif params["#{source}~="]
-        output[target] = params["#{source}~="]
+        output[target] = transform(params["#{source}~="], opts)
       end
 
       output
@@ -112,14 +113,10 @@ module WhosGotDirt
     def one_of(target, source, opts = {})
       params = parameters(opts)
 
-      if Array === params[source]
-        # @note OpenCorporates AND format.
-        output[target] = params[source].map{|v| transform(v, opts)}.join(',')
-      elsif params[source]
-        output[target] = transform(params[source], opts)
+      if params[source]
+        equal(target, source, opts)
       elsif params["#{source}|="]
-        # @note OpenCorporates OR format.
-        output[target] = params["#{source}|="].map{|v| transform(v, opts)}.join('|')
+        output[target] = params["#{source}|="].map{|v| transform(v, opts)}.join(or_operator)
       end
 
       output
@@ -148,6 +145,12 @@ module WhosGotDirt
     # @abstract Subclass and override {#to_s} to return the URL from which to
     #   `GET` the results
     def to_s
+      raise NotImplementedError
+    end
+
+    # @abstract Subclass and override {#or_operator} to return the "OR"
+    #   operator's serialization
+    def or_operator
       raise NotImplementedError
     end
 

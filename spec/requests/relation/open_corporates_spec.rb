@@ -38,7 +38,7 @@ module WhosGotDirt::Requests::Relation
       end
 
       context 'when given a jurisdiction' do
-        include_examples 'one_of', 'jurisdiction_code', 'jurisdiction_code', ['GB', 'IE'], transformed: ['gb', 'ie']
+        include_examples 'one_of', 'jurisdiction_code', 'jurisdiction_code', ['GB', 'IE'], '|', transformed: ['gb', 'ie']
       end
 
       context 'when given a role' do

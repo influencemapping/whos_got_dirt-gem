@@ -50,11 +50,11 @@ module WhosGotDirt::Requests::Entity
       end
 
       context 'when given a jurisdiction' do
-        include_examples 'one_of', 'jurisdiction_code', 'jurisdiction_code', ['GB', 'IE'], transformed: ['gb', 'ie']
+        include_examples 'one_of', 'jurisdiction_code', 'jurisdiction_code', ['GB', 'IE'], '|', transformed: ['gb', 'ie']
       end
 
       context 'when given a country' do
-        include_examples 'one_of', 'country_code', 'country_code', ['GB', 'IE'], transformed: ['gb', 'ie']
+        include_examples 'one_of', 'country_code', 'country_code', ['GB', 'IE'], '|', transformed: ['gb', 'ie']
       end
 
       context 'when given a status' do
@@ -62,7 +62,7 @@ module WhosGotDirt::Requests::Entity
       end
 
       context 'when given an industry' do
-        include_examples 'one_of', 'industry_codes', 'industry_code', ['be_nace_2008-66191', 'be_nace_2008-66199']
+        include_examples 'one_of', 'industry_codes', 'industry_code', ['be_nace_2008-66191', 'be_nace_2008-66199'], '|'
       end
 
       context 'when given an inactivity status' do

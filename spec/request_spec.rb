@@ -9,6 +9,10 @@ module WhosGotDirt
         def to_s
           "#{base_url}?#{to_query(input)}"
         end
+
+        def or_operator
+          '|'
+        end
       end
     end
 
@@ -83,6 +87,11 @@ module WhosGotDirt
         expect(klass.new(nil).match('target', 'source', input: fuzzy)).to eq('target' => 'Smith John')
       end
 
+      it 'should return a criterion when value is transformed' do
+        expect(klass.new(fuzzy).match('target', 'source', transform: lambda{|v| v.upcase})).to eq('target' => 'SMITH JOHN')
+        expect(klass.new(exact).match('target', 'source', transform: lambda{|v| v.upcase})).to eq('target' => 'JOHN SMITH')
+      end
+
       it 'should prioritize exact match' do
         expect(klass.new(exact).match('target', 'source')).to eq('target' => 'John Smith')
       end
@@ -97,10 +106,6 @@ module WhosGotDirt
         many.merge('source' => 'three')
       end
 
-      let :all do
-        many.merge('source' => ['four', 'five'])
-      end
-
       it 'should return a criterion' do
         expect(klass.new(many).one_of('target', 'source')).to eq('target' => 'one|two')
       end
@@ -112,15 +117,10 @@ module WhosGotDirt
       it 'should return a criterion when values are transformed' do
         expect(klass.new(many).one_of('target', 'source', transform: lambda{|v| v.upcase})).to eq('target' => 'ONE|TWO')
         expect(klass.new(one).one_of('target', 'source', transform: lambda{|v| v.upcase})).to eq('target' => 'THREE')
-        expect(klass.new(all).one_of('target', 'source', transform: lambda{|v| v.upcase})).to eq('target' => 'FOUR,FIVE')
       end
 
       it 'should prioritize exact match' do
         expect(klass.new(one).one_of('target', 'source')).to eq('target' => 'three')
-      end
-
-      it 'should prioritize all match' do
-        expect(klass.new(all).one_of('target', 'source')).to eq('target' => 'four,five')
       end
     end
 

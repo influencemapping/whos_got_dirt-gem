@@ -14,7 +14,7 @@ module WhosGotDirt::Requests::Entity
       end
 
       context 'when given a classification' do
-        include_examples 'one_of', 'type_ids', 'classification', [1, 2]
+        include_examples 'one_of', 'type_ids', 'classification', [1, 2], ','
       end
 
       context 'when given a limit' do

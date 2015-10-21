@@ -50,7 +50,7 @@ RSpec.shared_examples 'match' do |target,source,values,options|
   end
 end
 
-RSpec.shared_examples 'one_of' do |target,source,values,options|
+RSpec.shared_examples 'one_of' do |target,source,values,or_separator,options|
   let :many do
     {"#{source}|=" => values}
   end
@@ -59,20 +59,12 @@ RSpec.shared_examples 'one_of' do |target,source,values,options|
     many.merge(source => values.first)
   end
 
-  let :all do
-    many.merge(source => values)
-  end
-
   it 'should return a criterion' do
-    expect(described_class.new(input(many, options)).convert).to eq(target => transform(values, options).join('|'))
+    expect(described_class.new(input(many, options)).convert).to eq(target => transform(values, options).join(or_separator))
   end
 
   it 'should prioritize exact match' do
     expect(described_class.new(input(one, options)).convert).to eq(target => transform(values, options).first)
-  end
-
-  it 'should prioritize all match' do
-    expect(described_class.new(input(all, options)).convert).to eq(target => transform(values, options).join(','))
   end
 end
 

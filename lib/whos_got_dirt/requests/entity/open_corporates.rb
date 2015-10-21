@@ -30,7 +30,8 @@ module WhosGotDirt
       #   "industry_code": "be_nace_2008-66191"
       #
       # @example Find companies with all the given country codes.
-      #   "industry_code": ["be_nace_2008-66191", "be_nace_2008-66199"]
+      #   "a:industry_code": "be_nace_2008-66191",
+      #   "b:industry_code": "be_nace_2008-66199"
       #
       # @example Find companies with one of many country codes.
       #   "industry_code|=": ["be_nace_2008-66191", "be_nace_2008-66199"]
@@ -51,6 +52,13 @@ module WhosGotDirt
         # @return [String] the URL to request
         def to_s
           "#{base_url}?#{to_query(convert.merge(order: 'score'))}"
+        end
+
+        # Returns the "OR" operator's serialization.
+        #
+        # @return [String] the "OR" operator's serialization
+        def or_operator
+          '|'
         end
 
         # Converts the MQL parameters to API-specific parameters.
