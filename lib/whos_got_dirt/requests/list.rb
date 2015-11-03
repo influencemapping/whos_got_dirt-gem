@@ -5,9 +5,6 @@ module WhosGotDirt
     # Many APIs support the parameters below. For API-specific parameters, visit
     # the API's request class.
     #
-    # @example Find lists by name (exact match).
-    #   "name": "Barclays"
-    #
     # @example Find lists by name (fuzzy match).
     #   "name~=": "Barclays"
     #

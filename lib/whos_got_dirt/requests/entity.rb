@@ -7,9 +7,6 @@ module WhosGotDirt
     #
     # You may filter `dissolution_date` the same as `founding_date`.
     #
-    # @example Find entities by name (exact match).
-    #   "name": "ACME Inc."
-    #
     # @example Find entities by name (fuzzy match).
     #   "name~=": "ACME Inc."
     #
