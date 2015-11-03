@@ -22,11 +22,11 @@ module WhosGotDirt::Requests::Entity
       end
 
       context 'when given a founding date' do
-        include_examples 'date_range', 'incorporation_date', 'founding_date>='
+        include_examples 'date_range', 'incorporation_date', 'founding_date'
       end
 
       context 'when given a founding date' do
-        include_examples 'date_range', 'dissolution_date', 'dissolution_date>='
+        include_examples 'date_range', 'dissolution_date', 'dissolution_date'
       end
 
       context 'when given a contact detail' do

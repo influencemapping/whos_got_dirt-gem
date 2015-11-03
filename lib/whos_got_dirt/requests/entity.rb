@@ -13,6 +13,9 @@ module WhosGotDirt
     # @example Find entities by classification.
     #   "classification": "Private Limited Company"
     #
+    # @example Find entities with one of many classifications.
+    #   "classification|=": "Private Limited Company"
+    #
     # @example Find entities with a creation date greater than or equal to a given value.
     #   "created_at>=": "2010-01-01"
     #

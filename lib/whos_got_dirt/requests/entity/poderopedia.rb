@@ -31,7 +31,7 @@ module WhosGotDirt
 
           # API-specific parameters.
           equal('user_key', 'poderopedia_api_key')
-          match('entity', 'type', valid: ['Person', 'Organization'], transform: lambda{|v|
+          equal('entity', 'type', valid: ['Person', 'Organization'], transform: lambda{|v|
             case v
             when 'persona'
               'Person'
