@@ -10,9 +10,6 @@ module WhosGotDirt
     # @example Find entities by name (fuzzy match).
     #   "name~=": "ACME Inc."
     #
-    # @example Find entities by description (fuzzy match).
-    #   "description~=": "A purveyor of fine goods"
-    #
     # @example Find entities by classification.
     #   "classification": "Private Limited Company"
     #
