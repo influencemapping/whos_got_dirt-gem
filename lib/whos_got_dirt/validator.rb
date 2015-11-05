@@ -4,7 +4,7 @@ module WhosGotDirt
       # Validates the data against the named schema and returns any errors.
       #
       # @param [Hash] data the data to validate
-      # @param [String] the name of the definition in the JSON Schema
+      # @param [String] name the name of the definition in the JSON Schema
       # @return [Array<ValidationError>] a list of validation errors
       def validate(data, name)
         validator = validators[name.downcase]

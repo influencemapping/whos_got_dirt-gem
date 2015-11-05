@@ -57,7 +57,7 @@ module WhosGotDirt
     # Helper method to map a parameter that supports the MQL equality operator.
     #
     # @param [String] target the API-specific parameter name
-    # @param [String] sources the request parameter name
+    # @param [String] source the request parameter name
     # @param [Hash] opts options
     # @option opts [String] :input substitute MQL parameters
     # @option opts [String] :transform a transformation to apply to the value
@@ -85,7 +85,7 @@ module WhosGotDirt
     # Helper method to map a parameter that supports the MQL `~=` operator.
     #
     # @param [String] target the API-specific parameter name
-    # @param [String] sources the request parameter name
+    # @param [String] source the request parameter name
     # @param [Hash] opts options
     # @option opts [String] :input substitute MQL parameters
     # @option opts [String] :transform a transformation to apply to the value
