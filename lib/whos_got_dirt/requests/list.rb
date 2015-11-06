@@ -8,7 +8,7 @@ module WhosGotDirt
     # @example Find lists by name (fuzzy match).
     #   "name~=": "Barclays"
     #
-    # @example Limit the number of responses.
+    # @example Limit the number of results.
     #   "limit": 5
     module List
     end

@@ -6,7 +6,7 @@ module WhosGotDirt
       # @example Supply an API key.
       #   "open_oil_api_key": "..."
       #
-      # @example Find concessions with a given country code.
+      # @example Find concessions by country code.
       #   "country_code": "BR"
       #
       # @example Find concessions with a "licensed" or "unlicensed" status.
@@ -32,7 +32,7 @@ module WhosGotDirt
           equal('per_page', 'limit')
 
           input['subject'] && input['subject'].each do |subject|
-            equal('licensee', 'name', input: subject)
+            equal('licensee', 'name', input: subject) # doesn't work, upstream bug
           end
 
           # API-specific parameters.

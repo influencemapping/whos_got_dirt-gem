@@ -9,7 +9,7 @@ module WhosGotDirt
       # @example Supply an API key.
       #   "open_corporates_api_key": "..."
       #
-      # @example Find officerships with a given jurisdiction code.
+      # @example Find officerships by jurisdiction code.
       #   "jurisdiction_code": "gb"
       #
       # @example Find officerships with one of many jurisdiction codes.

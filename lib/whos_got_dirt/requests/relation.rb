@@ -10,7 +10,7 @@ module WhosGotDirt
     #     "name~=": "John Smith"
     #   }]
     #
-    # @example Find related people with a given birth date.
+    # @example Find related people by birth date.
     #   "subject": [{
     #     "birth_date": "2010-01-01"
     #   }]
@@ -43,7 +43,7 @@ module WhosGotDirt
     #     }]
     #   }]
     #
-    # @example Limit the number of responses.
+    # @example Limit the number of results.
     #   "limit": 5
     module Relation
     end

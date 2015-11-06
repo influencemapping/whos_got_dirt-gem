@@ -24,19 +24,19 @@ module WhosGotDirt
       #     "scheme": "SEC Central Index Key"
       #   }]
       #
-      # @example Find companies with a given SIC code.
+      # @example Find companies by SIC code.
       #   "industry_code": "2011"
       #
-      # @example Find companies with a given SIC sector.
+      # @example Find companies by SIC sector.
       #   "sector_code": "4100"
       #
       # @example Match within words on name and address queries.
       #   "substring_match": 1
       #
-      # @example Find companies with a given country code.
+      # @example Find companies by country code.
       #   "country_code": "US"
       #
-      # @example Find companies with a given country subdivision code.
+      # @example Find companies by country subdivision code.
       #   "subdiv_code": "OR"
       #
       # @example Find companies with SEC filings in a given year.

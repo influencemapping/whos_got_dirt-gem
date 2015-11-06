@@ -19,7 +19,7 @@ module WhosGotDirt
     # @example Find entities with a creation date greater than or equal to a given value.
     #   "created_at>=": "2010-01-01"
     #
-    # @example Find organizations with a given founding date.
+    # @example Find organizations by founding date.
     #   "founding_date": "2010-01-01"
     #
     # @example Find organizations with a founding date greater than or equal to a given value.
@@ -46,7 +46,7 @@ module WhosGotDirt
     #     "value~=": "52 London"
     #   }]
     #
-    # @example Limit the number of responses.
+    # @example Limit the number of results.
     #   "limit": 5
     module Entity
     end

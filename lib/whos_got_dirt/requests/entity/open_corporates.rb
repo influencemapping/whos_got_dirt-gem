@@ -11,22 +11,22 @@ module WhosGotDirt
       # @example Find companies by name prefix.
       #   "name~=" "ACME*"
       #
-      # @example Find companies with a given jurisdiction code.
+      # @example Find companies by jurisdiction code.
       #   "jurisdiction_code": "gb"
       #
       # @example Find companies with one of many jurisdiction codes.
       #   "jurisdiction_code|=": ["gb", "ie"]
       #
-      # @example Find companies with a given country code.
+      # @example Find companies by country code.
       #   "country_code": "gb"
       #
       # @example Find companies with one of many country codes.
       #   "country_code|=": ["gb", "ie"]
       #
-      # @example Find companies with a given status.
+      # @example Find companies by status.
       #   "current_status": "Dissolved"
       #
-      # @example Find companies with a given industry code.
+      # @example Find companies by industry code.
       #   "industry_code": "be_nace_2008-66191"
       #
       # @example Find companies with all the given country codes.
