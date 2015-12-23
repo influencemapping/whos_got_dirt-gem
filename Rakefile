@@ -34,9 +34,10 @@ task :schemas do
   def process_schema(url, definitions)
     schema = JSON.load(open(url).read)
     schema['properties'].each do |_,value|
-      process_value(value, definitions)
       if value.key?('items')
         process_value(value['items'], definitions)
+      else
+        process_value(value, definitions)
       end
     end
     schema
