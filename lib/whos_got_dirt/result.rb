@@ -49,7 +49,7 @@ module WhosGotDirt
     def validate!(opts = {})
       # The code assumes that processing errors in reverse avoids re-indexing
       # issues when deleting items from arrays. If this assumption is invalid,
-      # we can delete items on a time and re-validate using this code skeleton:
+      # we can delete items one at a time and re-validate using this skeleton:
       #
       # begin
       #   Validator.validate(result, type)
