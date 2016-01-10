@@ -33,10 +33,10 @@ module WhosGotDirt
           equal('user_key', 'poderopedia_api_key')
           equal('entity', 'type', valid: ['Person', 'Organization'], transform: lambda{|v|
             case v
-            when 'persona'
-              'Person'
-            when 'organizacion'
-              'Organization'
+            when 'Person'
+              'persona'
+            when 'Organization'
+              'organizacion'
             end
           })
 
