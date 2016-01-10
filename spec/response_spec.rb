@@ -32,10 +32,14 @@ module WhosGotDirt
       end
     end
 
+    let :body do
+      '[{"fn":"John Smith","id":"john-smith"},{"fn":"John Aaron Smith","id":"john-aaron-smith"}]'
+    end
+
     let :response do
       env = Faraday::Env.new
       env.url = 'https://api.example.com/endpoint?name~=John+Smith'
-      env.body = '[{"fn":"John Smith","id":"john-smith"},{"fn":"John Aaron Smith","id":"john-aaron-smith"}]'
+      env.body = body
       Faraday::Response.new(env)
     end
 
@@ -113,6 +117,12 @@ module WhosGotDirt
             'note' => 'MyResponse',
           }],
         }])
+      end
+    end
+
+    describe '#error_message' do
+      it 'should return the parsed response body' do
+        expect(instance.error_message).to eq(body)
       end
     end
   end

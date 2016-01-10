@@ -28,6 +28,11 @@ module WhosGotDirt
         def page
           Integer(parsed_body['Meta']['Parameters']['page'] || 1)
         end
+
+        # Returns the error message.
+        def error_message
+          parsed_body.strip
+        end
       end
     end
   end

@@ -56,6 +56,13 @@ module WhosGotDirt
       raise NotImplementedError
     end
 
+    # Returns the error message in the response body.
+    #
+    # @return [String] the error message in the response body
+    def error_message
+      body
+    end
+
     # @!method initialize(response)
     #   Sets the response's response.
     #   @param [Faraday::Response] response a response
