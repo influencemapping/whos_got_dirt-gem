@@ -52,7 +52,7 @@ module WhosGotDirt
         # @return [Array<Hash>] the results
         def to_a
           parsed_body['companies'].map do |data|
-            Result.new('Organization', renderer.result(data['company']), self).finalize!
+            Result.new('Entity', renderer.result(data['company']), self).finalize!
           end
         end
       end
