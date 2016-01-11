@@ -34,7 +34,7 @@ module WhosGotDirt
       # Memoizes a validator using the schema.
       def validator
         # `JSON::Validator#initialize_schema` runs faster if given a `Hash`.
-        @@validator ||= JSON::Validator.new(JSON.load(File.read(File.expand_path(File.join('..', '..', '..', 'schemas', 'popolo.json'), __FILE__))), {}, {
+        @@validator ||= JSON::Validator.new(JSON.load(File.read(File.expand_path(File.join('..', '..', '..', 'schemas', 'schema.json'), __FILE__))), {}, {
           # Keep the cache - whatever it is.
           clear_cache: false,
           # It's safe to skip data parsing if the data is a `Hash`.

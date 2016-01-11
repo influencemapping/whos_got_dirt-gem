@@ -26,7 +26,9 @@ module WhosGotDirt
             'url' => '/api_uri',
             'note' => 'LittleSis API detail',
           }],
-          'updated_at' => '/updated_at',
+          'updated_at' => lambda{|data|
+            ['updated_at', JsonPointer.new(data, '/updated_at').value.sub(' ', 'T') + 'Z']
+          },
 
           # Class-specific.
           'start_date' => lambda{|data|

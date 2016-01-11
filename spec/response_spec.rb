@@ -11,9 +11,9 @@ module WhosGotDirt
         end
 
         @template = {
-          '@type' => 'Person',
-          'id' => 123,
+          '@type' => 'Entity',
           'name' => '/fn',
+          'birth_date' => 2015,
           'identifiers' => [{
             'identifier' => '/id',
             'scheme' => 'ACME',
@@ -26,7 +26,7 @@ module WhosGotDirt
 
         def to_a
           parsed_body.map do |data|
-            Result.new('Person', renderer.result(data), self).finalize!
+            Result.new('Entity', renderer.result(data), self).finalize!
           end
         end
       end
@@ -49,9 +49,9 @@ module WhosGotDirt
 
     let :template do
       {
-        '@type' => 'Person',
-        'id' => 123,
+        '@type' => 'Entity',
         'name' => '/fn',
+        'birth_date' => 2015,
         'identifiers' => [{
           'identifier' => '/id',
           'scheme' => 'ACME',
@@ -93,9 +93,9 @@ module WhosGotDirt
     describe '#to_a' do
       it 'should return the results' do
         expect(instance.to_a).to eq([{
-          '@type' => 'Person',
-          'id' => '123',
+          '@type' => 'Entity',
           'name' => 'John Smith',
+          'birth_date' => '2015',
           'identifiers' => [{
             'identifier' => 'john-smith',
             'scheme' => 'ACME',
@@ -105,9 +105,9 @@ module WhosGotDirt
             'note' => 'MyResponse',
           }],
         }, {
-          '@type' => 'Person',
-          'id' => '123',
+          '@type' => 'Entity',
           'name' => 'John Aaron Smith',
+          'birth_date' => '2015',
           'identifiers' => [{
             'identifier' => 'john-aaron-smith',
             'scheme' => 'ACME',

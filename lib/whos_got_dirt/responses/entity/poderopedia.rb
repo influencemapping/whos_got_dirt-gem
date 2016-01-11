@@ -8,11 +8,11 @@ module WhosGotDirt
         @template = {
           '@type' => 'Entity',
           'name' => '/alias',
+          'description' => '/shortBio',
           'identifiers' => [{
             'identifier' => '/id',
             'scheme' => 'Poderopedia',
           }],
-          'description' => '/shortBio'
         }
 
         # Parses the response body.

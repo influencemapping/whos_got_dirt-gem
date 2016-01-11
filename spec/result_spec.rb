@@ -4,8 +4,8 @@ module WhosGotDirt
   RSpec.describe Result do
     let :result do
       {
-        'id' => 123,
         'name' => 'John Smith',
+        'birth_date' => 2015,
         'identifiers' => [{
           'scheme' => 'ACME',
         }, {
@@ -24,12 +24,12 @@ module WhosGotDirt
     end
 
     let :instance do
-      Result.new('Person', result, response)
+      Result.new('Entity', result, response)
     end
 
     describe '#initialize' do
       it 'should set the type, result and response' do
-        expect(instance.type).to eq('Person')
+        expect(instance.type).to eq('Entity')
         expect(instance.result).to eq(result)
         expect(instance.response).to eq(response)
       end
@@ -38,8 +38,8 @@ module WhosGotDirt
     describe '#add_source!' do
       it 'should add a source to a result' do
         expect(instance.add_source!).to eq({
-          'id' => 123,
           'name' => 'John Smith',
+          'birth_date' => 2015,
           'identifiers' => [{
             'scheme' => 'ACME',
           }, {
@@ -58,8 +58,8 @@ module WhosGotDirt
     describe 'validate!' do
       it 'should validate the result' do
         expect(instance.validate!).to eq({
-          'id' => '123',
           'name' => 'John Smith',
+          'birth_date' => '2015',
           'identifiers' => [{
             'identifier' => 'john-smith',
           }],
@@ -74,8 +74,8 @@ module WhosGotDirt
     describe '#finalize!' do
       it 'should finalize the result' do
         expect(instance.finalize!).to eq({
-          'id' => '123',
           'name' => 'John Smith',
+          'birth_date' => '2015',
           'identifiers' => [{
             'identifier' => 'john-smith',
           }],

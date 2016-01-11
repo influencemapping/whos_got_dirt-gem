@@ -4,8 +4,8 @@ module WhosGotDirt
   RSpec.describe Validator do
     let :invalid do
       {
-        'id' => 123,
         'name' => 'John Smith',
+        'birth_date' => 2015,
         'identifiers' => [{
           'scheme' => 'ACME',
         }, {
@@ -18,8 +18,8 @@ module WhosGotDirt
 
     let :valid do
       {
-        'id' => '123',
         'name' => 'John Smith',
+        'birth_date' => '2015',
         'identifiers' => [{
           'identifier' => 'john-smith',
         }],
@@ -28,15 +28,15 @@ module WhosGotDirt
 
     describe '.validate' do
       it 'should return errors for invalid data' do
-        expect(Validator.validate(invalid, 'person').map{|error| [error[:fragment], error[:failed_attribute]]}).to eq([
-          ['#/id', 'Type'],
+        expect(Validator.validate(invalid, 'entity').map{|error| [error[:fragment], error[:failed_attribute]]}).to eq([
+          ['#/birth_date', 'Type'],
           ['#/identifiers/0', 'Properties'],
           ['#/identifiers/2', 'Properties'],
         ])
       end
 
       it 'should not return errors for valid data' do
-        expect(Validator.validate(valid, 'person')).to eq([])
+        expect(Validator.validate(valid, 'entity')).to eq([])
       end
     end
   end

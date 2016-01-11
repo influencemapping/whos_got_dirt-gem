@@ -11,8 +11,6 @@ module WhosGotDirt
           'classification' => '/company_type',
           'founding_date' => '/incorporation_date',
           'dissolution_date' => '/dissolution_date',
-          'created_at' => '/created_at',
-          'updated_at' => '/updated_at',
           'other_names' => [{
             'name' => '/previous_names/company_name',
             'start_date' => '/previous_names/start_date',
@@ -39,6 +37,8 @@ module WhosGotDirt
             'note' => '/sources/publisher',
             'retrieved_at' => '/sources/retrieved_at', # @todo check Dublin Core, etc.
           }],
+          'created_at' => '/created_at',
+          'updated_at' => '/updated_at',
           # API-specific.
           'branch_status' => '/branch_status', # @todo if boolean, use "branch" as in request
           'current_status' => '/current_status',
