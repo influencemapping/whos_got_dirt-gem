@@ -82,5 +82,9 @@ module WhosGotDirt
     # @!method status
     #   Returns the HTTP status code.
     #   @return [Fixnum] the HTTP status code
+
+    # @!method success?
+    #   Returns whether the request succeeded.
+    #   @return [Boolean] whether the request succeeded
   end
 end

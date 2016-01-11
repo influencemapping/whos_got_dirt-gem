@@ -36,6 +36,14 @@ module WhosGotDirt
             Result.new('Entity', renderer.result(data), self).finalize!
           end
         end
+
+        def success?
+          success? && !parsed_body.key?('error')
+        end
+
+        def error_message
+          parsed_body['error']
+        end
       end
     end
   end
