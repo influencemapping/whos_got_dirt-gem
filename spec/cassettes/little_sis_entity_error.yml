@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.littlesis.org/entities.xml?q=bar
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 401
+      message: 
+    headers:
+      server:
+      - cloudflare-nginx
+      date:
+      - Sun, 10 Jan 2016 23:54:18 GMT
+      content-type:
+      - text/html; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      set-cookie:
+      - __cfduid=d0a1f180fbcab07f10a20a0e51d9152601452470058; expires=Mon, 09-Jan-17
+        23:54:18 GMT; path=/; domain=.littlesis.org; HttpOnly, symfony=rjsiompvljpg9goqudp16ina83;
+        path=/
+      x-powered-by:
+      - PHP/5.5.9-1ubuntu4.6
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      www-authenticate:
+      - Your request must include a query parameter named "_key" with a valid API
+        key value. To obtain an API key, visit http://api.littlesis.org/register
+      vary:
+      - Accept-Encoding
+      access-control-allow-origin:
+      - "*"
+      cf-ray:
+      - 262c4e69e5463fa7-YUL
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Response>
+        Your request must include a query parameter named "_key" with a valid API key value. To obtain an API key, visit http://api.littlesis.org/register.
+        </Response>
+    http_version: 
+  recorded_at: Sun, 10 Jan 2016 23:54:18 GMT
+recorded_with: VCR 3.0.1
