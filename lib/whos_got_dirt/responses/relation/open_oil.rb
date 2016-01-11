@@ -5,12 +5,23 @@ module WhosGotDirt
       #
       # @see http://openoil.net/openoil-api/
       class OpenOil < Response
+        class << self
+          # @private
+          def date_formatter(property, path)
+            return lambda{|data|
+              v = JsonPointer.new(data, path).value
+              [property, v.empty? ? nil : v + 'T00:00:00Z']
+            }
+          end
+        end
+
         @template = {
           '@type' => 'Relation',
           'subject' => lambda{|data|
             v = JsonPointer.new(data, '/licensees').value
             ['subject', v.map{|licensee| {'name' => licensee}}]
           },
+          'name' => '/name',
           'identifiers' => [{
             'identifier' => '/identifier',
             'scheme' => 'OpenOil',
@@ -22,12 +33,11 @@ module WhosGotDirt
             'url' => '/url_wiki',
             'note' => 'OpenOil wiki page',
           }],
-          'name' => '/name',
-          'created_at' => '/source_date',
-          'updated_at' => '/retrieved_date',
           'sources' => [{
             'url' => '/source_document',
           }],
+          'created_at' => date_formatter('created_at', '/source_date'),
+          'updated_at' => date_formatter('updated_at', '/retrieved_date'),
           # API-specific.
           'additional_properties' => '/details',
           'country_code' => '/country',

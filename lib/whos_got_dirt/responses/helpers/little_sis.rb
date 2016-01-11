@@ -7,12 +7,14 @@ module WhosGotDirt
           #   @return [Hash] the field storing the number of results
           attr_reader :count_field
 
+          # @private
           def date_formatter(property, path)
             return lambda{|data|
               [property, JsonPointer.new(data, path).value.sub(' ', 'T') + 'Z']
             }
           end
 
+          # @private
           def integer_formatter(property, path)
             return lambda{|data|
               [property, Integer(JsonPointer.new(data, path).value)]

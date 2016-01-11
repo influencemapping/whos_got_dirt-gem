@@ -82,7 +82,7 @@ module WhosGotDirt
           # the source having an integer instead of string value.
           pointer.value = pointer.value.to_s
         else
-          raise ValidationError.new(error.fetch(:message))
+          raise ValidationError.new("#{error.fetch(:message)} (#{pointer.value})")
         end
       end
 
