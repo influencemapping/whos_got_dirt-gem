@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.openduka.org/index.php/api/search?term=the
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 11 Jan 2016 01:50:10 GMT
+      server:
+      - Apache
+      set-cookie:
+      - ci_session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%225ee5f19c568590f29ec547cf0cbb15fc%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A14%3A%22198.48.204.118%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A14%3A%22Faraday+v0.9.1%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1452477010%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7Da4e6d71e7310fa2b434a1efda6aa9267;
+        expires=Mon, 11-Jan-2016 03:50:10 GMT; Max-Age=7200; path=/
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '62'
+      connection:
+      - close
+      content-type:
+      - text/html
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":"missing key and or search term"}'
+    http_version: 
+  recorded_at: Mon, 11 Jan 2016 01:50:11 GMT
+recorded_with: VCR 3.0.1
