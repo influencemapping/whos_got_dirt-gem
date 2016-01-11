@@ -8,8 +8,6 @@ module WhosGotDirt
         @template = {
           '@type' => 'List',
           'name' => '/name',
-          'created_at' => '/created_at',
-          'updated_at' => '/updated_at',
           'identifiers' => [{
             'identifier' => '/wikipedia_id',
             'scheme' => 'Wikipedia',
@@ -18,6 +16,8 @@ module WhosGotDirt
             'url' => '/opencorporates_url',
             'note' => 'OpenCorporates page',
           }],
+          'created_at' => '/created_at',
+          'updated_at' => '/updated_at',
         }
 
         # Transforms the parsed response body into results.

@@ -6,6 +6,18 @@ module WhosGotDirt
           # @!attribute [r] count_field
           #   @return [Hash] the field storing the number of results
           attr_reader :count_field
+
+          def date_formatter(property, path)
+            return lambda{|data|
+              [property, JsonPointer.new(data, path).value.sub(' ', 'T') + 'Z']
+            }
+          end
+
+          def integer_formatter(property, path)
+            return lambda{|data|
+              [property, Integer(JsonPointer.new(data, path).value)]
+            }
+          end
         end
 
         # Parses the response body.

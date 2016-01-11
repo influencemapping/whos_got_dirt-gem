@@ -24,7 +24,7 @@
           ]
         },
         "description": {
-          "description": "An extended description of an entity",
+          "description": "A description of the entity",
           "type": [
             "string",
             "null"
@@ -129,18 +129,84 @@
         }
       }
     },
-    "list": {
-      "$schema": "http://json-schema.org/draft-03/schema#",
-      "type": "object",
-      "properties": {
-
-      }
-    },
     "relation": {
       "$schema": "http://json-schema.org/draft-03/schema#",
       "type": "object",
       "properties": {
         
+      }
+    },
+    "list": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "enum": ["List"]
+        },
+        "name": {
+          "description": "The name of the list",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "A description of the list",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "number_of_items": {
+          "description": "The number of items in the list",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "item_list_order": {
+          "description": "The type of ordering (e.g. ascending, descending, unordered)",
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "ascending",
+            "descending",
+            "unordered"
+          ]
+        },
+        "identifiers": {
+          "description": "Issued identifiers",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/identifier"
+          }
+        },
+        "links": {
+          "description": "URLs to documents about the list",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/link"
+          }
+        },
+        "created_at": {
+          "description": "The time at which the resource was created",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updated_at": {
+          "description": "The time at which the resource was last modified",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
       }
     },
     "other_name": {

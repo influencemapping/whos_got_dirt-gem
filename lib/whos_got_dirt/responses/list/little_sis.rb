@@ -11,7 +11,7 @@ module WhosGotDirt
           '@type' => 'List',
           'name' => '/name',
           'description' => '/description',
-          'number_of_items' => '/num_entities',
+          'number_of_items' => integer_formatter('number_of_items', '/num_entities'),
           'item_list_order' => lambda{|data|
             v = JsonPointer.new(data, '/is_ranked').value
             if v == '1'
@@ -21,11 +21,11 @@ module WhosGotDirt
             end
             ['item_list_order', v]
           },
-          'updated_at' => '/updated_at',
           'identifiers' => [{
             'identifier' => '/id',
             'scheme' => 'LittleSis',
           }],
+          'updated_at' => date_formatter('updated_at', '/updated_at'),
         }
 
         # Transforms the parsed response body into results.
