@@ -38,7 +38,7 @@ module WhosGotDirt
         end
 
         def success?
-          success? && !parsed_body.key?('error')
+          super && Array === parsed_body
         end
 
         def error_message
