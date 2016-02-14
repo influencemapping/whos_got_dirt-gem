@@ -35,16 +35,17 @@ module WhosGotDirt
           'sources' => [{
             'url' => '/sources/url',
             'note' => '/sources/publisher',
-            'retrieved_at' => '/sources/retrieved_at', # @todo check Dublin Core, etc.
+            # API-specific.
+            'retrieved_at' => '/sources/retrieved_at',
           }],
           'created_at' => '/created_at',
           'updated_at' => '/updated_at',
           # API-specific.
-          'branch_status' => '/branch_status', # @todo if boolean, use "branch" as in request
+          'branch_status' => '/branch_status',
           'current_status' => '/current_status',
           'inactive' => '/inactive',
           'jurisdiction_code' => '/jurisdiction_code',
-          'retrieved_at' => '/retrieved_at', # @todo check Dublin Core, etc.
+          'retrieved_at' => '/retrieved_at',
         }
 
         # Transforms the parsed response body into results.
