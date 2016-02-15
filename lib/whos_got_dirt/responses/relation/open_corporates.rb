@@ -68,7 +68,7 @@ module WhosGotDirt
         def item_url(result)
           query = CGI.parse(env.url.query.to_s)
           url = "#{env.url.scheme}://#{env.url.host}/officers/#{result['identifiers'][0]['identifier']}"
-          if query['api_token']
+          if query['api_token'].any?
             url += "?api_token=#{CGI.escape(query['api_token'][0].to_s)}"
           end
           url
