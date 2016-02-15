@@ -12,10 +12,10 @@ module WhosGotDirt
           'founding_date' => '/incorporation_date',
           'dissolution_date' => '/dissolution_date',
           'other_names' => [{
-            'name' => '/previous_names/company_name',
-            'start_date' => '/previous_names/start_date',
-            'end_date' => '/previous_names/end_date',
-            'note' => '/previous_names/type',
+            'name' => '/previous_names/0/company_name',
+            'start_date' => '/previous_names/0/start_date',
+            'end_date' => '/previous_names/0/end_date',
+            'note' => '/previous_names/0/type',
           }],
           'identifiers' => [{
             'identifier' => '/company_number',
