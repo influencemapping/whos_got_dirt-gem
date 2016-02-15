@@ -38,6 +38,15 @@ module WhosGotDirt
             Result.new('Entity', renderer.result(data), self).finalize!
           end
         end
+
+        # Returns an entity's URL.
+        #
+        # @param [Hash] result the rendered result
+        # @return [String] the entity's URL
+        def entity_url(result)
+          query = CGI.parse(env.url.query.to_s)
+          "#{env.url.scheme}://#{env.url.host}/visualizacion/getEntityById?id=#{CGI.escape(result['identifiers'][0]['identifier'].to_s)}&entity=#{CGI.escape(query['entity'][0].to_s)}&user_key=#{CGI.escape(query['user_key'][0].to_s)}"
+        end
       end
     end
   end

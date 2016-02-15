@@ -28,6 +28,19 @@ module WhosGotDirt
             Result.new('List', renderer.result(data['corporate_grouping']), self).finalize!
           end
         end
+
+        # Returns a list's URL.
+        #
+        # @param [Hash] result the rendered result
+        # @return [String] the list's URL
+        def entity_url(result)
+          query = CGI.parse(env.url.query.to_s)
+          url = "#{env.url.scheme}://#{env.url.host}/corporate_groupings/#{CGI.escape(result['name'].to_s)}"
+          if query['api_token']
+            url += "?api_token=#{CGI.escape(query['api_token'][0].to_s)}"
+          end
+          url
+        end
       end
     end
   end

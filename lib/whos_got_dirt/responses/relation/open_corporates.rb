@@ -60,6 +60,19 @@ module WhosGotDirt
             Result.new('Relation', renderer.result(data['officer']), self).finalize!
           end
         end
+
+        # Returns a relation's URL.
+        #
+        # @param [Hash] result the rendered result
+        # @return [String] the relation's URL
+        def entity_url(result)
+          query = CGI.parse(env.url.query.to_s)
+          url = "#{env.url.scheme}://#{env.url.host}/officers/#{result['identifiers'][0]['identifier']}"
+          if query['api_token']
+            url += "?api_token=#{CGI.escape(query['api_token'][0].to_s)}"
+          end
+          url
+        end
       end
     end
   end

@@ -36,6 +36,15 @@ module WhosGotDirt
             Result.new('List', renderer.result(data), self).finalize!
           end
         end
+
+        # Returns a list's URL.
+        #
+        # @param [Hash] result the rendered result
+        # @return [String] the list's URL
+        def entity_url(result)
+          query = CGI.parse(env.url.query.to_s)
+          "#{env.url.scheme}://#{env.url.host}/list/#{result['identifiers'][0]['identifier']}.xml?_key=#{CGI.escape(query['_key'][0].to_s)}"
+        end
       end
     end
   end

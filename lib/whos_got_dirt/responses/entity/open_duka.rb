@@ -37,6 +37,15 @@ module WhosGotDirt
           end
         end
 
+        # Returns an entity's URL.
+        #
+        # @param [Hash] result the rendered result
+        # @return [String] the entity's URL
+        def entity_url(result)
+          query = CGI.parse(env.url.query.to_s)
+          "#{env.url.scheme}://#{env.url.host}/index.php/api/entity?id=#{CGI.escape(result['identifiers'][0]['identifier'].to_s)}&key=#{CGI.escape(query['key'][0].to_s)}"
+        end
+
         def success?
           super && Array === parsed_body
         end

@@ -24,6 +24,19 @@ module WhosGotDirt
       @response = response
     end
 
+    # Adds an API URL for the result.
+    #
+    # @return [Hash] the result
+    def add_link!
+      if response.respond_to?(:entity_url)
+        result['links'] ||= []
+        result['links'] << {
+          'url' => response.entity_url(result),
+          'note' => response.class.name.rpartition('::')[2],
+        }
+      end
+    end
+
     # Adds the requested URL as a source.
     #
     # @return [Hash] the result
@@ -98,6 +111,7 @@ module WhosGotDirt
     #
     # @return [Hash] the result
     def finalize!
+      add_link!
       add_source!
       validate!
       result
