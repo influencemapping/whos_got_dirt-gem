@@ -56,7 +56,11 @@ module WhosGotDirt
         #
         # @return [Array<Hash>] the results
         def to_a
-          parsed_body['Data']['Entities']['Entity'].map do |data|
+          list = parsed_body['Data']['Entities']['Entity']
+          if Hash === list
+            list = [list]
+          end
+          list.map do |data|
             Result.new('Entity', renderer.result(data), self).finalize!
           end
         end
