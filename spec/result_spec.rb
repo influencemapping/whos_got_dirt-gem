@@ -20,7 +20,11 @@ module WhosGotDirt
       env = Faraday::Env.new
       env.url = 'https://api.example.com/endpoint?name~=John+Smith'
       env.body = '[{"fn":"John Smith","id":"john-smith"},{"fn":"John Aaron Smith","id":"john-aaron-smith"}]'
-      Faraday::Response.new(env)
+      response = Faraday::Response.new(env)
+      def response.item_url(result)
+        "https://api.example.com/item/#{result['identifiers'][1]['identifier']}"
+      end
+      response
     end
 
     let :instance do
@@ -78,6 +82,10 @@ module WhosGotDirt
           'birth_date' => '2015',
           'identifiers' => [{
             'identifier' => 'john-smith',
+          }],
+          'links' => [{
+            'url' => 'https://api.example.com/item/john-smith',
+            'note' => 'Response',
           }],
           'sources' => [{
             'url' => 'https://api.example.com/endpoint?name~=John+Smith',

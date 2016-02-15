@@ -29,6 +29,10 @@ module WhosGotDirt
             Result.new('Entity', renderer.result(data), self).finalize!
           end
         end
+
+        def item_url(result)
+          "https://api.example.com/item/#{result['identifiers'][0]['identifier']}"
+        end
       end
     end
 
@@ -100,6 +104,10 @@ module WhosGotDirt
             'identifier' => 'john-smith',
             'scheme' => 'ACME',
           }],
+          'links' => [{
+            'url' => 'https://api.example.com/item/john-smith',
+            'note' => 'MyResponse',
+          }],
           'sources' => [{
             'url' => 'https://api.example.com/endpoint?name~=John+Smith',
             'note' => 'MyResponse',
@@ -111,6 +119,10 @@ module WhosGotDirt
           'identifiers' => [{
             'identifier' => 'john-aaron-smith',
             'scheme' => 'ACME',
+          }],
+          'links' => [{
+            'url' => 'https://api.example.com/item/john-aaron-smith',
+            'note' => 'MyResponse',
           }],
           'sources' => [{
             'url' => 'https://api.example.com/endpoint?name~=John+Smith',

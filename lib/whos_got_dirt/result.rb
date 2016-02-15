@@ -28,13 +28,11 @@ module WhosGotDirt
     #
     # @return [Hash] the result
     def add_link!
-      if response.respond_to?(:entity_url)
-        result['links'] ||= []
-        result['links'] << {
-          'url' => response.entity_url(result),
-          'note' => response.class.name.rpartition('::')[2],
-        }
-      end
+      result['links'] ||= []
+      result['links'] << {
+        'url' => response.item_url(result),
+        'note' => response.class.name.rpartition('::')[2],
+      }
     end
 
     # Adds the requested URL as a source.

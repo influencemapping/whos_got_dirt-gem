@@ -56,6 +56,12 @@ module WhosGotDirt
       raise NotImplementedError
     end
 
+    # @abstract Subclass and override {#item_url} to return an item's URL when
+    #   given a result
+    def item_url(result)
+      raise NotImplementedError
+    end
+
     # Returns the error message in the response body.
     #
     # @return [String] the error message in the response body

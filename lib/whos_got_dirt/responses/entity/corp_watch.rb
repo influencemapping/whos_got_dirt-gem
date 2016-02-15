@@ -71,7 +71,7 @@ module WhosGotDirt
         #
         # @param [Hash] result the rendered result
         # @return [String] the entity's URL
-        def entity_url(result)
+        def item_url(result)
           query = CGI.parse(env.url.query.to_s)
           url = "#{env.url.scheme}://#{env.url.host}#{env.url.path.sub(/\.json\z/, '')}/#{result['identifiers'][0]['identifier']}.json"
           if query['key']
