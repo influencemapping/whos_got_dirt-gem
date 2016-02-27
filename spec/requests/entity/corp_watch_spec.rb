@@ -17,6 +17,10 @@ module WhosGotDirt::Requests::Entity
         include_examples 'equal', 'limit', 'limit', 5
       end
 
+      context 'when given a page' do
+        include_examples 'equal', 'index', 'page', 2, transformed: 100
+      end
+
       context 'when given an IRS identifier' do
         it 'should return a criterion' do
           expect(CorpWatch.new({

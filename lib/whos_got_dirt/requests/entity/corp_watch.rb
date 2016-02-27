@@ -81,7 +81,8 @@ module WhosGotDirt
         # @see http://api.corpwatch.org/documentation/api_examples.html#A17
         def convert
           match('company_name', 'name')
-          equal('limit', 'limit')
+          equal('limit', 'limit') # default 100, maximum 5000
+          equal('index', 'page', transform: lambda{|v| (v - 1) * (input['limit'] || 100)})
 
           input['identifiers'] && input['identifiers'].each do |identifier|
             case identifier['scheme']

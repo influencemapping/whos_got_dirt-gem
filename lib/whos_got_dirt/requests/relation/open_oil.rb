@@ -29,7 +29,8 @@ module WhosGotDirt
         # @return [Hash] API-specific parameters
         # @see http://openoil.net/openoil-api/
         def convert
-          equal('per_page', 'limit')
+          equal('per_page', 'limit') # default 100, no maximum
+          equal('page', 'page')
 
           input['subject'] && input['subject'].each do |subject|
             equal('licensee', 'name', input: subject) # doesn't work, upstream bug

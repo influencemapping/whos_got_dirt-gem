@@ -21,6 +21,10 @@ module WhosGotDirt::Requests::Entity
         include_examples 'equal', 'num', 'limit', 5
       end
 
+      context 'when given a page' do
+        include_examples 'equal', 'page', 'page', 2
+      end
+
       context 'when given an API key' do
         include_examples 'equal', '_key', 'little_sis_api_key', 123
       end

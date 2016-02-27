@@ -38,7 +38,8 @@ module WhosGotDirt
         def convert
           match('q', 'name')
           one_of('type_ids', 'classification')
-          equal('num', 'limit')
+          equal('num', 'limit') # default 20, maximum 1000?
+          equal('page', 'page')
 
           # API-specific parameters.
           equal('_key', 'little_sis_api_key')

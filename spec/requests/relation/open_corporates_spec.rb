@@ -31,6 +31,10 @@ module WhosGotDirt::Requests::Relation
         end
       end
 
+      context 'when given a page' do
+        include_examples 'equal', 'page', 'page', 2
+      end
+
       context 'when given an API key' do
         it 'should return an API key parameter' do
           expect(OpenCorporates.new('open_corporates_api_key' => 123).convert).to eq('api_token' => 123, 'per_page' => 100)

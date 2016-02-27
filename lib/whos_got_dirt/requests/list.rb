@@ -10,6 +10,9 @@ module WhosGotDirt
     #
     # @example Limit the number of results.
     #   "limit": 5
+    #
+    # @example Paginate the results.
+    #   "page": 2
     module List
     end
   end

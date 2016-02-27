@@ -17,6 +17,10 @@ module WhosGotDirt::Requests::Relation
         include_examples 'equal', 'per_page', 'limit', 5
       end
 
+      context 'when given a page' do
+        include_examples 'equal', 'page', 'page', 2
+      end
+
       context 'when given an API key' do
         include_examples 'equal', 'apikey', 'open_oil_api_key', 123
       end

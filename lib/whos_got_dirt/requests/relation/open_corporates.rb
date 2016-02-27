@@ -45,7 +45,8 @@ module WhosGotDirt
         # @return [Hash] API-specific parameters
         # @see https://api.opencorporates.com/documentation/API-Reference
         def convert
-          equal('per_page', 'limit', default: input['open_corporates_api_key'] && 100)
+          equal('per_page', 'limit', default: input['open_corporates_api_key'] && 100) # default 30, maximum 100
+          equal('page', 'page')
 
           input['subject'] && input['subject'].each do |subject|
             match('q', 'name', input: subject)
