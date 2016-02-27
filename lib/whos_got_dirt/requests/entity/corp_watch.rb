@@ -82,7 +82,7 @@ module WhosGotDirt
         def convert
           match('company_name', 'name')
           equal('limit', 'limit') # default 100
-          equal('index', 'page', transform: lambda{|v| (v - 1) * (input['limit'] || 100)})
+          equal('index', 'page', transform: lambda{|v| (Integer(v) - 1) * (Integer(input['limit'] || 100))})
 
           input['identifiers'] && input['identifiers'].each do |identifier|
             case identifier['scheme']
