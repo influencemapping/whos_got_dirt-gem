@@ -24,7 +24,7 @@ module WhosGotDirt
         # @see http://api.littlesis.org/documentation#lists
         def convert
           match('q', 'name')
-          equal('num', 'limit') # default 100, maximum 100
+          equal('num', 'limit') # default 100
           equal('page', 'page')
 
           # API-specific parameters.

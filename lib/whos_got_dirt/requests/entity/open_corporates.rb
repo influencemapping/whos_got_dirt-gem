@@ -78,7 +78,7 @@ module WhosGotDirt
           equal('created_since', 'created_at>=')
           date_range('incorporation_date', 'founding_date')
           date_range('dissolution_date', 'dissolution_date')
-          equal('per_page', 'limit', default: input['open_corporates_api_key'] && 100) # default 30, maximum 100
+          equal('per_page', 'limit', default: input['open_corporates_api_key'] && 100) # default 30
           equal('page', 'page')
 
           input['contact_details'] && input['contact_details'].each do |contact_detail|
